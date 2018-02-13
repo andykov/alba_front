@@ -1,0 +1,58 @@
+// В этом файле должны быть стили для БЭМ-блока .sidebar , его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий... 
+.sidenav {
+  background-color: #fff;
+  @media screen and (max-width: $screen-xl - 1) {
+    margin-bottom: 32px;
+  }
+
+  &__list {
+    @media screen and (min-width: $screen-sm) and (max-width: $screen-xl - 1) {
+      display: flex;
+      flex-wrap: wrap;
+      position: relative;
+
+      &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-bottom: 1px solid #fff;
+      }
+    }
+  }
+  
+  &__item {
+    //@media screen and (max-width: $screen-md - 1) {
+    //  flex: 1 0 33.3333%;
+    //}
+    @media screen and (min-width: $screen-sm) and (max-width: $screen-xl - 1) {
+      flex: 1 0 33.3333%;
+      border-left: 1px solid #E6E6E6;
+      &:nth-child(3n+1) {
+        border-left-color: transparent;
+      }
+    }
+    &:not(:last-child) {
+      border-bottom: 1px solid #E6E6E6;
+    }
+
+    a {
+      display: block;
+      font-family: $font-family--lucidagrande;
+      font-weight: 400;
+      font-size: 11px;
+      letter-spacing: 0.4px;
+      line-height: (16 / 11);
+      text-transform: uppercase;
+      padding: 20px 32px;
+
+      @media screen and (min-width: $screen-sm) and (max-width: $screen-xl - 1) {
+        padding-left: 8px;
+        padding-right: 8px;
+        text-align: center;
+      }
+    }
+  }
+}

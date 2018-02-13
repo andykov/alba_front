@@ -1,0 +1,22 @@
+mixin form-login()
+	#form-login.js-form-login.form-login(style="display: none;")
+		.form-login__head
+			span Вход
+			a(href="#") Регистрация
+		.form-login__social
+		form
+			| <label class="field-text">
+			|  <span class="field-text__name">E-mail</span>
+			|  <span class="field-text__input-wrap">
+			|    <input class="field-text__input" type="text" placeholder="input[type=text]">
+			|  </span>
+			| </label>
+			| <label class="field-text">
+			|  <span class="field-text__name">Пароль</span>
+			|  <span class="field-text__input-wrap">
+			|    <input class="field-text__input" type="text" placeholder="input[type=text]">
+			|  </span>
+			| </label>
+			| <div class="field-control">
+			| 	<input class="btn" type="submit" value="Войти">
+			| </div>

@@ -1,0 +1,3 @@
+mixin svg-icon(svg_id, svg_width, svg_height, svg_class)
+	svg.icon-svg(class=svg_class,aria-hidden='true',width=svg_width,height=svg_height)
+		use(xlink:href='img/svg/sprite-svg.svg#' + svg_id)

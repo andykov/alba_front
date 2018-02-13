@@ -1,0 +1,164 @@
+.footer {
+  &__top,
+  &__bottom {
+    //@media screen and (max-width: $screen-md - 1) {
+    //  padding-left: 16px;
+    //  padding-right: 16px;
+    //}
+  }
+  &-nav {
+    padding-top: 30px;
+    position: relative;
+    @include row(32px, 32px, 48px, 24px, 32px, 40px);
+
+    @media screen and (min-width: $screen-md) {
+      padding-top: 40px;
+    }
+    @media screen and (min-width: $screen-lg) {
+      padding-top: 72px;
+    }
+
+    &__title {
+      font-family: $font-family--lucidagrande;
+      font-size: 15px;
+      font-weight: 700;
+      line-height: (20 / 15);
+      margin-bottom: 8px;
+      @media screen and (min-width: $screen-md) {
+        margin-bottom: 10px;
+      }
+      @media screen and (min-width: $screen-lg) {
+        margin-bottom: 28px;
+      }
+    }
+
+    &__item {
+      margin-bottom: 5px;
+      @media screen and (min-width: $screen-md) {
+        margin-bottom: 0;
+      }
+
+      a {
+        font-size: 13px;
+        line-height: (23 / 13);
+        letter-spacing: 0.3px;
+        @media screen and (min-width: $screen-md) {
+          font-size: 16px;
+          line-height: (32 / 16);
+          letter-spacing: 0.4px;
+        }
+        @media screen and (min-width: $screen-lg) {
+          line-height: (28 / 16);
+        }
+      }
+    }
+
+
+    &__col {
+      margin-bottom: 44px;
+
+      @include col(xs, 6, 12, 32px);
+      @include col(sm, 6, 12, 32px);
+      @include col(md, 4, 12, 48px);
+      @include col(lg, 2, 12, 24px);
+      @include col(xl, 2, 12, 32px);
+      @include col(xxl, 2, 15, 40px);
+
+      @media screen and (min-width: $screen-lg) and (max-width: $screen-xxl - 1) {
+        &--moving {
+          position: absolute;
+          bottom: 0;
+        }
+      }
+    }
+  }
+
+  &-contact {
+    &__phone {
+      font-family: $font-family--montserrat;
+      font-weight: 900;
+      font-size: 16px;
+      line-height: (19 / 16);
+      letter-spacing: -0.1px;
+
+      @media screen and (min-width: $screen-md) and (max-width: $screen-lg - 1) {
+        font-size: 21px;
+        line-height: (25 / 21);
+        letter-spacing: -0.13px;
+      }
+      @media screen and (min-width: $screen-lg) and (max-width: $screen-xl - 1) {
+        font-size: 16px;
+        line-height: (19 / 16);
+        letter-spacing: -0.1px;
+      }
+      @media screen and (min-width: $screen-xl) {
+        font-size: 21px;
+        line-height: (25 / 21);
+        letter-spacing: -0.13px;
+      }
+    }
+    &__online {
+      a {
+        display: block;
+        border: 2px solid #60D3D5;
+        font-family: $font-family--montserrat;
+        font-size: 11px;
+        font-weight: 700;
+        text-transform: uppercase;
+        line-height: (16 / 11);
+        letter-spacing: ((16 * 3.64) / 100)+px;
+        color: #20A7A8;
+        padding: 17px 0 19px;
+
+        span {
+
+        }
+      }
+    }
+  }
+  
+  &__bottom {
+    background-color: #282828;
+
+    font-size: 14px;
+    line-height: (19 / 14);
+    color: #A0A0A0;
+    padding-top: 31px;
+    padding-bottom: 31px;
+
+    @media screen and (min-width: $screen-md) {
+      padding-left: 32px;
+      padding-right: 32px;
+      margin-left: -16px;
+      margin-right: -16px;
+
+    }
+    @media screen and (min-width: $screen-lg) {
+      display: flex;
+      justify-content: space-between;
+      padding-left: 36px;
+      padding-right: 36px;
+    }
+    @media screen and (min-width: $screen-xl) {
+      padding-left: 43px;
+      padding-right: 43px;
+    }
+    @media screen and (min-width: $screen-xxl) {
+      padding-left: 48px;
+      padding-right: 48px;
+    }
+
+    a {
+      color: #A0A0A0;
+    }
+    span {
+      a {
+        color: #fff;
+      }
+    }
+
+    &__col {
+
+    }
+  }
+}

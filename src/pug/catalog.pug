@@ -1,0 +1,445 @@
+extends templates/main
+	
+block title
+	title Главная страница
+
+block content
+
+
+	.filter
+		.filter__inner
+			form#filter.filter__form.filter__form--priority
+				input(id="filter-submit" type="submit" hidden)
+				span.filter__title Фильтры:
+				ul.filter__list
+					li.filter__item
+						button(type="button" id="dAvailable" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Наличие
+						.filter__dropdown(aria-labelledby="dAvailable" data-dont-close)
+							.filter__dropdown-inner
+								label.field-checkbox
+									span.field-checkbox__input-wrap
+										input.field-checkbox__input(type="checkbox")
+										span.field-checkbox__name
+											| Есть в магазинах
+								button(type="button").filter__apply.btn Применить
+					li.filter__item
+						button(type="button" id="dPrice" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Цена
+						ul.filter__dropdown(aria-labelledby="dPrice" data-dont-close)
+							.filter__dropdown-inner
+								label.field-checkbox
+									span.field-checkbox__input-wrap
+										input.field-checkbox__input(type="checkbox")
+										span.field-checkbox__name
+											| Со скидкой
+								label.field-checkbox
+									span.field-checkbox__input-wrap
+										input.field-checkbox__input(type="checkbox")
+										span.field-checkbox__name
+											| Outlet
+								label.field-radio
+									span.field-radio__input-wrap
+										input.field-radio__input(type="radio" name="f-price")
+										span.field-radio__name
+											| До 2990
+								label.field-radio
+									span.field-radio__input-wrap
+										input.field-radio__input(type="radio" name="f-price")
+										span.field-radio__name
+											| До 4990
+								label.field-radio
+									span.field-radio__input-wrap
+										input.field-radio__input(type="radio" name="f-price")
+										span.field-radio__name
+											| До 7990
+								label.field-radio
+									span.field-radio__input-wrap
+										input.field-radio__input(type="radio" name="f-price")
+										span.field-radio__name
+											| Более 7990
+								button(type="button").filter__apply.btn Применить
+					li.filter__item
+						button(type="button" id="dColor" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Цвет
+						.filter__dropdown(aria-labelledby="dColor" data-dont-close)
+							.filter__dropdown-inner
+								.colors
+									label.colors__item
+										input(type="checkbox" hidden)
+										span(style="background-color:#F5F5DC;")
+									label.colors__item
+										input(type="checkbox" hidden)
+										span(style="background-color:#0000FF;")
+									label.colors__item
+										input(type="checkbox" hidden)
+										span(style="background-color:#000000;")
+									label.colors__item
+										input(type="checkbox" hidden)
+										span(style="background-color:#00FF00;")
+									label.colors__item
+										input(type="checkbox" hidden)
+										span(style="background-color:#FF5300;")
+									label.colors__item
+										input(type="checkbox" hidden)
+										span(style="background-color:#5A009D;")
+									label.colors__item
+										input(type="checkbox" hidden)
+										span(style="background-color:#ffff00;")
+									label.colors__item
+										input(type="checkbox" hidden)
+										span(style="background-color:#964B00;")
+									label.colors__item
+										input(type="checkbox" hidden)
+										span(style="background-color:#FF0000;")
+									label.colors__item
+										input(type="checkbox" hidden)
+										span(style="background-color:#FFFFFF;")
+									label.colors__item
+										input(type="checkbox" hidden)
+										span(style="background-color:#858585;")
+									label.colors__item
+										input(type="checkbox" hidden)
+										span(style="background-color:#61C3FF;")
+									label.colors__item
+										input(type="checkbox" hidden)
+										span(style="background-color:#FFCBDB;")
+								button(type="button").filter__apply.btn Применить
+
+					li.filter__item
+						button(type="button" id="dMaterial" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Материал
+						.filter__dropdown(aria-labelledby="dMaterial" data-dont-close)
+							.filter__dropdown-inner
+								label.field-checkbox
+									span.field-checkbox__input-wrap
+										input.field-checkbox__input(type="checkbox")
+										span.field-checkbox__name
+											| велюр
+								label.field-checkbox
+									span.field-checkbox__input-wrap
+										input.field-checkbox__input(type="checkbox")
+										span.field-checkbox__name
+											| кожа искусственная
+								label.field-checkbox
+									span.field-checkbox__input-wrap
+										input.field-checkbox__input(type="checkbox")
+										span.field-checkbox__name
+											| кожа натуральная
+								label.field-checkbox
+									span.field-checkbox__input-wrap
+										input.field-checkbox__input(type="checkbox")
+										span.field-checkbox__name
+											| кожа лакированная натуральная
+								label.field-checkbox
+									span.field-checkbox__input-wrap
+										input.field-checkbox__input(type="checkbox")
+										span.field-checkbox__name
+											| мех натуральный
+								label.field-checkbox
+									span.field-checkbox__input-wrap
+										input.field-checkbox__input(type="checkbox")
+										span.field-checkbox__name
+											| нубук
+								label.field-checkbox
+									span.field-checkbox__input-wrap
+										input.field-checkbox__input(type="checkbox")
+										span.field-checkbox__name
+											| резина
+								label.field-checkbox
+									span.field-checkbox__input-wrap
+										input.field-checkbox__input(type="checkbox")
+										span.field-checkbox__name
+											| синтетический материал
+								label.field-checkbox
+									span.field-checkbox__input-wrap
+										input.field-checkbox__input(type="checkbox")
+										span.field-checkbox__name
+											| текстиль
+								button(type="button").filter__apply.btn Применить
+					li.filter__item
+						button(id="dSize" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Размер
+						.filter__dropdown(aria-labelledby="dSize" data-dont-close)
+							.filter__dropdown-inner
+								.js-tabs.sizes
+									.sizes__head
+										.sizes__type
+											span(data-tab-btn="size-ru").active ru
+											span(data-tab-btn="size-uk") uk
+											span(data-tab-btn="size-us") us
+									#size-ru.sizes__list(data-tab-body).active
+										label.sizes__item
+											input(type="checkbox")
+											span 35
+										label.sizes__item
+											input(type="checkbox")
+											span 36
+										label.sizes__item
+											input(type="checkbox")
+											span 37
+										label.sizes__item
+											input(type="checkbox")
+											span 37,5
+										label.sizes__item
+											input(type="checkbox")
+											span 38
+										label.sizes__item
+											input(type="checkbox")
+											span 38,5
+										label.sizes__item
+											input(type="checkbox")
+											span 39
+										label.sizes__item
+											input(type="checkbox")
+											span 40
+										label.sizes__item
+											input(type="checkbox")
+											span 41
+										label.sizes__item
+											input(type="checkbox")
+											span 42
+									#size-uk.sizes__list(data-tab-body)
+										label.sizes__item
+											input(type="checkbox")
+											span 3 1/2
+										label.sizes__item
+											input(type="checkbox")
+											span 4
+										label.sizes__item
+											input(type="checkbox")
+											span 5
+										label.sizes__item
+											input(type="checkbox")
+											span 6
+										label.sizes__item
+											input(type="checkbox")
+											span 6 1/2
+										label.sizes__item
+											input(type="checkbox")
+											span 7
+										label.sizes__item
+											input(type="checkbox")
+											span 7 1/2
+										label.sizes__item
+											input(type="checkbox")
+											span 8
+										label.sizes__item
+											input(type="checkbox")
+											span 9 1/2
+										label.sizes__item
+											input(type="checkbox")
+											span 10
+									#size-us.sizes__list(data-tab-body)
+										label.sizes__item
+											input(type="checkbox")
+											span 5 1/2
+										label.sizes__item
+											input(type="checkbox")
+											span 6
+										label.sizes__item
+											input(type="checkbox")
+											span 7
+										label.sizes__item
+											input(type="checkbox")
+											span 8
+										label.sizes__item
+											input(type="checkbox")
+											span 8 1/2
+										label.sizes__item
+											input(type="checkbox")
+											span 9
+										label.sizes__item
+											input(type="checkbox")
+											span 9 1/2
+										label.sizes__item
+											input(type="checkbox")
+											span 10
+										label.sizes__item
+											input(type="checkbox")
+											span 11 1/2
+										label.sizes__item
+											input(type="checkbox")
+											span 12
+								button(type="button").filter__apply.btn Применить
+					li.filter__item
+						button(type="button" id="dSeason" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Сезон
+						.filter__dropdown(aria-labelledby="dSeason" data-dont-close)
+							.filter__dropdown-inner
+								label.field-checkbox
+									span.field-checkbox__input-wrap
+										input.field-checkbox__input(type="checkbox")
+										span.field-checkbox__name
+											| Всесезон
+								label.field-checkbox
+									span.field-checkbox__input-wrap
+										input.field-checkbox__input(type="checkbox")
+										span.field-checkbox__name
+											| Демисезон
+								label.field-checkbox
+									span.field-checkbox__input-wrap
+										input.field-checkbox__input(type="checkbox")
+										span.field-checkbox__name
+											| Зима
+								label.field-checkbox
+									span.field-checkbox__input-wrap
+										input.field-checkbox__input(type="checkbox")
+										span.field-checkbox__name
+											| Лето
+								button(type="button").filter__apply.btn Применить
+					li.filter__item
+						button(type="button" id="dStyle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Стиль
+						.filter__dropdown(aria-labelledby="dStyle" data-dont-close)
+							.filter__dropdown-inner
+								label.field-checkbox
+									span.field-checkbox__input-wrap
+										input.field-checkbox__input(type="checkbox")
+										span.field-checkbox__name
+											| Casual
+								label.field-checkbox
+									span.field-checkbox__input-wrap
+										input.field-checkbox__input(type="checkbox")
+										span.field-checkbox__name
+											| Classic
+								label.field-checkbox
+									span.field-checkbox__input-wrap
+										input.field-checkbox__input(type="checkbox")
+										span.field-checkbox__name
+											| Fashion
+								button(type="button").filter__apply.btn Применить
+					li.filter__item
+						button(type="button" id="dHell" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Высота каблука
+						.filter__dropdown(aria-labelledby="dHell" data-dont-close)
+							.filter__dropdown-inner
+								label.field-checkbox
+									span.field-checkbox__input-wrap
+										input.field-checkbox__input(type="checkbox")
+										span.field-checkbox__name
+											| Высокий
+								label.field-checkbox
+									span.field-checkbox__input-wrap
+										input.field-checkbox__input(type="checkbox")
+										span.field-checkbox__name
+											| Низкий
+								label.field-checkbox
+									span.field-checkbox__input-wrap
+										input.field-checkbox__input(type="checkbox")
+										span.field-checkbox__name
+											| Средний
+								button(type="button").filter__apply.btn Применить
+
+				.filter__more
+					button.filter__more-btn(type="button") ЕЩЕ
+					.filter__more-dropdown.hidden(data-dont-close)
+						ul.filter__more-list
+
+			form#sorting.filter__form.filter__form--sorting
+				input(id="sorting-submit" type="submit" hidden)
+				span.filter__title Сортировка:
+				ul.filter__list
+					li.filter__item
+						button(type="button" id="dAvailable" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Наличие
+						//.filter__dropdown(aria-labelledby="dAvailable" data-dont-close)
+						//	.filter__dropdown-inner
+						//		label.field-checkbox
+						//			span.field-checkbox__input-wrap
+						//				input.field-checkbox__input(type="checkbox")
+						//				span.field-checkbox__name
+						//					| Есть в магазинах
+						//		button(type="button").filter__apply.btn Применить
+
+
+	.container
+		.catalog
+			.catalog__item.catalog__item--banner
+				a(href="#").banner
+					img(src="img/content/catalog-banner.jpg")
+					.banner__text
+						span.banner__text-small Ликвидация коллекции
+						span.banner__text-large -70%
+
+			.catalog__item
+				+product('https://www.the-alba.com/upload/resize_cache/iblock/615/400_400_0/1103048201311_2-min.jpg', 'Сапожки', true, true, true, true)
+			.catalog__item
+				+product('https://www.the-alba.com/upload/resize_cache/iblock/615/400_400_0/1103048201311_2-min.jpg', 'Сапожки', true, false, false, true)
+			.catalog__item
+				+product('https://www.the-alba.com/upload/resize_cache/iblock/615/400_400_0/1103048201311_2-min.jpg', 'Сапожки', false, true, false, true)
+			.catalog__item
+				+product('https://www.the-alba.com/upload/resize_cache/iblock/615/400_400_0/1103048201311_2-min.jpg', 'Сапожки', true, false, true, true)
+			.catalog__item
+				+product('https://www.the-alba.com/upload/resize_cache/iblock/615/400_400_0/1103048201311_2-min.jpg', 'Сапожки', false, true, true, true)
+			.catalog__item
+				+product('https://www.the-alba.com/upload/resize_cache/iblock/615/400_400_0/1103048201311_2-min.jpg', 'Сапожки', false, false, false, true)
+			.catalog__item
+				+product('https://www.the-alba.com/upload/resize_cache/iblock/615/400_400_0/1103048201311_2-min.jpg', 'Сапожки', false, false, false, true)
+			.catalog__item
+				+product('https://www.the-alba.com/upload/resize_cache/iblock/615/400_400_0/1103048201311_2-min.jpg', 'Сапожки', false, false, false, true)
+			.catalog__item
+				+product('https://www.the-alba.com/upload/resize_cache/iblock/615/400_400_0/1103048201311_2-min.jpg', 'Сапожки', false, false, false, true)
+			.catalog__item
+				+product('https://www.the-alba.com/upload/resize_cache/iblock/615/400_400_0/1103048201311_2-min.jpg', 'Сапожки', false, false, false, true)
+			.catalog__item
+				+product('https://www.the-alba.com/upload/resize_cache/iblock/615/400_400_0/1103048201311_2-min.jpg', 'Сапожки', false, false, false, true)
+			.catalog__item
+				+product('https://www.the-alba.com/upload/resize_cache/iblock/615/400_400_0/1103048201311_2-min.jpg', 'Сапожки', false, false, false, true)
+			.catalog__item
+				+product('https://www.the-alba.com/upload/resize_cache/iblock/615/400_400_0/1103048201311_2-min.jpg', 'Сапожки', false, false, false, true)
+			.catalog__item
+				+product('https://www.the-alba.com/upload/resize_cache/iblock/615/400_400_0/1103048201311_2-min.jpg', 'Сапожки', false, false, false, true)
+			.catalog__item
+				+product('https://www.the-alba.com/upload/resize_cache/iblock/615/400_400_0/1103048201311_2-min.jpg', 'Сапожки', false, false, false, true)
+			.catalog__item
+				+product('https://www.the-alba.com/upload/resize_cache/iblock/615/400_400_0/1103048201311_2-min.jpg', 'Сапожки', false, false, false, true)
+			.catalog__item
+				+product('https://www.the-alba.com/upload/resize_cache/iblock/615/400_400_0/1103048201311_2-min.jpg', 'Сапожки', false, false, false, true)
+			.catalog__item
+				+product('https://www.the-alba.com/upload/resize_cache/iblock/615/400_400_0/1103048201311_2-min.jpg', 'Сапожки', false, false, false, true)
+			.catalog__item
+				+product('https://www.the-alba.com/upload/resize_cache/iblock/615/400_400_0/1103048201311_2-min.jpg', 'Сапожки', false, false, false, true)
+			.catalog__item
+				+product('https://www.the-alba.com/upload/resize_cache/iblock/615/400_400_0/1103048201311_2-min.jpg', 'Сапожки', false, false, false, true)
+			.catalog__item
+				+product('https://www.the-alba.com/upload/resize_cache/iblock/615/400_400_0/1103048201311_2-min.jpg', 'Сапожки', false, false, false, true)
+			.catalog__item
+				+product('https://www.the-alba.com/upload/resize_cache/iblock/615/400_400_0/1103048201311_2-min.jpg', 'Сапожки', false, false, false, true)
+			.catalog__item
+				+product('https://www.the-alba.com/upload/resize_cache/iblock/615/400_400_0/1103048201311_2-min.jpg', 'Сапожки', false, false, false, true)
+			.catalog__item
+				+product('https://www.the-alba.com/upload/resize_cache/iblock/615/400_400_0/1103048201311_2-min.jpg', 'Сапожки', false, false, false, true)
+			.catalog__item
+				+product('https://www.the-alba.com/upload/resize_cache/iblock/615/400_400_0/1103048201311_2-min.jpg', 'Сапожки', false, false, false, true)
+			.catalog__item
+				+product('https://www.the-alba.com/upload/resize_cache/iblock/615/400_400_0/1103048201311_2-min.jpg', 'Сапожки', false, false, false, true)
+			.catalog__item
+				+product('https://www.the-alba.com/upload/resize_cache/iblock/615/400_400_0/1103048201311_2-min.jpg', 'Сапожки', false, false, false, true)
+			.catalog__item
+				+product('https://www.the-alba.com/upload/resize_cache/iblock/615/400_400_0/1103048201311_2-min.jpg', 'Сапожки', false, false, false, true)
+		ul.pagination
+			li.pagination__prev
+				a(href="")
+					| <svg width="24" height="6" viewBox="0 0 24 6" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><use xlink:href="#path0_fill" transform="matrix(-1 0 0 1 6 0)"/><use xlink:href="#path1_fill" transform="matrix(-1 0 0 1 24 2)"/><defs><path id="path0_fill" fill-rule="evenodd" d="M6 2.5v1L0 6V0l6 2.5z"/><path id="path1_fill" fill-rule="evenodd" d="M0 0h18v2H0V0z"/></defs></svg>
+			li.pagination__item
+				a(href="") 1
+			li.pagination__item
+				a(href="") 2
+			li.pagination__next
+				a(href="")
+					| <svg width="24" height="6" viewBox="0 0 24 6" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><use xlink:href="#path0_fill" transform="translate(18)"/><use xlink:href="#path1_fill" transform="translate(0 2)"/><defs><path id="path0_fill" fill-rule="evenodd" d="M6 2.5v1L0 6V0l6 2.5z"/><path id="path1_fill" fill-rule="evenodd" d="M0 0h18v2H0V0z"/></defs></svg>
+		.catalog-text
+			.row.justify-content-center
+				.col-lg-8
+					p Туфли – основа гардероба современной женщины. И особой популярностью у представительниц прекрасного пола пользуется обувь итальянского производства, сочетающая в себе элегантность внешнего вида, высокий уровень комфорта и великолепное качество. Компания ALBA является прямым поставщиком продукции известных мировых брендов. В нашем интернет-магазине можно недорого купить женские туфли для любого сезона, выбрав модель под индивидуальные запросы.
+
+	.js-collapse.seo-text
+		.container
+			.row
+				.col-xs-12.col-lg-4.col-xxl-5
+					h4 Качественная обувь
+					p Качественная обувь – это залог повседневного комфорта и безупречности внешнего вида. Интернет-магазин ALBA тесно сотрудничает с ведущими европейскими фабриками, поставляя на российский рынок продукцию высокого качества по умеренным ценам. Если вам нужна модная женская обувь, в которой сочетаются изысканный дизайн, удобство и долговечность, знакомьтесь с ассортиментом нашего онлайн-каталога.
+				.col-xs-12.col-lg-4.col-xxl-5(data-collapse-body)
+					h4 Особенности нашего ассортимента
+					p Наш каталог включает сотни наименований доступной по цене женской обуви на любой вкус и сезон. Вы легко сможете подобрать у нас ботинки, ботильоны, ботфорты, полуботинки, мокасины, сапоги, туфли, а также стильные балетки, босоножки, сабо и сандалии. Представленный выбор включает повседневную и элегантную вечернюю обувь, а также экстравагантные модели для любительниц оригинальных образов. Каждая коллекция предлагает невероятное разнообразие вариантов исполнения верха, подошвы и каблуков, расцветок и декора. Кроме того, у нас доступен широкий размерный ряд, который включает и нестандартные модели с увеличенной колодкой.
+				.col-xs-12.col-lg-4.col-xxl-5(data-collapse-body)
+					h4 Преимущества предлагаемой обуви
+					p Качественные материалы пошива: натуральные нубук, кожа и мех, кожзам и текстиль.
+						| Все модели обладают безупречным кроем, который обеспечит вас безусловным комфортом в любую погоду.
+						| Роскошный дизайн, который способен подчеркнуть вашу индивидуальность и безупречный вкус.
+						| Недорого купить женскую обувь в интернет-магазине ALBA вам помогут регулярные распродажи и акции. Знакомьтесь с нашим ассортиментом и приобретайте понравившийся товар, сделав заказ по телефону или на сайте.
+			button(type="button" data-collapse-toggle) Полностью
+
+block js_libs

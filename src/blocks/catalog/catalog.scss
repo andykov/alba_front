@@ -1,0 +1,130 @@
+// В этом файле должны быть стили для БЭМ-блока .catalog , его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий... 
+
+.catalog {
+
+    @include row(32px, 32px, 48px, 24px, 32px, 40px);
+    @media (max-width: $screen-md - 1) {
+      padding-left: 4px;
+      padding-right: 4px;
+    }
+      flex-direction: row-reverse;
+
+	&__item {
+      margin-bottom: 16px;
+      position: relative;
+
+      @include make-col(6, $grid-columns, 8px);
+
+      @media screen and (min-width: $screen-sm) {
+        @include make-col(6, $grid-columns, 8px);
+      }
+      @media screen and (min-width: $screen-md) {
+        @include make-col(6, $grid-columns, 48px);
+        margin-bottom: 32px;
+      }
+      @media screen and (min-width: $screen-lg) {
+        @include make-col(3, $grid-columns, 24px);
+      }
+      @media screen and (min-width: $screen-xl) {
+        @include make-col(3, $grid-columns, 32px);
+        margin-bottom: 32px;
+      }
+      @media screen and (min-width: $screen-xxl) {
+        @include make-col(3, 15, 40px);
+        margin-bottom: 30px;
+      }
+
+      &:nth-child(3) {
+        @media screen and (max-width: $screen-lg - 1) {
+          margin-right: (6 * 100% / $grid-columns);
+        }
+      }
+      &:nth-child(5) {
+        @media screen and (min-width: $screen-lg) and (max-width: $screen-xl - 1) {
+          margin-right: (3 * 100% / $grid-columns);
+        }
+      }
+      &:nth-child(5) {
+        @media screen and (min-width: $screen-xl) and (max-width: $screen-xxl - 1) {
+          margin-right: (3 * 100% / $grid-columns);
+        }
+      }
+      &:nth-child(6) {
+        @include col-offset-right(xxl, 3, 15);
+      }
+
+      &--banner {
+        .banner {
+          position: absolute;
+          left: 0;
+          right: 0;
+          overflow: hidden;
+          padding-bottom: calc(200% + 16px);
+
+          @media screen and (min-width: $screen-md) {
+            padding-bottom: calc(200% + 32px);
+          }
+          @media screen and (min-width: $screen-xl) {
+            padding-bottom: calc(200% + 32px);
+          }
+          @media screen and (min-width: $screen-xxl) {
+            padding-bottom: calc(200% + 30px);
+          }
+
+          &:after {
+            content: '';
+            border: 1px solid #fff;
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            bottom: 8px;
+            left: 8px;
+            @media screen and (min-width: $screen-md) {
+              top: 40px;
+              right: 40px;
+              bottom: 40px;
+              left: 40px;
+            }
+            @media screen and (min-width: $screen-xxl) {
+              top: 32px;
+              right: 32px;
+              bottom: 32px;
+              left: 32px;
+            }
+          }
+
+          img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            max-width: 100%;
+            max-height: 100%;
+            margin: auto;
+          }
+
+          &__text {
+            position: absolute;
+            left: 20%;
+            top: 20%;
+            color: #fff;
+            &-small {
+              display: block;
+              font-family: $font-family--lucidagrande;
+              font-weight: 700;
+              font-size: 13px;
+              line-height: (20 / 13);
+            }
+            &-large {
+              display: block;
+              font-family: $font-family--montserrat;
+              font-weight: 900;
+              font-size: 41px;
+              line-height: (20 / 41);
+            }
+          }
+        }
+      }
+    }
+}

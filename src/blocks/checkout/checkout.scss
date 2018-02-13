@@ -1,0 +1,191 @@
+// В этом файле должны быть стили для БЭМ-блока .checkout , его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий... 
+
+.checkout {
+  
+    // формление заказа - корзина
+	&-basket {
+      background-color: #fff;
+      margin-bottom: 50px;
+
+      @media (max-width: $screen-md) {
+        margin-left: -(48px / 2);
+        margin-right: -(48px / 2);
+      }
+      @media (max-width: $screen-sm) {
+        margin-left: -(32px / 2);
+        margin-right: -(32px / 2);
+      }
+
+      &__head {
+        display: flex;
+        align-items: baseline;
+        padding: 26px 32px;
+        border-bottom: 1px solid #E6E6E6;
+
+        .icon-svg {
+
+        }
+
+        a {
+          font-family: $font-family--lucidagrande;
+          color: #A0A0A0;
+          margin-left: auto;
+          font-size: 11px;
+          font-weight: 700;
+          line-height: (16 / 11);
+          text-transform: uppercase;
+        }
+      }
+
+      &__item {
+        position: relative;
+        display: flex;
+        min-height: 175px;
+        border-bottom: 1px solid #E6E6E6;
+
+        @media screen and (min-width: $screen-md) {
+          padding: 0 20px;
+        }
+      }
+
+      &__remove {
+        position: absolute;
+        top: 16px;
+        right: 16px;
+      }
+
+      &__img {
+        flex-basis: 112px;
+        text-align: center;
+        align-self: center;
+
+        @media screen and (min-width: $screen-md) {
+          flex-basis: 220px;
+        }
+
+        img {
+          max-height: 79px;
+          max-width: 79px;
+          @media screen and (min-width: $screen-md) {
+            max-height: 131px;
+            min-width: 131px;
+          }
+        }
+      }
+
+      &__info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex: 1;
+        //padding-top: 45px;
+
+        &-row {
+          display: flex;
+          justify-content: space-between;
+          padding-top: 22px;
+          margin: auto 0;
+
+          & + .checkout-basket__info-row {
+            margin: auto 0 0;
+            padding-top: 0;
+          }
+        }
+      }
+
+      &__count {
+        > span {
+          font-family: $font-family--montserrat;
+          font-weight: 700;
+          font-size: 15px;
+          line-height: (20 / 15);
+        }
+      }
+
+      &__price {}
+
+      &__sizes {
+        margin-bottom: -1px;
+        width: 100%;
+      }
+
+      &__total {
+        background-color: #60D3D5;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 42px 16px 46px;
+
+        &-part {
+          text-align: center;
+
+          p {
+            font-family: $font-family--lucidagrande;
+            font-size: 11px;
+            line-height: (16 / 11);
+            letter-spacing: 0.4px;
+            text-transform: uppercase;
+            margin-bottom: 2px;
+          }
+
+          span {
+            font-family: $font-family--montserrat;
+            font-size: 18px;
+            font-weight: 700;
+            line-height: (26 / 18);
+            color: #fff;
+          }
+
+          &:last-child {
+            width: 100%;
+            padding-top: 25px;
+
+            span {
+              font-size: 26px;
+              font-weight: 900;
+              line-height: (32 / 26);
+            }
+          }
+        }
+      }
+    }
+
+    // формление заказа - форма
+    &-order {
+      background-color: #fff;
+      padding: 19px 72px 67px;
+
+      .list-dots-style {
+        font-size: 14px;
+      }
+
+      &__title {
+        margin-bottom: 30px;
+        display: flex;
+
+        .login-link {
+          a {
+            color: #1DB4B7;
+            &:hover {
+              color: #3C3C3C;
+            }
+          }
+        }
+      }
+
+      &__row {
+        border-bottom: 1px solid #E6E6E6;
+        padding: 40px 0 45px;
+      }
+
+      &__submit {
+        padding-top: 40px;
+
+        p {
+          font-size: 13px;
+          margin: 11px 0 0;
+        }
+      }
+    }
+}

@@ -1,0 +1,212 @@
+// В этом файле должны быть стили для БЭМ-блока .btn , его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, $media-условий...
+
+
+$gray-lighter:                hsl(0, 0%, 80%);
+$gray-lightest:               hsl(0, 0%, 90%);
+
+$btn-white: #fff;
+$btn-turq: #3dc4c3;
+$btn-green: #85cc58;
+$btn-gray: #E3E3E3;
+$btn-orange: #FFB000;
+
+$text-color:                  hsl(0, 0%, 10%);
+$line-height:                 1.375em;
+
+$field-padding-vertical:      10.5px;
+$field-padding-horizontal:    32px;
+
+$border-radius:               3px;
+
+.btn {
+  box-sizing: border-box;
+  display: inline-block;
+  margin: 0;
+  //padding: 11px 38.5px;
+  padding: 11px 16px;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  text-align: center;
+  font-size: 11px;
+  font-family: $font-family--montserrat;
+  font-weight: 500;
+  line-height: (16 / 11);
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: 1px;
+  border: 1px solid transparent;
+  outline: none;
+  background-color: #60D3D5;
+  background-image: none;
+  cursor: pointer;
+  transition: all $transition;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    color: #fff;
+    background-color: #1EB4B7;
+    box-shadow: 0 0 0 2px #1EB4B7;
+  }
+
+  &:active,
+  &:focus {
+    //$include field-focus;
+    background-color: #505050;
+    box-shadow: none;
+  }
+
+  //&--disabled,
+  //&:disabled {
+  //  opacity: $opacity;
+  //  color: $text-color;
+  //  background-color: $gray-lightest;
+  //  border-color: $gray-lighter;
+  //
+  //  // $at-root a.btn--disabled {
+  //  //   pointer-events: none;
+  //  // }
+  //}
+
+  &[class*="btn--"]:not(.btn--border) {
+    border-color: transparent;
+  }
+
+  &--border {
+    border: 1px solid;
+  }
+
+  // btn colors
+  &--gray {
+  	background-color: $btn-gray;
+  	color: $text-color;
+    &.btn--shadow {
+      &:hover,
+      &:focus {
+        color: #343434;
+        background-color: $btn-orange;
+      }
+    }
+  }
+
+  &--turq {
+  	background-color: $btn-turq;
+  	color: #fff;
+    letter-spacing: 0.8px;
+    &.btn--shadow {
+      &:hover,
+      &:focus {
+        color: #343434;
+        background-color: $btn-orange;
+      }
+    }
+  }
+
+  &--orange {
+  	background-color: $btn-orange;
+  	color: #343434;
+    &.btn--shadow {
+      &:hover,
+      &:focus {
+        color: #fff;
+        background-color: $btn-turq;
+      }
+    }
+  }
+
+  // btn sizes
+  &--wide {
+    width: 100%;
+  }
+
+  &--large {
+    font-size: 30px;
+    font-weight: 300;
+    line-height: (45 / 30);
+    padding-top: 19px;
+    padding-bottom: 19px;
+  }
+
+  // btn shadow
+  &--shadow {
+  	box-shadow: 0 6px 13px 0 rgba(0, 0, 0, 0.25);
+  }
+
+  &--arrow {
+    &:after {
+      content: '';
+      display: inline-block;
+      vertical-align: top;
+      margin-left: 8px;
+      background: url("../img/svg/arrow.svg") no-repeat;
+      background-size: contain;
+      width: 7px;
+      height: 14px;
+    }
+  }
+
+  // btc icons
+  &-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid transparent;
+    box-shadow: none;
+    font-size: 1rem;
+    position: relative;
+    user-select: none;
+    background-color: white;
+    color: #323232;
+    cursor: pointer;
+    text-align: center;
+    white-space: nowrap;
+    padding: 0;
+    vertical-align: middle;
+    width: 40px;
+    height: 40px;
+    transition: all $transition;
+
+
+    &--large {
+      width: 56px;
+      height: 56px;
+    }
+
+    &--black {
+      background-color: #000;
+      &:hover {
+        background-color: #60D3D5;
+        box-shadow: 0 0 0 2px #60D3D5;
+      }
+    }
+    &--blue {
+      background-color: #60D3D5;
+      &:hover {
+
+      }
+    }
+  }
+
+  //&-icon {
+  //  display: inline-flex;
+  //  outline: none;
+  //  svg {
+  //    margin: auto;
+  //  }
+  //  &--circle {
+  //    border-radius: 100%;
+  //    background-color: #fff;
+  //    padding: 2px;
+  //    width: 32px;
+  //    height: 32px;
+  //    border: 1px solid #60D3D5;
+  //    &:hover {
+  //      box-shadow: inset 0 0 0 0.5px #1EB4B7;
+  //      transform: scale(1.125);
+  //    }
+  //  }
+  //}
+}

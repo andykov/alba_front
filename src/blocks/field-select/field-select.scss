@@ -1,0 +1,25 @@
+// В этом файле должны быть стили для БЭМ-блока .field-select , его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий... 
+
+.field-select {
+  //display: inline-block;
+  .select2-selection {
+    outline: none;
+  }
+
+  //.select2-container--default .select2-results__option--highlighted[aria-selected] {
+  //  background-color: #00a9a4;
+  //}
+  //
+  //.select2-dropdown {
+  //  border: 1px solid #e5e5e5;
+  //  border-radius: 3px;
+  //  box-shadow: 0 6px 13px 0 rgba(0, 0, 0, 0.25);
+  //}
+
+	&--not-border {
+      .select2-selection {
+        border: 0;
+      }
+    }
+}

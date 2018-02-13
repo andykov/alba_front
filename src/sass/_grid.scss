@@ -1,0 +1,415 @@
+//1920 = ш1640 между40 от краев140
+//1366 = ш1216 между32 от краев75
+//1024 = ш936 между24 от краев44
+//768 = ш672 между48 от краев48
+
+//.container {
+//    @include container(32px, 48px, 48px, 32px, 40px);
+//}
+
+//.container-fluid {
+//    @media screen and (min-width: $screen-md) {
+//        padding-left: 32px;
+//        padding-right: 32px;
+//    }
+//    @media screen and (min-width: $screen-lg) {
+//        padding-left: 8px;
+//        padding-right: 8px;
+//    }
+//    @media screen and (min-width: $screen-xl) {
+//        padding-left: 32px;
+//        padding-right: 32px;
+//    }
+//}
+.container {
+    @include container(32px, 32px, 48px, 24px, 32px, 40px);
+}
+//.container2 {
+//    @include container(0, 0, 0, 0, 0, 0);
+//}
+.container-narrow {
+    //padding-left: 112px;
+    //padding-right: 112px;
+    @include col(xl, 8, 12, false);
+    @include col(xxl, 13, 15, false);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.row {
+    @include row(32px, 32px, 48px, 24px, 32px, 40px);
+}
+
+
+.col {
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+    padding-left: (32px / 2);
+    padding-right: (32px / 2);
+
+    @media screen and (min-width: $screen-sm) {
+        padding-left: (32px / 2);
+        padding-right: (32px / 2);
+    }
+    @media screen and (min-width: $screen-md) {
+        padding-left: (48px / 2);
+        padding-right: (48px / 2);
+    }
+    @media screen and (min-width: $screen-lg) {
+        padding-left: (24px / 2);
+        padding-right: (24px / 2);
+    }
+    @media screen and (min-width: $screen-xl) {
+        padding-left: (32px / 2);
+        padding-right: (32px / 2);
+    }
+    @media screen and (min-width: $screen-xxl) {
+        padding-left: (40px / 2);
+        padding-right: (40px / 2);
+    }
+}
+
+.jc-md-center {
+    justify-content: center
+}
+
+.col-1 { @include get-width(1, $grid-columns); }
+.col-2 { @include get-width(2, $grid-columns); }
+.col-3 { @include get-width(3, $grid-columns); }
+.col-4 { @include get-width(4, $grid-columns); }
+.col-5 { @include get-width(5, $grid-columns); }
+.col-6 { @include get-width(6, $grid-columns); }
+.col-7 { @include get-width(7, $grid-columns); }
+.col-8 { @include get-width(8, $grid-columns); }
+.col-9 { @include get-width(9, $grid-columns); }
+.col-10 { @include get-width(10, $grid-columns); }
+.col-11 { @include get-width(11, $grid-columns); }
+.col-12 { @include get-width(12, $grid-columns); }
+
+
+[class*="col-"] {
+    padding-left: (32px / 2);
+    padding-right: (32px / 2);
+    @media screen and (min-width: $screen-sm) {
+        padding-left: (32px / 2);
+        padding-right: (32px / 2);
+    }
+    @media screen and (min-width: $screen-md) {
+        padding-left: (48px / 2);
+        padding-right: (48px / 2);
+    }
+    @media screen and (min-width: $screen-lg) {
+        padding-left: (24px / 2);
+        padding-right: (24px / 2);
+    }
+    @media screen and (min-width: $screen-xl) {
+        padding-left: (32px / 2);
+        padding-right: (32px / 2);
+    }
+    @media screen and (min-width: $screen-xxl) {
+        padding-left: (40px / 2);
+        padding-right: (40px / 2);
+    }
+}
+
+
+// XS
+.col-xs-1 { @include col(xs, 1, $grid-columns, false); }
+.col-xs-2 { @include col(xs, 2, $grid-columns, false); }
+.col-xs-3 { @include col(xs, 3, $grid-columns, false); }
+.col-xs-4 { @include col(xs, 4, $grid-columns, false); }
+.col-xs-5 { @include col(xs, 5, $grid-columns, false); }
+.col-xs-6 { @include col(xs, 6, $grid-columns, false); }
+.col-xs-7 { @include col(xs, 7, $grid-columns, false); }
+.col-xs-8 { @include col(xs, 8, $grid-columns, false); }
+.col-xs-9 { @include col(xs, 9, $grid-columns, false); }
+.col-xs-10 { @include col(xs, 10, $grid-columns,false); }
+.col-xs-11 { @include col(xs, 11, $grid-columns,false); }
+.col-xs-12 { @include col(xs, 12, $grid-columns,false); }
+
+// SM
+.col-sm-1 { @include col(sm, 1, $grid-columns, false); }
+.col-sm-2 { @include col(sm, 2, $grid-columns, false); }
+.col-sm-3 { @include col(sm, 3, $grid-columns, false); }
+.col-sm-4 { @include col(sm, 4, $grid-columns, false); }
+.col-sm-5 { @include col(sm, 5, $grid-columns, false); }
+.col-sm-6 { @include col(sm, 6, $grid-columns, false); }
+.col-sm-7 { @include col(sm, 7, $grid-columns, false); }
+.col-sm-8 { @include col(sm, 8, $grid-columns, false); }
+.col-sm-9 { @include col(sm, 9, $grid-columns, false); }
+.col-sm-10 { @include col(sm, 10, $grid-columns, false); }
+.col-sm-11 { @include col(sm, 11, $grid-columns, false); }
+.col-sm-12 { @include col(sm, 12, $grid-columns, false); }
+
+// MD
+.col-md-1 { @include col(md, 1, $grid-columns, false); }
+.col-md-2 { @include col(md, 2, $grid-columns, false); }
+.col-md-3 { @include col(md, 3, $grid-columns, false); }
+.col-md-4 { @include col(md, 4, $grid-columns, false); }
+.col-md-5 { @include col(md, 5, $grid-columns, false); }
+.col-md-6 { @include col(md, 6, $grid-columns, false); }
+.col-md-7 { @include col(md, 7, $grid-columns, false); }
+.col-md-8 { @include col(md, 8, $grid-columns, false); }
+.col-md-9 { @include col(md, 9, $grid-columns, false); }
+.col-md-10 { @include col(md, 10, $grid-columns, false); }
+.col-md-11 { @include col(md, 11, $grid-columns, false); }
+.col-md-12 { @include col(md, 12, $grid-columns, false); }
+
+// LG
+.col-lg-1 { @include col(lg, 1, $grid-columns, false); }
+.col-lg-2 { @include col(lg, 2, $grid-columns, false); }
+.col-lg-3 { @include col(lg, 3, $grid-columns, false); }
+.col-lg-4 { @include col(lg, 4, $grid-columns, false); }
+.col-lg-5 { @include col(lg, 5, $grid-columns, false); }
+.col-lg-6 { @include col(lg, 6, $grid-columns, false); }
+.col-lg-7 { @include col(lg, 7, $grid-columns, false); }
+.col-lg-8 { @include col(lg, 8, $grid-columns, false); }
+.col-lg-9 { @include col(lg, 9, $grid-columns, false); }
+.col-lg-10 { @include col(lg, 10, $grid-columns, false); }
+.col-lg-11 { @include col(lg, 11, $grid-columns, false); }
+.col-lg-12 { @include col(lg, 12, $grid-columns, false); }
+
+// XL
+.col-xl-1 { @include col(xl, 1, $grid-columns, false); }
+.col-xl-2 { @include col(xl, 2, $grid-columns, false); }
+.col-xl-3 { @include col(xl, 3, $grid-columns, false); }
+.col-xl-4 { @include col(xl, 4, $grid-columns, false); }
+.col-xl-5 { @include col(xl, 5, $grid-columns, false); }
+.col-xl-6 { @include col(xl, 6, $grid-columns, false); }
+.col-xl-7 { @include col(xl, 7, $grid-columns, false); }
+.col-xl-8 { @include col(xl, 8, $grid-columns, false); }
+.col-xl-9 { @include col(xl, 9, $grid-columns, false); }
+.col-xl-10 { @include col(xl, 10, $grid-columns, false); }
+.col-xl-11 { @include col(xl, 11, $grid-columns, false); }
+.col-xl-12 { @include col(xl, 12, $grid-columns, false); }
+
+// XXL
+.col-xxl-1 { @include col(xxl, 1, 15, false); }
+.col-xxl-2 { @include col(xxl, 2, 15, false); }
+.col-xxl-3 { @include col(xxl, 3, 15, false); }
+.col-xxl-4 { @include col(xxl, 4, 15, false); }
+.col-xxl-5 { @include col(xxl, 5, 15, false); }
+.col-xxl-6 { @include col(xxl, 6, 15, false); }
+.col-xxl-7 { @include col(xxl, 7, 15, false); }
+.col-xxl-8 { @include col(xxl, 8, 15, false); }
+.col-xxl-9 { @include col(xxl, 9, 15, false); }
+.col-xxl-10 { @include col(xxl, 10, 15, false); }
+.col-xxl-11 { @include col(xxl, 11, 15, false); }
+.col-xxl-12 { @include col(xxl, 12, 15, false); }
+.col-xxl-13 { @include col(xxl, 13, 15, false); }
+.col-xxl-14 { @include col(xxl, 14, 15, false); }
+.col-xxl-15 { @include col(xxl, 15, 15, false); }
+
+// flex utils
+@include flex-utils-media();
+@include flex-utils-media(sm);
+@include flex-utils-media(md);
+@include flex-utils-media(lg);
+@include flex-utils-media(xl);
+@include flex-utils-media(xxl);
+
+.offset-sm-0 { @include col-offset(sm, 0, $grid-columns); }
+.offset-sm-1 { @include col-offset(sm, 1, $grid-columns); }
+.offset-sm-2 { @include col-offset(sm, 2, $grid-columns); }
+.offset-sm-3 { @include col-offset(sm, 3, $grid-columns); }
+.offset-sm-4 { @include col-offset(sm, 4, $grid-columns); }
+.offset-sm-5 { @include col-offset(sm, 5, $grid-columns); }
+.offset-sm-6 { @include col-offset(sm, 6, $grid-columns); }
+.offset-sm-7 { @include col-offset(sm, 7, $grid-columns); }
+.offset-sm-8 { @include col-offset(sm, 8, $grid-columns); }
+.offset-sm-9 { @include col-offset(sm, 9, $grid-columns); }
+.offset-sm-10 { @include col-offset(sm, 10, $grid-columns); }
+.offset-sm-11 { @include col-offset(sm, 11, $grid-columns); }
+
+.offset-md-0 { @include col-offset(md, 0, $grid-columns); }
+.offset-md-1 { @include col-offset(md, 1, $grid-columns); }
+.offset-md-2 { @include col-offset(md, 2, $grid-columns); }
+.offset-md-3 { @include col-offset(md, 3, $grid-columns); }
+.offset-md-4 { @include col-offset(md, 4, $grid-columns); }
+.offset-md-5 { @include col-offset(md, 5, $grid-columns); }
+.offset-md-6 { @include col-offset(md, 6, $grid-columns); }
+.offset-md-7 { @include col-offset(md, 7, $grid-columns); }
+.offset-md-8 { @include col-offset(md, 8, $grid-columns); }
+.offset-md-9 { @include col-offset(md, 9, $grid-columns); }
+.offset-md-10 { @include col-offset(md, 10, $grid-columns); }
+.offset-md-11 { @include col-offset(md, 11, $grid-columns); }
+
+.offset-lg-0 { @include col-offset(lg, 0, $grid-columns); }
+.offset-lg-1 { @include col-offset(lg, 1, $grid-columns); }
+.offset-lg-2 { @include col-offset(lg, 2, $grid-columns); }
+.offset-lg-3 { @include col-offset(lg, 3, $grid-columns); }
+.offset-lg-4 { @include col-offset(lg, 4, $grid-columns); }
+.offset-lg-5 { @include col-offset(lg, 5, $grid-columns); }
+.offset-lg-6 { @include col-offset(lg, 6, $grid-columns); }
+.offset-lg-7 { @include col-offset(lg, 7, $grid-columns); }
+.offset-lg-8 { @include col-offset(lg, 8, $grid-columns); }
+.offset-lg-9 { @include col-offset(lg, 9, $grid-columns); }
+.offset-lg-10 { @include col-offset(lg, 10, $grid-columns); }
+.offset-lg-11 { @include col-offset(lg, 11, $grid-columns); }
+
+.offset-xl-0 { @include col-offset(xl, 0, $grid-columns); }
+.offset-xl-1 { @include col-offset(xl, 1, $grid-columns); }
+.offset-xl-2 { @include col-offset(xl, 2, $grid-columns); }
+.offset-xl-3 { @include col-offset(xl, 3, $grid-columns); }
+.offset-xl-4 { @include col-offset(xl, 4, $grid-columns); }
+.offset-xl-5 { @include col-offset(xl, 5, $grid-columns); }
+.offset-xl-6 { @include col-offset(xl, 6, $grid-columns); }
+.offset-xl-7 { @include col-offset(xl, 7, $grid-columns); }
+.offset-xl-8 { @include col-offset(xl, 8, $grid-columns); }
+.offset-xl-9 { @include col-offset(xl, 9, $grid-columns); }
+.offset-xl-10 { @include col-offset(xl, 10, $grid-columns); }
+.offset-xl-11 { @include col-offset(xl, 11, $grid-columns); }
+
+.offset-xxl-0 { @include col-offset(xxl, 0, 15); }
+.offset-xxl-1 { @include col-offset(xxl, 1, 15); }
+.offset-xxl-2 { @include col-offset(xxl, 2, 15); }
+.offset-xxl-3 { @include col-offset(xxl, 3, 15); }
+.offset-xxl-4 { @include col-offset(xxl, 4, 15); }
+.offset-xxl-5 { @include col-offset(xxl, 5, 15); }
+.offset-xxl-6 { @include col-offset(xxl, 6, 15); }
+.offset-xxl-7 { @include col-offset(xxl, 7, 15); }
+.offset-xxl-8 { @include col-offset(xxl, 8, 15); }
+.offset-xxl-9 { @include col-offset(xxl, 9, 15); }
+.offset-xxl-10 { @include col-offset(xxl, 10, 15); }
+.offset-xxl-11 { @include col-offset(xxl, 11, 15); }
+.offset-xxl-12 { @include col-offset(xxl, 12, 15); }
+.offset-xxl-13 { @include col-offset(xxl, 13, 15); }
+.offset-xxl-14 { @include col-offset(xxl, 14, 15); }
+
+.no-gutters {
+    padding-left: 0;
+    padding-right: 0;
+
+    &-sm {
+        @media (min-width: $screen-sm) {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
+    &-md {
+        @media (min-width: $screen-md) {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
+    &-lg {
+        @media (min-width: $screen-lg) {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
+    &-xl {
+        @media (min-width: $screen-xl) {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
+    &-xxl {
+        @media (min-width: $screen-xxl) {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+}
+//[class*="col-"] {
+//    padding-left: (32px / 2);
+//    padding-right: (32px / 2);
+//    @media screen and (min-width: $screen-sm) {
+//        padding-left: (32px / 2);
+//        padding-right: (32px / 2);
+//    }
+//    @media screen and (min-width: $screen-md) {
+//        padding-left: (48px / 2);
+//        padding-right: (48px / 2);
+//    }
+//    @media screen and (min-width: $screen-lg) {
+//        padding-left: (24px / 2);
+//        padding-right: (24px / 2);
+//    }
+//    @media screen and (min-width: $screen-xl) {
+//        padding-left: (32px / 2);
+//        padding-right: (32px / 2);
+//    }
+//    @media screen and (min-width: $screen-xxl) {
+//        padding-left: (40px / 2);
+//        padding-right: (40px / 2);
+//    }
+//}
+.screen-stretch {
+    //margin-left: -(32px / 2);
+    //margin-right: -(32px / 2);
+
+
+
+    &-sm {
+        //@media (min-width: $screen-sm) {
+        //    margin-left: -(32px / 2);
+        //    margin-right: -(32px / 2);
+        //}
+        @media (max-width: $screen-sm) {
+            margin-left: -32px;
+            margin-right: -32px;
+        }
+    }
+
+    &-md {
+        //@media (min-width: $screen-md) {
+        //    margin-left: -(48px / 2);
+        //    margin-right: -(48px / 2);
+        //}
+        @media (max-width: $screen-md) {
+            margin-left: -48px;
+            margin-right: -48px;
+        }
+    }
+
+    &-lg {
+        //@media (min-width: $screen-lg) {
+        //    margin-left: -(24px / 2);
+        //    margin-right: -(24px / 2);
+        //}
+        @media (max-width: $screen-lg) {
+            margin-left: -24px;
+            margin-right: -24px;
+        }
+    }
+
+    &-xl {
+        //@media (min-width: $screen-xl) {
+        //    margin-left: -(32px / 2);
+        //    margin-right: -(32px / 2);
+        //}
+        @media (max-width: $screen-xl) {
+            margin-left: -32px;
+            margin-right: -32px;
+        }
+    }
+
+    &-xxl {
+        //@media (min-width: $screen-xxl) {
+        //    margin-left: -(40px / 2);
+        //    margin-right: -(40px / 2);
+        //}
+        @media (max-width: $screen-xxl) {
+            margin-left: -40px;
+            margin-right: -40px;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+

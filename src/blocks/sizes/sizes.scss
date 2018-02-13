@@ -1,0 +1,113 @@
+// В этом файле должны быть стили для БЭМ-блока .sizes , его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий... 
+
+.sizes {
+  //display: flex;
+
+  &__head {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__type {
+    font-family: $font-family--montserrat;
+    font-size: 11px;
+    font-weight: 700;
+    line-height: (16 / 11);
+    color: #A0A0A0;
+    text-transform: uppercase;
+    padding-bottom: 4px;
+    margin-bottom: 20px;
+
+    span {
+      display: inline-block;
+      margin-right: 12px;
+      cursor: pointer;
+
+      &[data-tab-btn] {
+        &.active {
+          color: #000;
+          border-bottom: 2px solid #60D3D5;
+        }
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding-bottom: 1px;
+
+    &[data-tab-body] {
+      display: none;
+
+      &.active {
+        display: flex;
+      }
+    }
+  }
+
+  &__item {
+    text-align: center;
+    color: #2E2E2E;
+    font-size: 12px;
+    letter-spacing: ((21 * 2.86) / 100)+px;
+    margin-right: -1px;
+    margin-bottom: -1px;
+    cursor: pointer;
+
+    @media screen and (min-width: $screen-xl) {
+      font-size: 14px;
+    }
+
+    input {
+      display: none;
+      &:checked ~ span {
+        color: #fff;
+        &:after {
+          top: 0;
+          background-color: #60D3D5;
+        }
+      }
+    }
+
+    span {
+      width: 40px;
+      height: 40px;
+      display: block;
+      position: relative;
+      border: 1px solid #E6E6E6;
+      z-index: 1;
+      line-height: 40px;
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: 100%;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: -1;
+        transition: top 0.3s;
+      }
+    }
+
+    &--text {
+      flex: 1;
+      max-width: 146px;
+
+      span {
+        width: auto;
+        font-size: 12px;
+        //padding: 0 12px;
+        text-align: center;
+        white-space: nowrap;
+
+        @media screen and (min-width: $screen-xl) {
+          font-size: 13px;
+        }
+      }
+    }
+  }
+}

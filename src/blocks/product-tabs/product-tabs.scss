@@ -1,0 +1,61 @@
+// В этом файле должны быть стили для БЭМ-блока .product-tabs , его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий... 
+
+.product-tabs {
+    //flex: 1;
+    //max-width: 1120px;
+    //@include make-col(11, 15, false);
+    @include col(md, 12, $grid-columns, false);
+    @include col(xl, 9, $grid-columns, false);
+    margin-right: auto;
+
+    @media screen and (min-width: $screen-lg) {
+      padding-right: 56px;
+    }
+    @media screen and (min-width: $screen-xl) {
+      //padding-right: 82px;
+    }
+
+	&__nav {
+      display: flex;
+      margin-bottom: 40px;
+      font-size: 14px;
+
+      ul {
+        display: flex;
+        align-items: flex-end;
+      }
+
+      li {
+        padding: 0 35px;
+
+        &.active {
+          a {
+            border-bottom-color: #60D3D5;
+          }
+        }
+      }
+
+      a {
+        display: block;
+        font-family: $font-family--montserrat;
+        font-weight: 700;
+        font-size: 11px;
+        text-transform: uppercase;
+        line-height: (16 / 11);
+        letter-spacing: 0.4px;
+        padding-bottom: 7px;
+        border-bottom: 2px solid transparent;
+      }
+    }
+
+    &__body {}
+
+    &__item {
+      display: none;
+
+      &.active {
+        display: block;
+      }
+    }
+}

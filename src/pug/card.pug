@@ -1,0 +1,264 @@
+extends templates/main
+	
+block title
+	title Главная страница
+
+block content
+
+	ul.breadcrumbs
+		li.breadcrumbs__item
+			a(href="#") A
+		li.breadcrumbs__item
+			a(href="#") Женская обувь
+		li.breadcrumbs__item
+			a(href="#") Ботинки
+
+	.card-detail
+		.product-gallery
+			.js-product-gallery-big.product-gallery__big
+				.product-gallery__item
+					img(src="https://www.the-alba.com/upload/resize_cache/iblock/7c9/1000_1000_1/1103048101301_1-min.jpg" class="zoom" data-magnify-src="https://www.the-alba.com/upload/resize_cache/iblock/7c9/1000_1000_1/1103048101301_1-min.jpg")
+				.product-gallery__item
+					img(src="https://www.the-alba.com/upload/resize_cache/iblock/8bb/1000_1000_1/1103048101301_2-min.jpg" class="zoom" data-magnify-src="https://www.the-alba.com/upload/resize_cache/iblock/8bb/1000_1000_1/1103048101301_2-min.jpg")
+				.product-gallery__item
+					img(src="https://www.the-alba.com/upload/resize_cache/iblock/e03/1000_1000_1/1103048101301_3-min.jpg" class="zoom" data-magnify-src="https://www.the-alba.com/upload/resize_cache/iblock/e03/1000_1000_1/1103048101301_3-min.jpg")
+				.product-gallery__item
+					img(src="https://www.the-alba.com/upload/resize_cache/iblock/f68/1000_1000_1/1103048101301_4-min.jpg" class="zoom" data-magnify-src="https://www.the-alba.com/upload/resize_cache/iblock/f68/1000_1000_1/1103048101301_4-min.jpg")
+				.product-gallery__item
+					img(src="https://www.the-alba.com/upload/resize_cache/iblock/7e5/1000_1000_1/1103048101301_5-min.jpg" class="zoom" data-magnify-src="https://www.the-alba.com/upload/resize_cache/iblock/7e5/1000_1000_1/1103048101301_5-min.jpg")
+			.js-product-gallery-thumb.product-gallery__thumb
+				.product-gallery__thumb-item
+					img(src="https://www.the-alba.com/upload/resize_cache/iblock/7c9/115_115_1/1103048101301_1-min.jpg")
+				.product-gallery__thumb-item
+					img(src="https://www.the-alba.com/upload/resize_cache/iblock/8bb/115_115_1/1103048101301_2-min.jpg")
+				.product-gallery__thumb-item
+					img(src="https://www.the-alba.com/upload/resize_cache/iblock/e03/115_115_1/1103048101301_3-min.jpg")
+				.product-gallery__thumb-item
+					img(src="https://www.the-alba.com/upload/resize_cache/iblock/f68/115_115_1/1103048101301_4-min.jpg")
+				.product-gallery__thumb-item
+					img(src="https://www.the-alba.com/upload/resize_cache/iblock/7e5/115_115_1/1103048101301_5-min.jpg")
+
+		.container
+			.product-holder
+				.product-info
+					.product-info__title Ботинки
+					.product-info__id 1621001001402
+					.product-info__price
+						.price
+							span(data-old-price="6000") 4800 руб.
+							span Экономия 1200 руб.
+					.product-info__color
+						span Цвет
+						a(href="#")
+							img(src="https://www.the-alba.com/upload/resize_cache/iblock/9a0/1000_1000_1/1669000801401_1.jpg" width="48px")
+						a(href="#")
+							img(src="https://www.the-alba.com/upload/resize_cache/iblock/9a0/1000_1000_1/1669000801401_1.jpg" width="48px")
+					.product-info__sizes
+						.js-tabs.sizes
+							.sizes__head
+								.sizes__title Размер
+								.sizes__type
+									span(data-tab-btn="size-ru").active ru
+									span(data-tab-btn="size-uk") uk
+									span(data-tab-btn="size-us") us
+								.sizes__how
+									a(href="#") Как определить
+							#size-ru.sizes__list(data-tab-body).active
+								label.sizes__item
+									input(type="checkbox")
+									span 35
+								label.sizes__item
+									input(type="checkbox")
+									span 36
+								label.sizes__item
+									input(type="checkbox")
+									span 37
+								label.sizes__item
+									input(type="checkbox")
+									span 37,5
+								label.sizes__item
+									input(type="checkbox")
+									span 38
+								label.sizes__item
+									input(type="checkbox")
+									span 38,5
+								label.sizes__item
+									input(type="checkbox")
+									span 39
+								label.sizes__item
+									input(type="checkbox")
+									span 40
+								label.sizes__item
+									input(type="checkbox")
+									span 41
+								label.sizes__item
+									input(type="checkbox")
+									span 42
+							#size-uk.sizes__list(data-tab-body)
+								label.sizes__item
+									input(type="checkbox")
+									span 3 1/2
+								label.sizes__item
+									input(type="checkbox")
+									span 4
+								label.sizes__item
+									input(type="checkbox")
+									span 5
+								label.sizes__item
+									input(type="checkbox")
+									span 6
+								label.sizes__item
+									input(type="checkbox")
+									span 6 1/2
+								label.sizes__item
+									input(type="checkbox")
+									span 7
+								label.sizes__item
+									input(type="checkbox")
+									span 7 1/2
+								label.sizes__item
+									input(type="checkbox")
+									span 8
+								label.sizes__item
+									input(type="checkbox")
+									span 9 1/2
+								label.sizes__item
+									input(type="checkbox")
+									span 10
+							#size-us.sizes__list(data-tab-body)
+								label.sizes__item
+									input(type="checkbox")
+									span 5 1/2
+								label.sizes__item
+									input(type="checkbox")
+									span 6
+								label.sizes__item
+									input(type="checkbox")
+									span 7
+								label.sizes__item
+									input(type="checkbox")
+									span 8
+								label.sizes__item
+									input(type="checkbox")
+									span 8 1/2
+								label.sizes__item
+									input(type="checkbox")
+									span 9
+								label.sizes__item
+									input(type="checkbox")
+									span 9 1/2
+								label.sizes__item
+									input(type="checkbox")
+									span 10
+								label.sizes__item
+									input(type="checkbox")
+									span 11 1/2
+								label.sizes__item
+									input(type="checkbox")
+									span 12
+
+					.product-info__buttons
+						a(href="").btn В корзину
+						//a(href="").btn
+						a(href="").btn Забронировать в магазине
+					p Доставим сегодня за 320 руб. (Москва)
+					a(href="#") О доставке
+					p Самовывоз, бесплатно, сегодня.
+					a(href="#") Магазины на карте
+
+				.product-desc
+					ul.product-desc__links
+						li
+							span Доставим сегодня за 320 руб. (Москва)
+							a(href="#") О доставке
+						li
+							span Самовывоз, бесплатно, сегодня.
+							a(href="#") Магазины на карте
+					ul.product-desc__list
+						li
+							span Высота каблука:
+							span низкий
+						li
+							span Материал верха:
+							span натуральная кожа
+						li
+							span Материал подошвы:
+							span резина
+						li
+							span Сезонность:
+							span демисезон
+						li
+							span Цвет:
+							span темно-синий
+					p Классический ботинки со шнурками на устойчивом каблуке, декорированные металлическими полукольцами. Комфортная обувь на каждый день
+
+
+				.product-tabs
+					.product-tabs__nav
+						span Ваш город: Москва
+						ul
+							li.active
+								a(href="#available") наличие в магазинах
+							li
+								a(href="#delivery") доставка и примерка
+							li
+								a(href="#payment") оплата
+							li
+								a(href="#reviews") отзывы
+					.product-tabs__body
+						#available.product-tabs__item.active
+							.shops
+								.shops-map
+									| <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A0606129cc3aca5dc22b848c942aeb0ca610a35559449df72f90b5e1db98305c9&amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>
+								.js-shops-list.shops-list
+									.shops-list__item
+										span
+											b ТЦ Метрополис
+										ul
+											li +7 495 721-88-25
+											li
+												span пн-чт: 10 22,
+												span пт-вс: 10 23
+											li
+												span площадь Киевского Вокзала, 2
+												a(href="#") на карте
+									.shops-list__item
+										span
+											b ТЦ Метрополис
+										ul
+											li +7 495 721-88-25
+											li 10 22
+											li
+												span Ленинградское шоссе, 116 а, стр. 4
+												a(href="#") на карте
+									.shops-list__item
+										span
+											b ТЦ Метрополис
+										ul
+											li +7 495 721-88-25
+											li
+												span пн-чт: 10 22,
+												span пт-вс: 10 23
+											li
+												span площадь Киевского Вокзала, 2
+												a(href="#") на карте
+									.shops-list__item
+										span
+											b ТЦ Метрополис
+										ul
+											li +7 495 721-88-25
+											li 10 22
+											li
+												span Ленинградское шоссе, 116 а, стр. 4
+												a(href="#") на карте
+						#delivery.product-tabs__item
+							| EMPTY ...
+						#payment.product-tabs__item
+							| EMPTY ...
+						#reviews.product-tabs__item
+							| EMPTY ...
+
+	+slider-product()
+
+
+block js_libs

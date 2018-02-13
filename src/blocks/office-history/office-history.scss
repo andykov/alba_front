@@ -1,0 +1,147 @@
+// В этом файле должны быть стили для БЭМ-блока .office-history , его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий... 
+.timeline-orders {
+  background-color: #fff;
+  padding-top: 84px;
+  padding-bottom: 59px;
+  margin-bottom: 96px;
+  @media screen and (max-width: $screen-md - 1) {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  @media screen and (min-width: $screen-md) {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+  @media screen and (min-width: $screen-xl) {
+    padding-left: 104px;
+    padding-right: 104px;
+  }
+  @media screen and (min-width: $screen-xxl) {
+    padding-left: 112px;
+    padding-right: 112px;
+  }
+
+  &__title {
+    margin-bottom: 64px;
+    h2 {
+      margin-bottom: 4px;
+    }
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+  &__list {
+    //max-width: 856px;
+    margin: 0 auto 58px;
+    border-top: 1px solid #E6E6E6;
+  }
+
+  &__head {
+    display: flex;
+    align-items: center;
+    padding: 19px 0;
+  }
+
+  &__item {
+    border-bottom: 1px solid #E6E6E6;
+  }
+
+  //&__btn {
+  //  .btn-icon {
+  //    vertical-align: middle;
+  //  }
+  //}
+
+  &__data {
+    display: inline-flex;
+    vertical-align: middle;
+    width: 100%;
+    @media screen and (max-width: $screen-md - 1) {
+      flex-wrap: wrap;
+    }
+
+    li {
+      font-size: 12px;
+      letter-spacing: 0.4px;
+      line-height: (21 / 12);
+      color: #505050;
+      padding-left: 16px;
+      white-space: nowrap;
+
+      @media screen and (max-width: $screen-md - 1) {
+        flex: 1 0 33.3333%;
+      }
+
+      @media screen and (min-width: $screen-md) {
+        font-size: 16px;
+        padding-left: 45px;
+        line-height: (22 / 16);
+
+
+        &:first-child {
+          padding-left: 28px;
+        }
+      }
+    }
+  }
+
+  &-units {
+
+    @media screen and (min-width: $screen-md) {
+      padding-left: 60px;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: (21 / 14);
+      letter-spacing: 0.4px;
+      margin: 21px 0 28px;
+    }
+
+    &__item {
+      background-color: #F8F8F8;
+      display: flex;
+      align-items: center;
+      position: relative;
+      padding: 1px 2px;
+      font-size: 12px;
+      @media screen and (min-width: $screen-md) {
+        font-size: 16px;
+      }
+      &:last-of-type {
+        padding-bottom: 2px;
+      }
+      &:first-of-type {
+        padding-top: 2px;
+      }
+
+
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        right: 24px;
+        left: 122px;
+        border-bottom: 1px solid #E6E6E6;
+        @media screen and (min-width: $screen-lg) {
+          right: 32px;
+          left: 126px;
+        }
+      }
+
+      li {
+        &:not(:first-child) {
+          margin-left: 32px;
+        }
+        &:last-child {
+          padding-left: 22px;
+        }
+        &:first-child {
+          max-width: 98px;
+        }
+      }
+    }
+  }
+}

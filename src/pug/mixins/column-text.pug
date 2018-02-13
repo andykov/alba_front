@@ -1,0 +1,14 @@
+mixin column-text(iconPath, iconSvg, title, text, buttonText, buttonColor)
+	.column-text
+		if iconPath
+			.column-text__icon
+				img(src=iconPath, alt="")
+		.column-text__title
+			=title
+		if text
+			.column-text__text
+				=text
+		if buttonText || buttonColor
+			.column-text__button
+				a.btn(href="#" class=buttonColor)
+					=buttonText

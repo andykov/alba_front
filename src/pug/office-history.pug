@@ -1,0 +1,88 @@
+extends templates/main
+	
+block title
+	title Главная страница
+
+block content
+	h1.content__title Личный кабинет
+	.container
+		.row
+			.col-12.col-xl-3.col-xxl-3
+				+sidenav()
+
+			.col-12.col-xl-9.col-xxl-12
+				.timeline-orders
+					.timeline-orders__title
+						h2.h1 История заказов
+						p Ваши личные данные надежно хранятся и будут автоматически заполнятся в форме оформления заказа
+
+					.timeline-orders__list
+						.timeline-orders__item.collapse.open
+							.timeline-orders__head
+								.timeline-orders__btn
+									button.btn-icon.btn-icon--v.btn-icon--circle(data-toggle="collapse")
+										| <svg xmlns="http://www.w3.org/2000/svg" width="10" height="7" viewBox="0 0 10 7">
+										| 	<polyline fill="none" stroke="#60D3D5" stroke-width="2" points="1 0 4.333 5 5.667 5 9 0" transform="translate(0 1)"/>
+										| </svg>
+								ul.timeline-orders__data
+									li Заказ 256156
+									li 25 дек. 2017
+									li 3 тов.
+									li 18 245 руб.
+									li Наличными
+									li.status-transit В пути
+							.timeline-orders-units.collapse__body
+								ul.timeline-orders-units__item
+									li
+										img(src="https://www.the-alba.com/upload/resize_cache/iblock/277/100_100_1/2813024401301_1.jpg")
+									li Туфли
+									li 5200 руб.
+								ul.timeline-orders-units__item
+									li
+										img(src="https://www.the-alba.com/upload/resize_cache/iblock/277/100_100_1/2813024401301_1.jpg")
+									li Туфли
+									li 5200 руб.
+								ul.timeline-orders-units__item
+									li
+										img(src="https://www.the-alba.com/upload/resize_cache/iblock/277/100_100_1/2813024401301_1.jpg")
+									li Туфли
+									li 5200 руб.
+								p Доставка курьером по адресу: г. Москва, Кулакова, д. 10, кв. 20
+						.timeline-orders__item
+							.timeline-orders__head
+								.timeline-orders__btn
+									button.btn-icon.btn-icon--v.btn-icon--circle(data-toggle="collapse")
+										| <svg xmlns="http://www.w3.org/2000/svg" width="10" height="7" viewBox="0 0 10 7">
+										|    <polyline fill="none" stroke="#60D3D5" stroke-width="2" points="1 0 4.333 5 5.667 5 9 0" transform="translate(0 1)"/>
+										| </svg>
+
+								ul.timeline-orders__data
+									li Заказ 256156
+									li 25 дек. 2017
+									li 4 тов.
+									li 23 567 руб.
+									li Картой
+									li.status-canceled Отменен
+						.timeline-orders__item
+							.timeline-orders__head
+								.timeline-orders__btn
+									button.btn-icon.btn-icon--v.btn-icon--circle(data-toggle="collapse")
+										| <svg xmlns="http://www.w3.org/2000/svg" width="10" height="7" viewBox="0 0 10 7">
+										|    <polyline fill="none" stroke="#60D3D5" stroke-width="2" points="1 0 4.333 5 5.667 5 9 0" transform="translate(0 1)"/>
+										| </svg>
+
+								ul.timeline-orders__data
+									li Заказ 256156
+									li 25 дек. 2017
+									li 3 тов.
+									li 18 245 руб.
+									li Наличными
+									li.status-done Доставлен
+					ul.pagination
+						li.pagination__prev
+							a(href="")
+						li.pagination__item
+							a(href="") 1
+						li.pagination__next
+							a(href="")
+block js_libs

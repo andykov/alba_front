@@ -1,0 +1,54 @@
+// В этом файле должны быть стили для БЭМ-блока .field-checkbox , его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий... 
+
+.field-checkbox {
+    padding-left: 39px;
+    position: relative;
+    cursor: pointer;
+
+    &__input-wrap {
+
+    }
+
+    &__input {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 0;
+      overflow: hidden;
+      visibility: hidden;
+      &:checked + .field-checkbox__name {
+        &:before {
+          background-image: url('../img/svg/icon-check.svg');
+        }
+      }
+    }
+
+	&__name {
+      &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        width: 24px;
+        height: 24px;
+        background-color: #60D3D5;
+        background-repeat: no-repeat;
+        background-position: center 3px;
+        transition: $transition;
+      }
+    }
+
+    &:hover {
+      .field-checkbox__name {
+        &:before {
+          background-color: #1EB4B7;
+          box-shadow: 0 0 0 2px #1EB4B7;
+        }
+      }
+    }
+
+    &__error {
+      color: red;
+    }
+}

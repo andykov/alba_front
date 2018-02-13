@@ -1,0 +1,171 @@
+// В этом файле должны быть стили для БЭМ-блока .nav , его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+
+// Основная навигация
+.nav-main {
+	//background-color: #505054;
+
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		@media screen and (min-width: $screen-lg) {
+			flex-wrap: nowrap;
+		}
+	}
+	&__item {
+		position: relative;
+		align-self: center;
+
+		@media screen and (max-width: $screen-md - 1) {
+			width: 50%;
+
+			&:nth-child(even) {
+				text-align: right;
+				a {
+					padding-left: 6px;
+				}
+			}
+		}
+		@media screen and (min-width: $screen-md) {
+			width: 25%;
+		}
+		@media screen and (min-width: $screen-lg) {
+			width: auto;
+
+			&:first-child {
+				a {
+					padding-left: 0;
+				}
+			}
+			&:last-child {
+				a {
+					padding-right: 0;
+				}
+			}
+		}
+
+		//&:not(:last-child):after {
+		//	content: '';
+		//	width: 4px;
+		//	height: 4px;
+		//	background-color: rgba(0,0,0,0.5);
+		//	position: absolute;
+		//}
+
+	}
+	&__link {
+		display: block;
+		padding: 16px;
+		font-family: $font-family--lucidagrande;
+		font-size: 10px;
+		font-weight: 700;
+		line-height: (16 / 10);
+		letter-spacing: 0.4px;
+		color: #000;
+		text-transform: uppercase;
+		@media screen and (min-width: $screen-lg) {
+			padding: 24px 0;
+			font-size: 11px;
+			line-height: (16 / 11);
+		}
+	}
+}
+
+// Навигация по полу
+.nav-gender {
+
+	@media screen and (max-width: $screen-lg - 1) {
+		border-top: 1px solid #E6E6E6;
+	}
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+		max-width: 225px;
+		margin: 0 auto;
+		@media screen and (min-width: $screen-md) {
+			max-width: 390px;
+		}
+		@media screen and (min-width: $screen-xxl) {
+			max-width: 500px;
+		}
+	}
+
+	//width: 100%;
+
+
+	&__item {
+		display: block;
+		font-family: $font-family--lucidagrande;
+		font-size: 14px;
+		font-weight: 700;
+		padding-bottom: 6px;
+		line-height: (34 / 14);
+		border-bottom: 3px solid transparent;
+		color: #000;
+		@media screen and (max-width: $screen-lg - 1) {
+			padding: 25px 0;
+		}
+		@media screen and (max-width: $screen-md - 1) {
+			padding: 9px 0;
+		}
+		@media screen and (min-width: $screen-md) {
+			font-size: 20px;
+			line-height: (34 / 20);
+		}
+		@media screen and (min-width: 1366px) {
+			font-size: 26px;
+			line-height: (34 / 26);
+		}
+
+		&.active {
+			border-color: #60D3D5;
+		}
+
+	}
+}
+
+// Вторичная навигация и дополнительные ссылки/кнопки
+.nav-second {
+	@media screen and (max-width: $screen-lg - 1) {
+		margin-top: 23px;
+	}
+	&__item {
+		@media screen and (max-width: $screen-lg - 1) {
+			margin-top: 23px;
+		}
+	}
+}
+.header__login {
+	@media screen and (max-width: $screen-lg - 1) {
+		top: 21.5px;
+	}
+	@media screen and (min-width: $screen-lg) {
+		display: flex;
+		.phone {
+			display: none;
+		}
+	}
+	
+	li {
+		@media screen and (max-width: $screen-lg - 1) {
+			margin-top: 23px;
+		}
+	}
+
+}
+@media screen and (max-width: $screen-lg - 1) {
+	.header__region {
+
+	}
+	.nav-second {
+		width: 70%;
+	}
+	.header__login {
+		display: flex;
+		flex-direction: column-reverse;
+		position: absolute;
+		right: 16px;
+		text-align: right;
+	}
+}

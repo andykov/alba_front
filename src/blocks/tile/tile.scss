@@ -1,0 +1,21 @@
+// В этом файле должны быть стили для БЭМ-блока .tile , его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий... 
+
+.tile {
+  text-align: center;
+  //padding: $grid-gutter-width;
+  padding: 8px;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  &__icon {
+    //min-height: 72px;
+    margin: auto;
+    padding: 13px 0;
+  }
+
+  &__text {
+    //margin-top: auto;
+    min-height: 36px;
+  }
+}

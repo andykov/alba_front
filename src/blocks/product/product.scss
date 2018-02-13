@@ -1,0 +1,185 @@
+// В этом файле должны быть стили для БЭМ-блока .product , его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий... 
+
+.product {
+
+  max-width: 312px;
+  position: relative;
+  margin: 0 auto;
+  //box-shadow: 0 0 0 20px rgba(255,255,255, 0), 0 32px 64px 0 rgba(0, 0, 0, 0);
+  //transition: box-shadow $transition;
+  transition: all 0.2s ease-in-out;
+
+  &__gallery {
+    display: block;
+    background-color: #fff;
+    position: relative;
+    margin-bottom: ((14 / 296) * 100%);
+    //padding: ((23 / 296) * 100%) ((23 / 296) * 100%) 100% ((23 / 296) * 100%);
+    padding-bottom: 100%;
+    .brazzers {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      max-width: 100%;
+      max-height: 100%;
+      margin: auto;
+    }
+    img {
+      width: auto;
+      //max-height: 125px;
+      //@media (min-width: $screen-sm) {
+      //  max-height: 193px;
+      //}
+      //@media (min-width: $screen-md) {
+      //  max-height: 250px;
+      //}
+      //@media (min-width: $screen-lg) {
+      //  max-height: 182px;
+      //}
+      //@media (min-width: $screen-xl) {
+      //  max-height: 236px;
+      //}
+      //@media (min-width: $screen-xxl) {
+      //  max-height: 250px;
+      //}
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      max-width: 100%;
+      max-height: 100%;
+      margin: auto;
+      padding: ((23 / 296) * 100%);
+      transition: transform .4s ease-out;
+    }
+
+    .brazzers {
+
+    }
+  }
+
+  &__badges {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &__view {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+    //background-color: #60D3D5;
+    //width: 56px;
+    //height: 56px;
+  }
+
+  &__info {
+    padding-bottom: 2px;
+    @media (max-width: $screen-md - 1) {
+      .price {
+        text-align: left;
+      }
+    }
+    @media (min-width: $screen-md) {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+  }
+
+  &__name {
+    font-family: $font-family--montserrat;
+    font-size: 11px;
+    line-height: (20 / 11);
+    font-weight: 700;
+    letter-spacing: normal;
+
+    @media (min-width: $screen-md) {
+      font-size: 15px;
+      line-height: (20 / 15);
+    }
+  }
+
+  &__info-hover {
+    display: none;
+    background-color: #fff;
+    width: 100%;
+    //position: absolute;
+    top: 100%;
+    //opacity: 0;
+    //visibility: hidden;
+    margin-bottom: -100%;
+    transition: all 0.2s ease-in-out;
+  }
+
+  &__select {
+    display: flex;
+    margin-top: 17px;
+
+    //.btn-icon {
+    //  margin-left: auto;
+    //}
+  }
+
+  &__sizes {
+    padding-left: 16px;
+    margin-right: auto;
+    position: relative;
+    > span {
+      position: absolute;
+      bottom: -4px;
+      left: 4px;
+      font-family: $font-family--montserrat;
+      font-size: 7px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      line-height: (16 / 7);
+      text-transform: uppercase;
+      transform: rotate(-90deg);
+      transform-origin: left center;
+    }
+  }
+  &__desc {
+    font-size: 13px;
+    margin-top: 19px;
+    li {
+      display: flex;
+    }
+    span {
+      flex: 1;
+      &:first-child {
+        max-width: 73px;
+      }
+    }
+  }
+
+  &:hover {
+    background-color: #fff;
+    box-shadow: 0 0 0 4px rgba(255,255,255, 1), 0 32px 64px 20px rgba(0, 0, 0, 0.12);
+    z-index: 10;
+
+    @media (min-width: $screen-md) {
+      box-shadow: 0 0 0 24px rgba(255,255,255, 1), 0 32px 64px 20px rgba(0, 0, 0, 0.12);
+    }
+    @media (min-width: $screen-lg) {
+      box-shadow: 0 0 0 12px rgba(255,255,255, 1), 0 32px 64px 20px rgba(0, 0, 0, 0.12);
+    }
+    @media (min-width: $screen-xl) {
+      box-shadow: 0 0 0 16px rgba(255,255,255, 1), 0 32px 64px 20px rgba(0, 0, 0, 0.12);
+    }
+    @media (min-width: $screen-xxl) {
+      box-shadow: 0 0 0 20px rgba(255,255,255, 1), 0 32px 64px 20px rgba(0, 0, 0, 0.12);
+    }
+
+    .product__info-hover {
+      display: block;
+      //opacity: 1;
+      //visibility: visible;
+    }
+  }
+}

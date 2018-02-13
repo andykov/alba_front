@@ -1,0 +1,33 @@
+// В этом файле должны быть стили для БЭМ-блока .form-login , его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий... 
+
+.fancybox-stage {
+  .form-login {
+    //opacity: 0;
+    //visibility: hidden;
+
+    transform: translateX(0px);
+    opacity: 1;
+    &.open {
+
+      //opacity: 1;
+      //visibility: visible;
+    }
+  }
+}
+.form-login {
+  background-color: #fff;
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: 460px;
+  padding: 40px;
+  margin: 0;
+  transform: translateX(100%);
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+  z-index: 10;
+
+}

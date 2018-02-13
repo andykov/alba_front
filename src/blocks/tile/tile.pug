@@ -1,0 +1,17 @@
+mixin tile(icon, title, text, className)
+	.tile(class=className)
+		if (icon)
+			.tile__icon
+				img(src= icon)
+		if (title)
+			.tile__title= title
+		.tile__text= text
+
+// +tile('icon', 'title', 'text', 'className')
+
+mixin tile_link(icon, text, className)
+	a(href="#")
+		.tile(class=className)
+			.tile__icon
+				img(src= icon)
+			.tile__text= text

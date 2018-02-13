@@ -1,0 +1,31 @@
+// В этом файле должны быть стили для БЭМ-блока .field-couner , его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий... 
+
+.field-counter {
+    display: flex;
+
+	&__input {
+      width: 30px;
+      border: 0;
+      padding: 0;
+      text-align: center;
+      outline: none;
+    }
+
+    &__minus,
+    &__plus {
+      width: 24px;
+      height: 24px;
+      font-size: 22px;
+      font-weight: 900;
+      text-align: center;
+      line-height: 24px;
+
+      &:hover {
+        color: #1EB4B7;
+        cursor: pointer;
+      }
+    }
+    &__minus {}
+    &__plus {}
+}

@@ -1,0 +1,38 @@
+mixin subscribe()
+	.subscribe
+		.container
+			.subscribe__inner
+				.subscribe__text
+					h2 Скидка
+						span 10%
+							br
+							| на первый заказ!
+					p Подпишитесь и будьте одними из первых  в курсе выгодных предложений и новинок
+				.subscribe__form
+					form
+						.form-group
+							.form-field
+								label.field-text
+									span.field-text__name
+										| Ваш e-mail
+									span.field-text__input-wrap
+										input.field-text__input(type="email")
+									span.field-text__error
+							.form-field
+								label.field-checkbox
+									span.field-checkbox__input-wrap
+										input.field-checkbox__input(type="checkbox")
+										span.field-checkbox__name
+											| Женщинам
+									span.field-checkbox__error
+
+								label.field-checkbox
+									span.field-checkbox__input-wrap
+										input.field-checkbox__input(type="checkbox")
+										span.field-checkbox__name
+											| Мужчинам
+									span.field-checkbox__error
+
+
+						.form-control
+							input(type="submit" value="Подписаться").btn

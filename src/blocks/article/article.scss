@@ -1,0 +1,209 @@
+// В этом файле должны быть стили для БЭМ-блока .article , его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий... 
+
+
+.article {
+  position: relative;
+
+  p {
+    margin-bottom: 75px;
+  }
+
+  img {
+    margin-bottom: 85px;
+  }
+
+  h2 {
+    margin-bottom: 25px;
+    padding-top: 5px;
+  }
+
+  .border-thick {
+    //padding: 70px 97.5px;
+    padding: 8.75% 12.1875%;
+    border: 8px solid #60D3D5;
+    font-family: $font-family--montserrat;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: (28 / 16);
+    margin-top: 94px;
+    margin-bottom: 89px;
+    text-transform: uppercase;
+  }
+
+  &__head {
+    position: relative;
+
+    &__time {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+
+    &__title {
+      font-family: $font-family--montserrat;
+      //font-size: 26px;
+      font-weight: 900;
+      //line-height: (34 / 26);
+      margin-bottom: 53px;
+    }
+
+    &__text {
+      font-family: $font-family--montserrat;
+      font-size: 20px;
+      font-weight: 700;
+      line-height: (30 / 20);
+      width: 100%;
+    }
+  }
+
+  &__nav {
+
+    @media screen and (max-width: $screen-lg - 1) {
+      display: flex;
+      justify-content: space-between;
+      &-item {
+        width: 40%;
+        p {
+          margin-bottom: 0;
+        }
+        &:first-child {
+          text-align: left;
+        }
+        &:last-child {
+          p {
+            text-align: right;
+          }
+        }
+      }
+    }
+    @media screen and (min-width: $screen-lg) {
+      width: 176px;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+    //
+    //&:not(.is-affixed) {
+    //  position: absolute;
+    //  top: 0;
+    //  right: 0;
+    //}
+
+    &-item {
+      display: block;
+      text-align: right;
+    }
+
+    p {
+      font-family: $font-family--montserrat;
+      font-size: 15px;
+      font-weight: 700;
+      line-height: (20 / 15);
+      text-align: left;
+    }
+  }
+
+  //&__first-img {
+  //  margin-bottom: 84px;
+  //}
+}
+
+.article-filter {
+  display: flex;
+
+  @media (min-width: $screen-md) {
+    justify-content: flex-end;
+  }
+}
+
+.article-preview {
+  margin-bottom: 48px;
+
+  &:hover {
+    .article-preview__img {
+      a {
+        display: block;
+        position: relative;
+        &:after {
+          top: 0;
+          opacity: 1;
+          background-image: linear-gradient(-180deg, rgba(96,211,213,0.00) 50%, rgba(96,211,213,0.66) 100%);
+        }
+      }
+    }
+    .article-preview__info {
+      span:first-child {
+        background-color: #1EB4B7;
+      }
+    }
+    
+  }
+
+  &__img {
+    a {
+      display: block;
+      position: relative;
+      &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 100%;
+        right: 0;
+        bottom: 0;
+        opacity: 0;
+        transition: top 0.4s ease-in-out, opacity 0.6s ease-in-out;
+      }
+    }
+  }
+  &__info {
+    display: flex;
+    //height: 80px;
+    align-items: center;
+    flex-wrap: wrap;
+    span {
+      flex: 1 0 50%;
+      text-align: center;
+      padding: 24px 0;
+      &:first-child {
+        background-color: #60D3D5;
+        font-family: $font-family--montserrat;
+        font-size: 26px;
+        font-weight: 900;
+        line-height: (32 / 26);
+        color: #fff;
+        transition: background-color $transition ease-in-out;
+      }
+
+      & + span {
+        font-family: $font-family--lucidagrande;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: (26 / 18);
+      }
+    }
+    time  {
+      width: 72px;
+      padding: 0 20px;
+
+      & + span {
+        text-align: left;
+        font-family: $font-family--lucidagrande;
+        font-size: 15px;
+        font-weight: 700;
+        line-height: (20 / 15);
+      }
+    }
+    p {
+      width: 100%;
+      font-family: $font-family--lucidagrande;
+      font-size: 15px;
+      font-weight: 700;
+      line-height: (20 / 15);
+      min-height: 57px;
+      padding-top: 24px;
+      margin-bottom: 0;
+    }
+
+  }
+}

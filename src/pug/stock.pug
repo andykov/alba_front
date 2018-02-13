@@ -1,0 +1,149 @@
+extends templates/main
+	
+block title
+	title Главная страница
+
+block content
+
+	ul.breadcrumbs
+		li.breadcrumbs__item
+			a(href="#") A
+		li.breadcrumbs__item
+			a(href="#") Женская обувь
+		li.breadcrumbs__item
+			a(href="#") Ботинки
+
+	.container
+		.row
+			.col-md-6
+				h1 Акции и новости
+			.col-md-6
+				form.article-filter
+					label.field-checkbox
+						span.field-checkbox__input-wrap
+							input.field-checkbox__input(type="checkbox")
+							span.field-checkbox__name
+								| только промокоды
+					label.field-checkbox
+						span.field-checkbox__input-wrap
+							input.field-checkbox__input(type="checkbox")
+							span.field-checkbox__name
+								| действует сейчас
+
+
+		.row
+			.col-12.col-md-6.col-xl-4.col-xxl-5
+				.article-preview
+					.article-preview__img
+						a(href="#")
+							img(src="https://picsum.photos/g/520/411")
+					.article-preview__info
+						span 18%
+						span Всегда
+						p Дарим всем предновогоднюю скидку 18%
+			.col-12.col-md-6.col-xl-4.col-xxl-5
+				.article-preview
+					.article-preview__img
+						a(href="#")
+							img(src="https://picsum.photos/g/520/411")
+					.article-preview__info
+						span.article-preview__info-col 18%
+						span.article-preview__info-col Всегда
+						p Оплати онлайн и получи скидку 5%
+			.col-12.col-md-6.col-xl-4.col-xxl-5
+				.article-preview
+					.article-preview__img
+						a(href="#")
+							img(src="https://picsum.photos/g/520/411")
+					.article-preview__info
+						time 13.10 2017
+						span Замша — это бархатистая кожа так называемого жирового дубления.
+			.col-12.col-md-6.col-xl-4.col-xxl-5
+				.article-preview
+					.article-preview__img
+						a(href="#")
+							img(src="https://picsum.photos/g/520/411")
+					.article-preview__info
+						span 18%
+						span Всегда
+						p Дарим всем предновогоднюю скидку 18%
+			.col-12.col-md-6.col-xl-4.col-xxl-5
+				.article-preview
+					.article-preview__img
+						a(href="#")
+							img(src="https://picsum.photos/g/520/411")
+					.article-preview__info
+						span.article-preview__info-col 18%
+						span.article-preview__info-col Всегда
+						p Оплати онлайн и получи скидку 5%
+			.col-12.col-md-6.col-xl-4.col-xxl-5
+				.article-preview
+					.article-preview__img
+						a(href="#")
+							img(src="https://picsum.photos/g/520/411")
+					.article-preview__info
+						time 13.10 2017
+						span Замша — это бархатистая кожа так называемого жирового дубления.
+		.row.justify-content-center
+			.col-xl-10.col-xxl-10
+				.banner-horizontal
+					a(href="#")
+						img(src="https://picsum.photos/g/1008/144")
+		.row
+			.col-12.col-md-6.col-xl-4.col-xxl-5
+				.article-preview
+					.article-preview__img
+						a(href="#")
+							img(src="https://picsum.photos/g/520/411")
+					.article-preview__info
+						span 18%
+						span Всегда
+						p Дарим всем предновогоднюю скидку 18%
+			.col-12.col-md-6.col-xl-4.col-xxl-5
+				.article-preview
+					.article-preview__img
+						a(href="#")
+							img(src="https://picsum.photos/g/520/411")
+					.article-preview__info
+						span.article-preview__info-col 18%
+						span.article-preview__info-col Всегда
+						p Оплати онлайн и получи скидку 5%
+			.col-12.col-md-6.col-xl-4.col-xxl-5
+				.article-preview
+					.article-preview__img
+						a(href="#")
+							img(src="https://picsum.photos/g/520/411")
+					.article-preview__info
+						time 13.10 2017
+						span Замша — это бархатистая кожа так называемого жирового дубления.
+			.col-12.col-md-6.col-xl-4.col-xxl-5
+				.article-preview
+					.article-preview__img
+						a(href="#")
+							img(src="https://picsum.photos/g/520/411")
+					.article-preview__info
+						span 18%
+						span Всегда
+						p Дарим всем предновогоднюю скидку 18%
+			.col-12.col-md-6.col-xl-4.col-xxl-5
+				.article-preview
+					.article-preview__img
+						a(href="#")
+							img(src="https://picsum.photos/g/520/411")
+					.article-preview__info
+						span.article-preview__info-col 18%
+						span.article-preview__info-col Всегда
+						p Оплати онлайн и получи скидку 5%
+			.col-12.col-md-6.col-xl-4.col-xxl-5
+				.article-preview
+					.article-preview__img
+						a(href="#")
+							img(src="https://picsum.photos/g/520/411")
+					.article-preview__info
+						time 13.10 2017
+						span Замша — это бархатистая кожа так называемого жирового дубления.
+
+		.article-preview__upload
+			a(href="#").btn Загрузить еще
+
+block js_libs

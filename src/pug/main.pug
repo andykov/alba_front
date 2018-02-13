@@ -1,0 +1,129 @@
+extends templates/main
+	
+block title
+	title Главная страница
+
+block content
+
+	//.slider-sales
+	//	.slider-sales
+	.container-narrow
+		p sdfdsf
+	.js-slider-lookbook.slider-lookbook
+		.slider-lookbook__item
+			img(src="https://picsum.photos/408/512?image=155")
+		.slider-lookbook__item
+			img(src="https://picsum.photos/408/512?image=156")
+		.slider-lookbook__item
+			img(src="https://picsum.photos/408/512?image=157")
+		.slider-lookbook__item
+			img(src="https://picsum.photos/436/512?image=146")
+
+	+slider-product()
+
+	.container-narrow
+		p Codeply is a responsive design playground and code editor that front end developers can use to build, prototype and compare responsive frameworks. Codeply also has responsive examples, snippets and layouts.
+
+		.row
+			.cell
+				.cell_cont 1
+			.cell
+				.cell_cont 2
+			.cell
+				.cell_cont 3
+			.cell
+				.cell_cont 4
+			.cell
+				.cell_cont 5
+			.cell
+				.cell_cont 6
+			.cell
+				.cell_cont 7
+			.cell
+				.cell_cont 8
+			.cell
+				.cell_cont 9
+			.cell
+				.cell_cont 10
+			.cell
+				.cell_cont 11
+			.cell
+				.cell_cont 12
+			//.cell
+			//	.cell_cont 13
+			//.cell
+			//	.cell_cont 14
+
+
+
+
+
+
+
+
+	br
+	br
+	br
+	br
+	br
+	br
+	br
+	br
+	br
+	br
+	br
+	br
+	br
+	br
+	br
+	br
+
+
+
+
+	+tile('__path__', 'Удобная доставка', '5 способов Бесплатно от 5000 Р')
+
+	+product('https://picsum.photos/296/296/?gravity=east', 'Сапожки', true, true, true)
+
+	+slider-sale
+	.container-narrow
+		.row
+			.col-md-6
+				.js-trends.trends
+					.trends__item
+						.card
+							.card__short
+								.card__img
+									img(src="")
+									.card__flags
+										span A
+										span B
+									a.card__more
+										| (O)
+								.card__title
+									| Туфли
+								.card__price
+									span.card__price-old
+									span.card__price-current
+							.card__hover
+								.card__sizes
+									span.card__sizes-title
+									ul.card__sizes-list
+										li.card__sizes-item 36
+										li.card__sizes-item 37
+										li.card__sizes-item 38
+										li.card__sizes-item 39
+										li.card__sizes-item 40
+
+								ul.card__info
+									li
+										| Сезон
+										span демисезон
+									li
+										| Материал
+										span натуральная кожа, теленок
+									li
+										| Подкладка
+										span мех
+			.col-md-6
+				.js-stocks.stocks

@@ -1,0 +1,62 @@
+//include ../mixins/svg-icon.pug
+include ../../blocks/sidenav/sidenav.pug
+include ../../blocks/tile/tile.pug
+include ../../blocks/product/product.pug
+include ../../blocks/slider-sale/slider-sale.pug
+include ../../blocks/slider-product/slider-product.pug
+include ../../blocks/auth/auth.pug
+include ../../blocks/subscribe/subscribe.pug
+include ../../blocks/form-login/form-login.pug
+include ../../blocks/field-counter/field-counter
+//include ../../blocks/modal-region/modal-region.pug
+//include ../../blocks/modal-advice/modal-advice.pug
+//include ../mixins/column-text.pug
+
+doctype html
+html(lang="ru-RU")
+	head
+		meta(charset="UTF-8")
+		//meta(name='viewport', content='width=device-width, initial-scale=1')
+		meta(name='viewport', content='width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0')
+
+		//- Edge и ряд мобильных браузеров автоматом преобразуют телефоны в ссылки. Отключить если не нужно.
+		meta(name='format-detection', content='telephone=no')
+
+		block title
+			title Home
+
+		block head
+			link(rel="stylesheet" href="css/libs.css")
+			block css_libs
+				link(rel="stylesheet" href="css/select2.min.css")
+				link(rel="stylesheet" href="css/magnify.css")
+				link(rel="stylesheet" href="css/jQuery.Brazzers-Carousel.min.css")
+				link(rel="stylesheet" href="css/jquery.fancybox.min.css")
+			link(rel="stylesheet" href="css/template.css")
+
+			//script
+			//	include ../../blocks/is-mobile/is-mobile.js
+
+
+	body
+
+		include ../../blocks/header/header
+
+		main.content
+			block content
+
+
+		block footer
+
+		include ../../blocks/footer/footer
+
+		+auth()
+		+form-login()
+		//+modal-region()
+		//+modal-advice()
+
+
+		script(src="js/libs.js")
+		block js_libs
+
+		script(src="js/main.js")

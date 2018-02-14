@@ -5,15 +5,15 @@ block title
 
 block content
 
-	ul.breadcrumbs
-		li.breadcrumbs__item
-			a(href="#") A
-		li.breadcrumbs__item
-			a(href="#") Женская обувь
-		li.breadcrumbs__item
-			a(href="#") Ботинки
-
 	.card-detail
+		ul.breadcrumbs
+			li.breadcrumbs__item
+				a(href="#")
+					<svg xmlns="http://www.w3.org/2000/svg" width="18" height="10" viewBox="0 0 18 10"><path fill-rule="evenodd" d="M7.48 5.513l1.448-2.796 1.539 2.796H7.479zM12.813 0H5.177L0 9.991h5.86l.899-2.104h4.387l.94 2.113L18 9.991 12.814 0z"/></svg>
+			li.breadcrumbs__item
+				a(href="#") Женская обувь
+			li.breadcrumbs__item
+				a(href="#") Ботинки
 		.product-gallery
 			.js-product-gallery-big.product-gallery__big
 				.product-gallery__item
@@ -41,18 +41,25 @@ block content
 		.container
 			.product-holder
 				.product-info
+					span.product-info__discount %
 					.product-info__title Ботинки
 					.product-info__id 1621001001402
 					.product-info__price
 						.price
-							span(data-old-price="6000") 4800 руб.
+							span(data-old-price="14 490") 4800 руб.
 							span Экономия 1200 руб.
 					.product-info__color
-						span Цвет
-						a(href="#")
-							img(src="https://www.the-alba.com/upload/resize_cache/iblock/9a0/1000_1000_1/1669000801401_1.jpg" width="48px")
-						a(href="#")
-							img(src="https://www.the-alba.com/upload/resize_cache/iblock/9a0/1000_1000_1/1669000801401_1.jpg" width="48px")
+						span.product-info__option Цвет
+						label.field-radio
+							span.field-radio__input-wrap
+								input.field-radio__input(type="radio" name="f-price" checked)
+								span.field-radio__name
+									img(src="https://www.the-alba.com/upload/resize_cache/iblock/9a0/1000_1000_1/1669000801401_1.jpg" width="48px")
+						label.field-radio
+							span.field-radio__input-wrap
+								input.field-radio__input(type="radio" name="f-price")
+								span.field-radio__name
+									img(src="https://www.the-alba.com/upload/resize_cache/iblock/9a0/1000_1000_1/1669000801401_1.jpg" width="48px")
 					.product-info__sizes
 						.js-tabs.sizes
 							.sizes__head
@@ -76,19 +83,19 @@ block content
 								label.sizes__item
 									input(type="checkbox")
 									span 37,5
-								label.sizes__item
+								label.sizes__item.sizes__item--in-stock
 									input(type="checkbox")
 									span 38
-								label.sizes__item
+								label.sizes__item.sizes__item--in-stock
 									input(type="checkbox")
 									span 38,5
-								label.sizes__item
+								label.sizes__item.sizes__item--in-stock
 									input(type="checkbox")
 									span 39
-								label.sizes__item
+								label.sizes__item.size__item--in-stock
 									input(type="checkbox")
 									span 40
-								label.sizes__item
+								label.sizes__item.sizes__item--in-stock
 									input(type="checkbox")
 									span 41
 								label.sizes__item
@@ -158,13 +165,14 @@ block content
 									span 12
 
 					.product-info__buttons
-						a(href="").btn В корзину
-						//a(href="").btn
-						a(href="").btn Забронировать в магазине
-					p Доставим сегодня за 320 руб. (Москва)
-					a(href="#") О доставке
-					p Самовывоз, бесплатно, сегодня.
-					a(href="#") Магазины на карте
+						a(href="").btn.product-info__in-cart В корзину
+						a(href="").btn.product-info__add-desires
+						a(href="").btn.btn--border.product-info__reservation Забронировать в магазине
+					.product-info__delivery
+						p Доставим сегодня за 320 руб. (Москва)
+						a(href="#") О доставке
+						p Самовывоз, бесплатно, сегодня.
+						a(href="#") Магазины на карте
 
 				.product-desc
 					ul.product-desc__links

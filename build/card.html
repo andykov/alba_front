@@ -12,10 +12,10 @@
     <meta name="format-detection" content="telephone=no">
     <title>Главная страница</title>
     <link rel="stylesheet" href="css/libs.css">
-    <link rel="stylesheet" href="css/select2.min.css">
-    <link rel="stylesheet" href="css/magnify.css">
-    <link rel="stylesheet" href="css/jQuery.Brazzers-Carousel.min.css">
-    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+    <!--link(rel="stylesheet" href="css/select2.min.css")-->
+    <!--link(rel="stylesheet" href="css/magnify.css")-->
+    <!--link(rel="stylesheet" href="css/jQuery.Brazzers-Carousel.min.css")-->
+    <!--link(rel="stylesheet" href="css/jquery.fancybox.min.css")-->
     <link rel="stylesheet" href="css/template.css">
     <!--script-->
     <!--	include ../../blocks/is-mobile/is-mobile.js-->
@@ -122,12 +122,12 @@
                   </div>
                 </div>
               </div>
-              <button class="js-mobile-nav mobile-nav" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" viewBox="0 0 20 16"><path fill-rule="evenodd" d="M0 0h20v2H0V0zm0 7h20v2H0V7zm0 7h20v2H0v-2z"/></svg></button>
+              <button class="js-mobile-nav mobile-nav btn-icon" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" viewBox="0 0 20 16"><path fill-rule="evenodd" d="M0 0h20v2H0V0zm0 7h20v2H0V7zm0 7h20v2H0v-2z"/></svg></button>
             </div>
           </div>
         </div>
         <div class="header__navs">
-          <div class="header__navs-genger">
+          <div class="header__navs-gender">
             <div class="nav-gender">
               <div class="nav-gender__inner"><a class="nav-gender__item active" href="#">Женщинам</a><a class="nav-gender__item" href="#">Мужчинам</a></div>
             </div>
@@ -302,12 +302,12 @@
     //.header__bottom
     -->
     <main class="content">
-      <ul class="breadcrumbs">
-        <li class="breadcrumbs__item"><a href="#">A</a></li>
-        <li class="breadcrumbs__item"><a href="#">Женская обувь</a></li>
-        <li class="breadcrumbs__item"><a href="#">Ботинки</a></li>
-      </ul>
       <div class="card-detail">
+        <ul class="breadcrumbs">
+          <li class="breadcrumbs__item"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="10" viewBox="0 0 18 10"><path fill-rule="evenodd" d="M7.48 5.513l1.448-2.796 1.539 2.796H7.479zM12.813 0H5.177L0 9.991h5.86l.899-2.104h4.387l.94 2.113L18 9.991 12.814 0z"/></svg></a></li>
+          <li class="breadcrumbs__item"><a href="#">Женская обувь</a></li>
+          <li class="breadcrumbs__item"><a href="#">Ботинки</a></li>
+        </ul>
         <div class="product-gallery">
           <div class="js-product-gallery-big product-gallery__big">
             <div class="product-gallery__item"><img class="zoom" src="https://www.the-alba.com/upload/resize_cache/iblock/7c9/1000_1000_1/1103048101301_1-min.jpg" data-magnify-src="https://www.the-alba.com/upload/resize_cache/iblock/7c9/1000_1000_1/1103048101301_1-min.jpg"></div>
@@ -326,13 +326,18 @@
         </div>
         <div class="container">
           <div class="product-holder">
-            <div class="product-info">
+            <div class="product-info"><span class="product-info__discount">%</span>
               <div class="product-info__title">Ботинки</div>
               <div class="product-info__id">1621001001402</div>
               <div class="product-info__price">
-                <div class="price"><span data-old-price="6000">4800 руб.</span><span>Экономия 1200 руб.</span></div>
+                <div class="price"><span data-old-price="14 490">4800 руб.</span><span>Экономия 1200 руб.</span></div>
               </div>
-              <div class="product-info__color"><span>Цвет</span><a href="#"><img src="https://www.the-alba.com/upload/resize_cache/iblock/9a0/1000_1000_1/1669000801401_1.jpg" width="48px"></a><a href="#"><img src="https://www.the-alba.com/upload/resize_cache/iblock/9a0/1000_1000_1/1669000801401_1.jpg" width="48px"></a></div>
+              <div class="product-info__color"><span class="product-info__option">Цвет</span>
+                <label class="field-radio"><span class="field-radio__input-wrap">
+                    <input class="field-radio__input" type="radio" name="f-price" checked><span class="field-radio__name"><img src="https://www.the-alba.com/upload/resize_cache/iblock/9a0/1000_1000_1/1669000801401_1.jpg" width="48px"></span></span></label>
+                <label class="field-radio"><span class="field-radio__input-wrap">
+                    <input class="field-radio__input" type="radio" name="f-price"><span class="field-radio__name"><img src="https://www.the-alba.com/upload/resize_cache/iblock/9a0/1000_1000_1/1669000801401_1.jpg" width="48px"></span></span></label>
+              </div>
               <div class="product-info__sizes">
                 <div class="js-tabs sizes">
                   <div class="sizes__head">
@@ -353,19 +358,19 @@
                     <label class="sizes__item">
                       <input type="checkbox"><span>37,5</span>
                     </label>
-                    <label class="sizes__item">
+                    <label class="sizes__item sizes__item--in-stock">
                       <input type="checkbox"><span>38</span>
                     </label>
-                    <label class="sizes__item">
+                    <label class="sizes__item sizes__item--in-stock">
                       <input type="checkbox"><span>38,5</span>
                     </label>
-                    <label class="sizes__item">
+                    <label class="sizes__item sizes__item--in-stock">
                       <input type="checkbox"><span>39</span>
                     </label>
-                    <label class="sizes__item">
+                    <label class="sizes__item size__item--in-stock">
                       <input type="checkbox"><span>40</span>
                     </label>
-                    <label class="sizes__item">
+                    <label class="sizes__item sizes__item--in-stock">
                       <input type="checkbox"><span>41</span>
                     </label>
                     <label class="sizes__item">
@@ -438,17 +443,13 @@
                   </div>
                 </div>
               </div>
-              <div class="product-info__buttons"><a class="btn" href="">В корзину</a>
-                <!--a(href="").btn--><a class="btn" href="">Забронировать в магазине</a>
+              <div class="product-info__buttons"><a class="btn product-info__in-cart" href="">В корзину</a><a class="btn product-info__add-desires" href=""></a><a class="btn btn--border product-info__reservation" href="">Забронировать в магазине</a></div>
+              <div class="product-info__delivery">
+                <p>Доставим сегодня за 320 руб. (Москва)</p><a href="#">О доставке</a>
+                <p>Самовывоз, бесплатно, сегодня.</p><a href="#">Магазины на карте</a>
               </div>
-              <p>Доставим сегодня за 320 руб. (Москва)</p><a href="#">О доставке</a>
-              <p>Самовывоз, бесплатно, сегодня.</p><a href="#">Магазины на карте</a>
             </div>
             <div class="product-desc">
-              <ul class="product-desc__links">
-                <li><span>Доставим сегодня за 320 руб. (Москва)</span><a href="#">О доставке</a></li>
-                <li><span>Самовывоз, бесплатно, сегодня.</span><a href="#">Магазины на карте</a></li>
-              </ul>
               <ul class="product-desc__list">
                 <li><span>Высота каблука:</span><span>низкий</span></li>
                 <li><span>Материал верха:</span><span>натуральная кожа</span></li>
@@ -456,10 +457,11 @@
                 <li><span>Сезонность:</span><span>демисезон</span></li>
                 <li><span>Цвет:</span><span>темно-синий</span></li>
               </ul>
-              <p>Классический ботинки со шнурками на устойчивом каблуке, декорированные металлическими полукольцами. Комфортная обувь на каждый день</p>
+              <p class="product-desc__text">Классический ботинки со шнурками на устойчивом каблуке, декорированные металлическими полукольцами. Комфортная обувь на каждый день</p><b class="product-desc__share">поделиться с друзьям</b>
+              <div class="social"><a class="social__item" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><g fill="none" fill-rule="evenodd"><circle cx="16" cy="16" r="16" fill="#1D1D1D"/><path fill="#FFF" d="M15.752 12.02c.516.055.774.14.89.3.03.043.079.15.107.239.06.186.063.398.025 1.988-.023.993-.009 1.298.068 1.518.09.252.29.367.467.272.16-.088.534-.521.778-.905.565-.88.909-1.563 1.323-2.616.083-.208.195-.345.311-.377.047-.015.704-.027 1.513-.03l1.429-.004.12.054c.157.073.217.168.217.342 0 .33-.328 1.007-.89 1.836-.077.115-.367.521-.644.905-.61.846-.743 1.044-.836 1.25-.117.259-.089.472.095.723.053.071.323.357.6.636.773.78 1.124 1.191 1.41 1.641.205.325.284.565.251.77-.016.113-.123.247-.244.313-.144.076-.365.09-1.58.108l-1.15.017-.186-.066c-.474-.166-.79-.443-1.509-1.318-.397-.484-.692-.721-.897-.724-.188 0-.427.264-.53.592-.07.22-.095.389-.116.77-.025.45-.076.555-.339.67-.095.044-1.28.059-1.594.025a4.263 4.263 0 0 1-1.792-.641c-.839-.518-1.352-.983-1.903-1.722-.957-1.286-1.61-2.381-2.403-4.034-.307-.643-.667-1.475-.725-1.673-.058-.205.026-.374.216-.438.065-.022.428-.034 1.264-.046l1.174-.012.137.054c.216.088.307.2.453.574a44.33 44.33 0 0 0 1.013 2.142c.217.404.447.741.644.942.244.252.353.313.525.298.147-.015.186-.049.277-.257.22-.501.256-2.196.058-2.86-.114-.38-.284-.524-.753-.63-.081-.019-.081-.048-.007-.163.181-.274.504-.406 1.12-.46.337-.03 1.336-.032 1.613-.002z"/></g></svg></a><a class="social__item" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><g fill="none" fill-rule="evenodd"><circle cx="16" cy="16" r="16" fill="#1D1D1D"/><path fill="#FFF" d="M17.193 16.702h2.358l.353-2.845h-2.711v-1.816c0-.823.22-1.384 1.357-1.384l1.45-.001V8.112A18.693 18.693 0 0 0 17.887 8c-2.091 0-3.522 1.325-3.522 3.76v2.097H12v2.845h2.365V24h2.828v-7.298z"/></g></svg></a><a class="social__item" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><g fill="none" fill-rule="evenodd"><circle cx="16" cy="16" r="16" fill="#1D1D1D"/><path fill="#FFF" d="M21.612 12.784a2.808 2.808 0 0 0 1.263-1.536 5.91 5.91 0 0 1-1.825.674 2.91 2.91 0 0 0-2.096-.877c-1.586 0-2.872 1.244-2.872 2.777 0 .218.025.43.074.633a8.248 8.248 0 0 1-5.92-2.902c-.247.41-.388.886-.388 1.396 0 .964.508 1.814 1.278 2.312a2.946 2.946 0 0 1-1.301-.349v.035c0 1.345.99 2.468 2.303 2.724-.24.062-.494.097-.757.097-.185 0-.364-.018-.54-.051.365 1.104 1.426 1.907 2.682 1.929a5.887 5.887 0 0 1-3.567 1.187c-.231 0-.46-.013-.685-.038a8.318 8.318 0 0 0 4.403 1.25c5.283 0 8.17-4.233 8.17-7.904l-.01-.36a5.636 5.636 0 0 0 1.437-1.435c-.515.221-1.068.371-1.649.438z"/></g></svg></a></div>
             </div>
             <div class="product-tabs">
-              <div class="product-tabs__nav"><span>Ваш город: Москва</span>
+              <div class="product-tabs__nav"><span class="product-tabs__city">Ваш город: Москва</span>
                 <ul>
                   <li class="active"><a href="#available">наличие в магазинах</a></li>
                   <li><a href="#delivery">доставка и примерка</a></li>
@@ -474,30 +476,30 @@
                     <div class="js-shops-list shops-list">
                       <div class="shops-list__item"><span><b>ТЦ Метрополис</b></span>
                         <ul>
-                          <li>+7 495 721-88-25</li>
-                          <li><span>пн-чт: 10 22,</span><span>пт-вс: 10 23</span></li>
-                          <li><span>площадь Киевского Вокзала, 2</span><a href="#">на карте</a></li>
+                          <li class="shops-list__tel">+7 495 721-88-25</li>
+                          <li class="shops-list__time"><span>пн-чт: 10 22,</span><span>пт-вс: 10 23</span></li>
+                          <li class="shops-list__location"><span>площадь Киевского Вокзала, 2</span><a class="shops-list__on-map" href="#">на карте</a></li>
                         </ul>
                       </div>
                       <div class="shops-list__item"><span><b>ТЦ Метрополис</b></span>
                         <ul>
-                          <li>+7 495 721-88-25</li>
-                          <li>10 22</li>
-                          <li><span>Ленинградское шоссе, 116 а, стр. 4</span><a href="#">на карте</a></li>
+                          <li class="shops-list__tel">+7 495 721-88-25</li>
+                          <li class="shops-list__time">10 22</li>
+                          <li class="shops-list__location"><span>Ленинградское шоссе, 116 а, стр. 4</span><a class="shops-list__on-map" href="#">на карте</a></li>
                         </ul>
                       </div>
                       <div class="shops-list__item"><span><b>ТЦ Метрополис</b></span>
                         <ul>
-                          <li>+7 495 721-88-25</li>
-                          <li><span>пн-чт: 10 22,</span><span>пт-вс: 10 23</span></li>
-                          <li><span>площадь Киевского Вокзала, 2</span><a href="#">на карте</a></li>
+                          <li class="shops-list__tel">+7 495 721-88-25</li>
+                          <li class="shops-list__time"><span>пн-чт: 10 22,</span><span>пт-вс: 10 23</span></li>
+                          <li class="shops-list__location"><span>площадь Киевского Вокзала, 2</span><a class="shops-list__on-map" href="#">на карте</a></li>
                         </ul>
                       </div>
                       <div class="shops-list__item"><span><b>ТЦ Метрополис</b></span>
                         <ul>
-                          <li>+7 495 721-88-25</li>
-                          <li>10 22</li>
-                          <li><span>Ленинградское шоссе, 116 а, стр. 4</span><a href="#">на карте</a></li>
+                          <li class="shops-list__tel">+7 495 721-88-25</li>
+                          <li class="shops-list__time">10 22</li>
+                          <li class="shops-list__location"><span>Ленинградское шоссе, 116 а, стр. 4</span><a class="shops-list__on-map" href="#">на карте</a></li>
                         </ul>
                       </div>
                     </div>
@@ -1117,15 +1119,18 @@
         <div class="container">
           <div class="subscribe__inner">
             <div class="subscribe__text">
-              <h2>Скидка<span>10%<br/>на первый заказ!</span></h2>
+              <h2>Скидка<span>10%</span><br/>на первый заказ!</h2>
               <p>Подпишитесь и будьте одними из первых  в курсе выгодных предложений и новинок</p>
             </div>
             <div class="subscribe__form">
               <form>
                 <div class="form-group">
                   <div class="form-field">
-                    <label class="field-text"><span class="field-text__name">Ваш e-mail</span><span class="field-text__input-wrap">
+                    <label class="field-text"><span class="field-text__name subscribe__label">Ваш e-mail</span><span class="field-text__input-wrap">
                         <input class="field-text__input" type="email"/></span><span class="field-text__error"></span></label>
+                    <div class="form-control">
+                      <input class="btn" type="submit" value="Подписаться"/>
+                    </div>
                   </div>
                   <div class="form-field">
                     <label class="field-checkbox"><span class="field-checkbox__input-wrap">
@@ -1133,9 +1138,6 @@
                     <label class="field-checkbox"><span class="field-checkbox__input-wrap">
                         <input class="field-checkbox__input" type="checkbox"/><span class="field-checkbox__name">Мужчинам</span></span><span class="field-checkbox__error"></span></label>
                   </div>
-                </div>
-                <div class="form-control">
-                  <input class="btn" type="submit" value="Подписаться"/>
                 </div>
               </form>
             </div>

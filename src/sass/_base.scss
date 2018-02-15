@@ -68,6 +68,10 @@ h3 {
 	}
 }
 
+.h1 { @extend h1; }
+.h2 { @extend h2; }
+.h3 { @extend h3; }
+
 time {
 	display: inline-block;
 	width: 30px;
@@ -78,6 +82,7 @@ time {
 	line-height: (16 / 11);
 	color: #8F8F8F;
 }
+
 
 .h1 {
 	@extend h1;
@@ -90,6 +95,7 @@ time {
 .h3 {
 	@extend h3;
 }
+
 
 ul {
 	margin: 0;
@@ -141,11 +147,9 @@ p {
 .blue {
 	background-color: #4A90E2;
 }
-
 .gray {
 	background-color: #C2C2C2;
 }
-
 .green {
 	background-color: #7ED321;
 }
@@ -394,7 +398,7 @@ p {
 	line-height: 1;
 	max-width: 170px;
 	position: relative;
-	padding-left: 36px;
+	padding-left: 30px;
 	margin-left: auto;
 
 	input[type="text"] {
@@ -408,10 +412,12 @@ p {
 		color: #000;
 		text-transform: uppercase;
 		outline: none;
-		padding: 10px 0;
+		padding: 8px 0;
 		vertical-align: top;
 
 		@include placeholder {
+			font-family: $font-family--montserrat;
+			font-size: 10px;
 			color: #000;
 			opacity: 1;
 			letter-spacing: 0.4px;
@@ -431,8 +437,8 @@ p {
 		outline: none;
 		border: 0;
 		padding: 0;
-		width: 36px;
-		height: 36px;
+		width: 30px;
+		height: 30px;
 		cursor: pointer;
 	}
 

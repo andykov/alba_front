@@ -8,12 +8,12 @@
 /*$(function() {
 	
 });*/
+
 // .catalog scripts goes here 
 
 /*$(function() {
 	
 });*/
-
 // .checkout scripts goes here 
 
 /*$(function() {
@@ -52,6 +52,7 @@ $('.filter .filter__apply').on('click', function () {
 $(document).on('click', '[data-dont-close]', function(e) {
     e.stopPropagation();
 });
+
 
 /* ========================================================================
  * Основано на: Bootstrap dropdown.js v3.3.6
@@ -569,6 +570,11 @@ $(function() {
 /*$(function() {
 	
 });*/
+// .product-info scripts goes here 
+
+/*$(function() {
+	
+});*/
 // .product-tabs scripts goes here 
 
 $(function() {
@@ -608,7 +614,7 @@ $(function() {
 
         $(this).addClass('active');
         $("#"+tabId).addClass('active');
-    })
+    });
 });
 // .slider-product scripts goes here 
 

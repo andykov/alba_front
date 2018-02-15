@@ -565,6 +565,16 @@ $(function() {
     //     $collapseContainer.toggleClass('open')
     // });
 });
+// .product scripts goes here 
+
+/*$(function() {
+	
+});*/
+// .product-info scripts goes here 
+
+/*$(function() {
+	
+});*/
 // .product-tabs scripts goes here 
 
 $(function() {
@@ -583,11 +593,6 @@ $(function() {
     if (hash) $('.product-tabs__nav a[href$="'+hash+'"]').trigger('click');
 
 });
-// .product scripts goes here 
-
-/*$(function() {
-	
-});*/
 // .sidebar scripts goes here 
 
 $(function() {

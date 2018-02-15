@@ -15,6 +15,8 @@ $(function() {
     var $hlinks = $('.filter .filter__more-list');
     var $sorting = $('.filter .filter__form--sorting');
     var $more = $('.filter .filter__more');
+    var $filterTitle = $('.filter__title--filter');
+    var $filterDropdown = $('.filter__more-dropdown');
 
     var numOfItems = 0;
     var totalSpace = 0;
@@ -33,7 +35,7 @@ $(function() {
 
         // Get instant state
 
-        availableSpace = $nav.outerWidth() - $sorting.outerWidth() - 150;
+        availableSpace = $nav.outerWidth() - $sorting.outerWidth() - 240;
         // availableSpace = $vlinks.outerWidth() - 10;
         numOfVisibleItems = $vlinks.children().length;
         requiredSpace = breakWidths[numOfVisibleItems - 1];
@@ -49,11 +51,32 @@ $(function() {
             $hlinks.children().first().appendTo($vlinks);
             numOfVisibleItems += 1;
         }
+
+        if (availableSpace < 0) {
+            $filterTitle.fadeOut(1);
+            $more.addClass('as-title');
+            $btn.addClass('as-title').text('Фильтры');
+        } else {
+            $filterTitle.fadeIn(1);
+            $more.removeClass('as-title');
+            $btn.removeClass('as-title').text('ЕЩЕ');
+        }
+
         // Update the button accordingly
         // $btn.attr("count", numOfItems - numOfVisibleItems);
         if (numOfVisibleItems === numOfItems) {
             $btn.parent().addClass('hidden');
-        } else $btn.parent().removeClass('hidden');
+        } else {
+            $btn.parent().removeClass('hidden');
+        }
+
+        if (numOfVisibleItems == 0 && availableSpace < 0) {
+            $filterDropdown.removeClass('no-items').addClass('no-btn');
+        } else if (numOfVisibleItems == 0) {
+            $filterDropdown.removeClass('no-btn').addClass('no-items');
+        } else {
+            $filterDropdown.removeClass('no-items');
+        }
     }
 
     // Window listeners

@@ -32,6 +32,7 @@
         &.active {
           a {
             border-bottom-color: #60D3D5;
+            color: #000;
           }
         }
       }
@@ -46,6 +47,10 @@
         letter-spacing: 0.4px;
         padding-bottom: 7px;
         border-bottom: 2px solid transparent;
+        color: #a0a0a0;
+        &:hover {
+          color: $primary-color;
+        }
       }
     }
 
@@ -58,4 +63,8 @@
         display: block;
       }
     }
+  &__city {
+    padding-right: 35px;
+    line-height: 1.5;
+  }
 }

@@ -12,5 +12,5 @@ $(function() {
 
         $(this).addClass('active');
         $("#"+tabId).addClass('active');
-    })
+    });
 });

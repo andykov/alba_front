@@ -61,14 +61,7 @@ $border-radius:               3px;
 
   //&--disabled,
   //&:disabled {
-  //  opacity: $opacity;
-  //  color: $text-color;
-  //  background-color: $gray-lightest;
-  //  border-color: $gray-lighter;
-  //
-  //  // $at-root a.btn--disabled {
-  //  //   pointer-events: none;
-  //  // }
+
   //}
 
   &[class*="btn--"]:not(.btn--border) {

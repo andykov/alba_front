@@ -5,19 +5,21 @@ mixin subscribe()
 				.subscribe__text
 					h2 Скидка
 						span 10%
-							br
-							| на первый заказ!
+						br
+						| на первый заказ!
 					p Подпишитесь и будьте одними из первых  в курсе выгодных предложений и новинок
 				.subscribe__form
 					form
 						.form-group
 							.form-field
 								label.field-text
-									span.field-text__name
+									span.field-text__name.subscribe__label
 										| Ваш e-mail
 									span.field-text__input-wrap
 										input.field-text__input(type="email")
 									span.field-text__error
+								.form-control
+									input(type="submit" value="Подписаться").btn
 							.form-field
 								label.field-checkbox
 									span.field-checkbox__input-wrap
@@ -34,5 +36,4 @@ mixin subscribe()
 									span.field-checkbox__error
 
 
-						.form-control
-							input(type="submit" value="Подписаться").btn
+

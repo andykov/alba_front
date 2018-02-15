@@ -46,15 +46,11 @@ $border-radius: 3px;
   &:focus {
     text-decoration: none;
     color: #fff;
-    background-color: #1EB4B7;
-    box-shadow: 0 0 0 2px #1EB4B7;
+    background-color: #1eb4b7;
   }
 
-  &:active,
-  &:focus {
-    //$include field-focus;
-    background-color: #505050;
-    box-shadow: none;
+  &:active {
+    background-color: $black;
   }
 
   //&--disabled,
@@ -78,8 +74,10 @@ $border-radius: 3px;
     border: solid 1px #60d3d5;
     color: #1db4b7;
     &:hover {
-      background-color: transparent;
-      color: currentColor;
+      color: #fff;
+    }
+    &:active {
+      border-color: $black;
     }
   }
 

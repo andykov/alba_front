@@ -227,9 +227,10 @@ p {
 	}
 	&--sale {
 		background-color: #60D3D5;
+		font-family: $font-family--montserrat;
 	}
 	&--winter {
-		background: #1A1919 url("../img/svg/icon-winter.svg") no-repeat center center;
+		background: #6b74c1 url("../img/svg/icon-winter.svg") no-repeat center center;
 	}
 }
 
@@ -417,6 +418,115 @@ p {
 	//	@include col(xxl, 5, 15, 40px);
 	//}
 
+	background: #fff;
+	padding-top: 23px;
+	position: relative;
+
+	&::before {
+		content: '';
+		position: absolute;
+		z-index: -1;
+		top: 0;
+		right: 0;
+		bottom: -32px;
+		left: 0;
+		background: #fff;
+	}
+
+	@media screen and (min-width: $screen-md) {
+		padding-top: 66px;
+		padding-bottom: 4px;
+
+		&::before {
+			bottom: -16px;
+			right: -16px;
+			left: -16px;
+		}
+	}
+
+	@media screen and (min-width: $screen-xl) {
+		padding-top: 87px;
+		padding-bottom: 82px;
+
+		&::before {
+			bottom: 0;
+			left: -32px;
+			right: -32px;
+		}
+	}
+
+	@media screen and (min-width: $screen-xxl) {
+		padding-bottom: 92px;
+	}
+
+	.catalog-text {
+		margin-bottom: 0;
+	}
+
+	section {
+		margin-bottom: 12px;
+
+		&[data-collapse-body] {
+			margin-top: 40px;
+		}
+
+		@media screen and (min-width: $screen-md) {
+			margin-bottom: 52px;
+
+			&[data-collapse-body] {
+				margin-top: 0;
+			}
+		}
+
+		@media screen and (min-width: $screen-xl) {
+			margin-bottom: 0;
+		}
+	}
+
+	h4 {
+		margin-bottom: 12px;
+		font-family: $font-family--montserrat;
+		font-size: 13px;
+		font-weight: 600;
+		line-height: 1.38;
+		letter-spacing: normal;
+		text-align: left;
+		color: #000000;
+
+		@media screen and (min-width: $screen-md) {
+			margin-bottom: 14px;
+			font-size: 18px;
+			line-height: 1.44;
+			letter-spacing: -0.2px;
+		}
+
+		@media screen and (min-width: $screen-xl) {
+			margin-bottom: 37px;
+		}
+	}
+
+	[data-collapse-toggle] {
+		padding: 0;
+		font-family: $font-family--montserrat;
+		font-size: 10px;
+		font-weight: 600;
+		line-height: 1.6;
+		letter-spacing: 0.4px;
+		text-align: left;
+		text-transform: uppercase;
+		color: #a0a0a0;
+		background: transparent;
+		border: 0;
+		transition: all $transition;
+		cursor: pointer;
+
+		&:hover,
+		&:focus {
+			outline: none;
+			color: #1eb4b7;
+		}
+	}
+
 	@media screen and (max-width: $screen-md - 1) {
 		.hide {
 			display: none;
@@ -444,21 +554,184 @@ p {
 	justify-content: center;
 	align-items: center;
 
-	&__next {
+	&__arrow {
+		position: relative;
+		width: 24px;
+		height: 6px;
+
+		a {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			transition: all $transition;
+
+			&::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				display: block;
+				height: 2px;
+				margin: auto;
+				background: #c5c5c5;
+				transition: all $transition;
+			}
+		}
+
+		svg {
+			position: absolute;
+			top: 0;
+			width: 6px;
+			height: 6px;
+			fill: #c5c5c5;
+			transition: all $transition;
+
+		}
+
+
+		&--active {
+			a::before {
+				background: #000;
+			}
+
+			svg {
+				fill: #000;
+			}
+
+			&:hover,
+			&:focus {
+
+				a::before {
+					background: #1eb4b7;
+				}
+
+				svg {
+					fill: #1eb4b7;
+				}
+			}
+
+			&:active {
+				svg {
+					fill: #000;
+				}
+
+				a::before {
+					background: #000;
+				}
+
+			}
+
+		}
+
+		&--next {
+			margin-left: 11px;
+
+			@media (min-width: $screen-md) {
+				margin-left: 17px;
+			}
+
+			svg {
+				right: 0;
+			}
+
+			&.pagination__arrow--active {
+				&:hover,
+				&:focus {
+					a {
+						right: -10px;
+					}
+				}
+
+				&:active {
+					a {
+						left: 10px;
+					}
+				}
+			}
+		}
+
+		&--prev {
+			margin-right: 11px;
+
+			@media (min-width: $screen-md) {
+				margin-right: 17px;
+			}
+
+			svg {
+				left: 0;
+			}
+
+			&.pagination__arrow--active {
+				&:hover,
+				&:focus {
+					a {
+						left: -10px;
+					}
+				}
+
+				&:active {
+					a {
+						right: 10px;
+					}
+				}
+			}
+		}
 	}
-	&__prev {
-	}
+
+
 	&__item {
 		padding: 5px;
+
 		a {
 			display: block;
-			width: 48px;
-			height: 48px;
+			width: 24px;
+			height: 24px;
+			font-size: 12px;
+  		font-weight: 300;
 			text-align: center;
-			line-height: 48px;
-			font-size: 18px;
+			line-height: 24px;
 			background-color: #86E2E4;
+			color: #000;
 			border-radius: 100%;
+			transition: all $transition;
+
+			&:hover,
+			&:focus {
+				color: #fff;
+				background-color: #1eb4b7;
+        box-shadow: 0 0 0 2px #1eb4b7;
+			}
+
+			@media (min-width: $screen-md) {
+				width: 48px;
+				height: 48px;
+				line-height: 48px;
+				font-size: 18px;
+
+			}
+		}
+
+		&--active {
+			a {
+				color: #fff;
+			}
+		}
+	}
+
+	&--in-catalog {
+		margin-bottom: 36px;
+
+
+		@media screen and (min-width: $screen-md) {
+			margin-bottom: 54px;
+		}
+
+		@media screen and (min-width: $screen-xxl) {
+			margin-bottom: 66px;
 		}
 	}
 }

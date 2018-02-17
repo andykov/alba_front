@@ -43,9 +43,11 @@
       cursor: pointer;
 
       &[data-tab-btn] {
+        padding-bottom: 2px;
+        border-bottom: 2px solid transparent;
         &.active {
           color: #000;
-          box-shadow: 0 0 0 3px #f8f8f8, 0 5px 0 0 #60D3D5;
+          border-bottom-color: #60D3D5;
         }
       }
     }

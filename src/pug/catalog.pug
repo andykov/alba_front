@@ -332,15 +332,13 @@ block content
 				span.filter__title Сортировка:
 				ul.filter__list
 					li.filter__item
-						button(type="button" id="dAvailable" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Наличие
-						//.filter__dropdown(aria-labelledby="dAvailable" data-dont-close)
-						//	.filter__dropdown-inner
-						//		label.field-checkbox
-						//			span.field-checkbox__input-wrap
-						//				input.field-checkbox__input(type="checkbox")
-						//				span.field-checkbox__name
-						//					| Есть в магазинах
-						//		button(type="button").filter__apply.btn Применить
+						button(type="button" id="dSorting" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Наличие
+						.filter__dropdown(aria-labelledby="dSorting" data-dont-close)
+							.filter__dropdown-inner
+								.sorting
+									a.sorting__item(href="javascript:void(0);") Новинки
+									a.sorting__item(href="javascript:void(0);") По убыванию цены
+									a.sorting__item(href="javascript:void(0);") По возрастанию цены
 
 
 	.container

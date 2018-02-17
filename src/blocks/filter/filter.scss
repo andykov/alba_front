@@ -7,14 +7,56 @@
 
 
 .filter {
+  position: sticky;
+  width: 100%;
+  top: 0;
   z-index: 11;
   background-color: #505054;
   display: flex;
   justify-content: space-between;
   margin-bottom: 50px;
+  transition: all $transition;
+
+  &::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #505054;
+    transition: all $transition;
+  }
+
+  &--fixed {
+    @media (min-width: $screen-md) {
+      &::before {
+        left: -16px;
+        right: -16px;
+      }
+    }
+
+    @media (min-width: $screen-lg) {
+      &::before {
+        left: -8px;
+        right: -8px;
+      }
+    }
+
+    @media (min-width: $screen-xl) {
+      &::before {
+        left: -32px;
+        right: -32px;
+      }
+    }
+  }
+
+  &--hidden {
+    opacity: 0;
+  }
 
   &__inner {
-    //width: 100%;
     color: #fff;
     flex: 1;
     padding: 0 22px;

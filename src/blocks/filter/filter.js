@@ -2,13 +2,6 @@
 
 $(function() {
 
-
-
-    // var $nav = $('nav.greedy');
-    // var $btn = $('nav.greedy button');
-    // var $vlinks = $('nav.greedy .links');
-    // var $hlinks = $('nav.greedy .hidden-links');
-
     var $nav = $('.filter');
     var $btn = $('.filter__more-btn');
     var $vlinks = $('.filter__form--priority .filter__list');
@@ -44,22 +37,26 @@ $(function() {
         // There is not enought space
         if (requiredSpace > availableSpace) {
             $vlinks.children().last().prependTo($hlinks);
+            $hlinks.children().addClass('dropdown--submenu');
+            // $hlinks.children().attr('data-dropdown', 'submenu');
             numOfVisibleItems -= 1;
             check();
             // There is more than enough space
         } else if (availableSpace > breakWidths[numOfVisibleItems]) {
-            $hlinks.children().first().appendTo($vlinks);
+            $hlinks.children().first().appendTo($vlinks)
+            $vlinks.children().removeClass('dropdown--submenu');
+            // $vlinks.children().removeAttr('data-dropdown');
             numOfVisibleItems += 1;
         }
 
         if (availableSpace < 0) {
             $filterTitle.fadeOut(1);
             $more.addClass('as-title');
-            $btn.addClass('as-title').text('Фильтры');
+            // $btn.addClass('as-title').text('Фильтры');
         } else {
             $filterTitle.fadeIn(1);
             $more.removeClass('as-title');
-            $btn.removeClass('as-title').text('ЕЩЕ');
+            // $btn.removeClass('as-title').text('ЕЩЕ');
         }
 
         // Update the button accordingly
@@ -71,11 +68,11 @@ $(function() {
         }
 
         if (numOfVisibleItems == 0 && availableSpace < 0) {
-            $filterDropdown.removeClass('no-items').addClass('no-btn');
+            // $filterDropdown.removeClass('no-items').addClass('no-btn');
         } else if (numOfVisibleItems == 0) {
-            $filterDropdown.removeClass('no-btn').addClass('no-items');
+            // $filterDropdown.removeClass('no-btn').addClass('no-items');
         } else {
-            $filterDropdown.removeClass('no-items');
+            // $filterDropdown.removeClass('no-items');
         }
     }
 
@@ -84,9 +81,9 @@ $(function() {
         check();
     });
 
-    $btn.on('click', function() {
-        $hlinks.parent().toggleClass('hidden');
-    });
+    // $btn.on('click', function() {
+    //     $hlinks.parent().toggleClass('hidden');
+    // });
 
     check();
 
@@ -126,13 +123,6 @@ $(function() {
 
 
 
-
-
-
-
-
-
-//
 //     var $nav = $('.filter'),
 //         $btn = $('.filter .filter__more-btn'),
 //         $moreContainer = $('.filter .filter__more'),

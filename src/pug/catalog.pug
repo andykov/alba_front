@@ -323,8 +323,8 @@ block content
 								button(type="button").filter__apply.btn Применить
 
 				.filter__more
-					button.filter__more-btn(type="button") ЕЩЕ
-					.filter__more-dropdown.hidden(data-dont-close)
+					button.filter__more-btn(type="button"  id="dMore" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") ЕЩЕ
+					.filter__more-dropdown.hidden(aria-labelledby="dMore" data-dont-close)
 						ul.filter__more-list
 
 			form#sorting.filter__form.filter__form--sorting

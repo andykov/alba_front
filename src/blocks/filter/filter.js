@@ -88,6 +88,29 @@ $(function() {
         $hlinks.parent().toggleClass('hidden');
     });
 
+    if ($nav.length) {
+        var elementOffset;
+
+        $(window).resize(function() {
+            filterOffset = $nav.offset().top;
+        })
+
+        $(window).on('scroll', function () {
+            if ($(this).scrollTop() >= filterOffset) {
+                $nav.addClass('filter--fixed');
+            } else {
+                $nav.removeClass('filter--fixed');
+            }
+
+            if ($(this).scrollTop() >= $('.pagination--in-catalog').offset().top) {
+                $nav.addClass('filter--hidden');
+            } else {
+                $nav.removeClass('filter--hidden');
+            }
+
+        })
+    }
+
     check();
 
 

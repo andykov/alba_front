@@ -48,6 +48,17 @@
       > button {
         background-color: #FFF;
         color: #000;
+
+        &::after {
+          opacity: 0;
+
+        }
+        &:hover {
+           color: #000;
+          &::after {
+            opacity: 0;
+          }
+        }
       }
     }
   }
@@ -70,11 +81,13 @@
       padding: 16px 18px 16px 12px;
       white-space: nowrap;
       position: relative;
+      transition: all $transition;
 
       &:hover {
         color: #1DB4B7;
         &:after {
-          //opacity: 1;
+          opacity: 1;
+          background-image: url("../img/svg/arrow-v-blue.svg");
         }
       }
 
@@ -87,9 +100,10 @@
         margin-top: auto;
         margin-bottom: auto;
         background: url("../img/svg/arrow-v.svg") no-repeat center center / contain;
-        opacity: 0.25;
+        opacity: 0.4;
         width: 10px;
         height: 10px;
+        transition: all $transition;
       }
     }
 

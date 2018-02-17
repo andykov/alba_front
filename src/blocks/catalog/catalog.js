@@ -10,6 +10,11 @@ $(function() {
 				bannerHeight = +itemGap + 2 * itemHeight + 'px';
 
 		catalogBanner.css({'padding-bottom': bannerHeight});
+
+		// hack for catalog__item height on hover
+		if (!window.matchMedia('(min-width: 992px)').matches) {
+			catalogItem.css({'min-height': itemHeight});
+		}
 	}
 
 	$(window).on('load resize', function () {

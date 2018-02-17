@@ -9,6 +9,19 @@
       padding-right: 4px;
     }
       flex-direction: row-reverse;
+    margin-bottom: 3px;
+
+    @media screen and (min-width: $screen-md) {
+      margin-bottom: 7px;
+    }
+
+    @media screen and (min-width: $screen-lg) {
+      margin-bottom: 11px;
+    }
+
+    @media screen and (min-width: $screen-xxl) {
+      margin-bottom: 9px;
+    }
 
 	&__item {
       margin-bottom: 16px;
@@ -57,7 +70,7 @@
       &--banner {
         .banner {
           position: absolute;
-          width: 100%;
+          width: calc(100% - 8px);
           // left: 0;
           // right: 0;
           overflow: hidden;
@@ -65,12 +78,19 @@
 
           @media screen and (min-width: $screen-md) {
             padding-bottom: calc(200% + 32px);
+            width: calc(100% - 48px);
           }
+
+          @media screen and (min-width: $screen-lg) {
+            width: calc(100% - 24px);
+          }
+
           @media screen and (min-width: $screen-xl) {
             padding-bottom: calc(200% + 32px);
           }
           @media screen and (min-width: $screen-xxl) {
             padding-bottom: calc(200% + 30px);
+            width: calc(100% - 40px);
           }
 
           &:after {
@@ -158,5 +178,45 @@
           }
         }
       }
+  }
+
+  &-text {
+      margin-bottom: 39px;
+
+      @media screen and (min-width: $screen-md) {
+        margin-bottom: 70px;
+      }
+
+      @media screen and (min-width: $screen-lg) {
+        margin-bottom: 77px;
+      }
+
+      @media screen and (min-width: $screen-xxl) {
+        margin-bottom: 74px;
+      }
+
+    p {
+      font-size: 12px;
+      font-weight: 300;
+      line-height: 1.5;
+      letter-spacing: 0.3px;
+      color: #505050;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      @media screen and (min-width: $screen-md) {
+        font-size: 16px;
+        line-height: 1.38;
+        letter-spacing: 0.4px;
+      }
+
+      @media screen and (min-width: $screen-xxl) {
+        max-width: 968px;
+        margin-left: auto;
+        margin-right: auto;
+      }
     }
+  }
 }

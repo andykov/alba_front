@@ -1,9 +1,9 @@
-// .article scripts goes here 
+// .auth scripts goes here 
 
 /*$(function() {
 	
 });*/
-// .auth scripts goes here 
+// .article scripts goes here 
 
 /*$(function() {
 	
@@ -472,7 +472,6 @@ $(function() {
 //
 //     updateNav();
 });
-
 // .form-login scripts goes here 
 
 $(function() {
@@ -492,8 +491,45 @@ $(function() {
     //     }
     // });
 });
+
 $(function() {
 
+    // Вынос логотипа и панели с корзиной в отдельный блок в мобильном меню
+    var $headerMobile = $('.header-mobile'),
+        $headerNavs = $('.header-navs'),
+        $headerLogo = $('.header__logo'),
+        $headerGenderInr = $('.header-navs__gender-inner'),
+        $headerCart = $('.header__cart');
+
+    var createMobileNav = function() {
+        if ($(window).width() <= 991) {
+            $headerMobile.prepend($headerLogo, $headerCart);
+        } else {
+            $headerGenderInr.prepend($headerLogo);
+            $headerGenderInr.append($headerCart);
+        }
+    };
+
+
+    $(window).on( "resize", function () {
+        if ($(window).width() <= 991) {
+            if ($headerMobile.children().length != 0) {
+                return false;
+            }
+            $headerMobile.prepend($headerLogo, $headerCart);
+
+        } else {
+            if ($headerGenderInr.children().length > 1) {
+                return false;
+            }
+            $headerGenderInr.prepend($headerLogo);
+            $headerGenderInr.append($headerCart);
+        }
+    } ).resize();
+
+    $('.js-mobile-nav').on('click', function () {
+        $headerNavs.toggleClass('open');
+    });
 
 
 });
@@ -570,11 +606,6 @@ $(function() {
 /*$(function() {
 	
 });*/
-// .product-info scripts goes here 
-
-/*$(function() {
-	
-});*/
 // .product-tabs scripts goes here 
 
 $(function() {
@@ -600,6 +631,11 @@ $(function() {
 
 
 });
+// .product-info scripts goes here 
+
+/*$(function() {
+	
+});*/
 // .sizes scripts goes here 
 
 $(function() {

@@ -1,4 +1,18 @@
 .footer {
+	&__inner {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		@media screen and (min-width: $screen-md) {
+			flex-direction: row;
+			justify-content: space-between;
+		}
+	}
+	&__top {
+		@media screen and (min-width: $screen-lg) {
+			padding-bottom: 59px;
+		}
+	}
 	&-nav {
 		padding-top: 30px;
 		padding-bottom: 10px;
@@ -111,15 +125,14 @@
 			a {
 				display: block;
 				max-width: 136px;
-				border: 2px solid #60D3D5;
-				font-family: $font-family--montserrat;
 				font-size: 10px;
 				font-weight: 600;
-				text-transform: uppercase;
 				line-height: 1.6;
 				letter-spacing: 0.4px;
-				color: #1db4b7;
-				padding: 16px 17px;
+				padding: 17px;
+				white-space: normal;
+				border-width: 2px;
+				text-align: left;
 				@media screen and (min-width: $screen-md) {
 					font-size: 11px;
 					max-width: 100%;
@@ -129,7 +142,7 @@
 	}
 
 	&__bottom {
-		padding: 23px 16px 27px 16px;
+		padding: 23px 0 27px 0;
 		background-color: #282828;
 		font-size: 13px;
 		line-height: (19 / 14);
@@ -137,6 +150,8 @@
 		color: #A0A0A0;
 		@media screen and (min-width: $screen-md) {
 			padding: 27px 32px 30px 32px;
+			margin-right: -16px;
+			margin-left: -16px;
 			font-size: 14px;
 		}
 		@media screen and (min-width: $screen-lg) {
@@ -144,10 +159,14 @@
 			justify-content: space-between;
 			padding-left: 36px;
 			padding-right: 36px;
+			padding-bottom: 35px;
+
 		}
 		@media screen and (min-width: $screen-xl) {
-			padding-left: 43px;
-			padding-right: 43px;
+			margin-right: -32px;
+			margin-left: -32px;
+			padding-left: 68px;
+			padding-right: 68px;
 		}
 		@media screen and (min-width: $screen-xxl) {
 			padding-left: 48px;
@@ -167,11 +186,23 @@
 		}
 		@media screen and (min-width: $screen-md) {
 			display: flex;
+			margin-right: -18px;
+			margin-left: -18px;
+		}
+		@media screen and (min-width: $screen-xl) {
+			margin-bottom: 0;
 		}
 	}
 	&__item {
 		display: block;
 		margin-bottom: 16px;
+		@media screen and (min-width: $screen-md) {
+			padding-right: 18px;
+			padding-left: 18px;
+		}
+		@media screen and (min-width: $screen-xl) {
+			margin-bottom: 0;
+		}
 		a {
 			display: inline-block;
 			vertical-align: top;
@@ -184,6 +215,9 @@
 			a {
 				margin-right: 24px;
 				color: #A0A0A0;
+				@media screen and (min-width: $screen-md) {
+					margin-right: 36px;
+				}
 			}
 		}
 	}

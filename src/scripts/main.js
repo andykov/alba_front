@@ -59,21 +59,22 @@ $(function() {
 
     if ($('.js-shops-list').length) {
         $('.js-shops-list').slick({
-            arrows: true,
-            infinite: false,
-            slidesToShow: 2,
-            slidesToScroll: 1,
+          arrows: false,
+          infinite: false,
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          mobileFirst: true,
             responsive: [
                 {
-                    breakpoint: 1800,
+                    breakpoint: 1920,
                     settings: {
-                        slidesToShow: 2
+                        slidesToShow: 3
                     }
                 },
                 {
-                    breakpoint: 767,
+                    breakpoint: 768,
                     settings: {
-                      arrows: false
+                      arrows: true
                     }
                 }
             ]

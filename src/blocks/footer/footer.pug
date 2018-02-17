@@ -70,7 +70,7 @@ footer.footer
                     .footer-contact
                         .footer-contact__phone 8 800 555 00 30
                         .footer-contact__online
-                            a(href="#")
+                            a(href="#").btn.btn--border
                                 span Задать вопрос онлайн
                 .footer-nav__col.footer-nav__col--moving.offset-lg-10.offset-xxl-0
                     .footer-nav__title.footer-nav__title--social Мы в соцсетях
@@ -84,19 +84,20 @@ footer.footer
                         a.social__item(href="#")
                             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><g fill="none" fill-rule="evenodd"><circle cx="16" cy="16" r="16" fill="#1D1D1D"/><path fill="#FFF" d="M21.871 10.157c.734.734 1.129 1.75 1.129 2.936v5.814c0 1.214-.395 2.258-1.157 2.992-.734.706-1.75 1.101-2.964 1.101h-5.758c-1.157 0-2.173-.367-2.936-1.1C9.395 21.136 9 20.092 9 18.878v-5.786C9 10.637 10.637 9 13.093 9h5.814c1.186 0 2.23.395 2.964 1.157zm-.17 8.75h.057v-5.814c0-.819-.282-1.524-.762-2.033-.508-.508-1.214-.762-2.06-.762H13.12c-.847 0-1.58.254-2.06.734-.509.508-.763 1.214-.763 2.06v5.787c0 .875.254 1.58.762 2.089.509.48 1.214.734 2.061.734h5.758c.847 0 1.552-.254 2.06-.734.509-.48.763-1.186.763-2.06zM16 12.36c1.976 0 3.613 1.637 3.613 3.613A3.62 3.62 0 0 1 16 19.585a3.602 3.602 0 0 1-3.613-3.613A3.62 3.62 0 0 1 16 12.359zm0 5.927a2.325 2.325 0 0 1-2.315-2.314A2.325 2.325 0 0 1 16 13.657a2.325 2.325 0 0 1 2.315 2.315A2.325 2.325 0 0 1 16 18.286zm3.754-5.193a.819.819 0 1 1 0-1.637.819.819 0 0 1 0 1.637z"/></g></svg>
     .footer__bottom
-        .footer__bottom-col
-            .footer__item
-                a(href="/").footer__link.footer__link--site the-alba.com
-                span.footer__title-copy —  интернет магазин Alba © 2017
-            .footer__item.footer__item--offer
-                a(href="#").footer__link Оферта
-                a(href="#").footer__link Политика конфиденциальности
-        .footer__bottom-col
-            .footer__item
-                span.footer__title-copy Дизайн сайта —
-                a(href="#").footer__link.footer__link--bold ДзенДизайн
-            .footer__item
-                span.footer__title-copy Разработка сайта —
-                a(href="#").footer__link.footer__link--bold Unlim Company
+        .container.footer__inner
+            .footer__bottom-col
+                .footer__item
+                    a(href="/").footer__link.footer__link--site the-alba.com
+                    span.footer__title-copy —  интернет магазин Alba © 2017
+                .footer__item.footer__item--offer
+                    a(href="#").footer__link Оферта
+                    a(href="#").footer__link Политика конфиденциальности
+            .footer__bottom-col
+                .footer__item
+                    span.footer__title-copy Дизайн сайта —
+                    a(href="#").footer__link.footer__link--bold ДзенДизайн
+                .footer__item
+                    span.footer__title-copy Разработка сайта —
+                    a(href="#").footer__link.footer__link--bold Unlim Company
 
 .overlay

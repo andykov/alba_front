@@ -11,9 +11,9 @@ $(function() {
 
 		catalogBanner.css({'padding-bottom': bannerHeight});
 	}
-
-	$(window).on('load resize', function () {
-		bunnerSize();
-	});
-	
+  if ($('.catalog__item--banner .banner').length) {
+    $(window).on('load resize', function () {
+      bunnerSize();
+    })
+  }
 });

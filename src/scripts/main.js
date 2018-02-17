@@ -61,9 +61,9 @@ $(function() {
         $('.js-shops-list').slick({
           arrows: false,
           infinite: false,
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          mobileFirst: true,
+
+            slidesToScroll: 1,
+            mobileFirst: true,
             responsive: [
                 {
                     breakpoint: 1920,
@@ -74,7 +74,8 @@ $(function() {
                 {
                     breakpoint: 768,
                     settings: {
-                      arrows: true
+                      arrows: true,
+                      slidesToShow: 2
                     }
                 }
             ]

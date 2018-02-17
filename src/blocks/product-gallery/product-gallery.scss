@@ -6,6 +6,7 @@
 	flex-direction: column;
 	justify-content: space-between;
 	background-color: #fff;
+	overflow: hidden;
 	@media screen and (min-width: $screen-md) {
 		margin-right: -16px;
 		margin-left: -16px;

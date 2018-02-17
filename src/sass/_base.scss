@@ -605,7 +605,6 @@ p {
 
 		}
 
-
 		&--active {
 			a::before {
 				background: #000;
@@ -695,7 +694,6 @@ p {
 		}
 	}
 
-
 	&__item {
 		padding: 5px;
 
@@ -704,7 +702,7 @@ p {
 			width: 24px;
 			height: 24px;
 			font-size: 12px;
-  		font-weight: 300;
+			font-weight: 300;
 			text-align: center;
 			line-height: 24px;
 			background-color: #86E2E4;
@@ -716,7 +714,7 @@ p {
 			&:focus {
 				color: #fff;
 				background-color: #1eb4b7;
-        box-shadow: 0 0 0 2px #1eb4b7;
+				box-shadow: 0 0 0 2px #1eb4b7;
 			}
 
 			@media (min-width: $screen-md) {
@@ -737,7 +735,6 @@ p {
 
 	&--in-catalog {
 		margin-bottom: 36px;
-
 
 		@media screen and (min-width: $screen-md) {
 			margin-bottom: 54px;
@@ -903,7 +900,7 @@ p {
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
-		padding-top: 123px;
+		padding-top: 102px;
 	}
 	@media screen and (min-width: $screen-lg) and (max-width: $screen-xl) {
 		order: 1;
@@ -962,4 +959,3 @@ p {
 		color: #000000;
 	}
 }
-

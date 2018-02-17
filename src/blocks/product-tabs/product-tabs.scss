@@ -37,81 +37,65 @@
 		.product-tabs__body {
 			@media screen and (min-width: $screen-md) {
 				padding-left: 45px;
+				margin-left: -48px;
 			}
 			@media screen and (min-width: $screen-lg) {
 				padding-left: 35px;
+				margin-left: 0;
 			}
 		}
 	}
 
 	&__nav {
 		display: flex;
-		flex-wrap: wrap;
 		margin-bottom: 21px;
 		font-size: 14px;
+		overflow: auto;
 		@media screen and (min-width: $screen-md) {
 			flex-wrap: nowrap;
 		}
 		@media screen and (min-width: $screen-xl) {
 			margin-bottom: 39px;
 		}
-		ul {
-			display: flex;
-			align-items: flex-end;
-			flex: 1;
-			overflow: auto;
-			margin-right: -12px;
-			margin-left: -12px;
-			@media screen and (min-width: $screen-md) {
-				padding-top: 3px;
-				margin-right: 0;
-				margin-left: 0;
+	}
+	&__tab {
+		padding: 0 12px;
+		@media screen and (min-width: $screen-md) {
+			padding: 0 19px;
+		}
+		&.active {
+			a {
+				border-bottom-color: #60D3D5;
+				color: #000;
 			}
 		}
-
-		li {
-			padding: 0 12px;
-			@media screen and (min-width: $screen-md) {
-				padding: 0 19px;
-			}
-			&.active {
-				a {
-					border-bottom-color: #60D3D5;
-					color: #000;
-				}
-			}
-			&:last-child {
+		&:last-child {
+			padding-right: 0;
+			a {
 				padding-right: 0;
-				a {
-					padding-right: 0;
-				}
-			}
-		}
-
-		a {
-			display: block;
-			font-family: $font-family--montserrat;
-			font-weight: 600;
-			font-size: 10px;
-			text-transform: uppercase;
-			line-height: (16 / 11);
-			letter-spacing: 0.4px;
-			padding-bottom: 7px;
-			padding-right: 10px;
-			border-bottom: 2px solid transparent;
-			white-space: nowrap;
-			color: #a0a0a0;
-			&:hover {
-				color: $primary-color;
-			}
-			@media screen and (min-width: $screen-md) {
-				font-size: 11px;
 			}
 		}
 	}
-
-
-
+	&__link {
+		display: block;
+		font-family: $font-family--montserrat;
+		font-weight: 600;
+		font-size: 10px;
+		text-transform: uppercase;
+		line-height: (16 / 11);
+		letter-spacing: 0.4px;
+		padding-bottom: 7px;
+		padding-right: 10px;
+		border-bottom: 2px solid transparent;
+		white-space: nowrap;
+		color: #a0a0a0;
+		&:hover {
+			color: $primary-color;
+		}
+		@media screen and (min-width: $screen-md) {
+			font-size: 11px;
+		}
+	}
 	&__item {
 		display: none;
 		&.active {
@@ -124,6 +108,7 @@
 		font-size: 12px;
 		line-height: 1.33;
 		letter-spacing: 0.3px;
+		white-space: nowrap;
 		@media screen and (min-width: $screen-md) {
 			display: inline-block;
 			margin-bottom: 0;

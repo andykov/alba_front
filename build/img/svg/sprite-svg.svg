@@ -8,7 +8,12 @@
 <title>E0EAF9BE-25BB-4D20-9288-19310ECF5D0C</title>
 <desc>Created with sketchtool.</desc>
 <polygon id="Combined-Shape" points="6,3.5 6,2.5 0,0 0,6 "/>
-</symbol><symbol id="arr-next" viewBox="0 0 24 6"><use xlink:href="#path0_fill" transform="translate(18)"/><use xlink:href="#path1_fill" transform="translate(0 2)"/></symbol><symbol id="arr-prev" viewBox="0 0 24 6"><use xlink:href="#path0_fill" transform="matrix(-1 0 0 1 6 0)"/><use xlink:href="#path1_fill" transform="matrix(-1 0 0 1 24 2)"/></symbol><symbol id="arrow-h" viewBox="0 0 5 6"><path d="M1 0l3 3-3 3" stroke="#BFBFBF" fill="none" fill-rule="evenodd"/></symbol><symbol id="arrow-v-blue" viewBox="0 0 10 7">
+</symbol><symbol id="arr-next" viewBox="0 0 24 6"><use xlink:href="#path0_fill" transform="translate(18)"/><use xlink:href="#path1_fill" transform="translate(0 2)"/></symbol><symbol id="arr-prev" viewBox="0 0 24 6"><use xlink:href="#path0_fill" transform="matrix(-1 0 0 1 6 0)"/><use xlink:href="#path1_fill" transform="matrix(-1 0 0 1 24 2)"/></symbol><symbol id="arrow-h" viewBox="0 0 5 6"><path d="M1 0l3 3-3 3" stroke="#BFBFBF" fill="none" fill-rule="evenodd"/></symbol><symbol id="arrow-v-black" viewBox="0 0 10 7">
+<style type="text/css">
+	.st0{fill:none;stroke:#000000;stroke-width:2;}
+</style>
+<polyline class="st0" points="1,1 4.3,6 5.7,6 9,1 "/>
+</symbol><symbol id="arrow-v-blue" viewBox="0 0 10 7">
   <polyline fill="none" stroke="#1eb4b7" stroke-width="2" points="1 0 4.333 5 5.667 5 9 0" transform="translate(0 1)"/>
 </symbol><symbol id="arrow-v" viewBox="0 0 10 7">
   <polyline fill="none" stroke="#1eb4b7" stroke-width="2" points="1 0 4.333 5 5.667 5 9 0" transform="translate(0 1)"/>

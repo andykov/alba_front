@@ -388,6 +388,29 @@ $(function() {
         $hlinks.parent().toggleClass('hidden');
     });
 
+    if ($nav.length) {
+        var elementOffset;
+
+        $(window).resize(function() {
+            filterOffset = $nav.offset().top;
+        })
+
+        $(window).on('scroll', function () {
+            if ($(this).scrollTop() >= filterOffset) {
+                $nav.addClass('filter--fixed');
+            } else {
+                $nav.removeClass('filter--fixed');
+            }
+
+            if ($(this).scrollTop() >= $('.pagination--in-catalog').offset().top) {
+                $nav.addClass('filter--hidden');
+            } else {
+                $nav.removeClass('filter--hidden');
+            }
+
+        })
+    }
+
     check();
 
 
@@ -717,20 +740,29 @@ $(function() {
             slidesToShow: 2,
             centerPadding: '0',
             centerMode: true,
-            // variableWidth: true,
             responsive: [
                 {
-                    breakpoint: 1800,
+                    breakpoint: 1920,
                     settings: {
-                        slidesToShow: 5,
-                        centerPadding: '0'
+                        centerPadding: '336px',
+                        slidesToShow: 4
                     }
                 },
                 {
-                    breakpoint: 991,
+                    breakpoint: 992,
+                    settings: {
+                        slidesToShow: 3,
+                        centerPadding: '97px',
+                        arrows: true
+
+                    }
+                }
+                ,
+                {
+                    breakpoint: 1200,
                     settings: {
                         slidesToShow: 4,
-                        centerPadding: '0'
+                        centerPadding: '150px'
                     }
                 }
             ]
@@ -742,23 +774,32 @@ $(function() {
         infinite: true,
         speed: 300,
         slidesToShow: 2,
-        centerPadding: '20px',
+        centerPadding: '0',
         centerMode: true,
         responsive: [
-          {
-            breakpoint: 1800,
-            settings: {
-              slidesToShow: 5,
-              centerPadding: '0'
+            {
+                breakpoint: 1920,
+                settings: {
+                    centerPadding: '336px'
+                }
+            },
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 3,
+                    centerPadding: '97px',
+                    arrows: true
+
+                }
             }
-          },
-          {
-            breakpoint: 991,
-            settings: {
-              slidesToShow: 4,
-              centerPadding: '0'
+            ,
+            {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 4,
+                    centerPadding: '150px'
+                }
             }
-          }
         ]
       });
       $('.js-slider-product-recently-watched').slick({
@@ -768,33 +809,37 @@ $(function() {
         infinite: true,
         speed: 300,
         slidesToShow: 2,
-        centerPadding: '20px',
+        centerPadding: '0',
         centerMode: true,
         responsive: [
-          {
-            breakpoint: 1800,
-            settings: {
-              slidesToShow: 5,
-              centerPadding: '0'
+            {
+                breakpoint: 1920,
+                settings: {
+                    centerPadding: '336px'
+                }
+            },
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 3,
+                    centerPadding: '97px',
+                    arrows: true
+
+                }
             }
-          },
-          {
-            breakpoint: 991,
-            settings: {
-              slidesToShow: 4,
-              centerPadding: '0'
+            ,
+            {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 4,
+                    centerPadding: '150px'
+                }
             }
-          }
         ]
       })
 
     }
 });
-// .slider-products scripts goes here 
-
-/*$(function() {
-	
-});*/
 // .slider-sale scripts goes here 
 
 $(function() {
@@ -824,6 +869,11 @@ $(function() {
     }
 
 });
+// .slider-products scripts goes here 
+
+/*$(function() {
+	
+});*/
 // .social scripts goes here 
 
 /*$(function() {

@@ -815,8 +815,8 @@ p {
 .product-holder {
 	@media screen and (min-width: $screen-md) {
 		display: flex;
-		margin-right: -44px;
-		margin-left: -44px;
+		margin-right: -48px;
+		margin-left: -48px;
 	}
 	@media screen and (min-width: $screen-md) and (max-width: $screen-lg - 1) {
 		flex-wrap: wrap;

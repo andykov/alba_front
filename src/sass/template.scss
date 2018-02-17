@@ -13,6 +13,10 @@
 
 // blocks
 @import "../blocks/btn/btn.scss";
+@import "../blocks/breadcrumbs/breadcrumbs";
+@import "../blocks/social/social";
+@import "../blocks/product-gallery/product-gallery";
+@import "../blocks/shops/shops";
 @import "../blocks/sizes/sizes.scss";
 @import "../blocks/tabs/tabs.scss";
 @import "../blocks/dropdown/dropdown.scss";
@@ -28,8 +32,6 @@
 @import "../blocks/tile/tile.scss";
 @import "../blocks/auth/auth.scss";
 @import "../blocks/subscribe/subscribe.scss";
-
-
 @import "../blocks/filter/filter.scss";
 @import "../blocks/catalog/catalog.scss";
 @import "../blocks/product/product.scss";

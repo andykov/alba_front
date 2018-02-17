@@ -32,6 +32,10 @@
     }
     &--sorting {
       margin-left: auto;
+
+      .filter__dropdown {
+        right: 0;
+      }
     }
   }
 
@@ -313,3 +317,11 @@
   }
 }
 
+.sorting {
+  &__item {
+    display: block;
+    &:not(:last-of-type) {
+      margin-bottom: 10px;
+    }
+  }
+}

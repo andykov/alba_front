@@ -83,4 +83,11 @@ $(function() {
 
     check();
 
+
+
+
+    // закрытие выпадающего фильтра по кнопке применить
+    $('.filter .filter__apply').on('click', function () {
+        $(this).closest('.filter__item').removeClass('open');
+    });
 });

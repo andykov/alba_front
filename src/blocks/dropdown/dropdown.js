@@ -13,19 +13,6 @@
 //     };
 // });
 
-// закрытие выпадающего фильтра по кнопке применить
-$('.filter .filter__apply').on('click', function () {
-    $(this).closest('.filter__item').removeClass('open');
-});
-
-// отмена закрытия бутстраповского дропдауна с чекбоксами
-$(document).on('click', '[data-dont-close]', function(e) {
-    e.stopPropagation();
-});
-
-
-
-
 /* ========================================================================
  * Основано на: Bootstrap dropdown.js v3.3.6
  * Все изменения сопровождены закомментироваными оригиналами
@@ -189,3 +176,18 @@ $(document).on('click', '[data-dont-close]', function(e) {
         .on('keydown.bs.dropdown.data-api', '.dropdown-menu', Dropdown.prototype.keydown)
 
 }(jQuery);
+
+$(function() {
+    // отмена закрытия бутстраповского дропдауна с чекбоксами
+    $(document).on('click', '[data-dont-close]', function(e) {
+        e.stopPropagation();
+    });
+
+    // многоуровневый дропдаун
+    $('.dropdown--submenu [data-toggle="dropdown"]').on('click', function (event) {
+        event.preventDefault();
+        event.stopPropagation();
+        $(this).parent().siblings().removeClass('open');
+        $(this).parent().toggleClass('open');
+    });
+});

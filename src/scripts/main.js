@@ -14,12 +14,9 @@
 
 
 $(function() {
-    $('.dropdown--submenu [data-toggle="dropdown"]').on('click', function(event) {
-        event.preventDefault();
-        event.stopPropagation();
-        $(this).parent().siblings().removeClass('open');
-        $(this).parent().toggleClass('open');
-    });
+
+
+
 
     var $collapseContainer = $(".js-collapse"),
         $collapseToggle = $collapseContainer.find('[data-collapse-toggle]'),

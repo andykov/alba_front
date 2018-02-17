@@ -1,13 +1,3 @@
-// .auth scripts goes here 
-
-/*$(function() {
-	
-});*/
-// .article scripts goes here 
-
-/*$(function() {
-	
-});*/
 // .breadcrumbs scripts goes here 
 
 /*$(function() {
@@ -32,7 +22,17 @@ $(function() {
     })
   }
 });
+// .auth scripts goes here 
 
+/*$(function() {
+	
+});*/
+
+// .article scripts goes here 
+
+/*$(function() {
+	
+});*/
 // .checkout scripts goes here 
 
 /*$(function() {
@@ -52,19 +52,6 @@ $(function() {
 //         $(this).toggleClass('open');
 //     };
 // });
-
-// закрытие выпадающего фильтра по кнопке применить
-$('.filter .filter__apply').on('click', function () {
-    $(this).closest('.filter__item').removeClass('open');
-});
-
-// отмена закрытия бутстраповского дропдауна с чекбоксами
-$(document).on('click', '[data-dont-close]', function(e) {
-    e.stopPropagation();
-});
-
-
-
 
 /* ========================================================================
  * Основано на: Bootstrap dropdown.js v3.3.6
@@ -229,39 +216,6 @@ $(document).on('click', '[data-dont-close]', function(e) {
         .on('keydown.bs.dropdown.data-api', '.dropdown-menu', Dropdown.prototype.keydown)
 
 }(jQuery);
-// .field-checkbox scripts goes here 
-
-/*$(function() {
-	
-});*/
-$(function() {
-
-    // Счетчик количества в корзине
-    var $fieldCounter = $('.js-field-counter'),
-        $fieldCounterInput = $fieldCounter.find('.field-counter__input'),
-        $fieldCounterPlus = $fieldCounter.find('.field-counter__plus'),
-        $fieldCounterMinus = $fieldCounter.find('.field-counter__minus');
-
-    $fieldCounterPlus.on('click', function (e) {
-        e.preventDefault();
-        var currentVal = parseInt($('.field-counter__input').val());
-        if (!isNaN(currentVal)) {
-            $(this).closest($fieldCounter).find($fieldCounterInput).val(currentVal + 1);
-        } else {
-            $(this).closest($fieldCounter).find($fieldCounterInput).val(0);
-        }
-    });
-
-    $fieldCounterMinus.on('click', function (e) {
-        e.preventDefault();
-        var currentVal = parseInt($('.field-counter__input').val());
-        if (!isNaN(currentVal) && currentVal > 0) {
-            $(this).closest($fieldCounter).find($fieldCounterInput).val(currentVal - 1);
-        } else {
-            $(this).closest($fieldCounter).find($fieldCounterInput).val(0);
-        }
-    });
-});
 // .field-radio scripts goes here 
 
 /*$(function() {
@@ -269,6 +223,180 @@ $(function() {
 });*/
 
 
+
+// .form-login scripts goes here 
+
+$(function() {
+    // var $loginBtn = $('.js-login'),
+    //     $formLogin = $('.js-form-login'),
+    //     $overlay = $('.overlay');
+    //
+    // $loginBtn.on('click', function () {
+    //     $($formLogin).add($overlay).toggleClass('open');
+    // });
+    //
+    // $(document).mouseup(function (e){ // отслеживаем событие клика по веб-документу
+    //     var block = $formLogin; // определяем элемент, к которому будем применять условия (можем указывать ID, класс либо любой другой идентификатор элемента)
+    //     if (!block.is(e.target) // проверка условия если клик был не по нашему блоку
+    //         && block.has(e.target).length === 0) { // проверка условия если клик не по его дочерним элементам
+    //         block.removeClass('open'); // если условия выполняются - скрываем наш элемент
+    //     }
+    // });
+});
+$(function() {
+
+    // Вынос логотипа и панели с корзиной в отдельный блок в мобильном меню
+    var $headerMobile = $('.header-mobile'),
+        $headerNavs = $('.header-navs'),
+        $headerLogo = $('.header__logo'),
+        $headerGenderInr = $('.header-navs__gender-inner'),
+        $headerCart = $('.header__cart');
+
+    var createMobileNav = function() {
+        if ($(window).width() <= 991) {
+            $headerMobile.prepend($headerLogo, $headerCart);
+        } else {
+            $headerGenderInr.prepend($headerLogo);
+            $headerGenderInr.append($headerCart);
+        }
+    };
+
+
+    $(window).on( "resize", function () {
+        if ($(window).width() <= 991) {
+            if ($headerMobile.children().length != 0) {
+                return false;
+            }
+            $headerMobile.prepend($headerLogo, $headerCart);
+
+        } else {
+            if ($headerGenderInr.children().length > 1) {
+                return false;
+            }
+            $headerGenderInr.prepend($headerLogo);
+            $headerGenderInr.append($headerCart);
+        }
+    } ).resize();
+
+    $('.js-mobile-nav').on('click', function () {
+        $headerNavs.toggleClass('open');
+    });
+
+
+});
+
+/**
+ * Определение мобильного устройства
+ */
+document.addEventListener('DOMContentLoaded', function(){
+    if (window.isMobile !== undefined) {
+        // console.log(isMobile);
+        if(isMobile.any) {
+            var rootClasses = ' is-mobile';
+            for (key in isMobile) {
+                if(typeof isMobile[key] === 'boolean' && isMobile[key] && key !== 'any') rootClasses += ' is-mobile--'+key;
+                if(typeof isMobile[key] === 'object' && key !== 'other') {
+                    for (type in isMobile[key]) {
+                        if(isMobile[key][type]) rootClasses += ' is-mobile--'+key+'-'+type;
+                    }
+                }
+            }
+            document.documentElement.className += rootClasses;
+        }
+    }
+    else {
+        console.log('Классы для мобильных не добавлены: в сборке отсутствует isMobile.js');
+    }
+});
+// .nav scripts goes here
+
+$(function() {
+
+    // $('.js-mobile-nav').on('click', function () {
+    //     $('.js-sidebar').parent().addClass('show');
+    //     $('body').addClass('scroll-off');
+    //     $('.page-overlay').fadeIn(500);
+    // });
+    // $('.js-mobile-nav-close').on('click', function () {
+    //     $('.js-sidebar').parent().removeClass('show');
+    //     $('body').removeClass('scroll-off');
+    //     $('.page-overlay').fadeOut(500);
+    // });
+
+});
+// .news scripts goes here 
+
+$(function() {
+    // $(".news-nav").stick_in_parent();
+
+    // return $("[data-sticky-element]").stick_in_parent({
+    //     parent: "[data-sticky-parent]"
+    // });
+
+    // $('.news-nav').stickySidebar({
+    //     topSpacing: 60,
+    //     bottomSpacing: 60,
+    //     containerSelector: '.news',
+    //     innerWrapperSelector: '.news-nav__inner',
+    // });
+
+});
+// .field-checkbox scripts goes here 
+
+/*$(function() {
+	
+});*/
+// .product scripts goes here 
+
+/*$(function() {
+	
+});*/
+// .product-gallery scripts goes here 
+
+/*$(function() {
+	
+});*/
+// .office-history scripts goes here 
+
+$(function() {
+    // $('[data-toggle="collapse"]').on('click', function () {
+    //     var $collapseTrigger = $(this),
+    //         $collapseContainer = $collapseTrigger.closest($('.collapse')),
+    //         $collapseBody = $collapseContainer.find('.collapse__body');
+    //
+    //     $collapseContainer.toggleClass('open')
+    // });
+});
+// .product-tabs scripts goes here 
+
+$(function() {
+
+    $(".product-tabs__item").hide().first().show();
+    $(".product-tabs__nav li:first").addClass("active");
+
+    $(".product-tabs__nav a").on('click', function (e) {
+        e.preventDefault();
+        $(this).closest('li').addClass("active").siblings().removeClass("active");
+        $($(this).attr('href')).show().siblings('.product-tabs__item').hide();
+    });
+
+    var hash = $.trim( window.location.hash );
+
+    if (hash) $('.product-tabs__nav a[href$="'+hash+'"]').trigger('click');
+
+});
+// .shops scripts goes here 
+
+/*$(function() {
+	
+});*/
+// .sidebar scripts goes here 
+
+$(function() {
+
+
+
+});
 // .filter scripts goes here
 
 $(function() {
@@ -354,229 +482,19 @@ $(function() {
 
     check();
 
-});
-
-$(function() {
-
-    // Вынос логотипа и панели с корзиной в отдельный блок в мобильном меню
-    var $headerMobile = $('.header-mobile'),
-        $headerNavs = $('.header-navs'),
-        $headerLogo = $('.header__logo'),
-        $headerGenderInr = $('.header-navs__gender-inner'),
-        $headerCart = $('.header__cart');
-
-    var createMobileNav = function() {
-        if ($(window).width() <= 991) {
-            $headerMobile.prepend($headerLogo, $headerCart);
-        } else {
-            $headerGenderInr.prepend($headerLogo);
-            $headerGenderInr.append($headerCart);
-        }
-    };
 
 
-    $(window).on( "resize", function () {
-        if ($(window).width() <= 991) {
-            if ($headerMobile.children().length != 0) {
-                return false;
-            }
-            $headerMobile.prepend($headerLogo, $headerCart);
 
-        } else {
-            if ($headerGenderInr.children().length > 1) {
-                return false;
-            }
-            $headerGenderInr.prepend($headerLogo);
-            $headerGenderInr.append($headerCart);
-        }
-    } ).resize();
-
-    $('.js-mobile-nav').on('click', function () {
-        $headerNavs.toggleClass('open');
+    // закрытие выпадающего фильтра по кнопке применить
+    $('.filter .filter__apply').on('click', function () {
+        $(this).closest('.filter__item').removeClass('open');
     });
-
-
 });
-
-/**
- * Определение мобильного устройства
- */
-document.addEventListener('DOMContentLoaded', function(){
-    if (window.isMobile !== undefined) {
-        // console.log(isMobile);
-        if(isMobile.any) {
-            var rootClasses = ' is-mobile';
-            for (key in isMobile) {
-                if(typeof isMobile[key] === 'boolean' && isMobile[key] && key !== 'any') rootClasses += ' is-mobile--'+key;
-                if(typeof isMobile[key] === 'object' && key !== 'other') {
-                    for (type in isMobile[key]) {
-                        if(isMobile[key][type]) rootClasses += ' is-mobile--'+key+'-'+type;
-                    }
-                }
-            }
-            document.documentElement.className += rootClasses;
-        }
-    }
-    else {
-        console.log('Классы для мобильных не добавлены: в сборке отсутствует isMobile.js');
-    }
-});
-// .nav scripts goes here
-
-$(function() {
-
-    // $('.js-mobile-nav').on('click', function () {
-    //     $('.js-sidebar').parent().addClass('show');
-    //     $('body').addClass('scroll-off');
-    //     $('.page-overlay').fadeIn(500);
-    // });
-    // $('.js-mobile-nav-close').on('click', function () {
-    //     $('.js-sidebar').parent().removeClass('show');
-    //     $('body').removeClass('scroll-off');
-    //     $('.page-overlay').fadeOut(500);
-    // });
-
-});
-// .form-login scripts goes here 
-
-$(function() {
-    // var $loginBtn = $('.js-login'),
-    //     $formLogin = $('.js-form-login'),
-    //     $overlay = $('.overlay');
-    //
-    // $loginBtn.on('click', function () {
-    //     $($formLogin).add($overlay).toggleClass('open');
-    // });
-    //
-    // $(document).mouseup(function (e){ // отслеживаем событие клика по веб-документу
-    //     var block = $formLogin; // определяем элемент, к которому будем применять условия (можем указывать ID, класс либо любой другой идентификатор элемента)
-    //     if (!block.is(e.target) // проверка условия если клик был не по нашему блоку
-    //         && block.has(e.target).length === 0) { // проверка условия если клик не по его дочерним элементам
-    //         block.removeClass('open'); // если условия выполняются - скрываем наш элемент
-    //     }
-    // });
-});
-// .news scripts goes here 
-
-$(function() {
-    // $(".news-nav").stick_in_parent();
-
-    // return $("[data-sticky-element]").stick_in_parent({
-    //     parent: "[data-sticky-parent]"
-    // });
-
-    // $('.news-nav').stickySidebar({
-    //     topSpacing: 60,
-    //     bottomSpacing: 60,
-    //     containerSelector: '.news',
-    //     innerWrapperSelector: '.news-nav__inner',
-    // });
-
-});
-// .office-history scripts goes here 
-
-$(function() {
-    // $('[data-toggle="collapse"]').on('click', function () {
-    //     var $collapseTrigger = $(this),
-    //         $collapseContainer = $collapseTrigger.closest($('.collapse')),
-    //         $collapseBody = $collapseContainer.find('.collapse__body');
-    //
-    //     $collapseContainer.toggleClass('open')
-    // });
-});
-// .product scripts goes here 
-
-/*$(function() {
-	
-});*/
-// .product-gallery scripts goes here 
-
-/*$(function() {
-	
-});*/
 // .product-info scripts goes here 
 
 /*$(function() {
 	
 });*/
-// .product-tabs scripts goes here 
-
-$(function() {
-
-    $(".product-tabs__item").hide().first().show();
-    $(".product-tabs__nav li:first").addClass("active");
-
-    $(".product-tabs__nav a").on('click', function (e) {
-        e.preventDefault();
-        $(this).closest('li').addClass("active").siblings().removeClass("active");
-        $($(this).attr('href')).show().siblings('.product-tabs__item').hide();
-    });
-
-    var hash = $.trim( window.location.hash );
-
-    if (hash) $('.product-tabs__nav a[href$="'+hash+'"]').trigger('click');
-
-});
-// .shops scripts goes here 
-
-/*$(function() {
-	
-});*/
-// .sidebar scripts goes here 
-
-$(function() {
-
-
-
-});
-// .sizes scripts goes here 
-
-$(function() {
-    // универсальные табы без стилей
-    var $tabBtn = $('.js-tabs [data-tab-btn]'),
-        $tabBody = $('.js-tabs [data-tab-body]');
-    $tabBtn.on('click', function(){
-        var tabId = $(this).attr('data-tab-btn');
-
-        $(this).siblings().removeClass('active');
-        $(this).closest('.js-tabs').find($tabBody).removeClass('active');
-
-        $(this).addClass('active');
-        $("#"+tabId).addClass('active');
-    });
-});
-// .slider-product scripts goes here 
-
-$(function() {
-    if($('.js-slider-product').length) {
-        $('.js-slider-product').slick({
-            mobileFirst: true,
-            dots: false,
-            infinite: true,
-            speed: 300,
-            slidesToShow: 2,
-            centerPadding: '20px',
-            centerMode: true,
-            // variableWidth: true,
-            responsive: [
-                {
-                    breakpoint: 1800,
-                    settings: {
-                        slidesToShow: 5,
-                        centerPadding: '0'
-                    }
-                },
-                {
-                    breakpoint: 991,
-                    settings: {
-                        slidesToShow: 4,
-                        centerPadding: '0'
-                    }
-                }
-            ]
-        });
-    }
-});
 // .slider-sale scripts goes here 
 
 $(function() {
@@ -618,6 +536,22 @@ $(function() {
     //     $(this).parent().find('.hide');
     // });
 });
+// .sizes scripts goes here 
+
+$(function() {
+    // универсальные табы без стилей
+    var $tabBtn = $('.js-tabs [data-tab-btn]'),
+        $tabBody = $('.js-tabs [data-tab-body]');
+    $tabBtn.on('click', function(){
+        var tabId = $(this).attr('data-tab-btn');
+
+        $(this).siblings().removeClass('active');
+        $(this).closest('.js-tabs').find($tabBody).removeClass('active');
+
+        $(this).addClass('active');
+        $("#"+tabId).addClass('active');
+    });
+});
 // .tabs scripts goes here 
 
 // $(function() {
@@ -628,6 +562,66 @@ $(function() {
 /*$(function() {
 	
 });*/
+// .slider-product scripts goes here 
+
+$(function() {
+    if($('.js-slider-product').length) {
+        $('.js-slider-product').slick({
+            mobileFirst: true,
+            dots: false,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 2,
+            centerPadding: '20px',
+            centerMode: true,
+            // variableWidth: true,
+            responsive: [
+                {
+                    breakpoint: 1800,
+                    settings: {
+                        slidesToShow: 5,
+                        centerPadding: '0'
+                    }
+                },
+                {
+                    breakpoint: 991,
+                    settings: {
+                        slidesToShow: 4,
+                        centerPadding: '0'
+                    }
+                }
+            ]
+        });
+    }
+});
+$(function() {
+
+    // Счетчик количества в корзине
+    var $fieldCounter = $('.js-field-counter'),
+        $fieldCounterInput = $fieldCounter.find('.field-counter__input'),
+        $fieldCounterPlus = $fieldCounter.find('.field-counter__plus'),
+        $fieldCounterMinus = $fieldCounter.find('.field-counter__minus');
+
+    $fieldCounterPlus.on('click', function (e) {
+        e.preventDefault();
+        var currentVal = parseInt($('.field-counter__input').val());
+        if (!isNaN(currentVal)) {
+            $(this).closest($fieldCounter).find($fieldCounterInput).val(currentVal + 1);
+        } else {
+            $(this).closest($fieldCounter).find($fieldCounterInput).val(0);
+        }
+    });
+
+    $fieldCounterMinus.on('click', function (e) {
+        e.preventDefault();
+        var currentVal = parseInt($('.field-counter__input').val());
+        if (!isNaN(currentVal) && currentVal > 0) {
+            $(this).closest($fieldCounter).find($fieldCounterInput).val(currentVal - 1);
+        } else {
+            $(this).closest($fieldCounter).find($fieldCounterInput).val(0);
+        }
+    });
+});
 // function LoadFinance()
 // {
 //     $(function() {
@@ -644,12 +638,20 @@ $(function() {
 
 
 $(function() {
-    $('.dropdown--submenu [data-toggle="dropdown"]').on('click', function(event) {
+
+     // отмена закрытия бутстраповского дропдауна с чекбоксами
+    $(document).on('click', '[data-dont-close]', function(e) {
+        e.stopPropagation();
+    });
+
+    // многоуровневый дропдаун
+    $('.dropdown--submenu [data-toggle="dropdown"]').on('click', function (event) {
         event.preventDefault();
         event.stopPropagation();
         $(this).parent().siblings().removeClass('open');
         $(this).parent().toggleClass('open');
     });
+
 
     var $collapseContainer = $(".js-collapse"),
         $collapseToggle = $collapseContainer.find('[data-collapse-toggle]'),

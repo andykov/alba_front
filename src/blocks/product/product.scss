@@ -71,33 +71,65 @@
   &__view {
     position: absolute;
     bottom: 0;
-    right: 0;
+    right: -4px;
     z-index: 2;
+    visibility: hidden;
+    opacity: 0;
+    transition: background-color, box-shadow $transition, visibility, opacity .2s ease-in-out;
     //background-color: #60D3D5;
     //width: 56px;
     //height: 56px;
+    @media (min-width: $screen-md) {
+      right: -24px;
+    }
+    @media (min-width: $screen-lg) {
+      right: -12px;
+    }
+    @media (min-width: $screen-xl) {
+      right: -16px;
+    }
+    @media (min-width: $screen-xxl) {
+      right: -20px;
+    }
   }
 
   &__info {
     padding-bottom: 2px;
-    @media (max-width: $screen-md - 1) {
-      .price {
+      .price [data-old-price]{
         text-align: left;
+        font-size: 12px;
+        font-weight: 300;
+
+        &::before {
+          margin-right: 5px;
+          font-size: 11px;
+        }
       }
-    }
+
     @media (min-width: $screen-md) {
       display: flex;
       justify-content: space-between;
       align-items: flex-end;
+
+      .price [data-old-price] {
+        font-size: 18px;
+        line-height: 24px;
+
+        &::before {
+          font-size: 15px;
+          line-height: 24px;
+        }
+      }
     }
   }
 
   &__name {
     font-family: $font-family--montserrat;
     font-size: 11px;
-    line-height: (20 / 11);
-    font-weight: 700;
+    line-height: 1.82;
+    font-weight: 600;
     letter-spacing: normal;
+    color: #000000;
 
     @media (min-width: $screen-md) {
       font-size: 15px;
@@ -106,24 +138,49 @@
   }
 
   &__info-hover {
-    display: none;
+    //display: none;
+    //background-color: #fff;
+    //width: 100%;
+    ////position: absolute;
+    //top: 100%;
+    ////opacity: 0;
+    ////visibility: hidden;
+    //margin-bottom: -100%;
+    //transition: all 0.2s ease-in-out;
+    position: absolute;
+    top: 0;
+    left: -1px;
+    right: -1px;
+    bottom: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: transform .2s ease-out;
+    z-index: -1;
+    backface-visibility: hidden;
     background-color: #fff;
-    width: 100%;
-    //position: absolute;
-    top: 100%;
-    //opacity: 0;
-    //visibility: hidden;
-    margin-bottom: -100%;
-    transition: all 0.2s ease-in-out;
+
+    &:before {
+      content: "";
+      float: left;
+      height: 100%;
+      width: 100%;
+    }
+    &-inner {
+      transition: all 0.2s ease-in-out;
+    }
   }
 
   &__select {
     display: flex;
     margin-top: 17px;
+    clear: both;
 
-    //.btn-icon {
-    //  margin-left: auto;
-    //}
+    .btn-icon {
+      min-width: 40px;
+      margin-left: 10px;
+     // margin-left: auto;
+
+    }
   }
 
   &__sizes {
@@ -132,16 +189,24 @@
     position: relative;
     > span {
       position: absolute;
-      bottom: -4px;
-      left: 4px;
+      // bottom: -4px;
+      // transform: rotate(-90deg);
+      // transform-origin: left center;
+      // left: 4px;
       font-family: $font-family--montserrat;
       font-size: 7px;
-      font-weight: 700;
+      font-weight: 600;
       letter-spacing: 1px;
       line-height: (16 / 7);
       text-transform: uppercase;
-      transform: rotate(-90deg);
-      transform-origin: left center;
+      top: 0;
+      left: 0;
+      height: 100%;
+      text-align: center;
+      writing-mode: vertical-lr;
+      transform: scale(-1);
+      transform-origin: center;
+      text-align: center;
     }
   }
   &__desc {
@@ -159,27 +224,41 @@
   }
 
   &:hover {
-    background-color: #fff;
-    box-shadow: 0 0 0 4px rgba(255,255,255, 1), 0 32px 64px 20px rgba(0, 0, 0, 0.12);
-    z-index: 10;
-
-    @media (min-width: $screen-md) {
-      box-shadow: 0 0 0 24px rgba(255,255,255, 1), 0 32px 64px 20px rgba(0, 0, 0, 0.12);
-    }
-    @media (min-width: $screen-lg) {
-      box-shadow: 0 0 0 12px rgba(255,255,255, 1), 0 32px 64px 20px rgba(0, 0, 0, 0.12);
-    }
-    @media (min-width: $screen-xl) {
-      box-shadow: 0 0 0 16px rgba(255,255,255, 1), 0 32px 64px 20px rgba(0, 0, 0, 0.12);
-    }
-    @media (min-width: $screen-xxl) {
-      box-shadow: 0 0 0 20px rgba(255,255,255, 1), 0 32px 64px 20px rgba(0, 0, 0, 0.12);
-    }
+    z-index: 1;
 
     .product__info-hover {
-      display: block;
+      //display: block;
       //opacity: 1;
       //visibility: visible;
+
+      visibility: visible;
+      opacity: 1;
+      transition: all 0.3s;
+
+      &-inner {
+        background-color: #fff;
+        box-shadow: 0 0 0 4px rgba(255,255,255, 1), 0 32px 64px 20px rgba(0, 0, 0, 0.12);
+        z-index: 10;
+        transition: all 0.2s;
+
+        @media (min-width: $screen-md) {
+          box-shadow: 0 0 0 24px rgba(255,255,255, 1), 0 32px 64px 20px rgba(0, 0, 0, 0.12);
+        }
+        @media (min-width: $screen-lg) {
+          box-shadow: 0 0 0 12px rgba(255,255,255, 1), 0 32px 64px 20px rgba(0, 0, 0, 0.12);
+        }
+        @media (min-width: $screen-xl) {
+          box-shadow: 0 0 0 16px rgba(255,255,255, 1), 0 32px 64px 20px rgba(0, 0, 0, 0.12);
+        }
+        @media (min-width: $screen-xxl) {
+          box-shadow: 0 0 0 20px rgba(255,255,255, 1), 0 32px 64px 20px rgba(0, 0, 0, 0.12);
+        }
+      }
+    }
+
+    .product__view {
+      visibility: visible;
+      opacity: 1;
     }
   }
 }

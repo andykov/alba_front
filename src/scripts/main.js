@@ -61,21 +61,21 @@ $(function() {
         $('.js-shops-list').slick({
             arrows: true,
             infinite: false,
-            slidesToShow: 3,
+            slidesToShow: 2,
             slidesToScroll: 1,
             responsive: [
                 {
                     breakpoint: 1800,
                     settings: {
-                        slidesToShow: 2,
+                        slidesToShow: 2
                     }
                 },
-                // {
-                //     breakpoint: 1365,
-                //     settings: {
-                //         slidesToShow: 2,
-                //     }
-                // }
+                {
+                    breakpoint: 767,
+                    settings: {
+                      arrows: false
+                    }
+                }
             ]
         });
     }
@@ -86,13 +86,12 @@ $(function() {
 
     if($productGalleryBig.length) {
         $productGalleryBig.slick({
-            // infinite: false,
+            mobileFirst: true,
             lazyLoad: 'ondemand',
             arrows: false,
             slidesToShow: 2,
             centerMode: true,
             variableWidth: true,
-            // centerPadding: '-120px',
             dots: false,
             centerPadding: '0',
             asNavFor: $productGalleryThumb

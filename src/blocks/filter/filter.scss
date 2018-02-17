@@ -7,6 +7,7 @@
 
 
 .filter {
+  z-index: 11;
   background-color: #505054;
   display: flex;
   justify-content: space-between;
@@ -24,18 +25,25 @@
   &__form {
     display: flex;
     align-items: center;
+
     &--priority {
+      padding-right: 48px;
 
     }
     &--sorting {
       margin-left: auto;
+
+      .filter__dropdown {
+        right: 0;
+      }
     }
   }
 
   &__title {
     font-size: 13px;
     padding-right: 7px;
-    padding-bottom: 1px;
+    padding-bottom: 4px;
+
   }
 
   &__item,
@@ -44,6 +52,17 @@
       > button {
         background-color: #FFF;
         color: #000;
+
+        &::after {
+          opacity: 0;
+
+        }
+        &:hover {
+           color: #000;
+          &::after {
+            opacity: 0;
+          }
+        }
       }
     }
   }
@@ -63,27 +82,32 @@
       line-height: (16 / 11);
       letter-spacing: 0.4px;
       text-transform: uppercase;
-      padding: 18px 13px 14px;
+      padding: 16px 18px 16px 12px;
       white-space: nowrap;
       position: relative;
+      transition: all $transition;
+
       &:hover {
         color: #1DB4B7;
         &:after {
-          //opacity: 1;
+          opacity: 1;
+          background-image: url("../img/svg/arrow-v-blue.svg");
         }
       }
 
       &:after {
         content: '';
         position: absolute;
-        right: 0;
-        top: 50%;
+        top: 0;
+        bottom: 0;
+        right: 4px;
+        margin-top: auto;
+        margin-bottom: auto;
         background: url("../img/svg/arrow-v.svg") no-repeat center center / contain;
-        opacity: 0.25;
+        opacity: 0.4;
         width: 10px;
         height: 10px;
-        transform: translateY(-50%);
-        margin-top: -1px;
+        transition: all $transition;
       }
     }
 
@@ -159,21 +183,63 @@
   // Список пунктов в "Еще"
   &__more {
     position: relative;
-    padding: 8px 0px;
+    padding: 7px 0 7px 17px;
+
+    &.as-title {
+      padding: 0;
+    }
 
     &.hidden {
       display: none;
     }
 
     &-btn {
-      padding: 4.5px 15px;
+      position: relative;
+      padding: 8px 30px 8px 15px;
+      font-family: $font-family--lucidagrande;
+      font-size: 11px;
+      font-weight: 700;
+      line-height: (16 / 11);
       background: transparent;
       border: 1px solid rgba(255,255,255, 0.2);
       color: #FFF;
       outline: none;
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 14px;
+        margin-top: auto;
+        margin-bottom: auto;
+        background: url("../img/svg/arrow-v.svg") no-repeat center center / contain;
+        opacity: 0.25;
+        width: 10px;
+        height: 10px;
+      }
+
+
       &:focus {
         outline: none;
       }
+
+      &.as-title {
+        font-family: inherit;
+        font-weight: inherit;
+        text-transform: capitalize;
+        font-size: 13px;
+        padding-top: 0;
+        padding-right: 16px;
+        padding-bottom: 4px;
+        padding-left: 0;
+        border: 0;
+
+        &:after {
+          right: 0;
+        }
+      }
+
 
       &.hidden {
         display: none;
@@ -184,6 +250,7 @@
       position: absolute;
       top: 100%;
       right: 0;
+      z-index: 3;
       padding: 16px;
       visibility: visible;
       opacity: 1;
@@ -201,6 +268,17 @@
         .filter__more-list {
           opacity: 0;
         }
+      }
+
+      &.no-items {
+        left: 0;
+        right: initial;
+      }
+
+      &.no-btn {
+        top: calc(100% + 12px);
+        left: -22px;
+        right: initial;
       }
 
       &:after {
@@ -226,5 +304,24 @@
       transition: all $transition 0.2s;
     }
   }
+
+
+  &__apply {
+    width: 100%;
+    margin-top: 16px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    font-size: 11px;
+    line-height: (16/11);
+    border: 0;
+  }
 }
 
+.sorting {
+  &__item {
+    display: block;
+    &:not(:last-of-type) {
+      margin-bottom: 10px;
+    }
+  }
+}

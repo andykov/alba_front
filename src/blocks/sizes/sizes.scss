@@ -15,7 +15,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 14px;
+    @media screen and (min-width: $screen-md) {
+      margin-bottom: 22px;
+    }
   }
   &__how {
     font-size: 13px;
@@ -35,14 +38,14 @@
 
     span {
       display: inline-block;
-      margin-right: 12px;
+      margin-right: 15px;
       //padding-bottom: 1px;
       cursor: pointer;
 
       &[data-tab-btn] {
         &.active {
           color: #000;
-          box-shadow: 0 0 0 3px #fff, 0 5px 0 0 #60D3D5;
+          box-shadow: 0 0 0 3px #f8f8f8, 0 5px 0 0 #60D3D5;
         }
       }
     }
@@ -65,9 +68,12 @@
 
   &__item {
     text-align: center;
-    color: #2E2E2E;
-    font-size: 12px;
-    letter-spacing: ((21 * 2.86) / 100)+px;
+    // color: #2E2E2E;
+    // font-size: 12px;
+    // letter-spacing: ((21 * 2.86) / 100)+px;
+    color: #3c3c3c;
+    font-size: 14px;
+    letter-spacing: 0.4px;
     margin-right: -1px;
     margin-bottom: -1px;
     cursor: pointer;
@@ -80,6 +86,8 @@
       display: none;
       &:checked ~ span {
         color: #fff;
+        position: relative;
+        z-index: 5;
         &:after {
           top: 0;
           background-color: #60D3D5;
@@ -92,7 +100,8 @@
       height: 41px;
       display: block;
       position: relative;
-      border: 1px solid #E6E6E6;
+      // border: 1px solid #E6E6E6;
+      box-shadow: inset 0 0 0 1px #E6E6E6;
       z-index: 1;
       line-height: 40px;
 
@@ -124,7 +133,10 @@
         }
       }
     }
-    &--in-stock {
+    &--in-stock,
+    &--orange,
+    &--blue,
+    &--green {
       position: relative;
       &::before {
         content: '';
@@ -135,14 +147,29 @@
         width: 5px;
         height: 5px;
         border-radius: 50%;
-        background-color: #000;
-        z-index: 2;
+        z-index: 6;
       }
+    }
+    &--in-stock::before {
+        background-color: #000;
+    }
+
+    &--orange::before {
+        background-color: #f5a623;
+    }
+
+    &--blue::before {
+        background-color: #4a90e2;
+    }
+
+    &--green::before {
+        background-color: #7ed321;
     }
     &:hover {
       span {
+        position: relative;
+        z-index: 5;
         box-shadow: inset 0 0 0 1px $primary-color;
-        border-color: transparent;
         color: $primary-color;
       }
     }

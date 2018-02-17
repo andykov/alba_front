@@ -9,6 +9,19 @@
       padding-right: 4px;
     }
       flex-direction: row-reverse;
+    margin-bottom: 3px;
+
+    @media screen and (min-width: $screen-md) {
+      margin-bottom: 7px;
+    }
+
+    @media screen and (min-width: $screen-lg) {
+      margin-bottom: 11px;
+    }
+
+    @media screen and (min-width: $screen-xxl) {
+      margin-bottom: 9px;
+    }
 
 	&__item {
       margin-bottom: 16px;
@@ -57,19 +70,27 @@
       &--banner {
         .banner {
           position: absolute;
-          left: 0;
-          right: 0;
+          width: calc(100% - 8px);
+          // left: 0;
+          // right: 0;
           overflow: hidden;
           padding-bottom: calc(200% + 16px);
 
           @media screen and (min-width: $screen-md) {
             padding-bottom: calc(200% + 32px);
+            width: calc(100% - 48px);
           }
+
+          @media screen and (min-width: $screen-lg) {
+            width: calc(100% - 24px);
+          }
+
           @media screen and (min-width: $screen-xl) {
             padding-bottom: calc(200% + 32px);
           }
           @media screen and (min-width: $screen-xxl) {
             padding-bottom: calc(200% + 30px);
+            width: calc(100% - 40px);
           }
 
           &:after {
@@ -81,50 +102,121 @@
             bottom: 8px;
             left: 8px;
             @media screen and (min-width: $screen-md) {
-              top: 40px;
-              right: 40px;
-              bottom: 40px;
-              left: 40px;
+              top: 12px;
+              right: 12px;
+              bottom: 12px;
+              left: 12px;
             }
             @media screen and (min-width: $screen-xxl) {
-              top: 32px;
-              right: 32px;
-              bottom: 32px;
-              left: 32px;
+              top: 16px;
+              right: 16px;
+              bottom: 16px;
+              left: 16px;
             }
           }
 
           img {
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            max-width: 100%;
-            max-height: 100%;
-            margin: auto;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            // top: 0;
+            // left: 0;
+            // right: 0;
+            // bottom: 0;
+            // max-width: 100%;
+            // max-height: 100%;
+            // margin: auto;
           }
 
           &__text {
             position: absolute;
-            left: 20%;
-            top: 20%;
+            left: 0;
+            top: 10%;
+            width: 100%;
             color: #fff;
+
             &-small {
               display: block;
+              max-width: 96px;
+              margin: auto;
               font-family: $font-family--lucidagrande;
               font-weight: 700;
               font-size: 13px;
-              line-height: (20 / 13);
+              line-height: 1.54;
             }
+
             &-large {
               display: block;
+              max-width: 110px;
+              margin: auto;
               font-family: $font-family--montserrat;
               font-weight: 900;
               font-size: 41px;
-              line-height: (20 / 41);
+              line-height: 1;
+              letter-spacing: -0.5px;
+            }
+
+            @media (min-width: $screen-md) {
+              top: 75px;
+
+              &-small {
+                max-width: 181px;
+                font-size: 26px;
+                font-weight: 900;
+                line-height: 1.23;
+              }
+
+              &-large {
+                max-width: 183px;
+                font-size: 69px;
+                font-weight: 900;
+                letter-spacing: -0.8px;
+              }
             }
           }
         }
       }
+  }
+
+  &-text {
+      margin-bottom: 39px;
+
+      @media screen and (min-width: $screen-md) {
+        margin-bottom: 70px;
+      }
+
+      @media screen and (min-width: $screen-lg) {
+        margin-bottom: 77px;
+      }
+
+      @media screen and (min-width: $screen-xxl) {
+        margin-bottom: 74px;
+      }
+
+    p {
+      font-size: 12px;
+      font-weight: 300;
+      line-height: 1.5;
+      letter-spacing: 0.3px;
+      color: #505050;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      @media screen and (min-width: $screen-md) {
+        font-size: 16px;
+        line-height: 1.38;
+        letter-spacing: 0.4px;
+      }
+
+      @media screen and (min-width: $screen-xxl) {
+        max-width: 968px;
+        margin-left: auto;
+        margin-right: auto;
+      }
     }
+  }
 }

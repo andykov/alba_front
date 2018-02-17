@@ -1,10 +1,9 @@
-// .article scripts goes here 
+// .auth scripts goes here 
 
 /*$(function() {
 	
 });*/
-
-// .auth scripts goes here 
+// .article scripts goes here 
 
 /*$(function() {
 	
@@ -33,6 +32,7 @@ $(function() {
     })
   }
 });
+
 // .checkout scripts goes here 
 
 /*$(function() {
@@ -54,9 +54,9 @@ $(function() {
 // });
 
 // закрытие выпадающего фильтра по кнопке применить
-// $('.filter .filter__apply').on('click', function () {
-//     $(this).closest('.filter__item').removeClass('open');
-// });
+$('.filter .filter__apply').on('click', function () {
+    $(this).closest('.filter__item').removeClass('open');
+});
 
 // отмена закрытия бутстраповского дропдауна с чекбоксами
 $(document).on('click', '[data-dont-close]', function(e) {
@@ -229,216 +229,7 @@ $(document).on('click', '[data-dont-close]', function(e) {
         .on('keydown.bs.dropdown.data-api', '.dropdown-menu', Dropdown.prototype.keydown)
 
 }(jQuery);
-
-
-
-
-
-
-
-
-// +function ($) {
-//     'use strict';
-//
-//     // DROPDOWN CLASS DEFINITION
-//     // =========================
-//
-//     var backdrop = '.dropdown-backdrop';
-//     var toggle   = '[data-toggle="dropdown"]';
-//     var Dropdown = function (element) {
-//         // $(element).on('click.bs.dropdown', this.toggle)
-//         $(element).on('click.nth.dropdown', this.toggle)
-//     };
-//
-//     // Dropdown.VERSION = '3.3.6'
-//
-//     function getParent($this) {
-//         var selector = $this.attr('data-target');
-//
-//         if (!selector) {
-//             selector = $this.attr('href')
-//             // selector = selector && /#[A-Za-z]/.test(selector) && selector.replace(/.*(?=#[^\s]*$)/, '') // strip for ie7
-//         }
-//
-//         var $parent = selector && $(selector);
-//
-//         return $parent && $parent.length ? $parent : $this.parent()
-//     }
-//
-//     function clearMenus(e) {
-//         if (e && e.which === 3) return;
-//         $(backdrop).remove();
-//         $(toggle).each(function () {
-//             var $this         = $(this);
-//             var $parent       = getParent($this);
-//             var relatedTarget = { relatedTarget: this };
-//
-//             // if (!$parent.hasClass('open')) return
-//             if (!$parent.hasClass('open')) return;
-//
-//             if (e && e.type == 'click' && /input|textarea/i.test(e.target.tagName) && $.contains($parent[0], e.target)) return;
-//
-//             // Выходим, если клик пришелся на элемент внутри .dropdown__menu
-//             if (e && e.type == 'click' && /dropdown__menu/i.test(e.toElement.offsetParent.className)) return;
-//
-//             // $parent.trigger(e = $.Event('hide.bs.dropdown', relatedTarget))
-//             // $parent.trigger(e = $.Event('hide.nth.dropdown', relatedTarget))
-//
-//             // if (e.isDefaultPrevented()) return
-//
-//             $this.attr('aria-expanded', 'false');
-//             // $parent.removeClass('open').trigger($.Event('hidden.bs.dropdown', relatedTarget))
-//
-//
-//             // if (!$this.is('[data-dropdown-inner]')) {
-//                 $parent.removeClass('open').trigger($.Event('hidden.nth.dropdown', relatedTarget))
-//             // } else if () {
-//             //
-//             // }
-//             // console.clear();
-//             // console.log($this);
-//             // console.log($parent.closest('[data-dropdown-inner]').length);
-//             // // if ($parent.closest('[data-dropdown-inner]').length == 0) {
-//             // if ($parent.find(toggle).length == 0) {
-//             //     $parent.removeClass('open').trigger($.Event('hidden.nth.dropdown', relatedTarget))
-//             // } else {
-//             //     console.log('1');
-//             // }
-//
-//         })
-//     }
-//
-//     Dropdown.prototype.toggle = function (e) {
-//         var $this = $(this);
-//
-//         // if ($this.is('.disabled, :disabled')) return
-//         if ($this.is(':disabled')) return;
-//
-//         var $parent  = getParent($this);
-//         // var isActive = $parent.hasClass('open')
-//         var isActive = $parent.hasClass('open');
-//
-//         clearMenus();
-//
-//
-//         if (!isActive) {
-//             // if ('ontouchstart' in document.documentElement && !$parent.closest('.navbar-nav').length) {
-//             if ('ontouchstart' in document.documentElement) {
-//                 // if mobile we use a backdrop because click events don't delegate
-//                 $(document.createElement('div'))
-//                     .addClass('dropdown-backdrop')
-//                     .insertAfter($(this))
-//                     .on('click', clearMenus)
-//             }
-//
-//             var relatedTarget = { relatedTarget: this };
-//             // $parent.trigger(e = $.Event('show.bs.dropdown', relatedTarget))
-//             // $parent.trigger(e = $.Event('show.nth.dropdown', relatedTarget))
-//
-//             // if (e.isDefaultPrevented()) return
-//
-//             $this
-//                 .trigger('focus')
-//                 .attr('aria-expanded', 'true');
-//
-//             $parent
-//             // .toggleClass('open')
-//                 .toggleClass('open')
-//                 // .trigger($.Event('shown.bs.dropdown', relatedTarget))
-//                 .trigger($.Event('shown.nth.dropdown', relatedTarget))
-//         }
-//
-//         return false
-//     }
-//
-//     Dropdown.prototype.keydown = function (e) {
-//         if (!/(38|40|27|32)/.test(e.which) || /input|textarea/i.test(e.target.tagName)) return;
-//
-//         var $this = $(this);
-//
-//         e.preventDefault();
-//         e.stopPropagation();
-//
-//         // if ($this.is('.disabled, :disabled')) return
-//         if ($this.is(':disabled')) return;
-//
-//         var $parent  = getParent($this);
-//         // var isActive = $parent.hasClass('open');
-//         var isActive = $parent.hasClass('open');
-//
-//         if (!isActive && e.which != 27 || isActive && e.which == 27) {
-//             if (e.which == 27) $parent.find(toggle).trigger('focus');
-//             return $this.trigger('click');
-//         }
-//
-//         // var desc = ' li:not(.disabled):visible a';
-//         // var $items = $parent.find('.dropdown-menu' + desc);
-//         var $items = $parent.find('.dropdown__menu a');
-//
-//         if (!$items.length) return;
-//
-//         var index = $items.index(e.target);
-//
-//         if (e.which == 38 && index > 0)                 index--         // up
-//         if (e.which == 40 && index < $items.length - 1) index++         // down
-//         if (!~index)                                    index = 0
-//
-//         $items.eq(index).trigger('focus')
-//     }
-//
-//
-//     // DROPDOWN PLUGIN DEFINITION
-//     // ==========================
-//
-//     function Plugin(option) {
-//         return this.each(function () {
-//             var $this = $(this)
-//             // var data  = $this.data('bs.dropdown')
-//             var data  = $this.data('nth.dropdown');
-//
-//             // if (!data) $this.data('bs.dropdown', (data = new Dropdown(this)))
-//             if (!data) $this.data('nth.dropdown', (data = new Dropdown(this)));
-//             if (typeof option == 'string') data[option].call($this)
-//         })
-//     }
-//
-//     var old = $.fn.dropdown
-//
-//     $.fn.dropdown             = Plugin;
-//     $.fn.dropdown.Constructor = Dropdown;
-//
-//
-//     // DROPDOWN NO CONFLICT
-//     // ====================
-//
-//     $.fn.dropdown.noConflict = function () {
-//         $.fn.dropdown = old;
-//         return this
-//     }
-//
-//
-//     // APPLY TO STANDARD DROPDOWN ELEMENTS
-//     // ===================================
-//
-//     $(document)
-//     // .on('click.bs.dropdown.data-api', clearMenus)
-//     // .on('click.bs.dropdown.data-api', '.dropdown form', function (e) { e.stopPropagation() })
-//     // .on('click.bs.dropdown.data-api', toggle, Dropdown.prototype.toggle)
-//     // .on('keydown.bs.dropdown.data-api', toggle, Dropdown.prototype.keydown)
-//     // .on('keydown.bs.dropdown.data-api', '.dropdown-menu', Dropdown.prototype.keydown)
-//         .on('click.nth.dropdown.data-api', clearMenus)
-//         .on('click.nth.dropdown.data-api', '.dropdown form', function (e) { e.stopPropagation() })
-//         .on('click.nth.dropdown.data-api', toggle, Dropdown.prototype.toggle)
-//         .on('keydown.nth.dropdown.data-api', toggle, Dropdown.prototype.keydown)
-//         .on('keydown.nth.dropdown.data-api', '.dropdown__menu', Dropdown.prototype.keydown)
-//
-// }(jQuery);
 // .field-checkbox scripts goes here 
-
-/*$(function() {
-	
-});*/
-// .field-radio scripts goes here 
 
 /*$(function() {
 	
@@ -471,6 +262,11 @@ $(function() {
         }
     });
 });
+// .field-radio scripts goes here 
+
+/*$(function() {
+	
+});*/
 
 
 // .filter scripts goes here
@@ -501,22 +297,18 @@ $(function() {
 
     function check() {
 
-        // Get instant state
-
         availableSpace = $nav.outerWidth() - $sorting.outerWidth() - 240;
         // availableSpace = $vlinks.outerWidth() - 10;
         numOfVisibleItems = $vlinks.children().length;
         requiredSpace = breakWidths[numOfVisibleItems - 1];
 
 
-        // There is not enought space
         if (requiredSpace > availableSpace) {
             $vlinks.children().last().prependTo($hlinks);
             $hlinks.children().addClass('dropdown--submenu');
             // $hlinks.children().attr('data-dropdown', 'submenu');
             numOfVisibleItems -= 1;
             check();
-            // There is more than enough space
         } else if (availableSpace > breakWidths[numOfVisibleItems]) {
             $hlinks.children().first().appendTo($vlinks)
             $vlinks.children().removeClass('dropdown--submenu');
@@ -542,13 +334,13 @@ $(function() {
             $btn.parent().removeClass('hidden');
         }
 
-        if (numOfVisibleItems == 0 && availableSpace < 0) {
-            // $filterDropdown.removeClass('no-items').addClass('no-btn');
-        } else if (numOfVisibleItems == 0) {
-            // $filterDropdown.removeClass('no-btn').addClass('no-items');
-        } else {
-            // $filterDropdown.removeClass('no-items');
-        }
+        // if (numOfVisibleItems == 0 && availableSpace < 0) {
+        //     // $filterDropdown.removeClass('no-items').addClass('no-btn');
+        // } else if (numOfVisibleItems == 0) {
+        //     // $filterDropdown.removeClass('no-btn').addClass('no-items');
+        // } else {
+        //     // $filterDropdown.removeClass('no-items');
+        // }
     }
 
     // Window listeners
@@ -562,143 +354,8 @@ $(function() {
 
     check();
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//     var $nav = $('.filter'),
-//         $btn = $('.filter .filter__more-btn'),
-//         $moreContainer = $('.filter .filter__more'),
-//         $vlinks = $('.filter .filter__list'),
-//         $vdd = $('.filter .filter__more-dropdown'),
-//         $sorting = $('.sorting'),
-//         $hlinks = $('.filter .filter__more-list');
-//
-//     var breaks = [];
-//
-//     function updateNav() {
-//
-//         // var availableSpace = $moreContainer.hasClass('hidden') ? $nav.outerWidth() : $nav.outerWidth() - $sorting.outerWidth() - $btn.outerWidth();
-//         if ($moreContainer.hasClass('hidden')) {
-//             var availableSpace = ($nav.parent().outerWidth() - $sorting.outerWidth());
-//         } else {
-//             var availableSpace = ($nav.parent().outerWidth() - $sorting.outerWidth()) - $btn.outerWidth();
-//         }
-//         console.clear();
-//         // console.log(availableSpace);
-//         // console.log(availableSpace2);
-//         console.log($sorting.outerWidth() + ' = Ширина сортировка ')
-//         console.log($btn.outerWidth() + ' = Ширина кнопки ')
-//         console.log($nav.parent().outerWidth() + ' = Ширина фильтра ')
-//         console.log(availableSpace + ' = Ширина фильтра с вычетом ')
-//         console.log($vlinks.closest('.filter').outerWidth() + ' = Ширина списка')
-//         // The visible list is overflowing the nav
-//         if($nav.outerWidth() > availableSpace) {
-//
-//             // Record the width of the list
-//             breaks.push($vlinks.outerWidth());
-//
-//             // Move item to the hidden list
-//             $vlinks.children().last().prependTo($hlinks);
-//
-//             // Show the dropdown btn
-//             if($moreContainer.hasClass('hidden')) {
-//                 $moreContainer.removeClass('hidden');
-//             }
-//
-//             // The visible list is not overflowing
-//         } else {
-//
-//             // There is space for another item in the nav
-//             if(availableSpace > breaks[breaks.length-1]) {
-//
-//                 // Move the item to the visible list
-//                 $hlinks.children().first().appendTo($vlinks);
-//                 breaks.pop();
-//             }
-//
-//             // Hide the dropdown btn if hidden list is empty
-//             if(breaks.length < 1) {
-//                 $moreContainer.addClass('hidden');
-//                 $vdd.addClass('hidden');
-//             }
-//             return false;
-//         }
-//
-//         // Keep counter updated
-//         // $btn.attr("count", breaks.length);
-//
-//         // Recur if the visible list is still overflowing the nav
-//         if($vlinks.closest('.filter').outerWidth() > availableSpace) {
-//             updateNav();
-//         }
-//
-//     }
-//
-// // Window listeners
-//
-//     $(window).resize(function() {
-//         updateNav();
-//     });
-//
-//     $btn.on('click', function() {
-//         $vdd.toggleClass('hidden');
-//     });
-//
-//     updateNav();
 });
 
-// .form-login scripts goes here 
-
-$(function() {
-    // var $loginBtn = $('.js-login'),
-    //     $formLogin = $('.js-form-login'),
-    //     $overlay = $('.overlay');
-    //
-    // $loginBtn.on('click', function () {
-    //     $($formLogin).add($overlay).toggleClass('open');
-    // });
-    //
-    // $(document).mouseup(function (e){ // отслеживаем событие клика по веб-документу
-    //     var block = $formLogin; // определяем элемент, к которому будем применять условия (можем указывать ID, класс либо любой другой идентификатор элемента)
-    //     if (!block.is(e.target) // проверка условия если клик был не по нашему блоку
-    //         && block.has(e.target).length === 0) { // проверка условия если клик не по его дочерним элементам
-    //         block.removeClass('open'); // если условия выполняются - скрываем наш элемент
-    //     }
-    // });
-});
 $(function() {
 
     // Вынос логотипа и панели с корзиной в отдельный блок в мобильном меню
@@ -780,6 +437,25 @@ $(function() {
     // });
 
 });
+// .form-login scripts goes here 
+
+$(function() {
+    // var $loginBtn = $('.js-login'),
+    //     $formLogin = $('.js-form-login'),
+    //     $overlay = $('.overlay');
+    //
+    // $loginBtn.on('click', function () {
+    //     $($formLogin).add($overlay).toggleClass('open');
+    // });
+    //
+    // $(document).mouseup(function (e){ // отслеживаем событие клика по веб-документу
+    //     var block = $formLogin; // определяем элемент, к которому будем применять условия (можем указывать ID, класс либо любой другой идентификатор элемента)
+    //     if (!block.is(e.target) // проверка условия если клик был не по нашему блоку
+    //         && block.has(e.target).length === 0) { // проверка условия если клик не по его дочерним элементам
+    //         block.removeClass('open'); // если условия выполняются - скрываем наш элемент
+    //     }
+    // });
+});
 // .news scripts goes here 
 
 $(function() {
@@ -823,11 +499,6 @@ $(function() {
 /*$(function() {
 	
 });*/
-// .shops scripts goes here 
-
-/*$(function() {
-	
-});*/
 // .product-tabs scripts goes here 
 
 $(function() {
@@ -846,6 +517,11 @@ $(function() {
     if (hash) $('.product-tabs__nav a[href$="'+hash+'"]').trigger('click');
 
 });
+// .shops scripts goes here 
+
+/*$(function() {
+	
+});*/
 // .sidebar scripts goes here 
 
 $(function() {

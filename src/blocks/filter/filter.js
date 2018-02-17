@@ -92,10 +92,11 @@ $(function() {
         var elementOffset;
 
         $(window).resize(function() {
-            filterOffset = $nav.offset().top;
+            filterOffset = $('.content').offset().top - +$('.content').css('padding-top').replace('px', '');
         })
 
         $(window).on('scroll', function () {
+
             if ($(this).scrollTop() >= filterOffset) {
                 $nav.addClass('filter--fixed');
             } else {

@@ -1,282 +1,143 @@
-.header
-	.header__container
-		.header__top
-			.header__logo
-				a(href="main.html")
-					img(src="img/logo-header.svg")
-			.header__cart
-				.panel-cart
-					span В корзине пусто
-					.panel-cart__dropdown
-						button(id="dCart" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-count-cart="3").btn-icon
-							span.icon-svg
-								| <svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" viewBox="0 0 20 24">
-								| <g fill="none" fill-rule="evenodd">
-								| <path fill="#000" d="M1.935 6.111L0 24h20L18.065 6.111z"/>
-								| <path stroke="#000" stroke-width="1.8" d="M8.065 11.222V3.556s0-2.237 1.935-2.237 1.935 2.237 1.935 2.237v7.666"/>
-								| </g>
-								| </svg>
-						.panel-cart__list(aria-labelledby="dCart")
-							.panel-cart__item
-								button(type="button").panel-cart__remove
-									| <svg width="11" height="12" viewBox="0 0 11 12" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-									|    <use xlink:href="#path0_stroke" transform="translate(1 1)"/>
-									|    <defs>
-									|        <path id="path0_stroke" d="M-.8.6l3.75 5 1.6-1.2L.8-.6-.8.6zM3.75 6h1.5V4h-1.5v2zm2.3-.4L9.8.6 8.2-.6l-3.75 5 1.6 1.2zm-5.25 5l3.75-5-1.6-1.2-3.75 5 1.6 1.2zm3.65-5l3.75 5 1.6-1.2-3.75-5-1.6 1.2z"/>
-									|    </defs>
-									| </svg>
-								.panel-cart__img
-									img(src="https://www.the-alba.com/upload/resize_cache/iblock/9cf/100_100_1/1103048101301_1-min.jpg")
-								.panel-cart__title
-									span Туфли
-									a(href="#") В корзину
-								.panel-cart__price
-									.price
-										span 5200 руб.
-							.panel-cart__item
-								button(type="button").panel-cart__remove
-									| <svg width="11" height="12" viewBox="0 0 11 12" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-									|    <use xlink:href="#path0_stroke" transform="translate(1 1)"/>
-									|    <defs>
-									|        <path id="path0_stroke" d="M-.8.6l3.75 5 1.6-1.2L.8-.6-.8.6zM3.75 6h1.5V4h-1.5v2zm2.3-.4L9.8.6 8.2-.6l-3.75 5 1.6 1.2zm-5.25 5l3.75-5-1.6-1.2-3.75 5 1.6 1.2zm3.65-5l3.75 5 1.6-1.2-3.75-5-1.6 1.2z"/>
-									|    </defs>
-									| </svg>
-								.panel-cart__img
-									img(src="https://www.the-alba.com/upload/resize_cache/iblock/75a/100_100_1/2041000801604_1.jpg")
-								.panel-cart__title
-									span Туфли
-									a(href="#") В корзину
-								.panel-cart__price
-									.price
-										span(data-old-price="6000") 4800 руб.
-										span Экономия 1200 руб.
-							.panel-cart__item
-								button(type="button").panel-cart__remove
-									| <svg width="11" height="12" viewBox="0 0 11 12" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-									|    <use xlink:href="#path0_stroke" transform="translate(1 1)"/>
-									|    <defs>
-									|        <path id="path0_stroke" d="M-.8.6l3.75 5 1.6-1.2L.8-.6-.8.6zM3.75 6h1.5V4h-1.5v2zm2.3-.4L9.8.6 8.2-.6l-3.75 5 1.6 1.2zm-5.25 5l3.75-5-1.6-1.2-3.75 5 1.6 1.2zm3.65-5l3.75 5 1.6-1.2-3.75-5-1.6 1.2z"/>
-									|    </defs>
-									| </svg>
-								.panel-cart__img
-									img(src="https://www.the-alba.com/upload/resize_cache/iblock/277/100_100_1/2813024401301_1.jpg")
-								.panel-cart__title
-									span Туфли
-									a(href="#") В корзину
-								.panel-cart__price
-									.price
-										span 8500 руб.
-							.panel-cart__action
-								a(href="#") Оформить заказ
-								span 18 500 руб.
-					.panel-cart__dropdown
-						button(id="dFavorite" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-count-favorite="2").btn-icon
-							span.icon-svg
-								| <svg xmlns="http://www.w3.org/2000/svg" width="22" height="19" viewBox="0 0 22 19">
-								| <path fill-rule="evenodd" d="M6.037 0C2.38 0 .013 3.655 0 6.658-.024 12.18 11 19 11 19s11.024-6.82 11-12.342C21.987 3.655 19.619 0 15.96 0 14.284 0 12.167 1.099 11 2.133 9.831 1.099 7.714 0 6.036 0z"/>
-								| </svg>
-						.panel-cart__list(aria-labelledby="dFavorite")
-							.panel-cart__item
-								button(type="button").panel-cart__remove
-									| <svg width="11" height="12" viewBox="0 0 11 12" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-									|    <use xlink:href="#path0_stroke" transform="translate(1 1)"/>
-									|    <defs>
-									|        <path id="path0_stroke" d="M-.8.6l3.75 5 1.6-1.2L.8-.6-.8.6zM3.75 6h1.5V4h-1.5v2zm2.3-.4L9.8.6 8.2-.6l-3.75 5 1.6 1.2zm-5.25 5l3.75-5-1.6-1.2-3.75 5 1.6 1.2zm3.65-5l3.75 5 1.6-1.2-3.75-5-1.6 1.2z"/>
-									|    </defs>
-									| </svg>
-								.panel-cart__img
-									img(src="https://www.the-alba.com/upload/resize_cache/iblock/277/100_100_1/2813024401301_1.jpg")
-								.panel-cart__title
-									span Туфли
-									a(href="#") В корзину
-								.panel-cart__price
-									.price
-										span 5200 руб.
-							.panel-cart__item
-								button(type="button").panel-cart__remove
-									| <svg width="11" height="12" viewBox="0 0 11 12" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-									|    <use xlink:href="#path0_stroke" transform="translate(1 1)"/>
-									|    <defs>
-									|        <path id="path0_stroke" d="M-.8.6l3.75 5 1.6-1.2L.8-.6-.8.6zM3.75 6h1.5V4h-1.5v2zm2.3-.4L9.8.6 8.2-.6l-3.75 5 1.6 1.2zm-5.25 5l3.75-5-1.6-1.2-3.75 5 1.6 1.2zm3.65-5l3.75 5 1.6-1.2-3.75-5-1.6 1.2z"/>
-									|    </defs>
-									| </svg>
-								.panel-cart__img
-									img(src="https://www.the-alba.com/upload/resize_cache/iblock/75a/100_100_1/2041000801604_1.jpg")
-								.panel-cart__title
-									span Туфли
-									a(href="#") В корзину
-								.panel-cart__price
-									.price
-										span 4800 руб.
-
-
-					button(type="button").js-mobile-nav.mobile-nav.btn-icon
-						| <svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" viewBox="0 0 20 16"><path fill-rule="evenodd" d="M0 0h20v2H0V0zm0 7h20v2H0V7zm0 7h20v2H0v-2z"/></svg>
-		.header__navs
-			div.header__navs-gender
+.header.header--white
+	.header-mobile
+	.header-navs
+		.header-navs__gender
+			.header-navs__gender-inner
+				.header__logo
+					a(href="main.html")
+						img(src="img/logo-header.svg")
 				.nav-gender
-					.nav-gender__inner
-						a.nav-gender__item.active(href="#") Женщинам
-						a.nav-gender__item(href="#") Мужчинам
-			div.header__navs-main
-				include ../nav/nav
-			div.header__navs-second
-				.header__region
-					a(href="#")
-						| Ваш город:
-						span Москва
-				ul.nav-second
-					li.nav-second__item
-						a(href="#") Доставка и примерка
-					li.nav-second__item
-						a(href="#") Безопасная оплата
-					li.nav-second__item
-						a(href="#") Пункты самовывоза
-					li.nav-second__item
-						a(href="#") Фирменные магазины
-					li.nav-second__item
-						a(href="#") Гарантия качества
-				ul.header__login
-					li.phone
-						span 8 800 555 00 30
-					li
-						a(href="javascript:;") Состояние заказа
-					li
-						a(href="javascript:;" data-fancybox data-src="#form-login").js-login.link-login Вход
+					a.nav-gender__item.active(href="#") Женщинам
+					a.nav-gender__item(href="#") Мужчинам
+
+				.header__cart
+					.panel-cart
+						span В корзине 3 товара на 18 500 руб.
+						.panel-cart__dropdown
+							button(id="dCart" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-count-cart="3").btn-icon
+								span.icon-svg
+									| <svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" viewBox="0 0 20 24">
+									| <g fill="none" fill-rule="evenodd">
+									| <path fill="#000" d="M1.935 6.111L0 24h20L18.065 6.111z"/>
+									| <path stroke="#000" stroke-width="1.8" d="M8.065 11.222V3.556s0-2.237 1.935-2.237 1.935 2.237 1.935 2.237v7.666"/>
+									| </g>
+									| </svg>
+							.panel-cart__list(aria-labelledby="dCart")
+								.panel-cart__item
+									button(type="button").panel-cart__remove
+										| <svg width="11" height="12" viewBox="0 0 11 12" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+										|    <use xlink:href="#path0_stroke" transform="translate(1 1)"/>
+										|    <defs>
+										|        <path id="path0_stroke" d="M-.8.6l3.75 5 1.6-1.2L.8-.6-.8.6zM3.75 6h1.5V4h-1.5v2zm2.3-.4L9.8.6 8.2-.6l-3.75 5 1.6 1.2zm-5.25 5l3.75-5-1.6-1.2-3.75 5 1.6 1.2zm3.65-5l3.75 5 1.6-1.2-3.75-5-1.6 1.2z"/>
+										|    </defs>
+										| </svg>
+									.panel-cart__img
+										img(src="https://www.the-alba.com/upload/resize_cache/iblock/9cf/100_100_1/1103048101301_1-min.jpg")
+									.panel-cart__title
+										span Туфли
+									.panel-cart__price
+										.price
+											span 5200 руб.
+								.panel-cart__item
+									button(type="button").panel-cart__remove
+										| <svg width="11" height="12" viewBox="0 0 11 12" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+										|    <use xlink:href="#path0_stroke" transform="translate(1 1)"/>
+										|    <defs>
+										|        <path id="path0_stroke" d="M-.8.6l3.75 5 1.6-1.2L.8-.6-.8.6zM3.75 6h1.5V4h-1.5v2zm2.3-.4L9.8.6 8.2-.6l-3.75 5 1.6 1.2zm-5.25 5l3.75-5-1.6-1.2-3.75 5 1.6 1.2zm3.65-5l3.75 5 1.6-1.2-3.75-5-1.6 1.2z"/>
+										|    </defs>
+										| </svg>
+									.panel-cart__img
+										img(src="https://www.the-alba.com/upload/resize_cache/iblock/75a/100_100_1/2041000801604_1.jpg")
+									.panel-cart__title
+										span Туфли
+									.panel-cart__price
+										.price
+											span(data-old-price="6000") 4800 руб.
+											span Экономия 1200 руб.
+								.panel-cart__item
+									button(type="button").panel-cart__remove
+										| <svg width="11" height="12" viewBox="0 0 11 12" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+										|    <use xlink:href="#path0_stroke" transform="translate(1 1)"/>
+										|    <defs>
+										|        <path id="path0_stroke" d="M-.8.6l3.75 5 1.6-1.2L.8-.6-.8.6zM3.75 6h1.5V4h-1.5v2zm2.3-.4L9.8.6 8.2-.6l-3.75 5 1.6 1.2zm-5.25 5l3.75-5-1.6-1.2-3.75 5 1.6 1.2zm3.65-5l3.75 5 1.6-1.2-3.75-5-1.6 1.2z"/>
+										|    </defs>
+										| </svg>
+									.panel-cart__img
+										img(src="https://www.the-alba.com/upload/resize_cache/iblock/277/100_100_1/2813024401301_1.jpg")
+									.panel-cart__title
+										span Туфли
+									.panel-cart__price
+										.price
+											span 8500 руб.
+								.panel-cart__action
+									a(href="#") Оформить заказ
+									span 18 500 руб.
+						.panel-cart__dropdown
+							button(id="dFavorite" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-count-favorite="2").btn-icon
+								span.icon-svg
+									| <svg xmlns="http://www.w3.org/2000/svg" width="22" height="19" viewBox="0 0 22 19">
+									| <path fill-rule="evenodd" d="M6.037 0C2.38 0 .013 3.655 0 6.658-.024 12.18 11 19 11 19s11.024-6.82 11-12.342C21.987 3.655 19.619 0 15.96 0 14.284 0 12.167 1.099 11 2.133 9.831 1.099 7.714 0 6.036 0z"/>
+									| </svg>
+							.panel-cart__list(aria-labelledby="dFavorite")
+								.panel-cart__item
+									button(type="button").panel-cart__remove
+										| <svg width="11" height="12" viewBox="0 0 11 12" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+										|    <use xlink:href="#path0_stroke" transform="translate(1 1)"/>
+										|    <defs>
+										|        <path id="path0_stroke" d="M-.8.6l3.75 5 1.6-1.2L.8-.6-.8.6zM3.75 6h1.5V4h-1.5v2zm2.3-.4L9.8.6 8.2-.6l-3.75 5 1.6 1.2zm-5.25 5l3.75-5-1.6-1.2-3.75 5 1.6 1.2zm3.65-5l3.75 5 1.6-1.2-3.75-5-1.6 1.2z"/>
+										|    </defs>
+										| </svg>
+									.panel-cart__img
+										img(src="https://www.the-alba.com/upload/resize_cache/iblock/277/100_100_1/2813024401301_1.jpg")
+									.panel-cart__title
+										span Туфли
+										a(href="#") В корзину
+									.panel-cart__price
+										.price
+											span 5200 руб.
+								.panel-cart__item
+									button(type="button").panel-cart__remove
+										| <svg width="11" height="12" viewBox="0 0 11 12" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+										|    <use xlink:href="#path0_stroke" transform="translate(1 1)"/>
+										|    <defs>
+										|        <path id="path0_stroke" d="M-.8.6l3.75 5 1.6-1.2L.8-.6-.8.6zM3.75 6h1.5V4h-1.5v2zm2.3-.4L9.8.6 8.2-.6l-3.75 5 1.6 1.2zm-5.25 5l3.75-5-1.6-1.2-3.75 5 1.6 1.2zm3.65-5l3.75 5 1.6-1.2-3.75-5-1.6 1.2z"/>
+										|    </defs>
+										| </svg>
+									.panel-cart__img
+										img(src="https://www.the-alba.com/upload/resize_cache/iblock/75a/100_100_1/2041000801604_1.jpg")
+									.panel-cart__title
+										span Туфли
+										a(href="#") В корзину
+									.panel-cart__price
+										.price
+											span 4800 руб.
 
 
-
-
-
-
-//header.header
-//	.header__container
-		//.header__top
-		//	a.header-region(href="#")
-		//		| Ваш город:
-		//		span Москва
-		//	ul.header-links
-		//		li.header-links__item
-		//			a(href="#") Доставка и примерка
-		//		li.header-links__item
-		//			a(href="#") Безопасная оплата
-		//		li.header-links__item
-		//			a(href="#") Пункты самовывоза
-		//		li.header-links__item
-		//			a(href="#") Фирменные магазины
-		//		li.header-links__item
-		//			a(href="#") Гарантия качества
-		//		//.header-links__item
-		//		//	a(href="#") Состояние заказа
-		//		//.header-links__item
-		//		//	a(href="#") Вход
-		//.header__middle
-		//	.nav-gender
-		//		.nav-gender__inner
-		//			a.nav-gender__item.active(href="#") Женщинам
-		//			a.nav-gender__item(href="#") Мужчинам
-		//	.panel-cart
-		//		.panel-cart__head
-		//			span В корзине пусто
-		//			.panel-cart__dropdown
-		//				button(id="dCart" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-count-cart="3").btn-icon
-		//					span.icon-svg
-		//						|<svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" viewBox="0 0 20 24">
-		//						|<g fill="none" fill-rule="evenodd">
-		//						|<path fill="#000" d="M1.935 6.111L0 24h20L18.065 6.111z"/>
-		//						|<path stroke="#000" stroke-width="1.8" d="M8.065 11.222V3.556s0-2.237 1.935-2.237 1.935 2.237 1.935 2.237v7.666"/>
-		//						|</g>
-		//						|</svg>
-		//				.panel-cart__list(aria-labelledby="dCart")
-		//					.panel-cart__item
-		//						button(type="button").panel-cart__remove
-		//							| <svg width="11" height="12" viewBox="0 0 11 12" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-		//							|    <use xlink:href="#path0_stroke" transform="translate(1 1)"/>
-		//							|    <defs>
-		//							|        <path id="path0_stroke" d="M-.8.6l3.75 5 1.6-1.2L.8-.6-.8.6zM3.75 6h1.5V4h-1.5v2zm2.3-.4L9.8.6 8.2-.6l-3.75 5 1.6 1.2zm-5.25 5l3.75-5-1.6-1.2-3.75 5 1.6 1.2zm3.65-5l3.75 5 1.6-1.2-3.75-5-1.6 1.2z"/>
-		//							|    </defs>
-		//							| </svg>
-		//						.panel-cart__img
-		//							img(src="https://www.the-alba.com/upload/resize_cache/iblock/9cf/100_100_1/1103048101301_1-min.jpg")
-		//						.panel-cart__title
-		//							span Туфли
-		//							a(href="#") В корзину
-		//						.panel-cart__price
-		//							.price
-		//								span 5200 руб.
-		//					.panel-cart__item
-		//						button(type="button").panel-cart__remove
-		//							| <svg width="11" height="12" viewBox="0 0 11 12" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-		//							|    <use xlink:href="#path0_stroke" transform="translate(1 1)"/>
-		//							|    <defs>
-		//							|        <path id="path0_stroke" d="M-.8.6l3.75 5 1.6-1.2L.8-.6-.8.6zM3.75 6h1.5V4h-1.5v2zm2.3-.4L9.8.6 8.2-.6l-3.75 5 1.6 1.2zm-5.25 5l3.75-5-1.6-1.2-3.75 5 1.6 1.2zm3.65-5l3.75 5 1.6-1.2-3.75-5-1.6 1.2z"/>
-		//							|    </defs>
-		//							| </svg>
-		//						.panel-cart__img
-		//							img(src="https://www.the-alba.com/upload/resize_cache/iblock/75a/100_100_1/2041000801604_1.jpg")
-		//						.panel-cart__title
-		//							span Туфли
-		//							a(href="#") В корзину
-		//						.panel-cart__price
-		//							.price
-		//								span(data-old-price="6000") 4800 руб.
-		//								span Экономия 1200 руб.
-		//					.panel-cart__item
-		//						button(type="button").panel-cart__remove
-		//							| <svg width="11" height="12" viewBox="0 0 11 12" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-		//							|    <use xlink:href="#path0_stroke" transform="translate(1 1)"/>
-		//							|    <defs>
-		//							|        <path id="path0_stroke" d="M-.8.6l3.75 5 1.6-1.2L.8-.6-.8.6zM3.75 6h1.5V4h-1.5v2zm2.3-.4L9.8.6 8.2-.6l-3.75 5 1.6 1.2zm-5.25 5l3.75-5-1.6-1.2-3.75 5 1.6 1.2zm3.65-5l3.75 5 1.6-1.2-3.75-5-1.6 1.2z"/>
-		//							|    </defs>
-		//							| </svg>
-		//						.panel-cart__img
-		//							img(src="https://www.the-alba.com/upload/resize_cache/iblock/277/100_100_1/2813024401301_1.jpg")
-		//						.panel-cart__title
-		//							span Туфли
-		//							a(href="#") В корзину
-		//						.panel-cart__price
-		//							.price
-		//								span 8500 руб.
-		//					.panel-cart__action
-		//						a(href="#") Оформить заказ
-		//						span 18 500 руб.
-		//			.panel-cart__dropdown
-		//				button(id="dFavorite" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-count-favorite="2").btn-icon
-		//					span.icon-svg
-		//						|<svg xmlns="http://www.w3.org/2000/svg" width="22" height="19" viewBox="0 0 22 19">
-		//						|<path fill-rule="evenodd" d="M6.037 0C2.38 0 .013 3.655 0 6.658-.024 12.18 11 19 11 19s11.024-6.82 11-12.342C21.987 3.655 19.619 0 15.96 0 14.284 0 12.167 1.099 11 2.133 9.831 1.099 7.714 0 6.036 0z"/>
-		//						|</svg>
-		//				.panel-cart__list(aria-labelledby="dFavorite")
-		//					.panel-cart__item
-		//						button(type="button").panel-cart__remove
-		//							| <svg width="11" height="12" viewBox="0 0 11 12" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-		//							|    <use xlink:href="#path0_stroke" transform="translate(1 1)"/>
-		//							|    <defs>
-		//							|        <path id="path0_stroke" d="M-.8.6l3.75 5 1.6-1.2L.8-.6-.8.6zM3.75 6h1.5V4h-1.5v2zm2.3-.4L9.8.6 8.2-.6l-3.75 5 1.6 1.2zm-5.25 5l3.75-5-1.6-1.2-3.75 5 1.6 1.2zm3.65-5l3.75 5 1.6-1.2-3.75-5-1.6 1.2z"/>
-		//							|    </defs>
-		//							| </svg>
-		//						.panel-cart__img
-		//							img(src="https://www.the-alba.com/upload/resize_cache/iblock/277/100_100_1/2813024401301_1.jpg")
-		//						.panel-cart__title
-		//							span Туфли
-		//							a(href="#") В корзину
-		//						.panel-cart__price
-		//							.price
-		//								span 5200 руб.
-		//					.panel-cart__item
-		//						button(type="button").panel-cart__remove
-		//							| <svg width="11" height="12" viewBox="0 0 11 12" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-		//							|    <use xlink:href="#path0_stroke" transform="translate(1 1)"/>
-		//							|    <defs>
-		//							|        <path id="path0_stroke" d="M-.8.6l3.75 5 1.6-1.2L.8-.6-.8.6zM3.75 6h1.5V4h-1.5v2zm2.3-.4L9.8.6 8.2-.6l-3.75 5 1.6 1.2zm-5.25 5l3.75-5-1.6-1.2-3.75 5 1.6 1.2zm3.65-5l3.75 5 1.6-1.2-3.75-5-1.6 1.2z"/>
-		//							|    </defs>
-		//							| </svg>
-		//						.panel-cart__img
-		//							img(src="https://www.the-alba.com/upload/resize_cache/iblock/75a/100_100_1/2041000801604_1.jpg")
-		//						.panel-cart__title
-		//							span Туфли
-		//							a(href="#") В корзину
-		//						.panel-cart__price
-		//							.price
-		//								span 4800 руб.
-		//.header__bottom
+						button(type="button").js-mobile-nav.mobile-nav.btn-icon
+							| <svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" viewBox="0 0 20 16"><path fill-rule="evenodd" d="M0 0h20v2H0V0zm0 7h20v2H0V7zm0 7h20v2H0v-2z"/></svg>
+					span.phone-desktop 8 800 555 00 30
+		.header-navs__main
+			include ../nav/nav
+		.header-navs__second
+			.header__region
+				a(href="#")
+					| Ваш город:
+					span Москва
+			ul.nav-second
+				li.nav-second__item
+					a(href="#") Доставка и примерка
+				li.nav-second__item
+					a(href="#") Безопасная оплата
+				li.nav-second__item
+					a(href="#") Пункты самовывоза
+				li.nav-second__item
+					a(href="#") Фирменные магазины
+				li.nav-second__item
+					a(href="#") Гарантия качества
+			ul.header__login
+				li.phone-mobile
+					span 8 800 555 00 30
+				li
+					a(href="javascript:;") Состояние заказа
+				li
+					a(href="javascript:;" data-fancybox data-src="#form-login").js-login.link-login Вход

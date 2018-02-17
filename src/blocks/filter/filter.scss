@@ -323,6 +323,7 @@
       transition: all $transition 0.2s;
 
       .filter__item {
+
         >button {
           color: #000;
 
@@ -337,6 +338,21 @@
               opacity: 1;
               background-image: url("../img/svg/arrow-v-blue.svg");
             }
+          }
+        }
+
+        &.open {
+
+          > button {
+
+            &::after {
+              transform: rotate(180deg);
+            }
+          }
+
+          .filter__dropdown {
+            border: 1px solid rgba(#000, .1);
+            left: 40px;
           }
         }
       }

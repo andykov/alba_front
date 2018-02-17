@@ -7,11 +7,17 @@
 	@media (min-width: $screen-md) {
 		padding-bottom: 53px;
 	}
+	@media (min-width: $screen-md) {
+		padding-bottom: 42px;
+	}
 	&__inner {
 		@include row(32px, 32px, 48px, 24px, 32px, 40px);
 		@media (min-width: $screen-md) {
 			padding-right: 147px;
 			padding-left: 147px;
+		}
+		@media (min-width: $screen-xl) {
+			padding-right: 0;
 		}
 	}
 	&__label {
@@ -29,12 +35,10 @@
 		}
 		@media screen and (min-width: $screen-lg) {
 			margin-bottom: 0;
-			@include col(lg, 4, 12, 24px);
-			@include col-offset(lg, 2, 12);
+			@include col(lg, 6, 12, 24px);
 		}
 		@media screen and (min-width: $screen-xl) {
 			@include col(xl, 4, 12, 32px);
-			@include col-offset(xl, 2, 12);
 		}
 		@media screen and (min-width: $screen-xxl) {
 			@include col(xxl, 3, 15, 40px);
@@ -79,11 +83,11 @@
 			@include col-offset(lg, 0, 12);
 		}
 		@media screen and (min-width: $screen-xl) {
-			@include col(xl, 5, 12, 32px);
-			@include col-offset(xl, 1, 12);
+			@include col(xl, 6.3, 12, 32px);
+			@include col-offset(xl, 1.65, 12);
 		}
 		@media screen and (min-width: $screen-xxl) {
-			@include col(xxl, 5, 15, 40px);
+			@include col(xxl, 6.3, 15, 40px);
 			@include col-offset(xxl, 1, 15);
 		}
 
@@ -95,6 +99,9 @@
 						display: flex;
 						align-items: flex-end;
 						margin-bottom: 15px;
+						@media screen and (min-width: $screen-xl) {
+							max-width: 312px;
+						}
 					}
 				}
 				.field-text {
@@ -102,6 +109,9 @@
 					margin-right: 16px;
 					@media screen and (min-width: $screen-md) {
 						margin-right: 24px;
+					}
+					@media screen and (min-width: $screen-xl) {
+						margin-right: 16px;
 					}
 				}
 			}
@@ -118,6 +128,9 @@
 			display: flex;
 			flex-wrap: wrap;
 			align-items: flex-end;
+		}
+		@media screen and (min-width: $screen-xl) {
+			padding-top: 8px;
 		}
 	}
 	.form-field {
@@ -142,11 +155,21 @@
 		}
 	}
 	&__checkboxes {
-		margin-bottom: 48px;
+		margin-bottom: 36px;
 		@media screen and (min-width: $screen-md) {
-			order: 1;
 			width: 100%;
 			margin-bottom: 0;
+			order: 1;
+		}
+		label {
+			margin-bottom: 0;
+		}
+	}
+	.form-control {
+		max-width: 176px;
+		width: 100%;
+		@media screen and (min-width: $screen-xxl) {
+			max-width: 184px;
 		}
 	}
 	&__btn {
@@ -154,6 +177,10 @@
 			max-width: 136px;
 			margin-bottom: 15px;
 			padding: 15px 16px;
+		}
+		@media screen and (min-width: $screen-md) {
+			max-width: 100%;
+			width: 100%;
 		}
 	}
 }

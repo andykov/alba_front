@@ -1,9 +1,14 @@
+// .article scripts goes here 
+
+/*$(function() {
+	
+});*/
 // .auth scripts goes here 
 
 /*$(function() {
 	
 });*/
-// .article scripts goes here 
+// .breadcrumbs scripts goes here 
 
 /*$(function() {
 	
@@ -11,9 +16,28 @@
 
 // .catalog scripts goes here 
 
-/*$(function() {
-	
-});*/
+$(function() {
+
+	function bunnerSize() {
+		var catalogBanner = $('.catalog__item--banner .banner'),
+				catalogItem = $('.catalog__item'),
+				itemHeight = catalogItem.outerHeight(),
+				itemGap = catalogItem.css('margin-bottom').replace('px',''),
+				bannerHeight = +itemGap + 2 * itemHeight + 'px';
+
+		catalogBanner.css({'padding-bottom': bannerHeight});
+
+		// hack for catalog__item height on hover
+		if (!window.matchMedia('(min-width: 992px)').matches) {
+			catalogItem.css({'min-height': itemHeight});
+		}
+	}
+  if ($('.catalog__item--banner .banner').length) {
+    $(window).on('load resize', function () {
+      bunnerSize();
+    })
+  }
+});
 // .checkout scripts goes here 
 
 /*$(function() {
@@ -296,6 +320,8 @@ $(function() {
     var $hlinks = $('.filter .filter__more-list');
     var $sorting = $('.filter .filter__form--sorting');
     var $more = $('.filter .filter__more');
+    var $filterTitle = $('.filter__title--filter');
+    var $filterDropdown = $('.filter__more-dropdown');
 
     var numOfItems = 0;
     var totalSpace = 0;
@@ -314,7 +340,7 @@ $(function() {
 
         // Get instant state
 
-        availableSpace = $nav.outerWidth() - $sorting.outerWidth() - 150;
+        availableSpace = $nav.outerWidth() - $sorting.outerWidth() - 240;
         // availableSpace = $vlinks.outerWidth() - 10;
         numOfVisibleItems = $vlinks.children().length;
         requiredSpace = breakWidths[numOfVisibleItems - 1];
@@ -330,11 +356,32 @@ $(function() {
             $hlinks.children().first().appendTo($vlinks);
             numOfVisibleItems += 1;
         }
+
+        if (availableSpace < 0) {
+            $filterTitle.fadeOut(1);
+            $more.addClass('as-title');
+            $btn.addClass('as-title').text('Фильтры');
+        } else {
+            $filterTitle.fadeIn(1);
+            $more.removeClass('as-title');
+            $btn.removeClass('as-title').text('ЕЩЕ');
+        }
+
         // Update the button accordingly
         // $btn.attr("count", numOfItems - numOfVisibleItems);
         if (numOfVisibleItems === numOfItems) {
             $btn.parent().addClass('hidden');
-        } else $btn.parent().removeClass('hidden');
+        } else {
+            $btn.parent().removeClass('hidden');
+        }
+
+        if (numOfVisibleItems == 0 && availableSpace < 0) {
+            $filterDropdown.removeClass('no-items').addClass('no-btn');
+        } else if (numOfVisibleItems == 0) {
+            $filterDropdown.removeClass('no-btn').addClass('no-items');
+        } else {
+            $filterDropdown.removeClass('no-items');
+        }
     }
 
     // Window listeners
@@ -472,6 +519,7 @@ $(function() {
 //
 //     updateNav();
 });
+
 // .form-login scripts goes here 
 
 $(function() {
@@ -491,7 +539,6 @@ $(function() {
     //     }
     // });
 });
-
 $(function() {
 
     // Вынос логотипа и панели с корзиной в отдельный блок в мобильном меню
@@ -606,6 +653,16 @@ $(function() {
 /*$(function() {
 	
 });*/
+// .product-gallery scripts goes here 
+
+/*$(function() {
+	
+});*/
+// .product-info scripts goes here 
+
+/*$(function() {
+	
+});*/
 // .product-tabs scripts goes here 
 
 $(function() {
@@ -624,6 +681,11 @@ $(function() {
     if (hash) $('.product-tabs__nav a[href$="'+hash+'"]').trigger('click');
 
 });
+// .shops scripts goes here 
+
+/*$(function() {
+	
+});*/
 // .sidebar scripts goes here 
 
 $(function() {
@@ -631,11 +693,6 @@ $(function() {
 
 
 });
-// .product-info scripts goes here 
-
-/*$(function() {
-	
-});*/
 // .sizes scripts goes here 
 
 $(function() {
@@ -713,6 +770,11 @@ $(function() {
     }
 
 });
+// .social scripts goes here 
+
+/*$(function() {
+	
+});*/
 // .subscribe scripts goes here 
 
 $(function() {
@@ -791,23 +853,24 @@ $(function() {
 
     if ($('.js-shops-list').length) {
         $('.js-shops-list').slick({
-            arrows: true,
-            infinite: false,
-            slidesToShow: 3,
-            slidesToScroll: 1,
+          arrows: false,
+          infinite: false,
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          mobileFirst: true,
             responsive: [
                 {
-                    breakpoint: 1800,
+                    breakpoint: 1920,
                     settings: {
-                        slidesToShow: 2,
+                        slidesToShow: 3
                     }
                 },
-                // {
-                //     breakpoint: 1365,
-                //     settings: {
-                //         slidesToShow: 2,
-                //     }
-                // }
+                {
+                    breakpoint: 768,
+                    settings: {
+                      arrows: true
+                    }
+                }
             ]
         });
     }
@@ -818,13 +881,12 @@ $(function() {
 
     if($productGalleryBig.length) {
         $productGalleryBig.slick({
-            // infinite: false,
+            mobileFirst: true,
             lazyLoad: 'ondemand',
             arrows: false,
             slidesToShow: 2,
             centerMode: true,
             variableWidth: true,
-            // centerPadding: '-120px',
             dots: false,
             centerPadding: '0',
             asNavFor: $productGalleryThumb

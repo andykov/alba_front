@@ -4,16 +4,15 @@ block title
 	title Главная страница
 
 block content
-
 	.filter
 		.filter__inner
 			form#filter.filter__form.filter__form--priority
 				input(id="filter-submit" type="submit" hidden)
 				span.filter__title.filter__title--filter Фильтры:
 				ul.filter__list
-					li.filter__item
+					li.filter__item.dropdown
 						button(type="button" id="dAvailable" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Наличие
-						.filter__dropdown(aria-labelledby="dAvailable" data-dont-close)
+						.filter__dropdown.dropdown-menu(aria-labelledby="dAvailable" data-dont-close)
 							.filter__dropdown-inner
 								label.field-checkbox
 									span.field-checkbox__input-wrap
@@ -21,9 +20,9 @@ block content
 										span.field-checkbox__name
 											| Есть в магазинах
 								button(type="button").filter__apply.btn Применить
-					li.filter__item
+					li.filter__item.dropdown
 						button(type="button" id="dPrice" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Цена
-						ul.filter__dropdown(aria-labelledby="dPrice" data-dont-close)
+						ul.filter__dropdown.dropdown-menu(aria-labelledby="dPrice" data-dont-close)
 							.filter__dropdown-inner
 								label.field-checkbox
 									span.field-checkbox__input-wrap
@@ -56,7 +55,7 @@ block content
 										span.field-radio__name
 											| Более 7990
 								button(type="button").filter__apply.btn Применить
-					li.filter__item
+					li.filter__item.dropdown
 						button(type="button" id="dColor" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Цвет
 						.filter__dropdown(aria-labelledby="dColor" data-dont-close)
 							.filter__dropdown-inner
@@ -102,7 +101,7 @@ block content
 										span(style="background-color:#FFCBDB;")
 								button(type="button").filter__apply.btn Применить
 
-					li.filter__item
+					li.filter__item.dropdown
 						button(type="button" id="dMaterial" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Материал
 						.filter__dropdown(aria-labelledby="dMaterial" data-dont-close)
 							.filter__dropdown-inner
@@ -152,7 +151,7 @@ block content
 										span.field-checkbox__name
 											| текстиль
 								button(type="button").filter__apply.btn Применить
-					li.filter__item
+					li.filter__item.dropdown
 						button(id="dSize" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Размер
 						.filter__dropdown(aria-labelledby="dSize" data-dont-close)
 							.filter__dropdown-inner
@@ -256,7 +255,7 @@ block content
 											input(type="checkbox")
 											span 12
 								button(type="button").filter__apply.btn Применить
-					li.filter__item
+					li.filter__item.dropdown
 						button(type="button" id="dSeason" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Сезон
 						.filter__dropdown(aria-labelledby="dSeason" data-dont-close)
 							.filter__dropdown-inner
@@ -281,7 +280,7 @@ block content
 										span.field-checkbox__name
 											| Лето
 								button(type="button").filter__apply.btn Применить
-					li.filter__item
+					li.filter__item.dropdown
 						button(type="button" id="dStyle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Стиль
 						.filter__dropdown(aria-labelledby="dStyle" data-dont-close)
 							.filter__dropdown-inner
@@ -301,9 +300,9 @@ block content
 										span.field-checkbox__name
 											| Fashion
 								button(type="button").filter__apply.btn Применить
-					li.filter__item
+					li.filter__item.dropdown
 						button(type="button" id="dHell" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Высота каблука
-						.filter__dropdown(aria-labelledby="dHell" data-dont-close)
+						.filter__dropdown.dropdown-menu(aria-labelledby="dHell" data-dont-close)
 							.filter__dropdown-inner
 								label.field-checkbox
 									span.field-checkbox__input-wrap
@@ -322,9 +321,9 @@ block content
 											| Средний
 								button(type="button").filter__apply.btn Применить
 
-				.filter__more
-					button.filter__more-btn(type="button"  id="dMore" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") ЕЩЕ
-					.filter__more-dropdown.hidden(aria-labelledby="dMore" data-dont-close)
+				.filter__more.dropdown
+					button.filter__more-btn(type="button" id="dMore" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") ЕЩЕ
+					.filter__more-dropdown.dropdown-menu(data-dont-close aria-labelledby="dMore")
 						ul.filter__more-list
 
 			form#sorting.filter__form.filter__form--sorting

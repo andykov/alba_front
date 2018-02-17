@@ -15,6 +15,20 @@
 
 $(function() {
 
+     git// отмена закрытия бутстраповского дропдауна с чекбоксами
+    $(document).on('click', '[data-dont-close]', function(e) {
+        e.stopPropagation();
+    });
+
+    // многоуровневый дропдаун
+    $('.dropdown--submenu [data-toggle="dropdown"]').on('click', function (event) {
+        event.preventDefault();
+        event.stopPropagation();
+        $(this).parent().siblings().removeClass('open');
+        $(this).parent().toggleClass('open');
+    });
+
+
     var $collapseContainer = $(".js-collapse"),
         $collapseToggle = $collapseContainer.find('[data-collapse-toggle]'),
         $collapseBody = $collapseContainer.find('[data-collapse-body]');
@@ -26,7 +40,6 @@ $(function() {
                 return $collapseBody.is(":visible") ? "Свернуть" : "Полностью";
             });
         });
-
     });
 
 

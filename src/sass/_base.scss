@@ -272,25 +272,15 @@ p {
 }
 
 .dropdown {
-	&__toggle {
-
-	}
-	&__menu {
-		position: absolute;
-		top: 100%;
-		left: 0;
-		z-index: 100;
+	.dropdown-menu {
 		display: none;
-		background-color: #fff;
-		background-clip: padding-box;
 	}
 	&.open {
-		.dropdown__menu {
+		>.dropdown-menu {
 			display: block;
 		}
 	}
 }
-
 .list-dots-style {
 	list-style: disc;
 	padding-left: 18px;

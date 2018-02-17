@@ -2,162 +2,208 @@
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий... 
 
 .product-info {
-  &__title {
-    margin-bottom: 3px;
-    padding-top: 67px;
-    font-family: $font-family--montserrat;
-    font-weight: 700;
-    font-size: 26px;
-    line-height: (34 / 26);
-    color: #000;
-  }
-  &__id {
-    margin-bottom: 16px;
-    font-size: 13px;
-    color: #3c3c3c;
-  }
-  &__option {
-    display: block;
-    margin-bottom: 18px;
-    color: #000000;
-    font: 600 11px/1.45 $font-family--montserrat;
-    letter-spacing: 0.4px;
-    text-transform: uppercase;
-  }
-  &__color {
-    margin-bottom: 32px;
-    img {
-      width: 44px;
-      height: 42px;
-    }
-    .field-radio {
-      margin-right: 15px;
-      &__input {
-        display: none;
-      }
-      &__input:checked + .field-radio__name {
-        display: block;
-        border-bottom: 2px solid #60d3d5;
-      }
-      &__name {
-        position: relative;
-        display: block;
-        padding-bottom: 10px;
-        cursor: pointer;
-
-        &::before {
-          content: '';
-          position: absolute;
-          left: 0;
-          top: 100%;
-          right: 0;
-          bottom: 10px;
-          opacity: 0;
-          transition: top 0.4s ease-in-out, opacity 0.6s ease-in-out;
-        }
-      }
-      &:hover .field-radio__name::before{
-        top: 0;
-        opacity: 1;
-        background-image: linear-gradient(-180deg, rgba(96, 211, 213, 0) 50%, rgba(96, 211, 213, .66) 100%);
-      }
-    }
+  @media (min-width: $screen-md) {
+	@include col(md, 6, 12, false);
+	  padding-right: 24px;
+	  padding-left: 44px;
   }
   @media screen and (min-width: $screen-xl) {
-    padding-left: 70px;
-    padding-right: 15px;
-    max-width: 296px + 70;
-    height: 752px;
-    //@include make-col(3, 15, false);
-  }
-
-  @media screen and (min-width: $screen-md) and (max-width: $screen-lg - 1) {
-    @include make-col(1, 2, 48px);
+	padding-left: 70px;
+	padding-right: 15px;
+	max-width: 296px + 70;
+	height: 752px;
   }
 
   @media screen and (min-width: $screen-lg) {
-    //width: 356px;
-    position: absolute;
-    top: 0;
-    //padding-left: 70px;
-    border-left: 1px solid #E6E6E6;
-    //align-self: flex-end;
+	position: absolute;
+	top: 0;
+	border-left: 1px solid #E6E6E6;
   }
   @media screen and (min-width: $screen-xxl) {
-    height: 832px;
+	height: 832px;
   }
-  &__discount {
-    position: absolute;
-    right: 20px;
-    top: 55px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 32px;
-    height: 32px;
-    background-color: #60d3d5;
-    font-family: $font-family--montserrat;
-    font-size: 16px;
-    font-weight: 600;
-    text-align: center;
-    color: #fff;
-    @media screen and (min-width: $screen-lg) {
-      left: -32px;
-      right: initial;
-    }
-    @media screen and (min-width: $screen-sm) {
-      right: 0;
-      top: 0;
-    }
-  }
-  .sizes {
-    margin-bottom: 34px;
-  }
-  &__buttons {
-    margin-bottom: 33px;
-  }
-  &__in-cart {
-    max-width: 224px;
-    width: 100%;
-    margin-right: 16px;
-    background-image: url(../img/svg/icon-cart.svg);
-    background-position: 16px 50%;
-    background-size: 16px 18px;
-  }
-  &__add-desires {
-    width: 40px;
-    height: 40px;
-    background-image: url(../img/svg/icon-favor.svg);
-    background-position: center;
-    background-size: 18px 15px;
-  }
-  &__reservation {
-    display: block;
-    width: 100%;
-    max-width: 280px;
-    margin-top: 16px;
-  }
-  &__delivery {
-    p {
-      margin-bottom: 4px;
-      font-size: 14px;
-      font-weight: 300;
-      line-height: 1.5;
-      color: #3c3c3c;
-    }
-    a {
-      display: inline-block;
-      margin-bottom: 14px;
-      padding-right: 15px;
-      font: 600 11px/1.45 $font-family--montserrat;
-      letter-spacing: 0.4px;
-      color: #a0a0a0;
-      text-transform: uppercase;
-      background: url(../img/svg/arrow-h.svg) right center no-repeat;
-      background-size: 5px 6px;
-      &:hover {
-        color: #60D3D5;
-      }
-    }
-  }
+	&__header {
+		display: flex;
+		justify-content: space-between;
+		padding-top: 26px;
+		@media (min-width: $screen-md) {
+			padding-top: 56px;
+		}
+	}
+	&__code {
+		margin-right: 20px;
+	}
+	&__title {
+		margin-bottom: 3px;
+		font-family: $font-family--montserrat;
+		font-size: 16px;
+		font-weight: 900;
+		line-height: 1.25;
+		color: #000;
+		@media (min-width: $screen-md) {
+			font-size: 26px;
+		}
+	}
+	&__id {
+		margin-bottom: 16px;
+		font-size: 13px;
+		color: #3c3c3c;
+	}
+	&__option {
+		display: block;
+		margin-bottom: 18px;
+		color: #000000;
+		font: 600 11px/1.45 $font-family--montserrat;
+		letter-spacing: 0.4px;
+		text-transform: uppercase;
+	}
+	&__color {
+		margin-bottom: 25px;
+		@media screen and (min-width: $screen-md) {
+			margin-bottom: 32px;
+		}
+		img {
+			width: 44px;
+			@media screen and (min-width: $screen-md) {
+				width: 48px;
+			}
+		}
+		.field-radio {
+			margin-right: 15px;
+			margin-bottom: 0;
+			&__input {
+				display: none;
+			}
+			&__input:checked + .field-radio__name {
+				display: block;
+				border-bottom: 2px solid #60d3d5;
+			}
+			&__name {
+				position: relative;
+				display: block;
+				padding-bottom: 6px;
+				cursor: pointer;
+				@media screen and (min-width: $screen-md) {
+					padding-bottom: 4px;
+				}
+				@media screen and (min-width: $screen-xl) {
+					padding-bottom: 6px;
+				}
+				&::before {
+					content: '';
+					position: absolute;
+					left: 0;
+					top: 100%;
+					right: 0;
+					bottom: 10px;
+					opacity: 0;
+					transition: top 0.4s ease-in-out, opacity 0.6s ease-in-out;
+					@media screen and (min-width: $screen-md) {
+						bottom: 4px;
+					}
+				}
+				@media screen and (min-width: $screen-md) {
+					padding-bottom: 10px;
+
+				}
+			}
+			&:hover .field-radio__name::before {
+				top: 0;
+				opacity: 1;
+				background-image: linear-gradient(-180deg, rgba(96, 211, 213, 0) 50%, rgba(96, 211, 213, .66) 100%);
+			}
+		}
+	}
+	&__discount {
+		display: none;
+		position: absolute;
+		top: 0;
+		right: -32px;
+		align-items: center;
+		justify-content: center;
+		width: 32px;
+		height: 32px;
+		background-color: #60d3d5;
+		font-family: $font-family--montserrat;
+		font-size: 16px;
+		font-weight: 600;
+		text-align: center;
+		color: #fff;
+		@media screen and (min-width: $screen-lg) {
+			left: -32px;
+			right: initial;
+		}
+		@media screen and (min-width: $screen-md) {
+			display: flex;
+			right: -16px;
+		}
+	}
+	.sizes {
+		margin-bottom: 34px;
+	}
+	&__buttons {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		max-width: 312px;
+		margin-bottom: 33px;
+
+	}
+	&__in-cart {
+		flex-grow: 1;
+		margin-right: 16px;
+		background-image: url(../img/svg/icon-cart.svg);
+		background-position: 16px 50%;
+		background-size: 16px 18px;
+		@media screen and (min-width: $screen-md) {
+			max-width: 256px;
+		}
+	}
+	&__add-desires {
+		width: 40px;
+		height: 40px;
+		background-image: url(../img/svg/icon-favor.svg);
+		background-position: center;
+		background-size: 18px 15px;
+	}
+	&__reservation {
+		display: block;
+		width: 100%;
+		//max-width: 280px;
+		margin-top: 16px;
+	}
+	&__delivery {
+		p {
+			margin-bottom: 5px;
+			font-size: 12px;
+			font-weight: 300;
+			line-height: 1.5;
+			color: #3c3c3c;
+			@media screen and (min-width: $screen-md) {
+				font-size: 14px;
+			}
+			@media screen and (min-width: $screen-md) {
+				margin-bottom: 2px;
+				letter-spacing: 0.4px;
+			}
+		}
+		a {
+			display: inline-block;
+			margin-bottom: 16px;
+			padding-right: 15px;
+			font: 600 10px/1.45 $font-family--montserrat;
+			letter-spacing: 0.4px;
+			color: #a0a0a0;
+			text-transform: uppercase;
+			background: url(../img/svg/arrow-h.svg) right center no-repeat;
+			background-size: 5px 6px;
+			&:hover {
+				color: #60D3D5;
+			}
+			@media screen and (min-width: $screen-md) {
+				margin-bottom: 14px;
+				font-size: 11px;
+			}
+		}
+	}
 }

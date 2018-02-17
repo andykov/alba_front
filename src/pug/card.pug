@@ -42,12 +42,14 @@ block content
 			.product-holder
 				.product-info
 					span.product-info__discount %
-					.product-info__title Ботинки
-					.product-info__id 1621001001402
-					.product-info__price
-						.price
-							span(data-old-price="14 490") 4800 руб.
-							span Экономия 1200 руб.
+					.product-info__header
+						.product-info__code
+							.product-info__title Ботинки
+							.product-info__id 1621001001402
+						.product-info__price
+							.price
+								span(data-old-price="14 490") 4800 руб.
+								span Экономия 1200 руб.
 					.product-info__color
 						span.product-info__option Цвет
 						label.field-radio
@@ -215,7 +217,7 @@ block content
 					.product-tabs__body
 						#available.product-tabs__item.active
 							.shops
-								.shops-map
+								.shops__map
 									| <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A0606129cc3aca5dc22b848c942aeb0ca610a35559449df72f90b5e1db98305c9&amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>
 								.js-shops-list.shops-list
 									.shops-list__item

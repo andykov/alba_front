@@ -4,7 +4,7 @@
 
 .header {
   margin: 0 auto;
-  padding-top: 32px;
+
 
   //&__container {
   //  background-color: #fff;
@@ -114,7 +114,7 @@
 
 
 .panel-cart {
-  background-color: #fff;
+
   position: relative;
   text-align: right;
   display: flex;
@@ -122,11 +122,38 @@
   align-items: center;
   //box-shadow: 0 32px 64px 0 rgba(0,0,0, 0.15);
 
+  @media screen and (max-width: $screen-md - 1) {
+    height: 100%;
+
+    & > span {
+      display: none;
+    }
+  }
   @media screen and (min-width: $screen-md) {
+    //background-color: #fff;
     width: 270px;
   }
   @media screen and (min-width: 1366px) {
     width: 387px;
+  }
+
+  span {
+    @media screen and (min-width: $screen-md) {
+      font-size: 14px;
+      line-height: (21 / 14);
+      letter-spacing: 0.4px;
+    }
+  }
+
+  .mobile-nav {
+    width: 52px;
+    height: 100%;
+    @media screen and (max-width: $screen-lg - 1) {
+      display: inline-flex;
+    }
+    @media screen and (min-width: $screen-lg) {
+      display: none;
+    }
   }
 
   &__head {
@@ -134,6 +161,12 @@
   }
 
   &__dropdown {
+    @media screen and (max-width: $screen-md - 1) {
+      height: 100%;
+      > .btn-icon {
+        height: 100%;
+      }
+    }
     button {
       &[data-count-cart],
       &[data-count-favorite] {
@@ -246,12 +279,46 @@
 
 
 .header {
+  @media screen and (min-width: $screen-md) {
+    padding-top: 16px;
+  }
+  &__top,
+  &__navs-gender,
+  &__navs-main {
+    @media screen and (max-width: $screen-md - 1) {
+      border-bottom: 1px solid #E6E6E6;
+    }
+  }
+
   &__top {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+
+    @media screen and (max-width: $screen-md - 1) {
+      padding-left: 16px;
+      height: 56px;
+    }
+    @media screen and (min-width: $screen-md) {
+      padding-left: 32px;
+      padding-right: 32px;
+      height: 72px;
+    }
+
+  }
+  &__logo {
+    width: 95px;
+    @media screen and (min-width: $screen-md) {
+      width: 121px;
+    }
+  }
+  &__cart {
+    @media screen and (max-width: $screen-md - 1) {
+      height: 100%;
+    }
   }
   &__navs {
-    background-color: #FFF;
+    //background-color: #FFF;
   }
 
   &__top,
@@ -259,9 +326,9 @@
     position: relative;
   }
 
-  &__navs-genger,
+  &__navs-gender,
   &__navs-second {
-    border-bottom: 1px solid #E6E6E6;
+    //border-bottom: 1px solid #E6E6E6;
   }
 
   &__navs-second {
@@ -271,7 +338,7 @@
     }
   }
 
-  &__navs-genger,
+  &__navs-gender,
   &__navs-second,
   &__navs-main {
     @media screen and (min-width: $screen-md) {
@@ -298,19 +365,20 @@
   &__navs-second {
     display: flex;
     justify-content: space-between;
-    background-color: rgba(248,248,248, 0.95);
+    //background-color: rgba(248,248,248, 0.95);
 
     font-size: 14px;
     line-height: (21 / 14);
     letter-spacing: 0.4px;
     padding-top: 21.5px;
     padding-bottom: 21.5px;
-    border-bottom: 1px solid #E6E6E6;
+    //border-bottom: 1px solid #E6E6E6;
 
     @media screen and (max-width: $screen-lg - 1) {
       flex-wrap: wrap;
       padding-left: 16px;
       padding-right: 16px;
+      //border-top: 1px solid #e6e6e6;
     }
 
     @media screen and (min-width: $screen-lg) {
@@ -329,7 +397,7 @@
     &__navs-second {
       position: relative;
     }
-    &__navs-genger {
+    &__navs-gender {
       flex-direction: column;
     }
   }

@@ -104,8 +104,13 @@
           margin-right: 5px;
           font-size: 11px;
         }
+<<<<<<< HEAD
 
       }
+=======
+      }
+
+>>>>>>> andrey
     @media (min-width: $screen-md) {
       display: flex;
       justify-content: space-between;
@@ -138,20 +143,42 @@
   }
 
   &__info-hover {
-    display: none;
+    //display: none;
+    //background-color: #fff;
+    //width: 100%;
+    ////position: absolute;
+    //top: 100%;
+    ////opacity: 0;
+    ////visibility: hidden;
+    //margin-bottom: -100%;
+    //transition: all 0.2s ease-in-out;
+    position: absolute;
+    top: 0;
+    left: -1px;
+    right: -1px;
+    bottom: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: transform .2s ease-out;
+    z-index: -1;
+    backface-visibility: hidden;
     background-color: #fff;
-    width: 100%;
-    //position: absolute;
-    top: 100%;
-    //opacity: 0;
-    //visibility: hidden;
-    margin-bottom: -100%;
-    transition: all 0.2s ease-in-out;
+
+    &:before {
+      content: "";
+      float: left;
+      height: 100%;
+      width: 100%;
+    }
+    &-inner {
+      transition: all 0.2s ease-in-out;
+    }
   }
 
   &__select {
     display: flex;
     margin-top: 17px;
+    clear: both;
 
     .btn-icon {
       min-width: 40px;
@@ -202,27 +229,36 @@
   }
 
   &:hover {
-    background-color: #fff;
-    box-shadow: 0 0 0 4px rgba(255,255,255, 1), 0 32px 64px 20px rgba(0, 0, 0, 0.12);
-    z-index: 10;
-
-    @media (min-width: $screen-md) {
-      box-shadow: 0 0 0 24px rgba(255,255,255, 1), 0 32px 64px 20px rgba(0, 0, 0, 0.12);
-    }
-    @media (min-width: $screen-lg) {
-      box-shadow: 0 0 0 12px rgba(255,255,255, 1), 0 32px 64px 20px rgba(0, 0, 0, 0.12);
-    }
-    @media (min-width: $screen-xl) {
-      box-shadow: 0 0 0 16px rgba(255,255,255, 1), 0 32px 64px 20px rgba(0, 0, 0, 0.12);
-    }
-    @media (min-width: $screen-xxl) {
-      box-shadow: 0 0 0 20px rgba(255,255,255, 1), 0 32px 64px 20px rgba(0, 0, 0, 0.12);
-    }
+    z-index: 1;
 
     .product__info-hover {
-      display: block;
+      //display: block;
       //opacity: 1;
       //visibility: visible;
+
+      visibility: visible;
+      opacity: 1;
+      transition: all 0.3s;
+
+      &-inner {
+        background-color: #fff;
+        box-shadow: 0 0 0 4px rgba(255,255,255, 1), 0 32px 64px 20px rgba(0, 0, 0, 0.12);
+        z-index: 10;
+        transition: all 0.2s;
+
+        @media (min-width: $screen-md) {
+          box-shadow: 0 0 0 24px rgba(255,255,255, 1), 0 32px 64px 20px rgba(0, 0, 0, 0.12);
+        }
+        @media (min-width: $screen-lg) {
+          box-shadow: 0 0 0 12px rgba(255,255,255, 1), 0 32px 64px 20px rgba(0, 0, 0, 0.12);
+        }
+        @media (min-width: $screen-xl) {
+          box-shadow: 0 0 0 16px rgba(255,255,255, 1), 0 32px 64px 20px rgba(0, 0, 0, 0.12);
+        }
+        @media (min-width: $screen-xxl) {
+          box-shadow: 0 0 0 20px rgba(255,255,255, 1), 0 32px 64px 20px rgba(0, 0, 0, 0.12);
+        }
+      }
     }
 
     .product__view {

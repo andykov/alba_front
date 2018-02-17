@@ -12,10 +12,10 @@
     <meta name="format-detection" content="telephone=no">
     <title>Главная страница</title>
     <link rel="stylesheet" href="css/libs.css">
-    <link rel="stylesheet" href="css/select2.min.css">
-    <link rel="stylesheet" href="css/magnify.css">
-    <link rel="stylesheet" href="css/jQuery.Brazzers-Carousel.min.css">
-    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+    <!--link(rel="stylesheet" href="css/select2.min.css")-->
+    <!--link(rel="stylesheet" href="css/magnify.css")-->
+    <!--link(rel="stylesheet" href="css/jQuery.Brazzers-Carousel.min.css")-->
+    <!--link(rel="stylesheet" href="css/jquery.fancybox.min.css")-->
     <link rel="stylesheet" href="css/template.css">
     <!--script-->
     <!--	include ../../blocks/is-mobile/is-mobile.js-->
@@ -122,12 +122,12 @@
                   </div>
                 </div>
               </div>
-              <button class="js-mobile-nav mobile-nav" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" viewBox="0 0 20 16"><path fill-rule="evenodd" d="M0 0h20v2H0V0zm0 7h20v2H0V7zm0 7h20v2H0v-2z"/></svg></button>
+              <button class="js-mobile-nav mobile-nav btn-icon" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" viewBox="0 0 20 16"><path fill-rule="evenodd" d="M0 0h20v2H0V0zm0 7h20v2H0V7zm0 7h20v2H0v-2z"/></svg></button>
             </div>
           </div>
         </div>
         <div class="header__navs">
-          <div class="header__navs-genger">
+          <div class="header__navs-gender">
             <div class="nav-gender">
               <div class="nav-gender__inner"><a class="nav-gender__item active" href="#">Женщинам</a><a class="nav-gender__item" href="#">Мужчинам</a></div>
             </div>
@@ -415,15 +415,18 @@
         <div class="container">
           <div class="subscribe__inner">
             <div class="subscribe__text">
-              <h2>Скидка<span>10%<br/>на первый заказ!</span></h2>
+              <h2>Скидка<span>10%</span><br/>на первый заказ!</h2>
               <p>Подпишитесь и будьте одними из первых  в курсе выгодных предложений и новинок</p>
             </div>
             <div class="subscribe__form">
               <form>
                 <div class="form-group">
                   <div class="form-field">
-                    <label class="field-text"><span class="field-text__name">Ваш e-mail</span><span class="field-text__input-wrap">
+                    <label class="field-text"><span class="field-text__name subscribe__label">Ваш e-mail</span><span class="field-text__input-wrap">
                         <input class="field-text__input" type="email"/></span><span class="field-text__error"></span></label>
+                    <div class="form-control">
+                      <input class="btn" type="submit" value="Подписаться"/>
+                    </div>
                   </div>
                   <div class="form-field">
                     <label class="field-checkbox"><span class="field-checkbox__input-wrap">
@@ -431,9 +434,6 @@
                     <label class="field-checkbox"><span class="field-checkbox__input-wrap">
                         <input class="field-checkbox__input" type="checkbox"/><span class="field-checkbox__name">Мужчинам</span></span><span class="field-checkbox__error"></span></label>
                   </div>
-                </div>
-                <div class="form-control">
-                  <input class="btn" type="submit" value="Подписаться"/>
                 </div>
               </form>
             </div>

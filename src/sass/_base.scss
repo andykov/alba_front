@@ -68,17 +68,9 @@ h3 {
 	}
 }
 
-.h1 {
-	@extend h1;
-}
-
-.h2 {
-	@extend h2;
-}
-
-.h3 {
-	@extend h3;
-}
+.h1 { @extend h1; }
+.h2 { @extend h2; }
+.h3 { @extend h3; }
 
 time {
 	display: inline-block;
@@ -91,6 +83,7 @@ time {
 	color: #8F8F8F;
 }
 
+
 .h1 {
 	@extend h1;
 }
@@ -102,6 +95,7 @@ time {
 .h3 {
 	@extend h3;
 }
+
 
 ul {
 	margin: 0;
@@ -153,11 +147,9 @@ p {
 .blue {
 	background-color: #4A90E2;
 }
-
 .gray {
 	background-color: #C2C2C2;
 }
-
 .green {
 	background-color: #7ED321;
 }

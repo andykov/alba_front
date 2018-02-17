@@ -71,33 +71,65 @@
   &__view {
     position: absolute;
     bottom: 0;
-    right: 0;
+    right: -4px;
     z-index: 2;
+    visibility: hidden;
+    opacity: 0;
+    transition: background-color, box-shadow $transition, visibility, opacity .2s ease-in-out;
     //background-color: #60D3D5;
     //width: 56px;
     //height: 56px;
+    @media (min-width: $screen-md) {
+      right: -24px;
+    }
+    @media (min-width: $screen-lg) {
+      right: -12px;
+    }
+    @media (min-width: $screen-xl) {
+      right: -16px;
+    }
+    @media (min-width: $screen-xxl) {
+      right: -20px;
+    }
   }
 
   &__info {
     padding-bottom: 2px;
-    @media (max-width: $screen-md - 1) {
-      .price {
+      .price [data-old-price]{
         text-align: left;
+        font-size: 12px;
+        font-weight: 300;
+
+        &::before {
+          margin-right: 5px;
+          font-size: 11px;
+        }
+
       }
-    }
     @media (min-width: $screen-md) {
       display: flex;
       justify-content: space-between;
       align-items: flex-end;
+
+      .price [data-old-price] {
+        font-size: 18px;
+        line-height: 24px;
+
+        &::before {
+          font-size: 15px;
+          line-height: 24px;
+        }
+      }
     }
   }
 
   &__name {
     font-family: $font-family--montserrat;
     font-size: 11px;
-    line-height: (20 / 11);
-    font-weight: 700;
+    line-height: 1.82;
+    font-weight: 600;
     letter-spacing: normal;
+    color: #000000;
 
     @media (min-width: $screen-md) {
       font-size: 15px;
@@ -121,9 +153,12 @@
     display: flex;
     margin-top: 17px;
 
-    //.btn-icon {
-    //  margin-left: auto;
-    //}
+    .btn-icon {
+      min-width: 40px;
+      margin-left: 10px;
+     // margin-left: auto;
+
+    }
   }
 
   &__sizes {
@@ -132,16 +167,24 @@
     position: relative;
     > span {
       position: absolute;
-      bottom: -4px;
-      left: 4px;
+      // bottom: -4px;
+      // transform: rotate(-90deg);
+      // transform-origin: left center;
+      // left: 4px;
       font-family: $font-family--montserrat;
       font-size: 7px;
-      font-weight: 700;
+      font-weight: 600;
       letter-spacing: 1px;
       line-height: (16 / 7);
       text-transform: uppercase;
-      transform: rotate(-90deg);
-      transform-origin: left center;
+      top: 0;
+      left: 0;
+      height: 100%;
+      text-align: center;
+      writing-mode: vertical-lr;
+      transform: scale(-1);
+      transform-origin: center;
+      text-align: center;
     }
   }
   &__desc {
@@ -180,6 +223,11 @@
       display: block;
       //opacity: 1;
       //visibility: visible;
+    }
+
+    .product__view {
+      visibility: visible;
+      opacity: 1;
     }
   }
 }

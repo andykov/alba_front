@@ -70,9 +70,12 @@
 
   &__item {
     text-align: center;
-    color: #2E2E2E;
-    font-size: 12px;
-    letter-spacing: ((21 * 2.86) / 100)+px;
+    // color: #2E2E2E;
+    // font-size: 12px;
+    // letter-spacing: ((21 * 2.86) / 100)+px;
+    color: #3c3c3c;
+    font-size: 14px;
+    letter-spacing: 0.4px;
     margin-right: -1px;
     margin-bottom: -1px;
     cursor: pointer;
@@ -85,6 +88,8 @@
       display: none;
       &:checked ~ span {
         color: #fff;
+        position: relative;
+        z-index: 5;
         &:after {
           top: 0;
           background-color: #60D3D5;
@@ -97,7 +102,8 @@
       height: 41px;
       display: block;
       position: relative;
-      border: 1px solid #E6E6E6;
+      // border: 1px solid #E6E6E6;
+      box-shadow: inset 0 0 0 1px #E6E6E6;
       z-index: 1;
       line-height: 40px;
 
@@ -129,7 +135,10 @@
         }
       }
     }
-    &--in-stock {
+    &--in-stock,
+    &--orange,
+    &--blue,
+    &--green {
       position: relative;
       &::before {
         content: '';
@@ -140,14 +149,29 @@
         width: 5px;
         height: 5px;
         border-radius: 50%;
-        background-color: #000;
-        z-index: 2;
+        z-index: 6;
       }
+    }
+    &--in-stock::before {
+        background-color: #000;
+    }
+
+    &--orange::before {
+        background-color: #f5a623;
+    }
+
+    &--blue::before {
+        background-color: #4a90e2;
+    }
+
+    &--green::before {
+        background-color: #7ed321;
     }
     &:hover {
       span {
+        position: relative;
+        z-index: 5;
         box-shadow: inset 0 0 0 1px $primary-color;
-        border-color: transparent;
         color: $primary-color;
       }
     }

@@ -2,5 +2,63 @@
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий... 
 
 .field-radio {
+	padding-left: 39px;
+  position: relative;
+  cursor: pointer;
 
+  &__input-wrap {
+
+  }
+
+  &__input {
+  	position: absolute;
+  	top: 0;
+  	left: 0;
+  	width: 0;
+  	height: 0;
+  	overflow: hidden;
+  	visibility: hidden;
+  	&:checked + .field-radio__name {
+  		&:after {
+  			content: '';
+	  		position: absolute;
+	  		top: 5px;
+	  		left: 5px;
+	  		width: 14px;
+	  		height: 14px;
+	  		border-radius: 50%;
+	  		background-color: #ffffff;
+	  		box-shadow: 0 4px 4px 0 rgba(0, 53, 54, 0.25);
+	  		transition: $transition;
+  		}
+  	}
+  }
+
+  &__name {
+  	&:before {
+  		content: '';
+  		position: absolute;
+  		left: 0;
+  		width: 24px;
+  		height: 24px;
+  		border-radius: 50%;
+  		background-color: #60D3D5;
+  		background-repeat: no-repeat;
+  		background-position: center 3px;
+  		transition: $transition;
+  	}
+  }
+
+  &:hover {
+  	.field-radio__name {
+  		&:before {
+  			background-color: #1EB4B7;
+  			box-shadow: 0 0 0 2px #1EB4B7;
+  		}
+  	}
+  }
+
+  &__error {
+  	color: red;
+  }
 }

@@ -21,286 +21,151 @@
     <!--	include ../../blocks/is-mobile/is-mobile.js-->
   </head>
   <body>
-    <div class="header">
-      <div class="header__container">
-        <div class="header__top">
-          <div class="header__logo"><a href="main.html"><img src="img/logo-header.svg"></a></div>
-          <div class="header__cart">
-            <div class="panel-cart"><span>В корзине пусто</span>
-              <div class="panel-cart__dropdown">
-                <button class="btn-icon" id="dCart" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-count-cart="3"><span class="icon-svg">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" viewBox="0 0 20 24">
-                    <g fill="none" fill-rule="evenodd">
-                    <path fill="#000" d="M1.935 6.111L0 24h20L18.065 6.111z"/>
-                    <path stroke="#000" stroke-width="1.8" d="M8.065 11.222V3.556s0-2.237 1.935-2.237 1.935 2.237 1.935 2.237v7.666"/>
-                    </g>
-                    </svg></span></button>
-                <div class="panel-cart__list" aria-labelledby="dCart">
-                  <div class="panel-cart__item">
-                    <button class="panel-cart__remove" type="button">
-                      <svg width="11" height="12" viewBox="0 0 11 12" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                         <use xlink:href="#path0_stroke" transform="translate(1 1)"/>
-                         <defs>
-                             <path id="path0_stroke" d="M-.8.6l3.75 5 1.6-1.2L.8-.6-.8.6zM3.75 6h1.5V4h-1.5v2zm2.3-.4L9.8.6 8.2-.6l-3.75 5 1.6 1.2zm-5.25 5l3.75-5-1.6-1.2-3.75 5 1.6 1.2zm3.65-5l3.75 5 1.6-1.2-3.75-5-1.6 1.2z"/>
-                         </defs>
-                      </svg>
-                    </button>
-                    <div class="panel-cart__img"><img src="https://www.the-alba.com/upload/resize_cache/iblock/9cf/100_100_1/1103048101301_1-min.jpg"></div>
-                    <div class="panel-cart__title"><span>Туфли</span><a href="#">В корзину</a></div>
-                    <div class="panel-cart__price">
-                      <div class="price"><span>5200 руб.</span></div>
+    <div class="header header--white">
+      <div class="header-mobile"></div>
+      <div class="header-navs">
+        <div class="header-navs__gender">
+          <div class="header-navs__gender-inner">
+            <div class="header__logo"><a href="main.html"><img src="img/logo-header.svg"></a></div>
+            <div class="nav-gender"><a class="nav-gender__item active" href="#">Женщинам</a><a class="nav-gender__item" href="#">Мужчинам</a></div>
+            <div class="header__cart">
+              <div class="panel-cart"><span>В корзине 3 товара на 18 500 руб.</span>
+                <div class="panel-cart__dropdown">
+                  <button class="btn-icon" id="dCart" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-count-cart="3"><span class="icon-svg">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" viewBox="0 0 20 24">
+                      <g fill="none" fill-rule="evenodd">
+                      <path fill="#000" d="M1.935 6.111L0 24h20L18.065 6.111z"/>
+                      <path stroke="#000" stroke-width="1.8" d="M8.065 11.222V3.556s0-2.237 1.935-2.237 1.935 2.237 1.935 2.237v7.666"/>
+                      </g>
+                      </svg></span></button>
+                  <div class="panel-cart__list" aria-labelledby="dCart">
+                    <div class="panel-cart__item">
+                      <button class="panel-cart__remove" type="button">
+                        <svg width="11" height="12" viewBox="0 0 11 12" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                           <use xlink:href="#path0_stroke" transform="translate(1 1)"/>
+                           <defs>
+                               <path id="path0_stroke" d="M-.8.6l3.75 5 1.6-1.2L.8-.6-.8.6zM3.75 6h1.5V4h-1.5v2zm2.3-.4L9.8.6 8.2-.6l-3.75 5 1.6 1.2zm-5.25 5l3.75-5-1.6-1.2-3.75 5 1.6 1.2zm3.65-5l3.75 5 1.6-1.2-3.75-5-1.6 1.2z"/>
+                           </defs>
+                        </svg>
+                      </button>
+                      <div class="panel-cart__img"><img src="https://www.the-alba.com/upload/resize_cache/iblock/9cf/100_100_1/1103048101301_1-min.jpg"></div>
+                      <div class="panel-cart__title"><span>Туфли</span></div>
+                      <div class="panel-cart__price">
+                        <div class="price"><span>5200 руб.</span></div>
+                      </div>
                     </div>
-                  </div>
-                  <div class="panel-cart__item">
-                    <button class="panel-cart__remove" type="button">
-                      <svg width="11" height="12" viewBox="0 0 11 12" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                         <use xlink:href="#path0_stroke" transform="translate(1 1)"/>
-                         <defs>
-                             <path id="path0_stroke" d="M-.8.6l3.75 5 1.6-1.2L.8-.6-.8.6zM3.75 6h1.5V4h-1.5v2zm2.3-.4L9.8.6 8.2-.6l-3.75 5 1.6 1.2zm-5.25 5l3.75-5-1.6-1.2-3.75 5 1.6 1.2zm3.65-5l3.75 5 1.6-1.2-3.75-5-1.6 1.2z"/>
-                         </defs>
-                      </svg>
-                    </button>
-                    <div class="panel-cart__img"><img src="https://www.the-alba.com/upload/resize_cache/iblock/75a/100_100_1/2041000801604_1.jpg"></div>
-                    <div class="panel-cart__title"><span>Туфли</span><a href="#">В корзину</a></div>
-                    <div class="panel-cart__price">
-                      <div class="price"><span data-old-price="6000">4800 руб.</span><span>Экономия 1200 руб.</span></div>
+                    <div class="panel-cart__item">
+                      <button class="panel-cart__remove" type="button">
+                        <svg width="11" height="12" viewBox="0 0 11 12" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                           <use xlink:href="#path0_stroke" transform="translate(1 1)"/>
+                           <defs>
+                               <path id="path0_stroke" d="M-.8.6l3.75 5 1.6-1.2L.8-.6-.8.6zM3.75 6h1.5V4h-1.5v2zm2.3-.4L9.8.6 8.2-.6l-3.75 5 1.6 1.2zm-5.25 5l3.75-5-1.6-1.2-3.75 5 1.6 1.2zm3.65-5l3.75 5 1.6-1.2-3.75-5-1.6 1.2z"/>
+                           </defs>
+                        </svg>
+                      </button>
+                      <div class="panel-cart__img"><img src="https://www.the-alba.com/upload/resize_cache/iblock/75a/100_100_1/2041000801604_1.jpg"></div>
+                      <div class="panel-cart__title"><span>Туфли</span></div>
+                      <div class="panel-cart__price">
+                        <div class="price"><span data-old-price="6000">4800 руб.</span><span>Экономия 1200 руб.</span></div>
+                      </div>
                     </div>
-                  </div>
-                  <div class="panel-cart__item">
-                    <button class="panel-cart__remove" type="button">
-                      <svg width="11" height="12" viewBox="0 0 11 12" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                         <use xlink:href="#path0_stroke" transform="translate(1 1)"/>
-                         <defs>
-                             <path id="path0_stroke" d="M-.8.6l3.75 5 1.6-1.2L.8-.6-.8.6zM3.75 6h1.5V4h-1.5v2zm2.3-.4L9.8.6 8.2-.6l-3.75 5 1.6 1.2zm-5.25 5l3.75-5-1.6-1.2-3.75 5 1.6 1.2zm3.65-5l3.75 5 1.6-1.2-3.75-5-1.6 1.2z"/>
-                         </defs>
-                      </svg>
-                    </button>
-                    <div class="panel-cart__img"><img src="https://www.the-alba.com/upload/resize_cache/iblock/277/100_100_1/2813024401301_1.jpg"></div>
-                    <div class="panel-cart__title"><span>Туфли</span><a href="#">В корзину</a></div>
-                    <div class="panel-cart__price">
-                      <div class="price"><span>8500 руб.</span></div>
+                    <div class="panel-cart__item">
+                      <button class="panel-cart__remove" type="button">
+                        <svg width="11" height="12" viewBox="0 0 11 12" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                           <use xlink:href="#path0_stroke" transform="translate(1 1)"/>
+                           <defs>
+                               <path id="path0_stroke" d="M-.8.6l3.75 5 1.6-1.2L.8-.6-.8.6zM3.75 6h1.5V4h-1.5v2zm2.3-.4L9.8.6 8.2-.6l-3.75 5 1.6 1.2zm-5.25 5l3.75-5-1.6-1.2-3.75 5 1.6 1.2zm3.65-5l3.75 5 1.6-1.2-3.75-5-1.6 1.2z"/>
+                           </defs>
+                        </svg>
+                      </button>
+                      <div class="panel-cart__img"><img src="https://www.the-alba.com/upload/resize_cache/iblock/277/100_100_1/2813024401301_1.jpg"></div>
+                      <div class="panel-cart__title"><span>Туфли</span></div>
+                      <div class="panel-cart__price">
+                        <div class="price"><span>8500 руб.</span></div>
+                      </div>
                     </div>
-                  </div>
-                  <div class="panel-cart__action"><a href="#">Оформить заказ</a><span>18 500 руб.</span></div>
-                </div>
-              </div>
-              <div class="panel-cart__dropdown">
-                <button class="btn-icon" id="dFavorite" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-count-favorite="2"><span class="icon-svg">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="19" viewBox="0 0 22 19">
-                    <path fill-rule="evenodd" d="M6.037 0C2.38 0 .013 3.655 0 6.658-.024 12.18 11 19 11 19s11.024-6.82 11-12.342C21.987 3.655 19.619 0 15.96 0 14.284 0 12.167 1.099 11 2.133 9.831 1.099 7.714 0 6.036 0z"/>
-                    </svg></span></button>
-                <div class="panel-cart__list" aria-labelledby="dFavorite">
-                  <div class="panel-cart__item">
-                    <button class="panel-cart__remove" type="button">
-                      <svg width="11" height="12" viewBox="0 0 11 12" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                         <use xlink:href="#path0_stroke" transform="translate(1 1)"/>
-                         <defs>
-                             <path id="path0_stroke" d="M-.8.6l3.75 5 1.6-1.2L.8-.6-.8.6zM3.75 6h1.5V4h-1.5v2zm2.3-.4L9.8.6 8.2-.6l-3.75 5 1.6 1.2zm-5.25 5l3.75-5-1.6-1.2-3.75 5 1.6 1.2zm3.65-5l3.75 5 1.6-1.2-3.75-5-1.6 1.2z"/>
-                         </defs>
-                      </svg>
-                    </button>
-                    <div class="panel-cart__img"><img src="https://www.the-alba.com/upload/resize_cache/iblock/277/100_100_1/2813024401301_1.jpg"></div>
-                    <div class="panel-cart__title"><span>Туфли</span><a href="#">В корзину</a></div>
-                    <div class="panel-cart__price">
-                      <div class="price"><span>5200 руб.</span></div>
-                    </div>
-                  </div>
-                  <div class="panel-cart__item">
-                    <button class="panel-cart__remove" type="button">
-                      <svg width="11" height="12" viewBox="0 0 11 12" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                         <use xlink:href="#path0_stroke" transform="translate(1 1)"/>
-                         <defs>
-                             <path id="path0_stroke" d="M-.8.6l3.75 5 1.6-1.2L.8-.6-.8.6zM3.75 6h1.5V4h-1.5v2zm2.3-.4L9.8.6 8.2-.6l-3.75 5 1.6 1.2zm-5.25 5l3.75-5-1.6-1.2-3.75 5 1.6 1.2zm3.65-5l3.75 5 1.6-1.2-3.75-5-1.6 1.2z"/>
-                         </defs>
-                      </svg>
-                    </button>
-                    <div class="panel-cart__img"><img src="https://www.the-alba.com/upload/resize_cache/iblock/75a/100_100_1/2041000801604_1.jpg"></div>
-                    <div class="panel-cart__title"><span>Туфли</span><a href="#">В корзину</a></div>
-                    <div class="panel-cart__price">
-                      <div class="price"><span>4800 руб.</span></div>
-                    </div>
+                    <div class="panel-cart__action"><a href="#">Оформить заказ</a><span>18 500 руб.</span></div>
                   </div>
                 </div>
-              </div>
-              <button class="js-mobile-nav mobile-nav btn-icon" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" viewBox="0 0 20 16"><path fill-rule="evenodd" d="M0 0h20v2H0V0zm0 7h20v2H0V7zm0 7h20v2H0v-2z"/></svg></button>
+                <div class="panel-cart__dropdown">
+                  <button class="btn-icon" id="dFavorite" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-count-favorite="2"><span class="icon-svg">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="19" viewBox="0 0 22 19">
+                      <path fill-rule="evenodd" d="M6.037 0C2.38 0 .013 3.655 0 6.658-.024 12.18 11 19 11 19s11.024-6.82 11-12.342C21.987 3.655 19.619 0 15.96 0 14.284 0 12.167 1.099 11 2.133 9.831 1.099 7.714 0 6.036 0z"/>
+                      </svg></span></button>
+                  <div class="panel-cart__list" aria-labelledby="dFavorite">
+                    <div class="panel-cart__item">
+                      <button class="panel-cart__remove" type="button">
+                        <svg width="11" height="12" viewBox="0 0 11 12" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                           <use xlink:href="#path0_stroke" transform="translate(1 1)"/>
+                           <defs>
+                               <path id="path0_stroke" d="M-.8.6l3.75 5 1.6-1.2L.8-.6-.8.6zM3.75 6h1.5V4h-1.5v2zm2.3-.4L9.8.6 8.2-.6l-3.75 5 1.6 1.2zm-5.25 5l3.75-5-1.6-1.2-3.75 5 1.6 1.2zm3.65-5l3.75 5 1.6-1.2-3.75-5-1.6 1.2z"/>
+                           </defs>
+                        </svg>
+                      </button>
+                      <div class="panel-cart__img"><img src="https://www.the-alba.com/upload/resize_cache/iblock/277/100_100_1/2813024401301_1.jpg"></div>
+                      <div class="panel-cart__title"><span>Туфли</span><a href="#">В корзину</a></div>
+                      <div class="panel-cart__price">
+                        <div class="price"><span>5200 руб.</span></div>
+                      </div>
+                    </div>
+                    <div class="panel-cart__item">
+                      <button class="panel-cart__remove" type="button">
+                        <svg width="11" height="12" viewBox="0 0 11 12" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                           <use xlink:href="#path0_stroke" transform="translate(1 1)"/>
+                           <defs>
+                               <path id="path0_stroke" d="M-.8.6l3.75 5 1.6-1.2L.8-.6-.8.6zM3.75 6h1.5V4h-1.5v2zm2.3-.4L9.8.6 8.2-.6l-3.75 5 1.6 1.2zm-5.25 5l3.75-5-1.6-1.2-3.75 5 1.6 1.2zm3.65-5l3.75 5 1.6-1.2-3.75-5-1.6 1.2z"/>
+                           </defs>
+                        </svg>
+                      </button>
+                      <div class="panel-cart__img"><img src="https://www.the-alba.com/upload/resize_cache/iblock/75a/100_100_1/2041000801604_1.jpg"></div>
+                      <div class="panel-cart__title"><span>Туфли</span><a href="#">В корзину</a></div>
+                      <div class="panel-cart__price">
+                        <div class="price"><span>4800 руб.</span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <button class="js-mobile-nav mobile-nav btn-icon" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" viewBox="0 0 20 16"><path fill-rule="evenodd" d="M0 0h20v2H0V0zm0 7h20v2H0V7zm0 7h20v2H0v-2z"/></svg></button>
+              </div><span class="phone-desktop">8 800 555 00 30</span>
             </div>
           </div>
         </div>
-        <div class="header__navs">
-          <div class="header__navs-gender">
-            <div class="nav-gender">
-              <div class="nav-gender__inner"><a class="nav-gender__item active" href="#">Женщинам</a><a class="nav-gender__item" href="#">Мужчинам</a></div>
-            </div>
-          </div>
-          <div class="header__navs-main">
-            <nav class="nav-main">
-              <ul class="nav-main__list">
-                <li class="nav-main__item"><a class="nav-main__link" href="about.html">Обувь</a></li>
-                <li class="nav-main__item"><a class="nav-main__link" href="catalogs.html">Сумки</a></li>
-                <li class="nav-main__item"><a class="nav-main__link" href="pay.html">Аксессуары</a></li>
-                <li class="nav-main__item"><a class="nav-main__link" href="idea.html">Акции</a></li>
-                <li class="nav-main__item"><a class="nav-main__link" href="contacts.html">Тренды сезона</a></li>
-                <li class="nav-main__item"><a class="nav-main__link" href="contacts.html">Скидки от партнеров</a></li>
-                <li class="nav-main__item"><a class="nav-main__link" href="contacts.html">Подарочные карты</a></li>
-                <li class="nav-main__item">
-                  <form class="form-search">
-                    <button type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"><g fill="none" fill-rule="evenodd" stroke="#000" stroke-width="2"><circle cx="5.5" cy="5.5" r="4.5"/><path stroke-linecap="square" d="M9 9l3.036 3.036"/></g></svg></button>
-                    <input type="text" placeholder="поиск по каталогу">
-                  </form>
-                </li>
-              </ul>
-            </nav>
-          </div>
-          <div class="header__navs-second">
-            <div class="header__region"><a href="#">Ваш город:<span>Москва</span></a></div>
-            <ul class="nav-second">
-              <li class="nav-second__item"><a href="#">Доставка и примерка</a></li>
-              <li class="nav-second__item"><a href="#">Безопасная оплата</a></li>
-              <li class="nav-second__item"><a href="#">Пункты самовывоза</a></li>
-              <li class="nav-second__item"><a href="#">Фирменные магазины</a></li>
-              <li class="nav-second__item"><a href="#">Гарантия качества</a></li>
+        <div class="header-navs__main">
+          <nav class="nav-main">
+            <ul class="nav-main__list">
+              <li class="nav-main__item"><a class="nav-main__link" href="about.html">Обувь</a></li>
+              <li class="nav-main__item"><a class="nav-main__link" href="catalogs.html">Сумки</a></li>
+              <li class="nav-main__item"><a class="nav-main__link" href="pay.html">Аксессуары</a></li>
+              <li class="nav-main__item"><a class="nav-main__link" href="idea.html">Акции</a></li>
+              <li class="nav-main__item"><a class="nav-main__link" href="contacts.html">Тренды сезона</a></li>
+              <li class="nav-main__item"><a class="nav-main__link" href="contacts.html">Скидки от партнеров</a></li>
+              <li class="nav-main__item"><a class="nav-main__link" href="contacts.html">Подарочные карты</a></li>
+              <li class="nav-main__item">
+                <form class="form-search">
+                  <button type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"><g fill="none" fill-rule="evenodd" stroke="#000" stroke-width="2"><circle cx="5.5" cy="5.5" r="4.5"/><path stroke-linecap="square" d="M9 9l3.036 3.036"/></g></svg></button>
+                  <input type="text" placeholder="поиск по каталогу">
+                </form>
+              </li>
             </ul>
-            <ul class="header__login">
-              <li class="phone"><span>8 800 555 00 30</span></li>
-              <li><a href="javascript:;">Состояние заказа</a></li>
-              <li><a class="js-login link-login" href="javascript:;" data-fancybox data-src="#form-login">Вход</a></li>
-            </ul>
-          </div>
+          </nav>
+        </div>
+        <div class="header-navs__second">
+          <div class="header__region"><a href="#">Ваш город:<span>Москва</span></a></div>
+          <ul class="nav-second">
+            <li class="nav-second__item"><a href="#">Доставка и примерка</a></li>
+            <li class="nav-second__item"><a href="#">Безопасная оплата</a></li>
+            <li class="nav-second__item"><a href="#">Пункты самовывоза</a></li>
+            <li class="nav-second__item"><a href="#">Фирменные магазины</a></li>
+            <li class="nav-second__item"><a href="#">Гарантия качества</a></li>
+          </ul>
+          <ul class="header__login">
+            <li class="phone-mobile"><span>8 800 555 00 30</span></li>
+            <li><a href="javascript:;">Состояние заказа</a></li>
+            <li><a class="js-login link-login" href="javascript:;" data-fancybox data-src="#form-login">Вход</a></li>
+          </ul>
         </div>
       </div>
     </div>
-    <!--header.header-->
-    <!--	.header__container
-    //.header__top
-    //	a.header-region(href="#")
-    //		| Ваш город:
-    //		span Москва
-    //	ul.header-links
-    //		li.header-links__item
-    //			a(href="#") Доставка и примерка
-    //		li.header-links__item
-    //			a(href="#") Безопасная оплата
-    //		li.header-links__item
-    //			a(href="#") Пункты самовывоза
-    //		li.header-links__item
-    //			a(href="#") Фирменные магазины
-    //		li.header-links__item
-    //			a(href="#") Гарантия качества
-    //		//.header-links__item
-    //		//	a(href="#") Состояние заказа
-    //		//.header-links__item
-    //		//	a(href="#") Вход
-    //.header__middle
-    //	.nav-gender
-    //		.nav-gender__inner
-    //			a.nav-gender__item.active(href="#") Женщинам
-    //			a.nav-gender__item(href="#") Мужчинам
-    //	.panel-cart
-    //		.panel-cart__head
-    //			span В корзине пусто
-    //			.panel-cart__dropdown
-    //				button(id="dCart" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-count-cart="3").btn-icon
-    //					span.icon-svg
-    //						|<svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" viewBox="0 0 20 24">
-    //						|<g fill="none" fill-rule="evenodd">
-    //						|<path fill="#000" d="M1.935 6.111L0 24h20L18.065 6.111z"/>
-    //						|<path stroke="#000" stroke-width="1.8" d="M8.065 11.222V3.556s0-2.237 1.935-2.237 1.935 2.237 1.935 2.237v7.666"/>
-    //						|</g>
-    //						|</svg>
-    //				.panel-cart__list(aria-labelledby="dCart")
-    //					.panel-cart__item
-    //						button(type="button").panel-cart__remove
-    //							| <svg width="11" height="12" viewBox="0 0 11 12" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    //							|    <use xlink:href="#path0_stroke" transform="translate(1 1)"/>
-    //							|    <defs>
-    //							|        <path id="path0_stroke" d="M-.8.6l3.75 5 1.6-1.2L.8-.6-.8.6zM3.75 6h1.5V4h-1.5v2zm2.3-.4L9.8.6 8.2-.6l-3.75 5 1.6 1.2zm-5.25 5l3.75-5-1.6-1.2-3.75 5 1.6 1.2zm3.65-5l3.75 5 1.6-1.2-3.75-5-1.6 1.2z"/>
-    //							|    </defs>
-    //							| </svg>
-    //						.panel-cart__img
-    //							img(src="https://www.the-alba.com/upload/resize_cache/iblock/9cf/100_100_1/1103048101301_1-min.jpg")
-    //						.panel-cart__title
-    //							span Туфли
-    //							a(href="#") В корзину
-    //						.panel-cart__price
-    //							.price
-    //								span 5200 руб.
-    //					.panel-cart__item
-    //						button(type="button").panel-cart__remove
-    //							| <svg width="11" height="12" viewBox="0 0 11 12" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    //							|    <use xlink:href="#path0_stroke" transform="translate(1 1)"/>
-    //							|    <defs>
-    //							|        <path id="path0_stroke" d="M-.8.6l3.75 5 1.6-1.2L.8-.6-.8.6zM3.75 6h1.5V4h-1.5v2zm2.3-.4L9.8.6 8.2-.6l-3.75 5 1.6 1.2zm-5.25 5l3.75-5-1.6-1.2-3.75 5 1.6 1.2zm3.65-5l3.75 5 1.6-1.2-3.75-5-1.6 1.2z"/>
-    //							|    </defs>
-    //							| </svg>
-    //						.panel-cart__img
-    //							img(src="https://www.the-alba.com/upload/resize_cache/iblock/75a/100_100_1/2041000801604_1.jpg")
-    //						.panel-cart__title
-    //							span Туфли
-    //							a(href="#") В корзину
-    //						.panel-cart__price
-    //							.price
-    //								span(data-old-price="6000") 4800 руб.
-    //								span Экономия 1200 руб.
-    //					.panel-cart__item
-    //						button(type="button").panel-cart__remove
-    //							| <svg width="11" height="12" viewBox="0 0 11 12" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    //							|    <use xlink:href="#path0_stroke" transform="translate(1 1)"/>
-    //							|    <defs>
-    //							|        <path id="path0_stroke" d="M-.8.6l3.75 5 1.6-1.2L.8-.6-.8.6zM3.75 6h1.5V4h-1.5v2zm2.3-.4L9.8.6 8.2-.6l-3.75 5 1.6 1.2zm-5.25 5l3.75-5-1.6-1.2-3.75 5 1.6 1.2zm3.65-5l3.75 5 1.6-1.2-3.75-5-1.6 1.2z"/>
-    //							|    </defs>
-    //							| </svg>
-    //						.panel-cart__img
-    //							img(src="https://www.the-alba.com/upload/resize_cache/iblock/277/100_100_1/2813024401301_1.jpg")
-    //						.panel-cart__title
-    //							span Туфли
-    //							a(href="#") В корзину
-    //						.panel-cart__price
-    //							.price
-    //								span 8500 руб.
-    //					.panel-cart__action
-    //						a(href="#") Оформить заказ
-    //						span 18 500 руб.
-    //			.panel-cart__dropdown
-    //				button(id="dFavorite" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-count-favorite="2").btn-icon
-    //					span.icon-svg
-    //						|<svg xmlns="http://www.w3.org/2000/svg" width="22" height="19" viewBox="0 0 22 19">
-    //						|<path fill-rule="evenodd" d="M6.037 0C2.38 0 .013 3.655 0 6.658-.024 12.18 11 19 11 19s11.024-6.82 11-12.342C21.987 3.655 19.619 0 15.96 0 14.284 0 12.167 1.099 11 2.133 9.831 1.099 7.714 0 6.036 0z"/>
-    //						|</svg>
-    //				.panel-cart__list(aria-labelledby="dFavorite")
-    //					.panel-cart__item
-    //						button(type="button").panel-cart__remove
-    //							| <svg width="11" height="12" viewBox="0 0 11 12" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    //							|    <use xlink:href="#path0_stroke" transform="translate(1 1)"/>
-    //							|    <defs>
-    //							|        <path id="path0_stroke" d="M-.8.6l3.75 5 1.6-1.2L.8-.6-.8.6zM3.75 6h1.5V4h-1.5v2zm2.3-.4L9.8.6 8.2-.6l-3.75 5 1.6 1.2zm-5.25 5l3.75-5-1.6-1.2-3.75 5 1.6 1.2zm3.65-5l3.75 5 1.6-1.2-3.75-5-1.6 1.2z"/>
-    //							|    </defs>
-    //							| </svg>
-    //						.panel-cart__img
-    //							img(src="https://www.the-alba.com/upload/resize_cache/iblock/277/100_100_1/2813024401301_1.jpg")
-    //						.panel-cart__title
-    //							span Туфли
-    //							a(href="#") В корзину
-    //						.panel-cart__price
-    //							.price
-    //								span 5200 руб.
-    //					.panel-cart__item
-    //						button(type="button").panel-cart__remove
-    //							| <svg width="11" height="12" viewBox="0 0 11 12" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    //							|    <use xlink:href="#path0_stroke" transform="translate(1 1)"/>
-    //							|    <defs>
-    //							|        <path id="path0_stroke" d="M-.8.6l3.75 5 1.6-1.2L.8-.6-.8.6zM3.75 6h1.5V4h-1.5v2zm2.3-.4L9.8.6 8.2-.6l-3.75 5 1.6 1.2zm-5.25 5l3.75-5-1.6-1.2-3.75 5 1.6 1.2zm3.65-5l3.75 5 1.6-1.2-3.75-5-1.6 1.2z"/>
-    //							|    </defs>
-    //							| </svg>
-    //						.panel-cart__img
-    //							img(src="https://www.the-alba.com/upload/resize_cache/iblock/75a/100_100_1/2041000801604_1.jpg")
-    //						.panel-cart__title
-    //							span Туфли
-    //							a(href="#") В корзину
-    //						.panel-cart__price
-    //							.price
-    //								span 4800 руб.
-    //.header__bottom
-    -->
     <main class="content">
       <ul class="breadcrumbs">
         <li class="breadcrumbs__item"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="10" viewBox="0 0 18 10"><path fill-rule="evenodd" d="M7.48 5.513l1.448-2.796 1.539 2.796H7.479zM12.813 0H5.177L0 9.991h5.86l.899-2.104h4.387l.94 2.113L18 9.991 12.814 0z"/></svg></a></li>

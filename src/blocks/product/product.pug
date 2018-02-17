@@ -29,23 +29,23 @@ mixin product(pathImg, title, badgeNew, badgeSale, badgeWinter, hover)
 						span Размер
 						.sizes
 							.sizes__list
-								label.sizes__item
+								label.sizes__item.sizes__item--orange
 									input(type="radio" name="size")
 									span 36
-								label.sizes__item
+								label.sizes__item.sizes__item--orange
 									input(type="radio" name="size")
 									span 37
-								label.sizes__item
+								label.sizes__item.sizes__item--blue
 									input(type="radio" name="size")
 									span 38
-								label.sizes__item
+								label.sizes__item.sizes__item--green
 									input(type="radio" name="size")
 									span 39
-					button(type="button").btn-icon
+					button(type="button").btn-icon.btn-icon--blue
 						| <svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" viewBox="0 0 20 24">
-						| 	<g fill="none" fill-rule="evenodd" opacity=".15" transform="translate(0 1)">
-						| 		<polygon fill="#000" points="1.935 5.111 0 23 20 23 18.065 5.111"/>
-						| 		<path stroke="#000" stroke-width="1.8" d="M8.065 10.222V2.556S8.065.319 10 .319s1.935 2.237 1.935 2.237v7.666"/>
+						| 	<g fill="none" fill-rule="evenodd" transform="translate(0 1)">
+						| 		<polygon fill="#fff" points="1.935 5.111 0 23 20 23 18.065 5.111"/>
+						| 		<path stroke="#fff" stroke-width="1.8" d="M8.065 10.222V2.556S8.065.319 10 .319s1.935 2.237 1.935 2.237v7.666"/>
 						| 	</g>
 						| </svg>
 				ul.product__desc

@@ -92,21 +92,23 @@
 
 // Навигация по полу
 .nav-gender {
+	display: flex;
+	justify-content: space-between;
+	max-width: 225px;
+	width: 100%;
+
 	@media screen and (min-width: $screen-md) {
-		border-top: 1px solid #E6E6E6;
-		border-bottom: 1px solid #E6E6E6;
+		max-width: 390px;
 	}
-	&__inner {
+	@media screen and (min-width: $screen-lg) {
 		display: flex;
 		justify-content: space-between;
-		max-width: 225px;
-		margin: 0 auto;
-		@media screen and (min-width: $screen-md) {
-			max-width: 390px;
-		}
-		@media screen and (min-width: $screen-xxl) {
-			max-width: 500px;
-		}
+	}
+	@media screen and (min-width: $screen-xxl) {
+		max-width: 500px;
+	}
+	&__inner {
+
 	}
 
 	//width: 100%;
@@ -150,6 +152,9 @@
 	//}
 	@media screen and (min-width: $screen-lg) {
 		display: flex;
+		text-align: center;
+		justify-content: center;
+		flex-grow: 1;
 	}
 	&__item {
 		@media screen and (max-width: $screen-lg - 1) {
@@ -159,6 +164,14 @@
 			padding-left: 9px;
 			padding-right: 9px;
 		}
+		@media screen and (min-width: $screen-xl) {
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+		@media screen and (min-width: $screen-xxl) {
+			padding-left: 32px;
+			padding-right: 32px;
+		}
 	}
 }
 .header__login {
@@ -167,7 +180,7 @@
 	}
 	@media screen and (min-width: $screen-lg) {
 		display: flex;
-		.phone {
+		.phone-mobile {
 			display: none;
 		}
 	}
@@ -176,6 +189,19 @@
 		@media screen and (max-width: $screen-lg - 1) {
 			margin-top: 23px;
 		}
+
+		&:last-child {
+			@media screen and (min-width: $screen-lg) {
+				padding-left: 18px;
+			}
+			@media screen and (min-width: $screen-xl) {
+				padding-left: 40px;
+			}
+			@media screen and (min-width: $screen-xxl) {
+				padding-left: 64px;
+			}
+		}
+
 	}
 
 }

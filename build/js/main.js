@@ -1,24 +1,19 @@
-// .article scripts goes here 
-
-/*$(function() {
-	
-});*/
 // .auth scripts goes here 
 
 /*$(function() {
 	
 });*/
-// .breadcrumbs scripts goes here 
+// .article scripts goes here 
 
 /*$(function() {
 	
 });*/
+
 // .catalog scripts goes here 
 
 /*$(function() {
 	
 });*/
-
 // .checkout scripts goes here 
 
 /*$(function() {
@@ -284,7 +279,6 @@ $(function() {
 });*/
 
 
-
 // .filter scripts goes here
 
 $(function() {
@@ -497,8 +491,45 @@ $(function() {
     //     }
     // });
 });
+
 $(function() {
 
+    // Вынос логотипа и панели с корзиной в отдельный блок в мобильном меню
+    var $headerMobile = $('.header-mobile'),
+        $headerNavs = $('.header-navs'),
+        $headerLogo = $('.header__logo'),
+        $headerGenderInr = $('.header-navs__gender-inner'),
+        $headerCart = $('.header__cart');
+
+    var createMobileNav = function() {
+        if ($(window).width() <= 991) {
+            $headerMobile.prepend($headerLogo, $headerCart);
+        } else {
+            $headerGenderInr.prepend($headerLogo);
+            $headerGenderInr.append($headerCart);
+        }
+    };
+
+
+    $(window).on( "resize", function () {
+        if ($(window).width() <= 991) {
+            if ($headerMobile.children().length != 0) {
+                return false;
+            }
+            $headerMobile.prepend($headerLogo, $headerCart);
+
+        } else {
+            if ($headerGenderInr.children().length > 1) {
+                return false;
+            }
+            $headerGenderInr.prepend($headerLogo);
+            $headerGenderInr.append($headerCart);
+        }
+    } ).resize();
+
+    $('.js-mobile-nav').on('click', function () {
+        $headerNavs.toggleClass('open');
+    });
 
 
 });
@@ -575,16 +606,6 @@ $(function() {
 /*$(function() {
 	
 });*/
-// .product-gallery scripts goes here 
-
-/*$(function() {
-	
-});*/
-// .product-info scripts goes here 
-
-/*$(function() {
-	
-});*/
 // .product-tabs scripts goes here 
 
 $(function() {
@@ -603,11 +624,6 @@ $(function() {
     if (hash) $('.product-tabs__nav a[href$="'+hash+'"]').trigger('click');
 
 });
-// .shops scripts goes here 
-
-/*$(function() {
-	
-});*/
 // .sidebar scripts goes here 
 
 $(function() {
@@ -615,6 +631,11 @@ $(function() {
 
 
 });
+// .product-info scripts goes here 
+
+/*$(function() {
+	
+});*/
 // .sizes scripts goes here 
 
 $(function() {
@@ -692,11 +713,6 @@ $(function() {
     }
 
 });
-// .social scripts goes here 
-
-/*$(function() {
-	
-});*/
 // .subscribe scripts goes here 
 
 $(function() {
@@ -775,24 +791,23 @@ $(function() {
 
     if ($('.js-shops-list').length) {
         $('.js-shops-list').slick({
-          arrows: false,
-          infinite: false,
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          mobileFirst: true,
+            arrows: true,
+            infinite: false,
+            slidesToShow: 3,
+            slidesToScroll: 1,
             responsive: [
                 {
-                    breakpoint: 1920,
+                    breakpoint: 1800,
                     settings: {
-                        slidesToShow: 3
+                        slidesToShow: 2,
                     }
                 },
-                {
-                    breakpoint: 768,
-                    settings: {
-                      arrows: true
-                    }
-                }
+                // {
+                //     breakpoint: 1365,
+                //     settings: {
+                //         slidesToShow: 2,
+                //     }
+                // }
             ]
         });
     }
@@ -803,12 +818,13 @@ $(function() {
 
     if($productGalleryBig.length) {
         $productGalleryBig.slick({
-            mobileFirst: true,
+            // infinite: false,
             lazyLoad: 'ondemand',
             arrows: false,
             slidesToShow: 2,
             centerMode: true,
             variableWidth: true,
+            // centerPadding: '-120px',
             dots: false,
             centerPadding: '0',
             asNavFor: $productGalleryThumb

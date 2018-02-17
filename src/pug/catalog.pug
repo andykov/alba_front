@@ -5,12 +5,11 @@ block title
 
 block content
 
-
 	.filter
 		.filter__inner
 			form#filter.filter__form.filter__form--priority
 				input(id="filter-submit" type="submit" hidden)
-				span.filter__title Фильтры:
+				span.filter__title.filter__title--filter Фильтры:
 				ul.filter__list
 					li.filter__item
 						button(type="button" id="dAvailable" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Наличие
@@ -409,32 +408,35 @@ block content
 				+product('https://www.the-alba.com/upload/resize_cache/iblock/615/400_400_0/1103048201311_2-min.jpg', 'Сапожки', false, false, false, true)
 			.catalog__item
 				+product('https://www.the-alba.com/upload/resize_cache/iblock/615/400_400_0/1103048201311_2-min.jpg', 'Сапожки', false, false, false, true)
-		ul.pagination
-			li.pagination__prev
+		ul.pagination.pagination--in-catalog
+			li.pagination__arrow.pagination__arrow--prev
 				a(href="")
-					| <svg width="24" height="6" viewBox="0 0 24 6" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><use xlink:href="#path0_fill" transform="matrix(-1 0 0 1 6 0)"/><use xlink:href="#path1_fill" transform="matrix(-1 0 0 1 24 2)"/><defs><path id="path0_fill" fill-rule="evenodd" d="M6 2.5v1L0 6V0l6 2.5z"/><path id="path1_fill" fill-rule="evenodd" d="M0 0h18v2H0V0z"/></defs></svg>
-			li.pagination__item
+					//- | <svg width="24" height="6" viewBox="0 0 24 6" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><use xlink:href="#path0_fill" transform="matrix(-1 0 0 1 6 0)"/><use xlink:href="#path1_fill" transform="matrix(-1 0 0 1 24 2)"/><defs><path id="path0_fill" fill-rule="evenodd" d="M6 2.5v1L0 6V0l6 2.5z"/><path id="path1_fill" fill-rule="evenodd" d="M0 0h18v2H0V0z"/></defs></svg>
+					| <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 6 6" xml:space="preserve"><polygon id="Combined-Shape" points="0,2.5 0,3.5 6,6 6,0 "/></svg>
+			li.pagination__item.pagination__item--active
 				a(href="") 1
 			li.pagination__item
 				a(href="") 2
-			li.pagination__next
+			li.pagination__arrow.pagination__arrow--active.pagination__arrow--next
 				a(href="")
-					| <svg width="24" height="6" viewBox="0 0 24 6" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><use xlink:href="#path0_fill" transform="translate(18)"/><use xlink:href="#path1_fill" transform="translate(0 2)"/><defs><path id="path0_fill" fill-rule="evenodd" d="M6 2.5v1L0 6V0l6 2.5z"/><path id="path1_fill" fill-rule="evenodd" d="M0 0h18v2H0V0z"/></defs></svg>
+					//- | <svg width="24" height="6" viewBox="0 0 24 6" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><use xlink:href="#path0_fill" transform="translate(18)"/><use xlink:href="#path1_fill" transform="translate(0 2)"/><defs><path id="path0_fill" fill-rule="evenodd" d="M6 2.5v1L0 6V0l6 2.5z"/><path id="path1_fill" fill-rule="evenodd" d="M0 0h18v2H0V0z"/></defs></svg>
+					| <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 6 6"  xml:space="preserve"><polygon id="Combined-Shape" points="6,3.5 6,2.5 0,0 0,6 "/></svg>
+
 		.catalog-text
 			.row.justify-content-center
 				.col-lg-8
 					p Туфли – основа гардероба современной женщины. И особой популярностью у представительниц прекрасного пола пользуется обувь итальянского производства, сочетающая в себе элегантность внешнего вида, высокий уровень комфорта и великолепное качество. Компания ALBA является прямым поставщиком продукции известных мировых брендов. В нашем интернет-магазине можно недорого купить женские туфли для любого сезона, выбрав модель под индивидуальные запросы.
 
 	.js-collapse.seo-text
-		.container
+		.catalog-text.container
 			.row
-				.col-xs-12.col-lg-4.col-xxl-5
+				section.col-xs-12.col-lg-4.col-xxl-5
 					h4 Качественная обувь
 					p Качественная обувь – это залог повседневного комфорта и безупречности внешнего вида. Интернет-магазин ALBA тесно сотрудничает с ведущими европейскими фабриками, поставляя на российский рынок продукцию высокого качества по умеренным ценам. Если вам нужна модная женская обувь, в которой сочетаются изысканный дизайн, удобство и долговечность, знакомьтесь с ассортиментом нашего онлайн-каталога.
-				.col-xs-12.col-lg-4.col-xxl-5(data-collapse-body)
+				section.col-xs-12.col-lg-4.col-xxl-5(data-collapse-body)
 					h4 Особенности нашего ассортимента
 					p Наш каталог включает сотни наименований доступной по цене женской обуви на любой вкус и сезон. Вы легко сможете подобрать у нас ботинки, ботильоны, ботфорты, полуботинки, мокасины, сапоги, туфли, а также стильные балетки, босоножки, сабо и сандалии. Представленный выбор включает повседневную и элегантную вечернюю обувь, а также экстравагантные модели для любительниц оригинальных образов. Каждая коллекция предлагает невероятное разнообразие вариантов исполнения верха, подошвы и каблуков, расцветок и декора. Кроме того, у нас доступен широкий размерный ряд, который включает и нестандартные модели с увеличенной колодкой.
-				.col-xs-12.col-lg-4.col-xxl-5(data-collapse-body)
+				section.col-xs-12.col-lg-4.col-xxl-5(data-collapse-body)
 					h4 Преимущества предлагаемой обуви
 					p Качественные материалы пошива: натуральные нубук, кожа и мех, кожзам и текстиль.
 						| Все модели обладают безупречным кроем, который обеспечит вас безусловным комфортом в любую погоду.

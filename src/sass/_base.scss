@@ -1077,109 +1077,109 @@ p {
   }
 }
 
-.price {
-  text-align: right;
-  span {
-    display: block;
-    font-size: 12px;
-    line-height: (24 / 12);
-    & + span {
-      font-size: 12px;
-      padding-top: 6px;
-      color: #1eb4b7;
-    }
+//.price {
+//  text-align: right;
+//  span {
+//    display: block;
+//    font-size: 12px;
+//    line-height: (24 / 12);
+//    & + span {
+//      font-size: 12px;
+//      padding-top: 6px;
+//      color: #1eb4b7;
+//    }
+//
+//    @media screen and (min-width: $screen-md) {
+//      font-size: 18px;
+//      line-height: (24 / 18);
+//      & + span {
+//        margin-bottom: 5px;
+//        padding-top: 4px;
+//        font-size: 13px;
+//
+//        @media screen and (min-width: $screen-md) {
+//          margin-bottom: 0;
+//        }
+//      }
+//    }
+//  }
+//  [data-old-price] {
+//    font-size: 13px;
+//    font-weight: 600;
+//    line-height: 2;
+//    color: #000000;
+//    @media (min-width: $screen-md) {
+//      margin-bottom: 4px;
+//      font-size: 21px;
+//      line-height: 1.24;
+//      letter-spacing: -0.2px;
+//    }
+//    &:before {
+//      content: attr(data-old-price);
+//      opacity: 0.3;
+//      text-decoration: line-through;
+//      margin-right: 12px;
+//      font-size: 12px;
+//      font-weight: 300;
+//      line-height: 1.6;
+//      color: #000000;
+//      @media (min-width: $screen-md) {
+//        font-size: 15px;
+//      }
+//    }
+//  }
+//}
+  .price {
+  	text-align: right;
+  	span {
+  		display: block;
+  		font-size: 12px;
+  		line-height: (20 / 12);
+  		& + span {
+  			font-size: 12px;
+  			color: #1eb4b7;
+  		}
 
-    @media screen and (min-width: $screen-md) {
-      font-size: 18px;
-      line-height: (24 / 18);
-      & + span {
-        margin-bottom: 5px;
-        padding-top: 4px;
-        font-size: 13px;
+  		@media screen and (min-width: $screen-md) {
+  			font-size: 18px;
+  			line-height: (24 / 18);
 
-        @media screen and (min-width: $screen-md) {
-          margin-bottom: 0;
-        }
-      }
-    }
+  			& + span {
+  				margin-bottom: 5px;
+  				font-size: 13px;
+
+  				@media screen and (min-width: $screen-md) {
+  					margin-bottom: 0;
+  				}
+  			}
+  		}
+  	}
+  	[data-old-price] {
+  		//font-size: 13px;
+  		//font-weight: 300;
+  		//line-height: 2;
+  		//color: #000000;
+  		@media (min-width: $screen-md) {
+  			//margin-bottom: 4px;
+  			//font-size: 21px;
+  			//line-height: 1.24;
+  			//letter-spacing: -0.2px;
+  		}
+  		&:before {
+  			content: attr(data-old-price);
+  			opacity: 0.3;
+  			text-decoration: line-through;
+  			margin-right: 12px;
+  			font-size: 12px;
+  			font-weight: 300;
+  			line-height: 1.6;
+  			color: #000000;
+  			@media (min-width: $screen-md) {
+  				font-size: 15px;
+  			}
+  		}
+  	}
   }
-  [data-old-price] {
-    font-size: 13px;
-    font-weight: 600;
-    line-height: 2;
-    color: #000000;
-    @media (min-width: $screen-md) {
-      margin-bottom: 4px;
-      font-size: 21px;
-      line-height: 1.24;
-      letter-spacing: -0.2px;
-    }
-    &:before {
-      content: attr(data-old-price);
-      opacity: 0.3;
-      text-decoration: line-through;
-      margin-right: 12px;
-      font-size: 12px;
-      font-weight: 300;
-      line-height: 1.6;
-      color: #000000;
-      @media (min-width: $screen-md) {
-        font-size: 15px;
-      }
-    }
-  }
-}
-  //.price {
-  //	text-align: right;
-  //	span {
-  //		display: block;
-  //		font-size: 12px;
-  //		line-height: (20 / 12);
-  //		& + span {
-  //			font-size: 12px;
-  //			color: #1eb4b7;
-  //		}
-  //
-  //		@media screen and (min-width: $screen-md) {
-  //			font-size: 18px;
-  //			line-height: (24 / 18);
-  //
-  //			& + span {
-  //				margin-bottom: 5px;
-  //				font-size: 13px;
-  //
-  //				@media screen and (min-width: $screen-md) {
-  //					margin-bottom: 0;
-  //				}
-  //			}
-  //		}
-  //	}
-  //	[data-old-price] {
-  //		//font-size: 13px;
-  //		//font-weight: 300;
-  //		//line-height: 2;
-  //		//color: #000000;
-  //		@media (min-width: $screen-md) {
-  //			//margin-bottom: 4px;
-  //			//font-size: 21px;
-  //			//line-height: 1.24;
-  //			//letter-spacing: -0.2px;
-  //		}
-  //		&:before {
-  //			content: attr(data-old-price);
-  //			opacity: 0.3;
-  //			text-decoration: line-through;
-  //			margin-right: 12px;
-  //			font-size: 12px;
-  //			font-weight: 300;
-  //			line-height: 1.6;
-  //			color: #000000;
-  //			@media (min-width: $screen-md) {
-  //				font-size: 15px;
-  //			}
-  //		}
-  //	}
-  //}
 
   .product-desc {
     padding-top: 20px;

@@ -12,7 +12,10 @@ $transition-time:             0.3s !default;
 
 .dropdown {
   position: relative;
-  display: inline-block;
+
+  &--submenu {
+
+  }
 
   &__menu {
     position: absolute;

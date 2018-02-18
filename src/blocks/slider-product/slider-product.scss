@@ -3,9 +3,12 @@
 
 .slider-product {
   padding-top: 60px;
+  margin-left: -4px;
+  margin-right: -4px;
+
   @media screen and (min-width: $screen-md) {
-    margin-left: -16px;
-    margin-right: -16px;
+    margin-left: -24px;
+    margin-right: -24px;
   }
   @media screen and (min-width: $screen-lg) {
     margin-left: -8px;
@@ -15,7 +18,11 @@
     margin-left: -32px;
     margin-right: -32px;
   }
-	&__item {
-      padding-bottom: 126px;
+  &__item {
+    padding-bottom: 126px;
+    margin: 0 4px;
+    @media screen and (min-width: $screen-md) {
+      margin: 0 24px;
     }
+  }
 }

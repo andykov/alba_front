@@ -202,18 +202,18 @@ block content
 							<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><g fill="none" fill-rule="evenodd"><circle cx="16" cy="16" r="16" fill="#1D1D1D"/><path fill="#FFF" d="M17.193 16.702h2.358l.353-2.845h-2.711v-1.816c0-.823.22-1.384 1.357-1.384l1.45-.001V8.112A18.693 18.693 0 0 0 17.887 8c-2.091 0-3.522 1.325-3.522 3.76v2.097H12v2.845h2.365V24h2.828v-7.298z"/></g></svg>
 						a.social__item(href="#")
 							<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><g fill="none" fill-rule="evenodd"><circle cx="16" cy="16" r="16" fill="#1D1D1D"/><path fill="#FFF" d="M21.612 12.784a2.808 2.808 0 0 0 1.263-1.536 5.91 5.91 0 0 1-1.825.674 2.91 2.91 0 0 0-2.096-.877c-1.586 0-2.872 1.244-2.872 2.777 0 .218.025.43.074.633a8.248 8.248 0 0 1-5.92-2.902c-.247.41-.388.886-.388 1.396 0 .964.508 1.814 1.278 2.312a2.946 2.946 0 0 1-1.301-.349v.035c0 1.345.99 2.468 2.303 2.724-.24.062-.494.097-.757.097-.185 0-.364-.018-.54-.051.365 1.104 1.426 1.907 2.682 1.929a5.887 5.887 0 0 1-3.567 1.187c-.231 0-.46-.013-.685-.038a8.318 8.318 0 0 0 4.403 1.25c5.283 0 8.17-4.233 8.17-7.904l-.01-.36a5.636 5.636 0 0 0 1.437-1.435c-.515.221-1.068.371-1.649.438z"/></g></svg>
-				.product-tabs
+				.product-tabs.product-tabs--adress
 					.product-tabs__nav
 						span.product-tabs__city Ваш город: Москва
-						ul
-							li.active
-								a(href="#available") наличие в магазинах
-							li
-								a(href="#delivery") доставка и примерка
-							li
-								a(href="#payment") оплата
-							li
-								a(href="#reviews") отзывы
+						ul.product-tabs__nav
+							li.product-tabs__tab.active
+								a(href="#available").product-tabs__link наличие в магазинах
+							li.product-tabs__tab
+								a(href="#delivery").product-tabs__link доставка и примерка
+							li.product-tabs__tab
+								a(href="#payment").product-tabs__link оплата
+							li.product-tabs__tab
+								a(href="#reviews").product-tabs__link отзывы
 					.product-tabs__body
 						#available.product-tabs__item.active
 							.shops
@@ -267,7 +267,26 @@ block content
 						#reviews.product-tabs__item
 							| EMPTY ...
 
-	+slider-product()
+	.product-tabs.slider-products
+		.container.slider-products__nav-inner
+			ul.product-tabs__nav.slider-products__nav
+				li.product-tabs__tab.slider-products__item.active
+					a.product-tabs__link.slider-products__link(href="#recommended") Рекомендуем
+				li.product-tabs__tab.slider-products__item
+					a.product-tabs__link.slider-products__link(href="#related") Похожие товары
+				li.product-tabs__tab.slider-products__item
+					a.product-tabs__link.slider-products__link(href="#recently-watched") Вы недавно смотрели
+		.container.slider-products__inner
+			.product-tabs__body.slider-products__body
+					#recommended.product-tabs__item.slider-products__tab.active
+						.js-slider-product-recommended
+							+slider-product()
+					#related.product-tabs__item.slider-products__tab
+						.js-slider-product-related
+							+slider-product()
+					#recently-watched.product-tabs__item.slider-products__tab
+						.js-slider-product-recently-watched
+							+slider-product()
 
 
 block js_libs

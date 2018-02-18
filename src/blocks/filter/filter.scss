@@ -440,9 +440,18 @@
           }
 
           .filter__dropdown {
-            border: 1px solid rgba(#000, .1);
-            left: 40px;
+            // left: 40px;
             position: static;
+            margin-left: -24px;
+            &::after {
+              transition: none;
+              box-shadow: none;
+              height: calc(100% - 48px);
+              width: auto;
+              top: 48px;
+              left: -24px;
+              right: -24px;
+            }
           }
         }
       }
@@ -474,6 +483,7 @@
         }
       }
     }
+
 
     }
   }

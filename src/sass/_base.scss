@@ -3,30 +3,31 @@ html {
 }
 
 body {
-  font-family: $font-family;
-  font-weight: 300;
-  font-size: 12px;
-  line-height: (21 / 12);
-  letter-spacing: 0.3px;
-  background-color: #f8f8f8;
-  color: $text-color;
+	font-family: $font-family;
+	font-weight: 300;
+	font-size: 12px;
+	line-height: (21 / 12);
+	letter-spacing: 0.3px;
+	background-color: #f8f8f8;
+	color: $text-color;
+	overflow-x: hidden;
 
-  @media screen and (min-width: $screen-md) {
-    font-size: 16px;
-    line-height: (22 / 16);
-    letter-spacing: 0.4px;
+	@media screen and (min-width: $screen-md) {
+		font-size: 16px;
+		line-height: (22 / 16);
+		letter-spacing: 0.4px;
 
-    padding-left: 16px;
-    padding-right: 16px;
-  }
-  @media screen and (min-width: $screen-lg) {
-    padding-left: 8px;
-    padding-right: 8px;
-  }
-  @media screen and (min-width: $screen-xl) {
-    padding-left: 32px;
-    padding-right: 32px;
-  }
+		padding-left: 16px;
+		padding-right: 16px;
+	}
+	@media screen and (min-width: $screen-lg) {
+		padding-left: 8px;
+		padding-right: 8px;
+	}
+	@media screen and (min-width: $screen-xl) {
+		padding-left: 32px;
+		padding-right: 32px;
+	}
 }
 
 h1 {

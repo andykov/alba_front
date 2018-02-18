@@ -95,6 +95,8 @@
 
   &__info {
     padding-bottom: 2px;
+
+    @media (max-width: $screen-md - 1) {
       .price [data-old-price] {
         text-align: left;
         font-size: 12px;
@@ -105,20 +107,21 @@
           font-size: 11px;
         }
       }
+    }
     @media (min-width: $screen-md) {
       display: flex;
       justify-content: space-between;
       align-items: flex-end;
 
-      .price [data-old-price] {
-        font-size: 18px;
-        line-height: 24px;
-
-        &::before {
-          font-size: 15px;
-          line-height: 24px;
-        }
-      }
+      //.price [data-old-price] {
+      //  font-size: 18px;
+      //  line-height: 24px;
+      //
+      //  &::before {
+      //    font-size: 15px;
+      //    line-height: 24px;
+      //  }
+      //}
     }
   }
 
@@ -137,15 +140,6 @@
   }
 
   &__info-hover {
-    //display: none;
-    //background-color: #fff;
-    //width: 100%;
-    ////position: absolute;
-    //top: 100%;
-    ////opacity: 0;
-    ////visibility: hidden;
-    //margin-bottom: -100%;
-    //transition: all 0.2s ease-in-out;
     position: absolute;
     top: 0;
     left: -1px;
@@ -164,6 +158,7 @@
       height: 100%;
       width: 100%;
     }
+
     &-inner {
       transition: all 0.2s ease-in-out;
     }
@@ -171,14 +166,12 @@
 
   &__select {
     display: flex;
-    margin-top: 17px;
+    padding-top: 17px;
     clear: both;
 
     .btn-icon {
       min-width: 40px;
       margin-left: 10px;
-     // margin-left: auto;
-
     }
   }
 
@@ -186,12 +179,9 @@
     padding-left: 16px;
     margin-right: auto;
     position: relative;
+
     > span {
       position: absolute;
-      // bottom: -4px;
-      // transform: rotate(-90deg);
-      // transform-origin: left center;
-      // left: 4px;
       font-family: $font-family--montserrat;
       font-size: 7px;
       font-weight: 600;
@@ -208,14 +198,20 @@
       text-align: center;
     }
   }
+
   &__desc {
     font-size: 13px;
     margin-top: 19px;
+    @media (max-width: $screen-md - 1) {
+      padding: 0 8px;
+    }
     li {
       display: flex;
     }
+
     span {
       flex: 1;
+
       &:first-child {
         max-width: 73px;
       }
@@ -223,13 +219,9 @@
   }
 
   &:hover {
-    z-index: 1;
+    z-index: 10;
 
     .product__info-hover {
-      //display: block;
-      //opacity: 1;
-      //visibility: visible;
-
       visibility: visible;
       opacity: 1;
       transition: all 0.3s;

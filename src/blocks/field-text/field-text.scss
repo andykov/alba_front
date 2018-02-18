@@ -2,12 +2,14 @@
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий... 
 
 .field-text {
-	display: block;
+	display: flex;
+	align-items: center;
 	&__name {
-		margin-bottom: 10px;
+		//margin-bottom: 10px;
 		font: 600 11px/1.45 $font-family--montserrat;
 		letter-spacing: 0.4px;
 		text-transform: uppercase;
+		flex: 1;
 	}
 	&__input {
 		display: inline-block;
@@ -24,9 +26,18 @@
 		border: 1px solid transparent;
 		appearance: textfield;
 
+		@include placeholder {
+			font-size: 14px;
+			color: #3C3C3C;
+			opacity: 0.5;
+			letter-spacing: 0.4px;
+		}
+
 		&-wrap {
 			position: relative;
 			display: block;
+			max-width: 240px;
+			width: 100%;
 		}
 
 		&--lg {
@@ -40,12 +51,16 @@
 		&:focus,
 		&:active {
 			outline: 0;
-			//border-color: #3dc4c3;
+			border-bottom-color: #1EB4B7;
 		}
 
 		&:hover,
 		&:focus {
 			background-color: #D9F4F4;
+		}
+
+		&--add {
+
 		}
 	}
 }

@@ -87,7 +87,7 @@
 			@media (min-width: $screen-md) {
 				margin-bottom: 44px;
 			}
-			@media screen and (min-width: $screen-lg) and (max-width: $screen-xxl - 1) {
+			@media screen and (min-width: $screen-xl) and (max-width: $screen-xxl - 1) {
 				&--moving {
 					position: absolute;
 					bottom: 0;
@@ -150,8 +150,8 @@
 		color: #A0A0A0;
 		@media screen and (min-width: $screen-md) {
 			padding: 27px 32px 30px 32px;
-			margin-right: -16px;
-			margin-left: -16px;
+			margin-right: -8px;
+			margin-left: -8px;
 			font-size: 14px;
 		}
 		@media screen and (min-width: $screen-lg) {

@@ -59,8 +59,12 @@
 			background-color: #D9F4F4;
 		}
 
-		&--add {
-
+		&--border {
+			border: solid 1px #60d3d5;
+			background-color: transparent;
+			&:focus {
+				border-color: #1EB4B7;
+			}
 		}
 	}
 }

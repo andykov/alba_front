@@ -155,6 +155,8 @@
 		}
 	}
 	&__field {
+		flex-direction: column;
+		align-items: flex-start;
 		@media screen and (min-width: $screen-md) {
 			flex: 1;
 		}

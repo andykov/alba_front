@@ -1,25 +1,119 @@
 // В этом файле должны быть стили для БЭМ-блока .field-select , его элементов, 
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий... 
 
+//.field-select {
+//  position: relative;
+//
+//  &__drop {
+//    position: absolute;
+//    top: calc(100% + 8px);
+//    left: 0;
+//    z-index: 1;
+//    width: 0;
+//    height: 0;
+//    padding: 0;
+//    overflow: hidden;
+//    opacity: 0;
+//    color: #31353f;
+//    background-color: #fff;
+//    border: 1px solid #e9edf2;
+//    border-radius: 2px;
+//    box-shadow: 0 4px 40px rgba(72, 72, 72, 0.35);
+//    transition: opacity 0.3s;
+//  }
+//
+//  &.open {
+//    .field-select__drop {
+//      width: 100%;
+//      min-width: 120px;
+//      height: auto;
+//      padding: 10px 13px;
+//      opacity: 1;
+//      overflow: visible;
+//    }
+//  }
+//}
+
+
+
+
 .field-select {
-  //display: inline-block;
-  .select2-selection {
-    outline: none;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  font-size: 14px;
+  color: #3C3C3C;
+  width: 200px;
+
+
+}
+.field-select__pseudoselect {
+  background-color: #E9F6F6;
+  padding: 0 15px;
+  height: 40px;
+  line-height: 40px;
+
+  &:after {
+    content:"";
+    width: 10px;
+    height: 7px;
+    background: url("../img/svg/arrow-v-black.svg") no-repeat;
+    position: absolute;
+    top: 16px;
+    right: 10px;
+    opacity: 0.4;
   }
-
-  //.select2-container--default .select2-results__option--highlighted[aria-selected] {
-  //  background-color: #00a9a4;
-  //}
-  //
-  //.select2-dropdown {
-  //  border: 1px solid #e5e5e5;
-  //  border-radius: 3px;
-  //  box-shadow: 0 6px 13px 0 rgba(0, 0, 0, 0.25);
-  //}
-
-	&--not-border {
-      .select2-selection {
-        border: 0;
-      }
+  &:hover {
+    background-color: #D9F4F4;
+    &:after {
+      opacity: 1;
+      background: url("../img/svg/arrow-v-blue.svg") no-repeat;
     }
+  }
+  &:active, &.active {
+    background-color: #D9F4F4;
+    &:after {
+      opacity: 1;
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.field-select__drop {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background-color: #fff;
+  border-top: 1px solid #1EB4B7;
+  box-shadow: 0 16px 32px 0 rgba(0, 2, 14, 0.1);
+  opacity: 0;
+  width: 0;
+  height: 0;
+  transition: opacity 0.3s;
+  z-index: 1;
+  &.active {
+    width: 100%;
+    min-width: 120px;
+    height: auto;
+    opacity: 1;
+  }
+  li {
+    margin: 0;
+    padding: 8.5px 0;
+    text-indent: 15px;
+
+    &:hover {
+      background-color: #F4F4F4;
+    }
+    &[rel="hide"] {
+      display: none;
+    }
+    &.active {
+      background-color: #F4F4F4;
+    }
+  }
 }

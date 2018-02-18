@@ -1,3 +1,31 @@
-mixin field-select()
-	.field-select
-		| field-select
+//.field-select
+//	.field-select__text-name
+//	.field-select__pseudoselect(id="city" data-toggle="dropdown" aria-haspopup="false" aria-expanded="true") Москва
+//	.field-select__drop(aria-labelledby="city")
+//		label.field-radio
+//			span.field-radio__input-wrap
+//				input.field-radio__input(type="radio" name="f-price")
+//				span.field-radio__name Наличными
+//		label.field-radio
+//			span.field-radio__input-wrap
+//				input.field-radio__input(type="radio" name="f-price")
+//				span.field-radio__name Наличными
+
+|<div class="field-select open">
+|	<div class="field-select__text-name  field-select__text-name--sm">City</div>
+|	<div class="field-select__pseudoselect" id="city" data-toggle="dropdown" aria-haspopup="false" aria-expanded="true">Moscow</div>
+|	<div class="field-select__drop  field-checkbox" aria-labelledby="city">
+|		<div class="field-checkbox__input-wrap">
+|			<label class="field-checkbox__name">
+|				<input class="field-checkbox__input" type="radio" name="city" checked="">
+|				<span class="field-checkbox__name-text">Cow</span>
+|			</label>
+|		</div>
+|		<div class="field-checkbox__input-wrap">
+|			<label class="field-checkbox__name">
+|				<input class="field-checkbox__input" type="radio" name="city">
+|				<span class="field-checkbox__name-text">St. Not a cow</span>
+|			</label>
+|		</div>
+|	</div>
+|</div>

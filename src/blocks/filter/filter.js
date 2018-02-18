@@ -40,7 +40,7 @@ $(function() {
             check();
         } else if (availableSpace > breakWidths[numOfVisibleItems]) {
             $hlinks.children().first().appendTo($vlinks)
-            $vlinks.children().removeClass('dropdown--submenu');
+            $vlinks.children().removeClass('dropdown--submenu open');
             // $vlinks.children().removeAttr('data-dropdown');
             numOfVisibleItems += 1;
         }
@@ -60,7 +60,7 @@ $(function() {
         if (numOfVisibleItems === numOfItems) {
             $btn.parent().addClass('hidden');
         } else {
-            $btn.parent().removeClass('hidden');
+            $btn.parent().removeClass('hidden open');
         }
 
         // if (numOfVisibleItems == 0 && availableSpace < 0) {

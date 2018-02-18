@@ -15,7 +15,7 @@
 
 $(function() {
 
-     git// отмена закрытия бутстраповского дропдауна с чекбоксами
+    // отмена закрытия бутстраповского дропдауна с чекбоксами
     $(document).on('click', '[data-dont-close]', function(e) {
         e.stopPropagation();
     });

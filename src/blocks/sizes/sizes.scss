@@ -33,13 +33,10 @@
     line-height: (16 / 11);
     color: #A0A0A0;
     text-transform: uppercase;
-    //padding-bottom: 4px;
-    //margin-bottom: 16px;
 
     span {
       display: inline-block;
       margin-right: 15px;
-      //padding-bottom: 1px;
       cursor: pointer;
 
       &[data-tab-btn] {
@@ -68,17 +65,18 @@
     }
   }
 
+  label.sizes__item {
+    cursor: pointer;
+  }
+
   &__item {
     text-align: center;
-    // color: #2E2E2E;
-    // font-size: 12px;
-    // letter-spacing: ((21 * 2.86) / 100)+px;
     color: #3c3c3c;
     font-size: 14px;
     letter-spacing: 0.4px;
     margin-right: -1px;
     margin-bottom: -1px;
-    cursor: pointer;
+    cursor: default;
 
     @media screen and (min-width: $screen-xl) {
       font-size: 14px;

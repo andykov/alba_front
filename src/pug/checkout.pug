@@ -1,204 +1,226 @@
 extends templates/main
-	
+
 block title
-	title Главная страница
+  title Главная страница
 
 block content
-	.container
-		h1.content__title Оформление заказа
-	.container
-		.row.justify-content-xxl-center.flex-lg-row-reverse
-			.col-12.col-xl-5.col-xxl-5
-				.checkout-basket
-					.checkout-basket__head
-						span.icon-svg
-							| <svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" viewBox="0 0 20 24">
-							| <g fill="none" fill-rule="evenodd">
-							| <path fill="#60D3D5" d="M1.935 6.111L0 24h20L18.065 6.111z"/>
-							| <path stroke="#60D3D5" stroke-width="1.8" d="M8.065 11.222V3.556s0-2.237 1.935-2.237 1.935 2.237 1.935 2.237v7.666"/>
-							| </g>
-							| </svg>
-						span.h3 Ваш заказ
-						a(href="#") В каталог
-							span
-								| <svg width="5" height="6" viewBox="0 0 5 6" xmlns="http://www.w3.org/2000/svg"><path d="M1 0l3 3-3 3" stroke="#BFBFBF" fill="none" fill-rule="evenodd"/></svg>
-					.checkout-basket__item
-						a.checkout-basket__remove(href="#") X
-						.checkout-basket__img
-							img(src="img/content/checkout-basket-1.jpg")
-						.checkout-basket__info
-							.checkout-basket__info-row
-								.checkout-basket__count
-									span Туфли
-									+field-couner()
-								.checkout-basket__price
-									.price
-										span(data-old-price="6000") 4800 руб.
-										span Экономия 1200 руб.
-							.checkout-basket__info-row
-								.checkout-basket__sizes
-									.sizes
-										.sizes__list
-											label.sizes__item
-												input(type="radio" name="size")
-												span 35
-											label.sizes__item
-												input(type="radio" name="size")
-												span 35
-											div.sizes__item.sizes__item--text
-												span Размеры для примерки
-					.checkout-basket__item
-						a.checkout-basket__remove(href="#") X
-						.checkout-basket__img
-							img(src="img/content/checkout-basket-2.jpg")
-						.checkout-basket__info
-							.checkout-basket__info-row
-								.checkout-basket__count
-									span Туфли
-									+field-couner()
-								.checkout-basket__price
-									.price
-										span 4800 руб.
-					.checkout-basket__item
-						a.checkout-basket__remove(href="#") X
-						.checkout-basket__img
-							img(src="img/content/checkout-basket-3.jpg")
-						.checkout-basket__info
-							.checkout-basket__info-row
-								.checkout-basket__count
-									span Туфли
-									+field-couner()
-								.checkout-basket__price
-									.price
-										span 8500 руб.
-							.checkout-basket__info-row
-								.checkout-basket__sizes
-									.sizes
-										.sizes__list
-											div.sizes__item
-												span 37
-											div.sizes__item.dropdown
-												| <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">+</button>
-												.dropdown-menu(data-dont-close)
-													.sizes
-														.sizes__list
-															label.sizes__item
-																input(type="radio" name="size")
-																span 35
-															label.sizes__item
-																input(type="radio" name="size")
-																span 35
-											div.sizes__item.sizes__item--text
-												span Размеры для примерки
-					.checkout-basket__sales
-						| <label class="field-text">
-						|  <span class="field-text__input-wrap">
-						|    <input class="field-text__input" type="text">
-						|  </span>
-						| </label>
-						span Карта
-					.checkout-basket__total
-						.checkout-basket__total-part
-							p Стоимость товаров
-							span 18 500 руб.
-						.checkout-basket__total-part
-							p Доставка
-							span +300 руб.
-						.checkout-basket__total-part
-							p Итоговая сумма
-							span 18 800 руб.
+  .container
+    h1.content__title Оформление заказа
+  .container.checkout
+    .row.justify-content-xxl-center.flex-lg-row-reverse
+      .col-12.col-xl-5.col-xxl-5
+        .checkout-basket
+          .checkout-basket__head
+            span.icon-svg
+              | <svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" viewBox="0 0 20 24">
+              | <g fill="none" fill-rule="evenodd">
+              | <path fill="#60D3D5" d="M1.935 6.111L0 24h20L18.065 6.111z"/>
+              | <path stroke="#60D3D5" stroke-width="1.8" d="M8.065 11.222V3.556s0-2.237 1.935-2.237 1.935 2.237 1.935 2.237v7.666"/>
+              | </g>
+              | </svg>
+            span.h3 Ваш заказ
+            a(href="#") В каталог
+              span
+                | <svg width="5" height="6" viewBox="0 0 5 6" xmlns="http://www.w3.org/2000/svg"><path d="M1 0l3 3-3 3" stroke="#BFBFBF" fill="none" fill-rule="evenodd"/></svg>
+          .checkout-basket__item
+            button.checkout-basket__remove.icon-btn(type="button") <svg width="11" height="12" viewBox="0 0 11 12" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><use xlink:href="#a" transform="translate(1 1)"/><defs><path id="a" d="M-.8.6l3.75 5 1.6-1.2L.8-.6-.8.6zM3.75 6h1.5V4h-1.5v2zm2.3-.4L9.8.6 8.2-.6l-3.75 5 1.6 1.2zm-5.25 5l3.75-5-1.6-1.2-3.75 5 1.6 1.2zm3.65-5l3.75 5 1.6-1.2-3.75-5-1.6 1.2z"/></defs></svg>
+            .checkout-basket__img
+              img(src="img/content/checkout-basket-1.jpg")
+            .checkout-basket__info
+              .checkout-basket__info-row
+                .checkout-basket__count
+                  span Туфли
+                  +field-couner()
+                .checkout-basket__price
+                  .price
+                    span(data-old-price="6000") 4800 руб.
+                    span Экономия 1200 руб.
+              .checkout-basket__info-row
+                .checkout-basket__sizes
+                  .sizes
+                    .sizes__list
+                      label.sizes__item
+                        input(type="radio" name="size")
+                        span 35
+                      label.sizes__item
+                        input(type="radio" name="size")
+                        span 35
+                      div.sizes__item.sizes__item--text
+                        span Размеры для примерки
+          .checkout-basket__item
+            button.checkout-basket__remove.icon-btn(type="button") <svg width="11" height="12" viewBox="0 0 11 12" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><use xlink:href="#a" transform="translate(1 1)"/><defs><path id="a" d="M-.8.6l3.75 5 1.6-1.2L.8-.6-.8.6zM3.75 6h1.5V4h-1.5v2zm2.3-.4L9.8.6 8.2-.6l-3.75 5 1.6 1.2zm-5.25 5l3.75-5-1.6-1.2-3.75 5 1.6 1.2zm3.65-5l3.75 5 1.6-1.2-3.75-5-1.6 1.2z"/></defs></svg>
+            .checkout-basket__img
+              img(src="img/content/checkout-basket-2.jpg")
+            .checkout-basket__info
+              .checkout-basket__info-row
+                .checkout-basket__count
+                  span Туфли
+                  +field-couner()
+                .checkout-basket__price
+                  .price
+                    span 4800 руб.
+          .checkout-basket__item
+            button.checkout-basket__remove.icon-btn(type="button") <svg width="11" height="12" viewBox="0 0 11 12" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><use xlink:href="#a" transform="translate(1 1)"/><defs><path id="a" d="M-.8.6l3.75 5 1.6-1.2L.8-.6-.8.6zM3.75 6h1.5V4h-1.5v2zm2.3-.4L9.8.6 8.2-.6l-3.75 5 1.6 1.2zm-5.25 5l3.75-5-1.6-1.2-3.75 5 1.6 1.2zm3.65-5l3.75 5 1.6-1.2-3.75-5-1.6 1.2z"/></defs></svg>
+            .checkout-basket__img
+              img(src="img/content/checkout-basket-3.jpg")
+            .checkout-basket__info
+              .checkout-basket__info-row
+                .checkout-basket__count
+                  span Туфли
+                  +field-couner()
+                .checkout-basket__price
+                  .price
+                    span 8500 руб.
+              .checkout-basket__info-row
+                .checkout-basket__sizes
+                  .sizes
+                    .sizes__list
+                      div.sizes__item
+                        span 37
+                      div.sizes__item.dropdown
+                        button.checkout-basket__add-sizes.icon-btn.icon-btn--plus.icon-btn--large-plus(type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+                        .dropdown-menu(data-dont-close)
+                          .dropdown-menu__inner
+                            .sizes
+                              .sizes__list
+                                label.sizes__item
+                                  input(type="radio" name="size")
+                                  span 35
+                                label.sizes__item
+                                  input(type="radio" name="size")
+                                  span 35
+                      div.sizes__item.sizes__item--text
+                        span Размеры для примерки
+          .checkout-basket__sales
+            .field-text.checkout-basket__code
+              .field-text__input-wrap
+                input.checkout-basket__input.field-text__input.field-text__input--border(placeholder="+ промокод")
+                //span.checkout-basket__placeholder
+            .field-text.checkout-basket__code
+              .field-text__input-wrap
+                input.checkout-basket__input.field-text__input.field-text__input--border(placeholder="+ карта")
+                //span.checkout-basket__placeholder
+          .checkout-basket__total
+            .checkout-basket__total-part
+              p Стоимость товаров
+              span 18 500 руб.
+            .checkout-basket__total-part
+              p Доставка
+              span +300 руб.
+            .checkout-basket__total-part
+              p Итоговая сумма
+              span 18 800
+                span руб.
 
-			.col-12.col-xl-7.col-xxl-8.offset-xxl-1
-				form.checkout-order
-					.checkout-order__row
-						.checkout-order__title
-							h3 1. Способ доставки
-						.field-group
-							label.field-radio
-								span.field-radio__input-wrap
-									input.field-radio__input(type="radio" name="f-price")
-									span.field-radio__name Доставка до двери
-									span.field-radio__help-text 300 руб.
-							label.field-radio
-								span.field-radio__input-wrap
-									input.field-radio__input(type="radio" name="f-price")
-									span.field-radio__name Самовывоз
-									span.field-radio__help-text Бесплатно
-							label.field-radio
-								span.field-radio__input-wrap
-									input.field-radio__input(type="radio" name="f-price")
-									span.field-radio__name Пункт самовывоза
-									span.field-radio__help-text Бесплатно
-						ul.list-dots-style
-							li Вы можете примерить заказанную обувь перед тем, как принять окончательное решение о покупке.
-							li Вы оплачиваете только то, что вам подошло. Остальную обувь  вы можете отдать торговому представителю или вернуть позже.
-							li При выборе способа доставки курьером дополнительно предоставляется услуга "Примерка перед покупкой".
-							li Доступное время на примерку одного заказа — 15 минут
-					.checkout-order__row
-						.checkout-order__title
-							h3 2. Адрес доставки
-						.field-group
-							|<select id="deliveryCity">
-							|	<option value="moscow">Москва</option>
-							|	<option value="krasnodar" rel="icon-temperature">Краснодар</option>
-							|	<option value="kazan">Казань</option>
-							|</select>
-							//.field-select
-							//	.field-select__text-name
-							//	.field-select__pseudoselect(id="city" data-toggle="dropdown" aria-haspopup="false" aria-expanded="true") Москва
-							//	.field-select__drop(aria-labelledby="city")
-							//		label.field-radio
-							//			span.field-radio__input-wrap
-							//				input.field-radio__input(type="radio" name="f-price")
-							//				span.field-radio__name Наличными
-							//		label.field-radio
-							//			span.field-radio__input-wrap
-							//				input.field-radio__input(type="radio" name="f-price")
-							//				span.field-radio__name Наличными
-							label.field-text
-								span.field-text__input-wrap
-									input.field-text__input(type="text" placeholder="Улица, дом, квартира (офис)")
-					.checkout-order__row
-						.checkout-order__title
-							h3 3. Способ оплаты
-						.field-group
-							label.field-radio
-								span.field-radio__input-wrap
-									input.field-radio__input(type="radio" name="f-price")
-									span.field-radio__name Наличными
-							label.field-radio
-								span.field-radio__input-wrap
-									input.field-radio__input(type="radio" name="f-price")
-									span.field-radio__name Банковской картой
-					.checkout-order__row
-						.checkout-order__title
-							h3 4. Данные о получателе
-							span.login-link Уже зарегистрированы?
-								a(href="") Войдите
-								| и поля заполнятся
-						.checkout-order__contacts
-							label.field-text
-								span.field-text__name Имя
-								span.field-text__input-wrap
-									input.field-text__input(type="text")
-							label.field-text
-								span.field-text__name Фамилия
-								span.field-text__input-wrap
-									input.field-text__input(type="text")
-							label.field-text
-								span.field-text__name E-mail
-								span.field-text__input-wrap
-									input.field-text__input(type="text")
-							label.field-text
-								span.field-text__name Телефон
-								span.field-text__input-wrap
-									input.field-text__input(type="text")
-					.checkout-order__row
-						.checkout-order__open
-							label.field-textarea
-								textarea
-					.checkout-order__submit
-						input(type="submit" value="Оформить заказ").btn.btn--wide
-						p Оформляя заказ Вы принимаете публичную оферту и соглашение об обработке персональных данных (ФЗ152)
+      .col-12.col-xl-7.col-xxl-8.offset-xxl-1
+        form.checkout-order
+          .checkout-order__row
+            .checkout-order__title
+              h3 1. Способ доставки
+            .field-group
+              label.field-radio
+                span.field-radio__input-wrap
+                  input.field-radio__input(type="radio" name="f-price" checked)
+                  span.field-radio__name Доставка до двери
+                  span.field-radio__help-text 300 руб.
+              label.field-radio
+                span.field-radio__input-wrap
+                  input.field-radio__input(type="radio" name="f-price")
+                  span.field-radio__name Самовывоз
+                  span.field-radio__help-text Бесплатно
+              label.field-radio
+                span.field-radio__input-wrap
+                  input.field-radio__input(type="radio" name="f-price")
+                  span.field-radio__name Пункт самовывоза
+                  span.field-radio__help-text Бесплатно
+            ul.list-dots-style
+              li Вы можете примерить заказанную обувь перед тем, как принять окончательное решение о покупке.
+              li Вы оплачиваете только то, что вам подошло. Остальную обувь  вы можете отдать торговому представителю или вернуть позже.
+              li При выборе способа доставки курьером дополнительно предоставляется услуга "Примерка перед покупкой".
+              li Доступное время на примерку одного заказа — 15 минут
+          .checkout-order__row
+            .checkout-order__title
+              h3 2. Адрес доставки
+            .field-group
+              | <select id="deliveryCity">
+              |  <option value="moscow">Москва</option>
+              |  <option value="krasnodar" rel="icon-temperature">Краснодар</option>
+              |  <option value="kazan">Казань</option>
+              | </select>
+              //.field-select
+              //	.field-select__text-name
+              //	.field-select__pseudoselect(id="city" data-toggle="dropdown" aria-haspopup="false" aria-expanded="true") Москва
+              //	.field-select__drop(aria-labelledby="city")
+              //		label.field-radio
+              //			span.field-radio__input-wrap
+              //				input.field-radio__input(type="radio" name="f-price")
+              //				span.field-radio__name Наличными
+              //		label.field-radio
+              //			span.field-radio__input-wrap
+              //				input.field-radio__input(type="radio" name="f-price")
+              //				span.field-radio__name Наличными
+              label.field-text
+                span.field-text__input-wrap
+                  input.field-text__input(type="text" placeholder="Улица, дом, квартира (офис)")
+          .checkout-order__row
+            .checkout-order__title
+              h3 3. Способ оплаты
+            .field-group
+              label.field-radio
+                span.field-radio__input-wrap
+                  input.field-radio__input(type="radio" name="f-price" checked)
+                  span.field-radio__name Наличными
+              label.field-radio
+                span.field-radio__input-wrap
+                  input.field-radio__input(type="radio" name="f-price")
+                  span.field-radio__name Банковской картой
+          .checkout-order__row
+            .checkout-order__title
+              h3 4. Данные о получателе
+              span.login-link Уже зарегистрированы?
+                a(href="") Войдите
+                | и поля заполнятся
+            .checkout-order__contacts
+              label.field-text
+                span.field-text__name Имя
+                span.field-text__input-wrap
+                  input.field-text__input
+              label.field-text
+                span.field-text__name Фамилия
+                span.field-text__input-wrap
+                  input.field-text__input
+              label.field-text
+                span.field-text__name E-mail
+                span.field-text__input-wrap
+                  input.field-text__input(type="email")
+              label.field-text
+                span.field-text__name Телефон
+                span.field-text__input-wrap.checkout-order__tel
+                  input.field-text__input(type="tel")
+          .checkout-order__row
+            .checkout-order__open
+              label.field-textarea
+                textarea(placeholder="+ комментарий")
+          .checkout-basket__total
+            .checkout-basket__total-part
+              p Стоимость товаров
+              span 18 500 руб.
+            .checkout-basket__total-part
+              p Доставка
+              span +300 руб.
+            .checkout-basket__total-part
+              p Итоговая сумма
+              span 18 800 руб.
+          .checkout-order__submit
+            input(type="submit" value="Оформить заказ").btn.btn--wide
+            p Оформляя заказ Вы принимаете публичную оферту и соглашение об обработке персональных данных (ФЗ152)
 
+  .container.checkout__remember
+    .h2.checkout__title Не забудьте добавить
+  .slider-products.slider-products--checkout-page
+    .slider-products__inner
+      .product-tabs__body.slider-products__body
+        #recommended.product-tabs__item.slider-products__tab.active
+          .js-slider-product-recommended
+            +slider-product()
 block js_libs

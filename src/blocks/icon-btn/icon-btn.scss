@@ -1,0 +1,97 @@
+// В этом файле должны быть стили для БЭМ-блока .icon-btn , его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий... 
+
+.icon-btn {
+  position: relative;
+  display: flex;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  background-color: transparent;
+  border: none;
+  overflow: hidden;
+  svg {
+    fill: #b4b4b4;
+    transition: .1s ease-in;
+  }
+  &:hover,
+  &:active,
+  &:focus {
+    svg,
+    &::before,
+    &::after {
+      fill: #1eb4b7;
+      transform: scale(1.5);
+    }
+    &::before {
+      transform: translate(-50%, -50%) scale(1.5);
+      background-color: #1eb4b7;
+      height: 1px;
+    }
+    &::after {
+      transform: translate(-50%, -50%) scale(1.5) rotate(90deg);
+      background-color: #1eb4b7;
+      height: 1px;
+    }
+  }
+  &:focus {
+    outline: none;
+  }
+  &:active {
+    svg {
+      fill: #000;
+    }
+  }
+  &--plus {
+    &::before, &::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 10px;
+      height: 2px;
+      background-color: #000;
+      transform: translate(-50%, -50%);
+      transition: .1s ease-in;
+    }
+    &::after {
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(90deg);
+    }
+  }
+  &--minus {
+    &::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 10px;
+      height: 2px;
+      background-color: #000;
+      transform: translate(-50%, -50%);
+      transition: .1s ease-in;
+    }
+  }
+  &--large-plus {
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    border: none;
+    &::before, &::after {
+      width: 16px;
+      background-color: #60d3d5;
+    }
+    &:hover,
+    &:active,
+    &:focus{
+      &::before {
+        transform: translate(-50%, -50%) scale(1.3);
+      }
+      &::after {
+        transform: translate(-50%, -50%) scale(1.3) rotate(90deg);
+      }
+    }
+  }
+}

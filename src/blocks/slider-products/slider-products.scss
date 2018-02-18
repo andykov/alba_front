@@ -6,6 +6,13 @@
 	margin-bottom: -118px;
 	margin-left: -8px;
 	margin-right: -8px;
+	&--checkout-page {
+		margin-bottom: -170px;
+		padding-left: 16px;
+		margin-right: 0;
+		margin-left: 0;
+		padding-top: 0;
+	}
 	@media screen and (min-width: $screen-md) {
 		margin-bottom: -50px;
 		padding-top: 70px;

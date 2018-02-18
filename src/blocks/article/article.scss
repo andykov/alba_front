@@ -1,7 +1,6 @@
 // В этом файле должны быть стили для БЭМ-блока .article , его элементов, 
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий... 
 
-
 .article {
   position: relative;
   padding: 32px 0;
@@ -191,9 +190,9 @@
       right: 0;
     }
 
-     @media screen and (min-width: $screen-xl) {
+    @media screen and (min-width: $screen-xl) {
       width: 176px;
-     }
+    }
     //
     //&:not(.is-affixed) {
     //  position: absolute;
@@ -269,7 +268,7 @@
       width: 24px;
       height: 6px;
 
-      @media screen and (min-width: $screen-md){
+      @media screen and (min-width: $screen-md) {
         display: block;
       }
 
@@ -301,7 +300,7 @@
         top: 0;
         width: 6px;
         height: 6px;
-         fill: #000;
+        fill: #000;
         transition: all $transition;
       }
 
@@ -338,7 +337,7 @@
     img {
       width: 100%;
       height: auto;
-      @media screen and (min-width: $screen-xl){
+      @media screen and (min-width: $screen-xl) {
         margin-bottom: 84px;
       }
     }
@@ -369,24 +368,75 @@
   &__several-img {
     overflow-x: auto;
     flex-wrap: nowrap;
-    > div  {
+    > div {
       max-width: 400px;
     }
 
     @media screen and (min-width: $screen-md) {
       flex-wrap: wrap;
-      > div  {
+      > div {
         max-width: initial;
       }
     }
   }
 }
-
-.article-filter {
-  display: flex;
-
-  @media (min-width: $screen-md) {
-    justify-content: flex-end;
+.article-header {
+  &__filter {
+    display: flex;
+    margin-bottom: 20px;
+    @media (min-width: $screen-md) {
+      justify-content: flex-end;
+      margin-bottom: 0;
+    }
+    @media screen and (min-width: $screen-lg) {
+      padding-top: 30px;
+      margin-bottom: 20px;
+    }
+    .field-checkbox {
+      margin-right: 15px;
+      margin-bottom: 0;
+      font-weight: 600;
+      font-size: 10px;
+      text-transform: uppercase;
+      &:last-child {
+        margin-right: 0;
+      }
+      @media screen and (min-width: $screen-md) {
+        font-size: 11px;
+        letter-spacing: 0.4px;
+      }
+    }
+    .field-checkbox__name:before {
+      top: 50%;
+      margin-top: -12px;
+    }
+  }
+  &__title {
+    position: relative;
+    display: inline-block;
+    padding-right: 45px;
+    font-weight: 700;
+    font-family: $font-family--montserrat;
+    @media (min-width: $screen-md) {
+      margin-bottom: 0;
+    }
+    @media (min-width: $screen-lg) {
+      font-size: 26px;
+    }
+  }
+  &__quantity {
+    position: absolute;
+    right: 0;
+    top: -10px;
+    font-size: 12px;
+    line-height: 1.5;
+    letter-spacing: 0.4px;
+    font-family: $font-family;
+    color: #3c3c3c;
+    font-weight: 300;
+    @media (min-width: $screen-md) {
+      font-size: 14px;
+    }
   }
 }
 
@@ -397,11 +447,14 @@
   margin-right: auto;
 
   @media screen and (min-width: $screen-md) {
+    padding-top: 25px;
     max-width: initial;
     margin-left: 0;
     margin-right: 0;
   }
-
+  @media screen and (min-width: $screen-xl) {
+    margin-bottom: 25px;
+  }
   &:hover {
     .article-preview__img {
       a {
@@ -410,18 +463,25 @@
         &:after {
           top: 0;
           opacity: 1;
-          background-image: linear-gradient(-180deg, rgba(96,211,213,0.00) 50%, rgba(96,211,213,0.66) 100%);
+          background-image: linear-gradient(-180deg, rgba(96, 211, 213, 0.00) 50%, rgba(96, 211, 213, 0.66) 100%);
         }
       }
     }
-    .article-preview__info {
-      span:first-child {
+    &__col {
+      &:first-child {
         background-color: #1EB4B7;
       }
     }
-    
-  }
 
+  }
+  &__number {
+    margin-right: 3px;
+  }
+  &__sub-number {
+    margin-right: 6px;
+    font-size: 13px;
+    font-weight: 300;
+  }
   &__img {
     img {
       width: 100%;
@@ -441,55 +501,24 @@
       }
     }
   }
+  &__upload {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 800px;
+    @media screen and (min-width: $screen-xl) {
+      padding-top: 23px;
+    }
+  }
+  &__load-more {
+    width: 100%;
+  }
   &__info {
     display: flex;
     //height: 80px;
     align-items: center;
     flex-wrap: wrap;
-    span {
-      flex: 1 0 50%;
-      text-align: center;
-      padding: 24px 0;
 
-      &:first-child {
-        background-color: #60D3D5;
-        font-family: $font-family--montserrat;
-        font-size: 26px;
-        font-weight: 900;
-        line-height: (32 / 26);
-        color: #fff;
-        transition: background-color $transition ease-in-out;
-      }
-
-      &:nth-of-type(2) {
-        align-self: stretch;
-        font-family: $font-family--montserrat;
-        font-size: 18px;
-        font-weight: 600;
-        line-height: 30px;
-        letter-spacing: -0.2px;
-        color: #000000;
-        border: solid 1px #e6e6e6;
-      }
-
-      & + span {
-        font-family: $font-family--lucidagrande;
-        font-size: 18px;
-        font-weight: 700;
-        line-height: (26 / 18);
-      }
-
-      i {
-        font-family: $font-family;
-        font-size: 13px;
-        font-weight: 300;
-        font-style: normal;
-        line-height: 1;
-        letter-spacing: 0.4px;
-        color: #3c3c3c;
-      }
-    }
-    time  {
+    time {
       width: 72px;
       padding: 0 20px;
 
@@ -513,7 +542,61 @@
     }
 
   }
+  &__info-col {
+    flex: 1 0 50%;
+    text-align: center;
+    padding: 18px 0;
+    min-height: 70px;
+    @media (min-width: $screen-xl) {
+      min-height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    &:first-child {
+      background-color: #60D3D5;
+      font-family: $font-family--montserrat;
+      font-size: 18px;
+      font-weight: 900;
+      line-height: (32 / 26);
+      color: #fff;
+      transition: background-color $transition ease-in-out;
+      @media (min-width: $screen-md) {
+        font-size: 26px;
+      }
+    }
 
+    &:nth-of-type(2):not(.article-preview__sub-number) {
+      align-self: stretch;
+      font-family: $font-family--montserrat;
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 30px;
+      letter-spacing: -0.2px;
+      color: #000000;
+      border: solid 1px #e6e6e6;
+      @media (min-width: $screen-md) {
+        font-size: 18px;
+      }
+    }
+
+    & + span {
+      font-family: $font-family--lucidagrande;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: (26 / 18);
+    }
+
+    i {
+      font-family: $font-family;
+      font-size: 13px;
+      font-weight: 300;
+      font-style: normal;
+      line-height: 1;
+      letter-spacing: 0.4px;
+      color: #3c3c3c;
+    }
+  }
   p {
     margin-top: 10px;
     font-family: $font-family--montserrat;
@@ -525,6 +608,7 @@
 
     @media screen and (min-width: $screen-xl) {
       margin-top: 24px;
+      padding-top: 0;
       margin-bottom: 0;
       font-size: 15px;
     }

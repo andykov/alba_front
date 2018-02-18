@@ -148,6 +148,9 @@
 		@media screen and (min-width: $screen-md) {
 			width: 100%;
 		}
+		@media screen and (min-width: $screen-xl) {
+			max-width: 100%;
+		}
 	}
 	.field-text__input {
 		@media screen and (min-width: $screen-md) {

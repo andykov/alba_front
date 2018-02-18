@@ -352,6 +352,9 @@ p {
 	padding: 32px 0;
 
 	&__title {
+		padding-left: 16px;
+		padding-right: 16px;
+
 		@media screen and (min-width: $screen-md) {
 			padding-left: 32px;
 			padding-right: 32px;
@@ -977,4 +980,37 @@ p {
 		text-transform: uppercase;
 		color: #000000;
 	}
+}
+
+
+.status {
+
+	&::before {
+		content: '';
+		display: inline-block;
+		width: 8px;
+		height: 8px;
+		margin-right: 7px;
+		border-radius: 50%;
+	}
+
+	&--transit {
+
+		&::before {
+			background: #4a90e2;
+		}
+	}
+	&--canceled {
+
+		&::before {
+			background: #c2c2c2;
+		}
+	}
+	&--done {
+
+		&::before {
+			background: #7ed321;
+		}
+	}
+
 }

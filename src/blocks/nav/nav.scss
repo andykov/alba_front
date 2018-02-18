@@ -96,9 +96,14 @@
 	justify-content: space-between;
 	max-width: 225px;
 	width: 100%;
-
+	@media screen and (max-width: $screen-lg - 1) {
+		margin: auto;
+	}
 	@media screen and (min-width: $screen-md) {
 		max-width: 390px;
+	}
+	@media screen and (min-width: $screen-lg) and (max-width: $screen-xl - 1) {
+		max-width: 377px;
 	}
 	@media screen and (min-width: $screen-lg) {
 		display: flex;

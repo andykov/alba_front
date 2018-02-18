@@ -1,6 +1,10 @@
 .header {
   margin: 0 auto;
+  position: relative;
+  z-index: 12;
+  @media screen and (max-width: $screen-md - 1) {
 
+  }
   &--white {
     .header-navs {
       background-color: #fff;
@@ -21,10 +25,11 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  //box-shadow: 0 32px 64px 0 rgba(0,0,0, 0.15);
+  z-index: 15;
 
   @media screen and (max-width: $screen-md - 1) {
     height: 100%;
+    position: static;
 
     & > span {
       display: none;
@@ -32,7 +37,9 @@
   }
 
 
-  span {
+
+  > span {
+    margin-right: 7px;
     @media screen and (min-width: $screen-md) {
       font-size: 14px;
       line-height: (21 / 14);
@@ -41,6 +48,7 @@
   }
 
   .mobile-nav {
+    background-color: transparent;
     width: 52px;
     height: 100%;
     @media screen and (max-width: $screen-lg - 1) {
@@ -56,17 +64,59 @@
   }
 
   &__dropdown {
+    margin-left: 5px;
     @media screen and (max-width: $screen-md - 1) {
       height: 100%;
       > .btn-icon {
         height: 100%;
       }
     }
-    button {
+    > .btn-icon {
+      background-color: transparent;
+      svg {
+        opacity: 0.15;
+      }
+
+      .icon-svg {
+        position: relative;
+        height: 24px;
+
+        &:before,
+        &:after {
+          content: '';
+          position: absolute;
+          left: 0;
+          right: 0;
+          margin: 0 auto;
+          background-color: #60D3D5;
+
+        }
+        &:before {
+          width: 6px;
+          height: 6px;
+          border-radius: 6px;
+          transform: scale(0);
+          transform-origin: top;
+          top: 200%;
+
+        }
+        &:after {
+          top: 50%;
+          width: 2px;
+          bottom: 0;
+          height: 0;
+          transition: height 0.2s;
+        }
+      }
+
       &[data-count-cart],
       &[data-count-favorite] {
         position: relative;
 
+        svg {
+          fill: #60D3D5;
+          opacity: 1;
+        }
 
         &:after {
           position: absolute;
@@ -74,7 +124,7 @@
           font-weight: 700;
           line-height: (16 / 11);
           color: #fff;
-          top: 50%;
+          top: 56%;
           transform: translateY(-50%);
         }
       }
@@ -82,11 +132,15 @@
       &[data-count-cart] {
         &:after {
           content: attr(data-count-cart);
-          margin-top: 2px;
         }
       }
 
       &[data-count-favorite] {
+        .icon-svg {
+          svg {
+            margin-top: auto;
+          }
+        }
         &:after {
           content: attr(data-count-favorite);
         }
@@ -94,9 +148,20 @@
     }
 
     &.open {
+      .icon-svg {
+        &:before {
+          transition: transform 0.2s 0.2s;
+          transform: scale(1);
+        }
+        &:after {
+          height: 40px;
+        }
+      }
       .panel-cart__list {
         visibility: visible;
         opacity: 1;
+        z-index: -1;
+        transform: scale(1);
       }
     }
   }
@@ -108,42 +173,60 @@
     right: 0;
     left: auto;
     z-index: 2;
-    box-shadow: 0 32px 64px 0 rgba(0, 0, 0, 0.15);
     width: 100%;
     visibility: hidden;
     opacity: 0;
+    transform: scale(0);
+    transform-origin: 80% 2%;
+    transition: transform 0.2s ease-in-out;
+    will-change: transform;
+    &:before {
+      content: '';
+      position: absolute;
+      background-color: #fff;
+      box-shadow: 0 32px 64px 0 rgba(0, 0, 0, 0.15);
+      width: 100%;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      @media screen and (min-width: $screen-md) {
+        top: -40px;
+      }
 
+      @media screen and (min-width: $screen-lg) {
+        top: -80px;
+      }
+    }
+    @media screen and (max-width: $screen-md - 1) {
+
+    }
     @media screen and (min-width: $screen-md) {
-      width: 195px;
+      width: 387px;
+      right: 0;
+    }
+    @media screen and (min-width: $screen-lg) {
+      width: 387px;
+      right: -36px;
     }
     @media screen and (min-width: $screen-xl) {
-      width: 387px;
+      right: -43px;
     }
-
-    .price {
-      [data-old-price] {
-        font-family: $font-family;
-        font-size: 18px;
-        font-weight: 300;
-        line-height: (24 / 18);
-        color: #000000;
-      }
+    @media screen and (min-width: $screen-xxl) {
+      right: -48px;
     }
   }
   &__item {
     display: flex;
     align-items: center;
     position: relative;
-    padding: 0 16px;
-
-    &:not(:last-child) {
-      border-bottom: 1px solid #E6E6E6;
-    }
+    padding: 8px 16px;
+    border-top: 1px solid #E6E6E6;
   }
   &__img {
     width: 94px;
     height: 94px;
     text-align: center;
+    overflow: hidden;
     img {
       max-height: 100%;
     }
@@ -164,11 +247,22 @@
   }
   &__price {
     margin-left: auto;
+
+    .price {
+      span,
+      [data-old-price] {
+        font-family: $font-family;
+        font-size: 18px;
+        font-weight: 300;
+        line-height: (24 / 18);
+        color: #000000;
+      }
+    }
   }
   &__remove {
     position: absolute;
-    right: 0;
-    top: 0;
+    right: 4px;
+    top: 4px;
     padding: 0;
     border: 0;
     outline: none;
@@ -176,9 +270,28 @@
     line-height: 1;
     width: 24px;
     height: 24px;
+    opacity: 0.2;
+    &:hover {
+      opacity: 1;
+      svg {
+        fill: #60D3D5;
+      }
+    }
   }
   &__action {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     padding: 32px;
+    position: relative;
+    border-top: 1px solid #E6E6E6;
+
+    span {
+      font-family: $font-family--montserrat;
+      font-weight: 700;
+      font-size: 15px;
+      line-height: (20 / 15);
+    }
   }
 }
 
@@ -242,9 +355,9 @@
     }
 
     &__gender {
-      @media screen and (min-width: $screen-md) {
-        flex-direction: column;
-      }
+      //@media screen and (min-width: $screen-md) {
+      //  flex-direction: column;
+      //}
       @media screen and (min-width: $screen-lg) {
         order: 1;
       }
@@ -302,6 +415,7 @@
 
 
   &-mobile {
+    border-bottom: 1px solid #E6E6E6;
     @media screen and (max-width: $screen-lg - 1) {
       display: flex;
       justify-content: space-between;
@@ -344,8 +458,17 @@
       align-self: stretch;
       justify-content: space-between;
     }
+    .panel-cart {
+      @media screen and (min-width: $screen-lg) {
+        padding: 20px 0;
+      }
+    }
     .phone-desktop {
       text-align: right;
+      padding-bottom: 26px;
+      @media screen and (max-width: $screen-lg - 1) {
+        display: none;
+      }
     }
     //@media screen and (min-width: $screen-lg) {
     //  .phone-desktop {

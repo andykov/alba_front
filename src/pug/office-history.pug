@@ -10,7 +10,7 @@ block content
 			.col-12.col-xl-3.col-xxl-3
 				+sidenav()
 
-			.col-12.col-xl-9.col-xxl-12
+			.col-12.col-xl-9.col-xxl-12.timeline-orders-wrap
 				.timeline-orders
 					.timeline-orders__title
 						h2.h1 История заказов
@@ -22,7 +22,7 @@ block content
 								.timeline-orders__btn
 									button.btn-icon.btn-icon--v.btn-icon--circle(data-toggle="collapse")
 										| <svg xmlns="http://www.w3.org/2000/svg" width="10" height="7" viewBox="0 0 10 7">
-										| 	<polyline fill="none" stroke="#60D3D5" stroke-width="2" points="1 0 4.333 5 5.667 5 9 0" transform="translate(0 1)"/>
+										| <polyline fill="none" stroke="#60D3D5" stroke-width="2" points="1 0 4.333 5 5.667 5 9 0" transform="translate(0 1)"/>
 										| </svg>
 								ul.timeline-orders__data
 									li Заказ 256156
@@ -30,7 +30,7 @@ block content
 									li 3 тов.
 									li 18 245 руб.
 									li Наличными
-									li.status-transit В пути
+									li.status.status--transit В пути
 							.timeline-orders-units.collapse__body
 								ul.timeline-orders-units__item
 									li
@@ -62,7 +62,7 @@ block content
 									li 4 тов.
 									li 23 567 руб.
 									li Картой
-									li.status-canceled Отменен
+									li.status.status--canceled Отменен
 						.timeline-orders__item
 							.timeline-orders__head
 								.timeline-orders__btn
@@ -77,7 +77,8 @@ block content
 									li 3 тов.
 									li 18 245 руб.
 									li Наличными
-									li.status-done Доставлен
+									li.status.status--done Доставлен
+
 					ul.pagination
 						li.pagination__arrow.pagination__arrow--prev
 							a(href="")

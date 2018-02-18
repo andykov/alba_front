@@ -63,16 +63,19 @@ block content
 								span.select-color__name
 									img(src="https://www.the-alba.com/upload/resize_cache/iblock/9a0/1000_1000_1/1669000801401_1.jpg" width="48px")
 					.product-info__sizes
-						.js-tabs.sizes
+						.sizes
 							.sizes__head
 								.sizes__title Размер
-								.sizes__type
-									span(data-tab-btn="size-ru").active ru
-									span(data-tab-btn="size-uk") uk
-									span(data-tab-btn="size-us") us
+								ul.sizes__type
+									li.sizes__type-item.active
+										a(href="#size-ru" data-toggle="tab") ru
+									li.sizes__type-item
+										a(href="#size-uk" data-toggle="tab") uk
+									li.sizes__type-item
+										a(href="#size-us" data-toggle="tab") us
 								.sizes__how
 									a(href="#") Как определить
-							#size-ru.sizes__list(data-tab-body).active
+							#size-ru.sizes__list.active
 								label.sizes__item
 									input(type="checkbox")
 									span 35
@@ -103,7 +106,7 @@ block content
 								label.sizes__item
 									input(type="checkbox")
 									span 42
-							#size-uk.sizes__list(data-tab-body)
+							#size-uk.sizes__list
 								label.sizes__item
 									input(type="checkbox")
 									span 3 1/2
@@ -134,7 +137,7 @@ block content
 								label.sizes__item
 									input(type="checkbox")
 									span 10
-							#size-us.sizes__list(data-tab-body)
+							#size-us.sizes__list
 								label.sizes__item
 									input(type="checkbox")
 									span 5 1/2
@@ -271,21 +274,21 @@ block content
 		.container.slider-products__nav-inner
 			ul.product-tabs__nav.slider-products__nav
 				li.product-tabs__tab.slider-products__item.active
-					a.product-tabs__link.slider-products__link(href="#recommended") Рекомендуем
+					a.product-tabs__link.slider-products__link(aria-controls="recommended" role="tab" data-toggle="tab" href="#recommended") Рекомендуем
 				li.product-tabs__tab.slider-products__item
-					a.product-tabs__link.slider-products__link(href="#related") Похожие товары
+					a.product-tabs__link.slider-products__link(aria-controls="related" role="tab" data-toggle="tab" href="#related") Похожие товары
 				li.product-tabs__tab.slider-products__item
-					a.product-tabs__link.slider-products__link(href="#recently-watched") Вы недавно смотрели
+					a.product-tabs__link.slider-products__link(aria-controls="recently-watched" role="tab" data-toggle="tab" href="#recently-watched") Вы недавно смотрели
 		.container.slider-products__inner
 			.product-tabs__body.slider-products__body
 					#recommended.product-tabs__item.slider-products__tab.active
-						.js-slider-product-recommended
+						.js-slider-product
 							+slider-product()
 					#related.product-tabs__item.slider-products__tab
-						.js-slider-product-related
+						.js-slider-product
 							+slider-product()
 					#recently-watched.product-tabs__item.slider-products__tab
-						.js-slider-product-recently-watched
+						.js-slider-product
 							+slider-product()
 
 

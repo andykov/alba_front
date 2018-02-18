@@ -1,8 +1,8 @@
 // .slider-product scripts goes here 
 
 $(function () {
-    if ($('.js-slider-product-recommended').length) {
-        $('.js-slider-product-recommended').slick({
+    if ($('.js-slider-product').length) {
+        $('.js-slider-product').slick({
             mobileFirst: true,
             dots: false,
             arrows: false,
@@ -26,8 +26,7 @@ $(function () {
                         slidesToShow: 3,
                         centerPadding: '97px'
                     }
-                }
-                ,
+                },
                 {
                     breakpoint: 1200,
                     settings: {
@@ -37,74 +36,5 @@ $(function () {
                 }
             ]
         });
-        $('.js-slider-product-related').slick({
-            mobileFirst: true,
-            dots: false,
-            arrows: false,
-            infinite: true,
-            speed: 300,
-            slidesToShow: 2,
-            centerPadding: '0',
-            centerMode: true,
-            responsive: [
-                {
-                    breakpoint: 1920,
-                    settings: {
-                        centerPadding: '336px'
-                    }
-                },
-                {
-                    breakpoint: 992,
-                    settings: {
-                        arrows: true,
-                        slidesToShow: 3,
-                        centerPadding: '97px'
-                    }
-                }
-                ,
-                {
-                    breakpoint: 1200,
-                    settings: {
-                        slidesToShow: 4,
-                        centerPadding: '150px'
-                    }
-                }
-            ]
-        });
-        $('.js-slider-product-recently-watched').slick({
-            mobileFirst: true,
-            dots: false,
-            arrows: false,
-            infinite: true,
-            speed: 300,
-            slidesToShow: 2,
-            centerPadding: '0',
-            centerMode: true,
-            responsive: [
-                {
-                    breakpoint: 1920,
-                    settings: {
-                        centerPadding: '336px'
-                    }
-                },
-                {
-                    breakpoint: 992,
-                    settings: {
-                        arrows: true,
-                        slidesToShow: 3,
-                        centerPadding: '97px'
-                    }
-                }
-                ,
-                {
-                    breakpoint: 1200,
-                    settings: {
-                        slidesToShow: 4,
-                        centerPadding: '150px'
-                    }
-                }
-            ]
-        })
-
     }
 });

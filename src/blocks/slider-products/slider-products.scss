@@ -58,9 +58,9 @@
 		//}
 	}
 	&__tab {
-		display: block !important;
+		//display: block !important;
 		&:not(:first-child) {
-			display: none !important;
+			//display: none !important;
 		}
 		@media screen and (min-width: $screen-md) {
 			padding-right:16px;

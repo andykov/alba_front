@@ -155,13 +155,16 @@ block content
 						button(id="dSize" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Размер
 						.filter__dropdown(aria-labelledby="dSize" data-dont-close)
 							.filter__dropdown-inner
-								.js-tabs.sizes
+								.sizes
 									.sizes__head
-										.sizes__type
-											span(data-tab-btn="size-ru").active ru
-											span(data-tab-btn="size-uk") uk
-											span(data-tab-btn="size-us") us
-									#size-ru.sizes__list(data-tab-body).active
+										ul.sizes__type
+											li.sizes__type-item.active
+												a(href="#size-ru" data-toggle="tab") ru
+											li.sizes__type-item
+												a(href="#size-uk" data-toggle="tab") uk
+											li.sizes__type-item
+												a(href="#size-us" data-toggle="tab") us
+									#size-ru.sizes__list.active
 										label.sizes__item
 											input(type="checkbox")
 											span 35
@@ -192,7 +195,7 @@ block content
 										label.sizes__item
 											input(type="checkbox")
 											span 42
-									#size-uk.sizes__list(data-tab-body)
+									#size-uk.sizes__list
 										label.sizes__item
 											input(type="checkbox")
 											span 3 1/2
@@ -223,7 +226,7 @@ block content
 										label.sizes__item
 											input(type="checkbox")
 											span 10
-									#size-us.sizes__list(data-tab-body)
+									#size-us.sizes__list
 										label.sizes__item
 											input(type="checkbox")
 											span 5 1/2

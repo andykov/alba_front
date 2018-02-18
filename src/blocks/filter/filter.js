@@ -48,11 +48,11 @@ $(function() {
         if (availableSpace < 0) {
             $filterTitle.fadeOut(1);
             $more.addClass('as-title');
-            // $btn.addClass('as-title').text('Фильтры');
+            $btn.addClass('as-title').text('Фильтры');
         } else {
             $filterTitle.fadeIn(1);
             $more.removeClass('as-title');
-            // $btn.removeClass('as-title').text('ЕЩЕ');
+            $btn.removeClass('as-title').text('ЕЩЕ');
         }
 
         // Update the button accordingly
@@ -63,13 +63,13 @@ $(function() {
             $btn.parent().removeClass('hidden');
         }
 
-        // if (numOfVisibleItems == 0 && availableSpace < 0) {
-        //     // $filterDropdown.removeClass('no-items').addClass('no-btn');
-        // } else if (numOfVisibleItems == 0) {
-        //     // $filterDropdown.removeClass('no-btn').addClass('no-items');
-        // } else {
-        //     // $filterDropdown.removeClass('no-items');
-        // }
+        if (numOfVisibleItems == 0 && availableSpace < 0) {
+            $filterDropdown.removeClass('no-items').addClass('no-btn');
+        } else if (numOfVisibleItems == 0) {
+            $filterDropdown.removeClass('no-btn').addClass('no-items');
+        } else {
+            $filterDropdown.removeClass('no-items');
+        }
     }
 
     // Window listeners

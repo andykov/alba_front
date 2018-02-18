@@ -119,7 +119,7 @@ block content
           .checkout-order__row
             .checkout-order__title
               h3 1. Способ доставки
-            .field-group
+            .field-group.checkout-order__address-delivery
               label.field-radio
                 span.field-radio__input-wrap
                   input.field-radio__input(type="radio" name="f-price" checked)
@@ -143,7 +143,7 @@ block content
           .checkout-order__row
             .checkout-order__title
               h3 2. Адрес доставки
-            .field-group
+            .field-group.checkout-order__group
               | <select id="deliveryCity">
               |  <option value="moscow">Москва</option>
               |  <option value="krasnodar" rel="icon-temperature">Краснодар</option>
@@ -167,14 +167,14 @@ block content
           .checkout-order__row
             .checkout-order__title
               h3 3. Способ оплаты
-            .field-group
+            .field-group.checkout-order__pay-group.checkout-order__group
               label.field-radio
                 span.field-radio__input-wrap
-                  input.field-radio__input(type="radio" name="f-price" checked)
+                  input.field-radio__input(type="radio" name="b-price" checked)
                   span.field-radio__name Наличными
               label.field-radio
                 span.field-radio__input-wrap
-                  input.field-radio__input(type="radio" name="f-price")
+                  input.field-radio__input(type="radio" name="b-price")
                   span.field-radio__name Банковской картой
           .checkout-order__row
             .checkout-order__title
@@ -203,16 +203,6 @@ block content
             .checkout-order__open
               label.field-textarea
                 textarea(placeholder="+ комментарий")
-          .checkout-basket__total
-            .checkout-basket__total-part
-              p Стоимость товаров
-              span 18 500 руб.
-            .checkout-basket__total-part
-              p Доставка
-              span +300 руб.
-            .checkout-basket__total-part
-              p Итоговая сумма
-              span 18 800 руб.
           .checkout-order__submit
             input(type="submit" value="Оформить заказ").btn.btn--wide
             p Оформляя заказ Вы принимаете публичную оферту и соглашение об обработке персональных данных (ФЗ152)

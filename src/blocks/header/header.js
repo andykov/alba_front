@@ -8,7 +8,8 @@ $(function() {
         $headerCart = $('.header__cart');
 
     var createMobileNav = function() {
-        if ($(window).width() <= 991) {
+        // if ($(window).width() <= 991) {
+        if (!window.matchMedia('(min-width: 992px)').matches) {
             $headerMobile.prepend($headerLogo, $headerCart);
         } else {
             $headerGenderInr.prepend($headerLogo);
@@ -18,7 +19,8 @@ $(function() {
 
 
     $(window).on( "resize", function () {
-        if ($(window).width() <= 991) {
+        // if ($(window).width() <= 991) {
+        if (!window.matchMedia('(min-width: 992px)').matches) {
             if ($headerMobile.children().length != 0) {
                 return false;
             }

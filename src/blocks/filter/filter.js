@@ -40,7 +40,7 @@ $(function() {
             check();
         } else if (availableSpace > breakWidths[numOfVisibleItems]) {
             $hlinks.children().first().appendTo($vlinks)
-            $vlinks.children().removeClass('dropdown--submenu');
+            $vlinks.children().removeClass('dropdown--submenu open');
             // $vlinks.children().removeAttr('data-dropdown');
             numOfVisibleItems += 1;
         }
@@ -48,11 +48,11 @@ $(function() {
         if (availableSpace < 0) {
             $filterTitle.fadeOut(1);
             $more.addClass('as-title');
-            // $btn.addClass('as-title').text('Фильтры');
+            $btn.addClass('as-title').text('Фильтры');
         } else {
             $filterTitle.fadeIn(1);
             $more.removeClass('as-title');
-            // $btn.removeClass('as-title').text('ЕЩЕ');
+            $btn.removeClass('as-title').text('ЕЩЕ');
         }
 
         // Update the button accordingly
@@ -60,16 +60,16 @@ $(function() {
         if (numOfVisibleItems === numOfItems) {
             $btn.parent().addClass('hidden');
         } else {
-            $btn.parent().removeClass('hidden');
+            $btn.parent().removeClass('hidden open');
         }
 
-        // if (numOfVisibleItems == 0 && availableSpace < 0) {
-        //     // $filterDropdown.removeClass('no-items').addClass('no-btn');
-        // } else if (numOfVisibleItems == 0) {
-        //     // $filterDropdown.removeClass('no-btn').addClass('no-items');
-        // } else {
-        //     // $filterDropdown.removeClass('no-items');
-        // }
+        if (numOfVisibleItems == 0 && availableSpace < 0) {
+            $filterDropdown.removeClass('no-items').addClass('no-btn');
+        } else if (numOfVisibleItems == 0) {
+            $filterDropdown.removeClass('no-btn').addClass('no-items');
+        } else {
+            $filterDropdown.removeClass('no-items');
+        }
     }
 
     // Window listeners

@@ -205,15 +205,15 @@ block content
 				.product-tabs.product-tabs--adress
 					.product-tabs__nav
 						span.product-tabs__city Ваш город: Москва
-						ul
-							li.active
-								a(href="#available") наличие в магазинах
-							li
-								a(href="#delivery") доставка и примерка
-							li
-								a(href="#payment") оплата
-							li
-								a(href="#reviews") отзывы
+						ul.product-tabs__nav
+							li.product-tabs__tab.active
+								a(href="#available").product-tabs__link наличие в магазинах
+							li.product-tabs__tab
+								a(href="#delivery").product-tabs__link доставка и примерка
+							li.product-tabs__tab
+								a(href="#payment").product-tabs__link оплата
+							li.product-tabs__tab
+								a(href="#reviews").product-tabs__link отзывы
 					.product-tabs__body
 						#available.product-tabs__item.active
 							.shops
@@ -266,25 +266,27 @@ block content
 							| EMPTY ...
 						#reviews.product-tabs__item
 							| EMPTY ...
+
 	.product-tabs.slider-products
-		.product-tabs__nav.slider-products__nav
-			ul.slider-products__list
-				li.slider-products__item.active
-					a.slider-products__link(href="#recommended") Рекомендуем
-				li.slider-products__item
-					a.slider-products__link(href="#related") Похожие товары
-				li.slider-products__item
-					a.slider-products__link(href="#recently-watched") Вы недавно смотрели
-		.product-tabs__body.slider-products__body
-			#recommended.product-tabs__item.slider-products__tab.active
-				.js-slider-product-recommended
-					+slider-product()
-			#related.product-tabs__item.slider-products__tab
-				.js-slider-product-related
-					+slider-product()
-			#recently-watched.product-tabs__item.slider-products__tab
-				.js-slider-product-recently-watched
-					+slider-product()
+		.container.slider-products__nav-inner
+			ul.product-tabs__nav.slider-products__nav
+				li.product-tabs__tab.slider-products__item.active
+					a.product-tabs__link.slider-products__link(href="#recommended") Рекомендуем
+				li.product-tabs__tab.slider-products__item
+					a.product-tabs__link.slider-products__link(href="#related") Похожие товары
+				li.product-tabs__tab.slider-products__item
+					a.product-tabs__link.slider-products__link(href="#recently-watched") Вы недавно смотрели
+		.container.slider-products__inner
+			.product-tabs__body.slider-products__body
+					#recommended.product-tabs__item.slider-products__tab.active
+						.js-slider-product-recommended
+							+slider-product()
+					#related.product-tabs__item.slider-products__tab
+						.js-slider-product-related
+							+slider-product()
+					#recently-watched.product-tabs__item.slider-products__tab
+						.js-slider-product-recently-watched
+							+slider-product()
 
 
 block js_libs

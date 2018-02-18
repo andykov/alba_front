@@ -14,6 +14,11 @@
     @media (max-width: $screen-sm) {
 
     }
+    .sizes__item span {
+      @media screen and (min-width: $screen-md) {
+        font-size: 14px;
+      }
+    }
     .sizes__item {
       font-size: 12px;
     }
@@ -365,23 +370,29 @@
       flex-direction: column;
     }
 
-
     &__address-delivery {
+      display: flex;
+      .field-radio__help-text {
+        display: block;
+
+      }
+      .radio__name {
+        margin-right: 32px;
+      }
       @media (min-width: $screen-xl) {
-        display: flex;
         flex-direction: row;
         justify-content: space-between;
       }
     }
     &__pay-group {
-          @media (min-width: $screen-xl) {
-            display: flex;
-            flex-direction: row;
-            span.field-radio__name {
-              margin-right: 32px;
-            }
-          }
+      @media (min-width: $screen-xl) {
+        display: flex;
+        flex-direction: row;
+        span.field-radio__name {
+          margin-right: 32px;
         }
+      }
+    }
 
     .list-dots-style {
       font-size: 12px;

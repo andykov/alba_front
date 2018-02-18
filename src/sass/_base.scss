@@ -243,9 +243,38 @@ p {
 }
 
 .share-line {
-	&__btn {
+	border-top: 1px solid #e6e6e6;
+	border-bottom: 1px solid #e6e6e6;
+	padding-top: 3.875%;
+	padding-bottom: 3.875%;
+
+	&__btn,
+	&__text {
 		text-align: center;
 	}
+
+	&__text {
+		margin-bottom: 3.875%;;
+		font-family: $font-family--montserrat;
+		font-size: 11px;
+		font-weight: 600;
+		text-transform: uppercase;
+		line-height: 1.45;
+		letter-spacing: 0.4px;
+		color: #000000;
+
+		@media screen and (min-width: $screen-md) {
+			margin-bottom: 0;
+			margin-left: -12px;
+			text-align: left;
+			line-height: 32px;
+		}
+
+		@media screen and (min-width: $screen-lg) {
+			margin-left: -16px;
+		}
+	}
+
 }
 
 .card-detail {

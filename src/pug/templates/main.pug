@@ -1,4 +1,4 @@
-//include ../mixins/svg-icon.pug
+include ../../blocks/header/header.pug
 include ../../blocks/sidenav/sidenav.pug
 include ../../blocks/tile/tile.pug
 include ../../blocks/product/product.pug
@@ -40,7 +40,8 @@ html(lang="ru")
 
 	body
 
-		include ../../blocks/header/header
+		block header
+			+header()
 
 		main.content
 			block content

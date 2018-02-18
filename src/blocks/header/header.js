@@ -37,5 +37,10 @@ $(function() {
         $headerNavs.toggleClass('open');
     });
 
+    // при открытии корзины скрывать меню если открыто
+    $('.panel-cart [data-toggle="dropdown"]').on('click', function () {
+        $('.header-navs.open').removeClass('open');
+    });
+
 
 });

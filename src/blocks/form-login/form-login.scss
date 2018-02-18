@@ -2,7 +2,7 @@
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий... 
 
 .fancybox-stage {
-  .form-login {
+  .form-login-wrap {
     //opacity: 0;
     //visibility: hidden;
 
@@ -16,18 +16,150 @@
   }
 }
 .form-login {
-  background-color: #fff;
-  position: fixed;
-  right: 0;
+
+  &-wrap {
+    background-color: #fff;
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    transform: translateX(100%);
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+    z-index: 10;
+
+
+    @media screen and (min-width: $screen-lg) {
+      width: 460px;
+    }
+
+    .fancybox-close-small {
+      position: fixed;
+    }
+  }
+
+  position: absolute;
   top: 0;
   bottom: 0;
-  height: 100%;
-  width: 460px;
-  padding: 40px;
-  margin: 0;
-  transform: translateX(100%);
-  transition: all 0.3s ease-in-out;
-  opacity: 0;
-  z-index: 10;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 312px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+
+  @media screen and (min-width: $screen-md) {
+    padding: 0;
+  }
+
+  @media (orientation: landscape) and (max-width: $screen-lg) {
+    min-height: 370px;
+  }
+
+  &__head {
+    margin-bottom: 28px;
+    font-family: $font-family--montserrat;
+
+    @media screen and (min-width: $screen-lg) {
+      margin-bottom: 57px;
+    }
+
+    span {
+      display: inline-block;
+      width: 50%;
+      font-size: 26px;
+      font-weight: 900;
+      line-height: 1.31;
+      letter-spacing: normal;
+      text-align: left;
+    }
+
+    a {
+      display: inline-block;
+      width: 50%;
+      font-size: 11px;
+      font-weight: 600;
+      line-height: 1.45;
+      letter-spacing: 0.4px;
+      text-transform: uppercase;
+      text-align: right;
+    }
+  }
+
+  &__social {
+    margin-bottom: 42px;
+
+    @media screen and (min-width: $screen-lg) {
+      margin-bottom: 63px;
+    }
+
+    span {
+      display: inline-block;
+      width: 100%;
+      margin-bottom: 8px;
+      font-family: $font-family--montserrat;
+      font-family: Montserrat;
+      font-size: 11px;
+      font-weight: 600;
+      line-height: 1.45;
+      letter-spacing: 0.4px;
+      text-transform: uppercase;
+
+      @media screen and (min-width: $screen-lg) {
+        margin-bottom: 12px;
+      }
+    }
+  }
+
+  form {
+    margin-bottom: 6vh;
+  }
+
+  .field-text {
+    margin-bottom: 8px;
+
+    &:last-of-type {
+      margin-bottom: 20px;
+
+      @media screen and (min-width: $screen-lg) {
+        margin-bottom: 32px;
+      }
+    }
+
+    &__name {
+      min-width: 20%;
+      @media screen and (min-width: $screen-md) {
+       min-width: calc(100% - 248px);
+     }
+
+    }
+
+    &__input-wrap {
+      max-width: 248px;
+    }
+  }
+
+  .field-control {
+    .btn {
+      width: 100%;
+      padding: 0;
+      border: none;
+      line-height: 40px;
+      letter-spacing: 0.4px;
+      color: #000;
+
+      &:active {
+        color: #fff;
+      }
+    }
+  }
+
+
 
 }

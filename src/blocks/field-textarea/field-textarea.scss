@@ -1,0 +1,47 @@
+// В этом файле должны быть стили для БЭМ-блока .field-textarea , его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий... 
+
+.field-textarea {
+  display: block;
+  margin-bottom: 0;
+  textarea {
+    max-width: 328px;
+    width: 100%;
+    resize: vertical;
+    border: solid 1px transparent;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 20px;
+    max-height: 40px;
+    padding: 8px 15px 10px 0;
+    transition: max-height 0.5s ease;
+
+    &::-webkit-input-placeholder {
+      font-family: $font-family--montserrat;
+      font-size: 10px;
+      font-weight: 600;
+      line-height: 1.6;
+      letter-spacing: 0.4px;
+      color: #000;
+      text-transform: uppercase;
+      transition: opacity 0.2s ease;
+      opacity: 1;
+      @media (min-width: $screen-md) {
+        font-size: 11px;
+        line-height: 1.45;
+        color: #1db4b7;
+      }
+    }
+    &:focus {
+      padding-left: 15px;
+      max-height: 200px;
+      outline: none;
+      background-color: #E9F6F6;
+      border-color: #60d3d5;
+      &::-webkit-input-placeholder {
+        opacity: 0;
+      }
+    }
+  }
+}

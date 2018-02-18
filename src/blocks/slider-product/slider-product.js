@@ -20,31 +20,18 @@ $(function () {
                     }
                 },
                 {
-                    breakpoint: 1200,
-                    settings: {
-                        slidesToShow: 4,
-                        centerPadding: '150px'
-                    }
-                },
-                {
                     breakpoint: 992,
                     settings: {
                         arrows: true,
                         slidesToShow: 3,
                         centerPadding: '97px'
                     }
-                }
-                ,
+                },
                 {
-                    breakpoint: 768,
+                    breakpoint: 1200,
                     settings: {
-                        arrows: true,
-                        rows: 2,
-                        slidesPerRow: 1,
-                        // slidesToShow: 2,
-                        // slidesToShow: 1,
-                        // slidesToScroll: 1,
-                        centerPadding: '97px'
+                        slidesToShow: 4,
+                        centerPadding: '150px'
                     }
                 }
             ]

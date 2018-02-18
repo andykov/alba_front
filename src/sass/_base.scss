@@ -865,10 +865,12 @@ p {
 
 .price {
 	text-align: right;
+
 	span {
 		display: block;
 		font-size: 12px;
 		line-height: (20 / 12);
+		white-space: nowrap;
 		& + span {
 			font-size: 12px;
 			color: #1eb4b7;

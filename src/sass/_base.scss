@@ -317,10 +317,15 @@ p {
 }
 
 .banner-horizontal {
-	margin-bottom: 48px;
+	margin-top: 23px;
+	margin-bottom: 23px;
 	text-align: center;
 }
-
+.stock {
+	@media screen and (min-width: $screen-xl) {
+		padding-bottom: 56px;
+	}
+}
 .colors {
 	display: flex;
 	flex-wrap: wrap;

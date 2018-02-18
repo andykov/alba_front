@@ -74,15 +74,27 @@ block content
 								.checkout-basket__sizes
 									.sizes
 										.sizes__list
-											label.sizes__item
-												input(type="radio" name="size")
+											div.sizes__item
 												span 37
-											label.sizes__item
-												span +
+											div.sizes__item.dropdown
+												| <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">+</button>
+												.dropdown-menu(data-dont-close)
+													.sizes
+														.sizes__list
+															label.sizes__item
+																input(type="radio" name="size")
+																span 35
+															label.sizes__item
+																input(type="radio" name="size")
+																span 35
 											div.sizes__item.sizes__item--text
 												span Размеры для примерки
 					.checkout-basket__sales
-						span Промокод
+						| <label class="field-text">
+						|  <span class="field-text__input-wrap">
+						|    <input class="field-text__input" type="text">
+						|  </span>
+						| </label>
 						span Карта
 					.checkout-basket__total
 						.checkout-basket__total-part
@@ -125,6 +137,23 @@ block content
 						.checkout-order__title
 							h3 2. Адрес доставки
 						.field-group
+							|<select id="deliveryCity">
+							|	<option value="moscow">Москва</option>
+							|	<option value="krasnodar" rel="icon-temperature">Краснодар</option>
+							|	<option value="kazan">Казань</option>
+							|</select>
+							//.field-select
+							//	.field-select__text-name
+							//	.field-select__pseudoselect(id="city" data-toggle="dropdown" aria-haspopup="false" aria-expanded="true") Москва
+							//	.field-select__drop(aria-labelledby="city")
+							//		label.field-radio
+							//			span.field-radio__input-wrap
+							//				input.field-radio__input(type="radio" name="f-price")
+							//				span.field-radio__name Наличными
+							//		label.field-radio
+							//			span.field-radio__input-wrap
+							//				input.field-radio__input(type="radio" name="f-price")
+							//				span.field-radio__name Наличными
 							label.field-text
 								span.field-text__input-wrap
 									input.field-text__input(type="text" placeholder="Улица, дом, квартира (офис)")
@@ -146,7 +175,7 @@ block content
 							span.login-link Уже зарегистрированы?
 								a(href="") Войдите
 								| и поля заполнятся
-						.field-group
+						.checkout-order__contacts
 							label.field-text
 								span.field-text__name Имя
 								span.field-text__input-wrap

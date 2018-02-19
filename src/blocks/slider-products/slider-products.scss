@@ -15,8 +15,8 @@
 	@media screen and (min-width: $screen-md) {
 		margin-bottom: -50px;
 		padding-top: 70px;
-		padding-right: 28px;
-		padding-left: 28px;
+		//padding-right: 32px;
+		//padding-left: 32px;
 	}
 	@media screen and (min-width: $screen-lg) {
 		padding-right: 0;
@@ -27,18 +27,18 @@
 		padding-top: 129px;
 		margin-bottom: -40px;
 	}
-	.slick-list {
-		margin-right: -4px;
-		margin-left: -4px;
-		@media screen and (min-width: $screen-md) {
-			margin-right: -48px;
-			margin-left: -48px;
-		}
-		@media screen and (min-width: $screen-md) {
-			margin-right: -52px;
-			margin-left: -52px;
-		}
-	}
+	//.slick-list {
+	//	margin-right: -4px;
+	//	margin-left: -4px;
+	//	@media screen and (min-width: $screen-md) {
+	//		margin-right: -48px;
+	//		margin-left: -48px;
+	//	}
+	//	@media screen and (min-width: $screen-md) {
+	//		margin-right: -52px;
+	//		margin-left: -52px;
+	//	}
+	//}
 	&__nav {
 		margin-bottom: 21px;
 		@media screen and (min-width: $screen-md) {
@@ -59,16 +59,25 @@
 	}
 	&__tab {
 		//display: block !important;
+
 		&:not(:first-child) {
 			//display: none !important;
 		}
 		@media screen and (min-width: $screen-md) {
-			padding-right:16px;
-			padding-left:16px;
+			//padding-right:16px;
+			//padding-left:16px;
 		}
 		@media screen and (min-width: $screen-lg) {
 			padding-right: 0;
 			padding-left: 0;
+			margin: 0 -8px;
+			margin: 0 -44px; // отступ контейнера (36) + отступ у body (8)
+		}
+		@media screen and (min-width: $screen-xl) {
+			margin: 0 -75px; // отступ у body (32px) + ширина вылезающей части слайда (43px)
+		}
+		@media screen and (min-width: $screen-xxl) {
+			margin: 0 -140px; // отступ контейнера + отступ у body
 		}
 	}
 	&__inner {
@@ -77,8 +86,16 @@
 		}
 		@media screen and (min-width: $screen-lg) {
 			width: auto;
-			margin-right: 28px;
-			margin-left: 28px;
+			margin-right: 36px; // отступ контенера
+			margin-left: 36px; // отступ контенера
+		}
+		@media screen and (min-width: $screen-xl) {
+			margin-right: 43px; // отступ контенера
+			margin-left: 43px; // отступ контенера
+		}
+		@media screen and (min-width: $screen-xxl) {
+			margin-right: 108px; // отступ контенера
+			margin-left: 108px; // отступ контейнера
 		}
 	}
 	&__item {

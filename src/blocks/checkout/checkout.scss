@@ -283,7 +283,7 @@
         width: 100%;
         height: 0;
         box-shadow: 0 32px 64px 0 rgba(0, 2, 14, 0.15);
-        z-index: 1;
+        z-index: -1;
       }
     }
 
@@ -291,6 +291,8 @@
       color: #3C3C3C;
       opacity: 0;
       transition: all 0.25s;
+      position: relative;
+      z-index: 1;
     }
     &__sales {
       display: flex;

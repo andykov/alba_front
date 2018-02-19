@@ -1,67 +1,146 @@
 // В этом файле должны быть стили для БЭМ-блока .breadcrumbs , его элементов, 
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий... 
 .breadcrumbs {
-  display: inline-flex;
-  position: relative;
-  &:after {
-	content: '';
-	position: absolute;
-	top: 50%;
-	width: 100%;
-	border-bottom: 1px solid #E6E6E6;
-  }
-  &__item {
-	font-size: 14px;
 	position: relative;
-	background-color: #fff;
-	z-index: 1;
+	display: inline-flex;
+	margin-bottom: 12px;
+	padding-left: 16px;
 
-	&:first-child {
-	  a {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		padding: 0;
-		width: 32px;
-		height: 32px;
-		font-size: 0;
-		@media screen and (min-width: $screen-md) {
-		  width: 40px;
-		  height: 40px;
-		}
-	  }
+	&:after {
+		content: '';
+		position: absolute;
+		left: 16px;
+		top: 50%;
+		width: calc(100% - 16px);
+		border-bottom: 1px solid #E6E6E6;
 	}
-	&:not(:last-child) {
-	  margin-right: 9px;
-	  @media (min-width: $screen-md) {
-		margin-right: 12px;
-	  }
+
+	@media screen and (min-width: $screen-md) {
+		margin-bottom: 24px;
+		padding-left: 32px;
+
+		&:after {
+			left: 32px;
+			width: calc(100% - 32px);
+		}
 	}
-	a {
-	  display: block;
-	  padding: 4.5px 8.5px;
-	  border: 1px solid #E6E6E6;
-	  font-size: 12px;
-	  svg {
-		fill: rgba(#1a1919, .4);
-	  }
-	  &:hover {
-		svg {
-		  fill: #1DB4B7;
+
+	@media screen and (min-width: $screen-xl) {
+		padding-left: 43px;
+
+		&:after {
+			left: 43px;
+			width: calc(100% - 43px);
 		}
-		border-color: $primary-color;
-	  }
-	  &:active {
-		border-color: #000;
-		color: #000;
-		svg {
-		  fill: #000;
+	}
+
+	@media screen and (min-width: $screen-xxl) {
+		padding-left: 48px;
+
+		&:after {
+			left: 48px;
+			width: calc(100% - 48px);
 		}
-	  }
-	  @media (min-width: $screen-md) {
-		padding: 9.5px 14.5px;
+	}
+
+	&__item {
 		font-size: 14px;
-	  }
+		position: relative;
+		z-index: 1;
+		background: #f8f8f8;
+
+		&--bg-white {
+			background: #ffffff;
+		}
+
+		&:first-child {
+			display: none;
+			@media screen and (min-width: $screen-md) {
+				display: block;
+			}
+			a {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				padding: 0;
+				width: 32px;
+				height: 32px;
+				font-size: 0;
+				@media screen and (min-width: $screen-md) {
+					width: 40px;
+					height: 40px;
+				}
+			}
+		}
+		&:not(:last-child) {
+			margin-right: 9px;
+			@media (min-width: $screen-md) {
+				margin-right: 12px;
+			}
+		}
+		a {
+			display: block;
+			padding: 0 8.5px;
+			border: 1px solid #E6E6E6;
+			font-size: 12px;
+			line-height: 30px;
+			svg {
+				fill: rgba(#1a1919, .4);
+			}
+			&:hover {
+				svg {
+					fill: #1DB4B7;
+				}
+				border-color: $primary-color;
+			}
+			&:active {
+				border-color: #000;
+				color: #000;
+				svg {
+					fill: #000;
+				}
+			}
+			@media (min-width: $screen-md) {
+				padding: 0 14.5px;
+				font-size: 14px;
+				line-height: 38px;
+			}
+		}
 	}
-  }
+
+	&__title {
+		position: relative;
+		margin-bottom: 0;
+		padding-left: 9px;
+		padding-right: 34px;
+		font-family: $font-family--montserrat;
+		font-size: 16px;
+		font-weight: 700;
+		line-height: 32px;
+		letter-spacing: normal;
+		color: #000000;
+
+		@media screen and (min-width: $screen-md){
+			padding-left: 14px;
+			padding-right: 42px;
+			font-size: 26px;
+			line-height: 40px;
+		}
+	}
+
+	&__quantity {
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-family: $font-family;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: 0.4px;
+    color: #3c3c3c;
+
+    @media screen and (min-width: $screen-md) {
+    	 font-size: 14px;
+    }
+	}
 }

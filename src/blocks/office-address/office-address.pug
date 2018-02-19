@@ -1,0 +1,35 @@
+mixin office-address()
+	.office-address
+		form
+
+			+address-choice('checked')
+			+address-choice()
+
+			fieldset.form-group
+				button.btn.btn--border Добавить адрес
+
+			.form-control
+				button.btn Сохранить
+
+
+
+mixin address-choice(radioChecked)
+	fieldset.form-group
+		.office-address__select
+			select
+				option Москва
+				option Санкт-Петербург
+				option Владивосток
+
+		.office-address__input
+			input.field-text__input(type="text" placeholder="ул. Железнодорожная, д. 18, к. 1, кв 37")
+
+		.office-address__radio
+			label.field-radio
+				span
+					if (radioChecked)
+						input.field-radio__input(type="radio" name="default-address" checked=radioChecked)
+					else
+						input.field-radio__input(type="radio" name="default-address")
+					span.field-radio__name
+						| По умолчанию

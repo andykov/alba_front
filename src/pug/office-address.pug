@@ -1,0 +1,23 @@
+extends templates/main
+
+block title
+	title  Личный кабинет | Адрес
+
+block content
+	h1.content__title Личный кабинет
+	.container
+		.row
+			.col-12.col-xl-3.col-xxl-3
+				+sidenav()
+
+			.col-12.col-xl-9.col-xxl-12.office-card-wrap.office-card-wrap--address
+				.office-card
+					.office-card__title
+						h2.h1 Адреса доставки
+						p Ваши личные данные надежно хранятся и будут автоматически заполнятся в форме оформления заказа
+
+					.office-card__content
+						include ../blocks/office-address/office-address
+						+office-address()
+
+block js_libs

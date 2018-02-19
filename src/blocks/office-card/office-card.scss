@@ -1,0 +1,91 @@
+// В этом файле должны быть стили для БЭМ-блока .office-card , его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий... 
+
+.office-card {
+	&-wrap {
+		background-color: #fff;
+		padding-top: 23px;
+		padding-bottom: 24px;
+
+		&--address {
+			padding-bottom: 0;
+		}
+
+		@media screen and (min-width: $screen-md) {
+			position: relative;
+			padding-top: 52px;
+			padding-bottom: 59px;
+
+			&--address {
+				padding-bottom: 0;
+			}
+
+
+			&::before {
+				content: '';
+				position: absolute;
+				z-index: -1;
+				left: -24px;
+				right: -24px;
+				top: 0;
+				bottom: 0;
+				background: #fff;
+			}
+		}
+
+		@media screen and (min-width: $screen-xl) {
+			padding-top: 0;
+			padding-bottom: 0;
+			&--address {
+				.office-card {
+					padding-bottom: 0;
+				}
+			}
+
+			background: transparent;
+			&::before {
+				display: none;
+			}
+		}
+	}
+
+	@media screen and (min-width: $screen-xl) {
+		padding-top: 84px;
+		padding-bottom: 59px;
+		padding-left: 10%;
+		padding-right: 10%;
+		margin-bottom: 88px;
+		background: #fff;
+	}
+
+	@media screen and (min-width: 1366px) {
+		padding-left: 104px;
+		padding-right: 104px;
+	}
+
+	@media screen and (min-width: $screen-xxl) {
+		margin-bottom: 96px;
+		padding-left: 112px;
+		padding-right: 112px;
+	}
+
+	&__title {
+		margin-bottom: 25px;
+
+		@media screen and (min-width: $screen-md) {
+			margin-bottom: 64px;
+		}
+
+		h2 {
+			margin-bottom: 2px;
+			font-family: $font-family--montserrat;
+
+			@media screen and (min-width: $screen-md) {
+				margin-bottom: 4px;
+			}
+		}
+		p {
+			margin-bottom: 0;
+		}
+	}
+}

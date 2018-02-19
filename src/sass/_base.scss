@@ -10,7 +10,7 @@ body {
 	letter-spacing: 0.3px;
 	background-color: #f8f8f8;
 	color: $text-color;
-	overflow-x: hidden;
+	//overflow-x: hidden;
 
 	@media screen and (min-width: $screen-md) {
 		font-size: 16px;
@@ -167,6 +167,34 @@ p {
 .tmb-wrap-table div.active {
   border-bottom-color: transparent;
 }
+
+.centerbg1 {
+  display: none;
+  width:100%;
+  height:100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 1000;
+  background: url('/design/im/texture1.jpg') #3c363e;
+}
+
+.centerbg2 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+
+#preloader {
+  top: -50%;
+  left: -50%;
+  position: relative;
+  width: 333px;
+  height: 26px;
+  background: url('/content/pages/articles/preloaders/bg2.gif');
+  border: solid #edda3d 2px;
+}
+
 
 .collapse {
   &__body {
@@ -359,11 +387,14 @@ p {
 
 .content {
   padding: 32px 0;
-
+  margin-bottom: 22px;
+  line-height: 1.25;
   &__title {
     @media screen and (min-width: $screen-md) {
       padding-left: 32px;
       padding-right: 32px;
+      margin-bottom: 28px;
+      line-height: 1.31;
     }
     @media screen and (min-width: $screen-lg) {
       padding-left: 36px;
@@ -882,254 +913,204 @@ p {
 }
 
 .price {
-  text-align: right;
-  span {
-    display: block;
-    font-size: 12px;
-    line-height: (24 / 12);
-    & + span {
-      font-size: 12px;
-      padding-top: 6px;
-      color: #1eb4b7;
-    }
+	text-align: right;
 
-    @media screen and (min-width: $screen-md) {
-      font-size: 18px;
-      line-height: (24 / 18);
-      & + span {
-        margin-bottom: 5px;
-        padding-top: 4px;
-        font-size: 13px;
+	span {
+		display: block;
+		font-size: 12px;
+		line-height: (20 / 12);
+		white-space: nowrap;
+		& + span {
+			font-size: 12px;
+			color: #1eb4b7;
+		}
 
-        @media screen and (min-width: $screen-md) {
-          margin-bottom: 0;
-        }
-      }
-    }
-  }
-  [data-old-price] {
-    font-size: 13px;
-    font-weight: 600;
-    line-height: 2;
-    color: #000000;
-    @media (min-width: $screen-md) {
-      margin-bottom: 4px;
-      font-size: 21px;
-      line-height: 1.24;
-      letter-spacing: -0.2px;
-    }
-    &:before {
-      content: attr(data-old-price);
-      opacity: 0.3;
-      text-decoration: line-through;
-      margin-right: 12px;
-      font-size: 12px;
-      font-weight: 300;
-      line-height: 1.6;
-      color: #000000;
-      @media (min-width: $screen-md) {
-        font-size: 15px;
-      }
-    }
-  }
+		@media screen and (min-width: $screen-md) {
+			font-size: 18px;
+			line-height: (24 / 18);
+
+			& + span {
+				margin-bottom: 5px;
+				font-size: 13px;
+
+				@media screen and (min-width: $screen-md) {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+	[data-old-price] {
+		//font-size: 13px;
+		//font-weight: 300;
+		//line-height: 2;
+		//color: #000000;
+		@media (min-width: $screen-md) {
+			//margin-bottom: 4px;
+			//font-size: 21px;
+			//line-height: 1.24;
+			//letter-spacing: -0.2px;
+		}
+		&:before {
+			content: attr(data-old-price);
+			opacity: 0.3;
+			text-decoration: line-through;
+			margin-right: 12px;
+			font-size: 12px;
+			font-weight: 300;
+			line-height: 1.6;
+			color: #000000;
+			@media (min-width: $screen-md) {
+				font-size: 15px;
+			}
+		}
+	}
 }
-  //.price {
-  //	text-align: right;
-  //	span {
-  //		display: block;
-  //		font-size: 12px;
-  //		line-height: (20 / 12);
-  //		& + span {
-  //			font-size: 12px;
-  //			color: #1eb4b7;
-  //		}
-  //
-  //		@media screen and (min-width: $screen-md) {
-  //			font-size: 18px;
-  //			line-height: (24 / 18);
-  //
-  //			& + span {
-  //				margin-bottom: 5px;
-  //				font-size: 13px;
-  //
-  //				@media screen and (min-width: $screen-md) {
-  //					margin-bottom: 0;
-  //				}
-  //			}
-  //		}
-  //	}
-  //	[data-old-price] {
-  //		//font-size: 13px;
-  //		//font-weight: 300;
-  //		//line-height: 2;
-  //		//color: #000000;
-  //		@media (min-width: $screen-md) {
-  //			//margin-bottom: 4px;
-  //			//font-size: 21px;
-  //			//line-height: 1.24;
-  //			//letter-spacing: -0.2px;
-  //		}
-  //		&:before {
-  //			content: attr(data-old-price);
-  //			opacity: 0.3;
-  //			text-decoration: line-through;
-  //			margin-right: 12px;
-  //			font-size: 12px;
-  //			font-weight: 300;
-  //			line-height: 1.6;
-  //			color: #000000;
-  //			@media (min-width: $screen-md) {
-  //				font-size: 15px;
-  //			}
-  //		}
-  //	}
-  //}
 
-  .product-desc {
-    padding-top: 20px;
-    font-size: 14px;
-    @include col(md, 6, 12, 88px);
-    @include col(xl, 3, 12, 0);
-    @media screen and (min-width: $screen-md) {
-      padding-top: 65px;
-    }
-    @media screen and (min-width: $screen-xl) {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      padding-top: 102px;
-    }
-    @media screen and (min-width: $screen-lg) and (max-width: $screen-xl) {
-      order: 1;
-    }
-    @media screen and (min-width: $screen-xxl) {
-      padding-top: 155px;
-    }
-    &__list {
-      margin-bottom: 24px;
-      @media screen and (min-width: $screen-md) {
-        margin-bottom: 60px;
-      }
-      @media screen and (min-width: $screen-xl) {
-        margin-bottom: 65px;
-      }
-      li {
-        display: flex;
-        margin-bottom: 8px;
-        @media screen and (min-width: $screen-md) {
-          margin-bottom: 5px;
-        }
-      }
-      span {
-        display: block;
-        flex: 1;
-        line-height: 1.5;
-        letter-spacing: 0.4px;
-        font-size: 12px;
-        &:first-child {
-          flex: 1.4;
-          @media screen and (min-width: $screen-xl) {
-            flex: .7;
-          }
-        }
-        @media screen and (min-width: $screen-md) {
-          font-size: 14px;
-        }
-      }
-    }
-    &__text {
-      margin-bottom: 33px;
-      font-size: 12px;
-      letter-spacing: 0.3px;
-      line-height: 1.5;
-      @media screen and (min-width: $screen-md) {
-        margin-bottom: 68px;
-        font-size: 14px;
-      }
-    }
-    &__share {
-      display: block;
-      margin-bottom: 14px;
-      font: 600 11px/1.45 $font-family--montserrat;
-      letter-spacing: 0.4px;
-      text-transform: uppercase;
-      color: #000000;
-    }
-  }
+.product-desc {
+	padding-top: 20px;
+	font-size: 14px;
+	@include col(md, 6, 12, 88px);
+	@include col(xl, 3, 12, 0);
+	@media screen and (min-width: $screen-md) {
+		padding-top: 65px;
+	}
+	@media screen and (min-width: $screen-xl) {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		padding-top: 102px;
+	}
+	@media screen and (min-width: $screen-lg) and (max-width: $screen-xl) {
+		order: 1;
+	}
+	@media screen and (min-width: $screen-xxl) {
+		padding-top: 155px;
+	}
+	&__list {
+		margin-bottom: 24px;
+		@media screen and (min-width: $screen-md) {
+			margin-bottom: 60px;
+		}
+		@media screen and (min-width: $screen-xl) {
+			margin-bottom: 65px;
+		}
+		li {
+			display: flex;
+			margin-bottom: 8px;
+			@media screen and (min-width: $screen-md) {
+				margin-bottom: 5px;
+			}
+		}
+		span {
+			display: block;
+			flex: 1;
+			line-height: 1.5;
+			letter-spacing: 0.4px;
+			font-size: 12px;
+			&:first-child {
+				flex: 1.4;
+				@media screen and (min-width: $screen-xl) {
+					flex: .7;
+				}
+			}
+			@media screen and (min-width: $screen-md) {
+				font-size: 14px;
+			}
+		}
+	}
+	&__text {
+		margin-bottom: 33px;
+		font-size: 12px;
+		letter-spacing: 0.3px;
+		line-height: 1.5;
+		@media screen and (min-width: $screen-md) {
+			margin-bottom: 68px;
+			font-size: 14px;
+		}
+	}
+	&__share {
+		display: block;
+		margin-bottom: 14px;
+		font: 600 11px/1.45 $font-family--montserrat;
+		letter-spacing: 0.4px;
+		text-transform: uppercase;
+		color: #000000;
+	}
+}
 
-  .status {
+.status {
 
-    &::before {
-      content: '';
-      display: inline-block;
-      width: 8px;
-      height: 8px;
-      margin-right: 7px;
-      border-radius: 50%;
-    }
+	&::before {
+		content: '';
+		display: inline-block;
+		width: 8px;
+		height: 8px;
+		margin-right: 7px;
+		border-radius: 50%;
+	}
 
-    &--transit {
+	&--transit {
 
-      &::before {
-        background: #4a90e2;
-      }
-    }
-    &--canceled {
+		&::before {
+			background: #4a90e2;
+		}
+	}
+	&--canceled {
 
-      &::before {
-        background: #c2c2c2;
-      }
-    }
-    &--done {
+		&::before {
+			background: #c2c2c2;
+		}
+	}
+	&--done {
 
-      &::before {
-        background: #7ed321;
-      }
-    }
-  }
+		&::before {
+			background: #7ed321;
+		}
+	}
+}
 
-  .select-color {
-    margin-right: 8px;
-    margin-bottom: 0;
-    &__input {
-      display: none;
-    }
-    &__input:checked + .select-color__name {
-      display: block;
-      border-bottom: 2px solid #60d3d5;
-    }
-    &__name {
-      position: relative;
-      display: block;
-      padding-bottom: 6px;
-      cursor: pointer;
-      @media screen and (min-width: $screen-md) {
-        padding-bottom: 4px;
-      }
-      @media screen and (min-width: $screen-xl) {
-        padding-bottom: 6px;
-      }
-      &::before {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 100%;
-        right: 0;
-        bottom: 10px;
-        opacity: 0;
-        transition: top 0.4s ease-in-out, opacity 0.6s ease-in-out;
-        @media screen and (min-width: $screen-md) {
-          bottom: 3px;
-        }
-      }
-      @media screen and (min-width: $screen-md) {
-        padding-bottom: 10px;
+.select-color {
+	margin-right: 8px;
+	margin-bottom: 0;
+	&__input {
+		display: none;
+	}
+	&__input:checked + .select-color__name {
+		display: block;
+		border-bottom: 2px solid #60d3d5;
+	}
+	&__name {
+		position: relative;
+		display: block;
+		padding-bottom: 6px;
+		cursor: pointer;
+		@media screen and (min-width: $screen-md) {
+			padding-bottom: 4px;
+		}
+		@media screen and (min-width: $screen-xl) {
+			padding-bottom: 6px;
+		}
+		&::before {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 100%;
+			right: 0;
+			bottom: 10px;
+			opacity: 0;
+			transition: top 0.4s ease-in-out, opacity 0.6s ease-in-out;
+			@media screen and (min-width: $screen-md) {
+				bottom: 3px;
+			}
+		}
+		@media screen and (min-width: $screen-md) {
+			padding-bottom: 10px;
 
-      }
-    }
-    &:hover .select-color__name::before {
-      top: 0;
-      opacity: 1;
-      background-image: linear-gradient(-180deg, rgba(96, 211, 213, 0) 50%, rgba(96, 211, 213, .66) 100%);
-    }
-  }
+		}
+	}
+	&:hover .select-color__name::before {
+		top: 0;
+		opacity: 1;
+		background-image: linear-gradient(-180deg, rgba(96, 211, 213, 0) 50%, rgba(96, 211, 213, .66) 100%);
+	}
+}

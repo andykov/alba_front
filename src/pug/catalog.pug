@@ -155,105 +155,111 @@ block content
 						button(id="dSize" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Размер
 						.filter__dropdown(aria-labelledby="dSize" data-dont-close)
 							.filter__dropdown-inner
-								.js-tabs.sizes
+								.sizes
 									.sizes__head
-										.sizes__type
-											span(data-tab-btn="size-ru").active ru
-											span(data-tab-btn="size-uk") uk
-											span(data-tab-btn="size-us") us
-									#size-ru.sizes__list(data-tab-body).active
-										label.sizes__item
-											input(type="checkbox")
-											span 35
-										label.sizes__item
-											input(type="checkbox")
-											span 36
-										label.sizes__item
-											input(type="checkbox")
-											span 37
-										label.sizes__item
-											input(type="checkbox")
-											span 37,5
-										label.sizes__item
-											input(type="checkbox")
-											span 38
-										label.sizes__item
-											input(type="checkbox")
-											span 38,5
-										label.sizes__item
-											input(type="checkbox")
-											span 39
-										label.sizes__item
-											input(type="checkbox")
-											span 40
-										label.sizes__item
-											input(type="checkbox")
-											span 41
-										label.sizes__item
-											input(type="checkbox")
-											span 42
-									#size-uk.sizes__list(data-tab-body)
-										label.sizes__item
-											input(type="checkbox")
-											span 3 1/2
-										label.sizes__item
-											input(type="checkbox")
-											span 4
-										label.sizes__item
-											input(type="checkbox")
-											span 5
-										label.sizes__item
-											input(type="checkbox")
-											span 6
-										label.sizes__item
-											input(type="checkbox")
-											span 6 1/2
-										label.sizes__item
-											input(type="checkbox")
-											span 7
-										label.sizes__item
-											input(type="checkbox")
-											span 7 1/2
-										label.sizes__item
-											input(type="checkbox")
-											span 8
-										label.sizes__item
-											input(type="checkbox")
-											span 9 1/2
-										label.sizes__item
-											input(type="checkbox")
-											span 10
-									#size-us.sizes__list(data-tab-body)
-										label.sizes__item
-											input(type="checkbox")
-											span 5 1/2
-										label.sizes__item
-											input(type="checkbox")
-											span 6
-										label.sizes__item
-											input(type="checkbox")
-											span 7
-										label.sizes__item
-											input(type="checkbox")
-											span 8
-										label.sizes__item
-											input(type="checkbox")
-											span 8 1/2
-										label.sizes__item
-											input(type="checkbox")
-											span 9
-										label.sizes__item
-											input(type="checkbox")
-											span 9 1/2
-										label.sizes__item
-											input(type="checkbox")
-											span 10
-										label.sizes__item
-											input(type="checkbox")
-											span 11 1/2
-										label.sizes__item
-											input(type="checkbox")
-											span 12
+										ul.sizes__type
+											li.sizes__type-item.active
+												a(href="#size-ru" data-toggle="tab") ru
+											li.sizes__type-item
+												a(href="#size-uk" data-toggle="tab") uk
+											li.sizes__type-item
+												a(href="#size-us" data-toggle="tab") us
+									#size-ru.sizes__tab-body.active
+										.sizes__list
+											label.sizes__item
+												input(type="checkbox")
+												span 35
+											label.sizes__item
+												input(type="checkbox")
+												span 36
+											label.sizes__item
+												input(type="checkbox")
+												span 37
+											label.sizes__item
+												input(type="checkbox")
+												span 37,5
+											label.sizes__item
+												input(type="checkbox")
+												span 38
+											label.sizes__item
+												input(type="checkbox")
+												span 38,5
+											label.sizes__item
+												input(type="checkbox")
+												span 39
+											label.sizes__item
+												input(type="checkbox")
+												span 40
+											label.sizes__item
+												input(type="checkbox")
+												span 41
+											label.sizes__item
+												input(type="checkbox")
+												span 42
+									#size-uk.sizes__tab-body
+										.sizes__list
+											label.sizes__item
+												input(type="checkbox")
+												span 3 1/2
+											label.sizes__item
+												input(type="checkbox")
+												span 4
+											label.sizes__item
+												input(type="checkbox")
+												span 5
+											label.sizes__item
+												input(type="checkbox")
+												span 6
+											label.sizes__item
+												input(type="checkbox")
+												span 6 1/2
+											label.sizes__item
+												input(type="checkbox")
+												span 7
+											label.sizes__item
+												input(type="checkbox")
+												span 7 1/2
+											label.sizes__item
+												input(type="checkbox")
+												span 8
+											label.sizes__item
+												input(type="checkbox")
+												span 9 1/2
+											label.sizes__item
+												input(type="checkbox")
+												span 10
+									#size-us.sizes__tab-body
+										.sizes__list
+											label.sizes__item
+												input(type="checkbox")
+												span 5 1/2
+											label.sizes__item
+												input(type="checkbox")
+												span 6
+											label.sizes__item
+												input(type="checkbox")
+												span 7
+											label.sizes__item
+												input(type="checkbox")
+												span 8
+											label.sizes__item
+												input(type="checkbox")
+												span 8 1/2
+											label.sizes__item
+												input(type="checkbox")
+												span 9
+											label.sizes__item
+												input(type="checkbox")
+												span 9 1/2
+											label.sizes__item
+												input(type="checkbox")
+												span 10
+											label.sizes__item
+												input(type="checkbox")
+												span 11 1/2
+											label.sizes__item
+												input(type="checkbox")
+												span 12
 								button(type="button").filter__apply.btn Применить
 					li.filter__item.dropdown
 						button(type="button" id="dSeason" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Сезон

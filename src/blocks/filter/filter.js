@@ -2,6 +2,7 @@
 
 $(function() {
 
+    // Перемещение пунктов фильтра в выпадающий список
     var $nav = $('.filter');
     var $btn = $('.filter__more-btn');
     var $vlinks = $('.filter__form--priority .filter__list');
@@ -15,7 +16,6 @@ $(function() {
     var totalSpace = 0;
     var breakWidths = [];
 
-    // Get initial state
     $vlinks.children().outerWidth(function(i, w) {
         totalSpace += w;
         numOfItems += 1;
@@ -55,7 +55,6 @@ $(function() {
             $btn.removeClass('as-title').text('ЕЩЕ');
         }
 
-        // Update the button accordingly
         // $btn.attr("count", numOfItems - numOfVisibleItems);
         if (numOfVisibleItems === numOfItems) {
             $btn.parent().addClass('hidden');
@@ -72,7 +71,6 @@ $(function() {
         }
     }
 
-    // Window listeners
     $(window).resize(function() {
         check();
     });
@@ -86,7 +84,7 @@ $(function() {
 
         $(window).resize(function() {
             filterOffset = $('.content').offset().top - +$('.content').css('padding-top').replace('px', '');
-        })
+        });
 
         $(window).on('scroll', function () {
 
@@ -106,8 +104,6 @@ $(function() {
     }
 
     check();
-
-
 
 
     // закрытие выпадающего фильтра по кнопке применить

@@ -147,6 +147,7 @@
 	.field-text__input-wrap {
 		@media screen and (min-width: $screen-md) {
 			width: 100%;
+			max-width: 100%;
 		}
 	}
 	.field-text__input {

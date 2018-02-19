@@ -21,7 +21,6 @@ $border-radius: 3px;
 .btn {
   box-sizing: border-box;
   display: inline-block;
-  //padding: 11px 38.5px;
   padding: 11px 16px;
   white-space: nowrap;
   vertical-align: middle;
@@ -196,23 +195,4 @@ $border-radius: 3px;
     }
   }
 
-  //&-icon {
-  //  display: inline-flex;
-  //  outline: none;
-  //  svg {
-  //    margin: auto;
-  //  }
-  //  &--circle {
-  //    border-radius: 100%;
-  //    background-color: #fff;
-  //    padding: 2px;
-  //    width: 32px;
-  //    height: 32px;
-  //    border: 1px solid #60D3D5;
-  //    &:hover {
-  //      box-shadow: inset 0 0 0 0.5px #1EB4B7;
-  //      transform: scale(1.125);
-  //    }
-  //  }
-  //}
 }

@@ -1,6 +1,7 @@
 // .news scripts goes here 
 
 $(function() {
+    // Фиксация навигации по новостям при скроле
     // $(".news-nav").stick_in_parent();
 
     // return $("[data-sticky-element]").stick_in_parent({

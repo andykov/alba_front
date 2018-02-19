@@ -1,8 +1,9 @@
 // .slider-product scripts goes here 
 
 $(function () {
-    if ($('.js-slider-product-recommended').length) {
-        $('.js-slider-product-recommended').slick({
+    // Горизонтальный слайдер товара
+    if ($('.js-slider-product').length) {
+        $('.js-slider-product').slick({
             mobileFirst: true,
             dots: false,
             arrows: false,
@@ -13,98 +14,28 @@ $(function () {
             centerMode: true,
             responsive: [
                 {
-                    breakpoint: 1920,
+                    breakpoint: 991,
                     settings: {
-                        centerPadding: '336px',
-                        slidesToShow: 4
+                        slidesToShow: 4,
+                        centerPadding: '32px' // ширина выступающей картинки (20px) + половина отступа между слайдами (12px)
                     }
                 },
                 {
-                    breakpoint: 992,
-                    settings: {
-                        arrows: true,
-                        slidesToShow: 3,
-                        centerPadding: '97px'
-                    }
-                }
-                ,
-                {
-                    breakpoint: 1200,
+                    breakpoint: 1199,
                     settings: {
                         slidesToShow: 4,
-                        centerPadding: '150px'
-                    }
-                }
-            ]
-        });
-        $('.js-slider-product-related').slick({
-            mobileFirst: true,
-            dots: false,
-            arrows: false,
-            infinite: true,
-            speed: 300,
-            slidesToShow: 2,
-            centerPadding: '0',
-            centerMode: true,
-            responsive: [
-                {
-                    breakpoint: 1920,
-                    settings: {
-                        centerPadding: '336px'
+                        centerPadding: '59px'
                     }
                 },
                 {
-                    breakpoint: 992,
+                    breakpoint: 1799,
                     settings: {
-                        arrows: true,
-                        slidesToShow: 3,
-                        centerPadding: '97px'
-                    }
-                }
-                ,
-                {
-                    breakpoint: 1200,
-                    settings: {
-                        slidesToShow: 4,
-                        centerPadding: '150px'
-                    }
-                }
-            ]
-        });
-        $('.js-slider-product-recently-watched').slick({
-            mobileFirst: true,
-            dots: false,
-            arrows: false,
-            infinite: true,
-            speed: 300,
-            slidesToShow: 2,
-            centerPadding: '0',
-            centerMode: true,
-            responsive: [
-                {
-                    breakpoint: 1920,
-                    settings: {
-                        centerPadding: '336px'
+                        slidesToShow: 5,
+                        centerPadding: '120px', // ширина выступающей картинки (100px) + половина отступа между слайдами (20px)
                     }
                 },
-                {
-                    breakpoint: 992,
-                    settings: {
-                        arrows: true,
-                        slidesToShow: 3,
-                        centerPadding: '97px'
-                    }
-                }
-                ,
-                {
-                    breakpoint: 1200,
-                    settings: {
-                        slidesToShow: 4,
-                        centerPadding: '150px'
-                    }
-                }
-            ]
-        })
 
+            ]
+        });
     }
 });

@@ -22,7 +22,16 @@
     padding-bottom: 126px;
     margin: 0 4px;
     @media screen and (min-width: $screen-md) {
-      margin: 0 24px;
+      margin: 0 24px; // отступ между слайдами
+    }
+    @media screen and (min-width: $screen-lg) {
+      margin: 0 12px; // отступ между слайдами
+    }
+    @media screen and (min-width: $screen-xl) {
+      margin: 0 16px;
+    }
+    @media screen and (min-width: $screen-xxl) {
+      margin: 0 20px;
     }
   }
 }

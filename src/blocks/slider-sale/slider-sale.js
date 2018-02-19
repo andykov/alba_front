@@ -1,6 +1,7 @@
 // .slider-sale scripts goes here 
 
 $(function() {
+    //
     if($('.js-slider-sale').length) {
         $('.js-slider-sale').slick({
             dots: false,

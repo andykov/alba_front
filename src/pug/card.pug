@@ -37,7 +37,6 @@ block content
 					img(src="https://www.the-alba.com/upload/resize_cache/iblock/f68/115_115_1/1103048101301_4-min.jpg")
 				.product-gallery__thumb-item
 					img(src="https://www.the-alba.com/upload/resize_cache/iblock/7e5/115_115_1/1103048101301_5-min.jpg")
-
 		.container
 			.product-holder
 				.product-info
@@ -63,109 +62,114 @@ block content
 								span.select-color__name
 									img(src="https://www.the-alba.com/upload/resize_cache/iblock/9a0/1000_1000_1/1669000801401_1.jpg" width="48px")
 					.product-info__sizes
-						.js-tabs.sizes
+						.sizes
 							.sizes__head
 								.sizes__title Размер
-								.sizes__type
-									span(data-tab-btn="size-ru").active ru
-									span(data-tab-btn="size-uk") uk
-									span(data-tab-btn="size-us") us
+								ul.sizes__type
+									li.sizes__type-item.active
+										a(href="#size-ru" data-toggle="tab") ru
+									li.sizes__type-item
+										a(href="#size-uk" data-toggle="tab") uk
+									li.sizes__type-item
+										a(href="#size-us" data-toggle="tab") us
 								.sizes__how
 									a(href="#") Как определить
-							#size-ru.sizes__list(data-tab-body).active
-								label.sizes__item
-									input(type="checkbox")
-									span 35
-								label.sizes__item
-									input(type="checkbox")
-									span 36
-								label.sizes__item
-									input(type="checkbox")
-									span 37
-								label.sizes__item
-									input(type="checkbox")
-									span 37,5
-								label.sizes__item.sizes__item--in-stock
-									input(type="checkbox")
-									span 38
-								label.sizes__item.sizes__item--in-stock
-									input(type="checkbox")
-									span 38,5
-								label.sizes__item.sizes__item--in-stock
-									input(type="checkbox")
-									span 39
-								label.sizes__item.size__item--in-stock
-									input(type="checkbox")
-									span 40
-								label.sizes__item.sizes__item--in-stock
-									input(type="checkbox")
-									span 41
-								label.sizes__item
-									input(type="checkbox")
-									span 42
-							#size-uk.sizes__list(data-tab-body)
-								label.sizes__item
-									input(type="checkbox")
-									span 3 1/2
-								label.sizes__item
-									input(type="checkbox")
-									span 4
-								label.sizes__item
-									input(type="checkbox")
-									span 5
-								label.sizes__item
-									input(type="checkbox")
-									span 6
-								label.sizes__item
-									input(type="checkbox")
-									span 6 1/2
-								label.sizes__item
-									input(type="checkbox")
-									span 7
-								label.sizes__item
-									input(type="checkbox")
-									span 7 1/2
-								label.sizes__item
-									input(type="checkbox")
-									span 8
-								label.sizes__item
-									input(type="checkbox")
-									span 9 1/2
-								label.sizes__item
-									input(type="checkbox")
-									span 10
-							#size-us.sizes__list(data-tab-body)
-								label.sizes__item
-									input(type="checkbox")
-									span 5 1/2
-								label.sizes__item
-									input(type="checkbox")
-									span 6
-								label.sizes__item
-									input(type="checkbox")
-									span 7
-								label.sizes__item
-									input(type="checkbox")
-									span 8
-								label.sizes__item
-									input(type="checkbox")
-									span 8 1/2
-								label.sizes__item
-									input(type="checkbox")
-									span 9
-								label.sizes__item
-									input(type="checkbox")
-									span 9 1/2
-								label.sizes__item
-									input(type="checkbox")
-									span 10
-								label.sizes__item
-									input(type="checkbox")
-									span 11 1/2
-								label.sizes__item
-									input(type="checkbox")
-									span 12
-
+							#size-ru.sizes__tab-body.active
+								.sizes__list
+									label.sizes__item
+										input(type="checkbox")
+										span 35
+									label.sizes__item
+										input(type="checkbox")
+										span 36
+									label.sizes__item
+										input(type="checkbox")
+										span 37
+									label.sizes__item
+										input(type="checkbox")
+										span 37,5
+									label.sizes__item.sizes__item--in-stock
+										input(type="checkbox")
+										span 38
+									label.sizes__item.sizes__item--in-stock
+										input(type="checkbox")
+										span 38,5
+									label.sizes__item.sizes__item--in-stock
+										input(type="checkbox")
+										span 39
+									label.sizes__item.size__item--in-stock
+										input(type="checkbox")
+										span 40
+									label.sizes__item.sizes__item--in-stock
+										input(type="checkbox")
+										span 41
+									label.sizes__item
+										input(type="checkbox")
+										span 42
+							#size-uk.sizes__tab-body
+								.sizes__list
+									label.sizes__item
+										input(type="checkbox")
+										span 3 1/2
+									label.sizes__item
+										input(type="checkbox")
+										span 4
+									label.sizes__item
+										input(type="checkbox")
+										span 5
+									label.sizes__item
+										input(type="checkbox")
+										span 6
+									label.sizes__item
+										input(type="checkbox")
+										span 6 1/2
+									label.sizes__item
+										input(type="checkbox")
+										span 7
+									label.sizes__item
+										input(type="checkbox")
+										span 7 1/2
+									label.sizes__item
+										input(type="checkbox")
+										span 8
+									label.sizes__item
+										input(type="checkbox")
+										span 9 1/2
+									label.sizes__item
+										input(type="checkbox")
+										span 10
+							#size-us.sizes__tab-body
+								.sizes__list
+									label.sizes__item
+										input(type="checkbox")
+										span 5 1/2
+									label.sizes__item
+										input(type="checkbox")
+										span 6
+									label.sizes__item
+										input(type="checkbox")
+										span 7
+									label.sizes__item
+										input(type="checkbox")
+										span 8
+									label.sizes__item
+										input(type="checkbox")
+										span 8 1/2
+									label.sizes__item
+										input(type="checkbox")
+										span 9
+									label.sizes__item
+										input(type="checkbox")
+										span 9 1/2
+									label.sizes__item
+										input(type="checkbox")
+										span 10
+									label.sizes__item
+										input(type="checkbox")
+										span 11 1/2
+									label.sizes__item
+										input(type="checkbox")
+										span 12
 					.product-info__buttons
 						a(href="").btn.product-info__in-cart В корзину
 						a(href="").btn.product-info__add-desires
@@ -175,7 +179,6 @@ block content
 						a(href="#") О доставке
 						p Самовывоз, бесплатно, сегодня.
 						a(href="#") Магазины на карте
-
 				.product-desc
 					ul.product-desc__list
 						li
@@ -207,13 +210,13 @@ block content
 						span.product-tabs__city Ваш город: Москва
 						ul.product-tabs__nav
 							li.product-tabs__tab.active
-								a(href="#available").product-tabs__link наличие в магазинах
+								a(href="#available" data-toggle="tab").product-tabs__link наличие в магазинах
 							li.product-tabs__tab
-								a(href="#delivery").product-tabs__link доставка и примерка
+								a(href="#delivery" data-toggle="tab").product-tabs__link доставка и примерка
 							li.product-tabs__tab
-								a(href="#payment").product-tabs__link оплата
+								a(href="#payment" data-toggle="tab").product-tabs__link оплата
 							li.product-tabs__tab
-								a(href="#reviews").product-tabs__link отзывы
+								a(href="#reviews" data-toggle="tab").product-tabs__link отзывы
 					.product-tabs__body
 						#available.product-tabs__item.active
 							.shops
@@ -261,31 +264,31 @@ block content
 												span Ленинградское шоссе, 116 а, стр. 4
 												a(href="#").shops-list__on-map на карте
 						#delivery.product-tabs__item
-							| EMPTY ...
+							| not design ...
 						#payment.product-tabs__item
-							| EMPTY ...
+							| not design ...
 						#reviews.product-tabs__item
-							| EMPTY ...
+							| not design ...
 
 	.product-tabs.slider-products
 		.container.slider-products__nav-inner
 			ul.product-tabs__nav.slider-products__nav
 				li.product-tabs__tab.slider-products__item.active
-					a.product-tabs__link.slider-products__link(href="#recommended") Рекомендуем
+					a.product-tabs__link.slider-products__link(aria-controls="recommended" role="tab" data-toggle="tab" href="#recommended") Рекомендуем
 				li.product-tabs__tab.slider-products__item
-					a.product-tabs__link.slider-products__link(href="#related") Похожие товары
+					a.product-tabs__link.slider-products__link(aria-controls="related" role="tab" data-toggle="tab" href="#related") Похожие товары
 				li.product-tabs__tab.slider-products__item
-					a.product-tabs__link.slider-products__link(href="#recently-watched") Вы недавно смотрели
+					a.product-tabs__link.slider-products__link(aria-controls="recently-watched" role="tab" data-toggle="tab" href="#recently-watched") Вы недавно смотрели
 		.container.slider-products__inner
 			.product-tabs__body.slider-products__body
 					#recommended.product-tabs__item.slider-products__tab.active
-						.js-slider-product-recommended
+						.js-slider-product
 							+slider-product()
 					#related.product-tabs__item.slider-products__tab
-						.js-slider-product-related
+						.js-slider-product
 							+slider-product()
 					#recently-watched.product-tabs__item.slider-products__tab
-						.js-slider-product-recently-watched
+						.js-slider-product
 							+slider-product()
 
 

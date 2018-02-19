@@ -1,4 +1,5 @@
 $(function() {
+    // кастомный селект
     $('select').each(function(){
         var $this = $(this), numberOfOptions = $(this).children('option').length;
 

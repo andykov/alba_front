@@ -51,5 +51,8 @@
     "slick-carousel": "^1.8.1",
     "sticky-sidebar": "^3.3.1",
     "svg4everybody": "^2.1.9"
+  },
+  "dependencies": {
+    "magnify": "^2.1.0"
   }
 }

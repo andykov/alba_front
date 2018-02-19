@@ -168,6 +168,34 @@ p {
   border-bottom-color: transparent;
 }
 
+.centerbg1 {
+  display: none;
+  width:100%;
+  height:100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 1000;
+  background: url('/design/im/texture1.jpg') #3c363e;
+}
+
+.centerbg2 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+
+#preloader {
+  top: -50%;
+  left: -50%;
+  position: relative;
+  width: 333px;
+  height: 26px;
+  background: url('/content/pages/articles/preloaders/bg2.gif');
+  border: solid #edda3d 2px;
+}
+
+
 .collapse {
   &__body {
     display: none;

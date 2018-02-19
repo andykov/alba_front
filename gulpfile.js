@@ -58,6 +58,7 @@ var PATH = {
   LIBS: {
     CSS: [
         'node_modules/slick-carousel/slick/slick.css',
+        'node_modules/magnify/dist/css/magnify.css',
         'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.css',
         'node_modules/brazzers-carousel/Brazzers-Carousel/jQuery.Brazzers-Carousel.min.css',
       // 'src/sass/libs/slick.css',
@@ -66,6 +67,8 @@ var PATH = {
       'node_modules/ismobilejs/isMobile.min.js',
       'node_modules/jquery/dist/jquery.min.js',
       'node_modules/slick-carousel/slick/slick.min.js',
+      'node_modules/magnify/dist/js/jquery.magnify.js',
+      'node_modules/magnify/dist/js/jquery.magnify-mobile.js',
       'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js',
       'node_modules/brazzers-carousel/Brazzers-Carousel/jQuery.Brazzers-Carousel.min.js',
       // 'node_modules/sticky-kit/dist/sticky-kit.min.js',

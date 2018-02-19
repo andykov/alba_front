@@ -1,6 +1,6 @@
 $(function() {
 
-    // Вынос логотипа и панели с корзиной в отдельный блок в мобильном меню
+    // Перенос логотипа и панели с корзиной в отдельный блок DOM в мобильном меню
     var $headerMobile = $('.header-mobile'),
         $headerNavs = $('.header-navs'),
         $headerLogo = $('.header__logo'),
@@ -8,7 +8,6 @@ $(function() {
         $headerCart = $('.header__cart');
 
     var createMobileNav = function() {
-        // if ($(window).width() <= 991) {
         if (!window.matchMedia('(min-width: 992px)').matches) {
             $headerMobile.prepend($headerLogo, $headerCart);
         } else {
@@ -19,7 +18,6 @@ $(function() {
 
 
     $(window).on( "resize", function () {
-        // if ($(window).width() <= 991) {
         if (!window.matchMedia('(min-width: 992px)').matches) {
             if ($headerMobile.children().length != 0) {
                 return false;

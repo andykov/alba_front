@@ -1,19 +1,11 @@
-// function LoadFinance()
-// {
-//     $(function() {
-//         $.getJSON(
-//             "https://api.cryptowat.ch/assets/xrp",
-//             function(json){
-//                 console.log(json);
-//                 // Patching payload into page element ID = "dog"
-//             });
-//     });
-// }
-//
-// setInterval( LoadFinance, 1000 );
-
-
 $(function() {
+    // $(window).on("load", function() {
+    //     $("body").css("overflow", "hidden"),
+    //     $(".js-preloader").delay(700).fadeOut("100"), setTimeout(function() {
+    //             $("body").removeAttr('style')
+    //     }, 200);
+    //
+    // });
 
     // отмена закрытия бутстраповского дропдауна с чекбоксами
     $(document).on('click', '[data-dont-close]', function(e) {
@@ -55,17 +47,17 @@ $(function() {
     // });
 
 
-
-    // if($('.zoom').length) {
-    //     // $('.zoom').magnify();
-    // }
+    // зум товара в детальной карточке
+    if($('.zoom').length) {
+        $('.zoom').magnify();
+    }
 
     // $('.js-dropdown').on('click', '[data-trigger="dropdown"]', function() {
     //     var $dropdownParent = $(this).closest('.js-dropdown');
     //     $dropdownParent.toggleClass('show');
     // });
 
-
+    // листалка при ховере в карточке товара
     if($('.brazzers').length) {
         $('.brazzers').brazzersCarousel();
     }
@@ -201,25 +193,21 @@ $(function() {
     };
 
 
-// slick on mobile
-
-        function slick_on_mobile(slider, settings){
-            $(window).on('load resize', function() {
-                if ($(window).width() > 767) {
-                    if (slider.hasClass('slick-initialized')) {
-                        slider.slick('unslick');
-                    }
-                    return
+    // включение слайдера на мобильном
+    function slickMobile(slider, settings) {
+        $(window).on('load resize', function () {
+            if ($(window).width() > 767) {
+                if (slider.hasClass('slick-initialized')) {
+                    slider.slick('unslick');
                 }
-                if (!slider.hasClass('slick-initialized')) {
-                    return slider.slick(settings);
-                }
-            });
-        };
+                return
+            }
+            if (!slider.hasClass('slick-initialized')) {
+                return slider.slick(settings);
+            }
+        });
+    };
 
-        slick_on_mobile(sliderLookBook, sliderLookBookSettings);
-
-
-
+    slickMobile(sliderLookBook, sliderLookBookSettings);
 
 });

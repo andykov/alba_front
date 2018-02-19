@@ -210,13 +210,13 @@ block content
 						span.product-tabs__city Ваш город: Москва
 						ul.product-tabs__nav
 							li.product-tabs__tab.active
-								a(href="#available").product-tabs__link наличие в магазинах
+								a(href="#available" data-toggle="tab").product-tabs__link наличие в магазинах
 							li.product-tabs__tab
-								a(href="#delivery").product-tabs__link доставка и примерка
+								a(href="#delivery" data-toggle="tab").product-tabs__link доставка и примерка
 							li.product-tabs__tab
-								a(href="#payment").product-tabs__link оплата
+								a(href="#payment" data-toggle="tab").product-tabs__link оплата
 							li.product-tabs__tab
-								a(href="#reviews").product-tabs__link отзывы
+								a(href="#reviews" data-toggle="tab").product-tabs__link отзывы
 					.product-tabs__body
 						#available.product-tabs__item.active
 							.shops
@@ -264,11 +264,11 @@ block content
 												span Ленинградское шоссе, 116 а, стр. 4
 												a(href="#").shops-list__on-map на карте
 						#delivery.product-tabs__item
-							| EMPTY ...
+							| not design ...
 						#payment.product-tabs__item
-							| EMPTY ...
+							| not design ...
 						#reviews.product-tabs__item
-							| EMPTY ...
+							| not design ...
 
 	.product-tabs.slider-products
 		.container.slider-products__nav-inner

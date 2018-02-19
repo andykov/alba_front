@@ -1,6 +1,7 @@
 // .slider-product scripts goes here 
 
 $(function () {
+    // Горизонтальный слайдер товара
     if ($('.js-slider-product').length) {
         $('.js-slider-product').slick({
             mobileFirst: true,
@@ -15,9 +16,7 @@ $(function () {
                 {
                     breakpoint: 991,
                     settings: {
-                        // arrows: true,
                         slidesToShow: 4,
-                        // centerPadding: '97px'
                         centerPadding: '32px' // ширина выступающей картинки (20px) + половина отступа между слайдами (12px)
                     }
                 },

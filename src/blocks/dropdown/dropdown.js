@@ -1,26 +1,7 @@
-// Факт открытия
-// $('.filter__list [data-toggle="dropdown"]').parent().on('shown.nth.dropdown', function () {
-//     // console.log('Дроп с id="drop-demo-01": сработало событие shown.nth.dropdown 111');
-// });
-
-// Факт закрытия
-// $('.filter [data-toggle="dropdown"]').parent().on('hidden.nth.dropdown', function (e) {
-//     console.log('Дроп с id="drop-demo-01": сработало событие hidden.nth.dropdown');
-//     var attr = $(this).attr('data-dropdown-inner');
-//
-//     if ( typeof attr !== 'undefined' && attr !== false) {
-//         $(this).toggleClass('open');
-//     };
-// });
-
 /* ========================================================================
- * Основано на: Bootstrap dropdown.js v3.3.6
+ * Основано на: Bootstrap dropdown.js v3.3.7
  * Все изменения сопровождены закомментироваными оригиналами
  * ======================================================================== */
-
-
-
-
 
 +function ($) {
     'use strict';

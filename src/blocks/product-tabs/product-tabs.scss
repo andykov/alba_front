@@ -28,7 +28,9 @@
 			padding-top: 96px;
 		}
 		.product-tabs__nav {
-			margin-bottom: 0;
+			@media screen and (min-width: $screen-md) {
+				margin-bottom: 0;
+			}
 		}
 		.product-tabs__nav-inner {
 			@media screen and (min-width: $screen-md) {

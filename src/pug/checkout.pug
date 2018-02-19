@@ -6,8 +6,7 @@ block title
 
 
 block content
-  .container
-    h1.content__title Оформление заказа
+  h1.content__title Оформление заказа
   .container.checkout
     .row.justify-content-xxl-center.flex-lg-row-reverse
       .col-12.col-xl-5.col-xxl-5
@@ -97,11 +96,12 @@ block content
             .field-text.checkout-basket__code
               .field-text__input-wrap
                 input.checkout-basket__input.field-text__input.field-text__input--border(placeholder="+ промокод")
-                //span.checkout-basket__placeholder
             .field-text.checkout-basket__code
               .field-text__input-wrap
-                input.checkout-basket__input.field-text__input.field-text__input--border(placeholder="+ карта")
-                //span.checkout-basket__placeholder
+                input.checkout-basket__input.field-text__input.field-text__input--border(placeholder="")
+                span.checkout-basket__placeholder-inner
+                  span.checkout-basket__placeholder + карта
+
           .checkout-basket__total
             .checkout-basket__total-part
               p Стоимость товаров
@@ -114,7 +114,7 @@ block content
               span 18 800
                 span руб.
 
-      .col-12.col-xl-7.col-xxl-8.offset-xxl-1
+      .col-12.col-xl-7.col-xxl-8
         form.checkout-order
           .checkout-order__row
             .checkout-order__title
@@ -210,9 +210,9 @@ block content
   .container.checkout__remember
     .h2.checkout__title Не забудьте добавить
   .slider-products.slider-products--checkout-page
-    .slider-products__inner
+    .container.slider-products__inner
       .product-tabs__body.slider-products__body
         #recommended.product-tabs__item.slider-products__tab.active
-          .js-slider-product-recommended
+          .js-slider-product
             +slider-product()
 block js_libs

@@ -5,6 +5,7 @@
   display: block;
   margin-bottom: 0;
   textarea {
+    display: block;
     max-width: 328px;
     width: 100%;
     resize: vertical;
@@ -13,9 +14,7 @@
     font-size: 16px;
     font-weight: 300;
     line-height: 20px;
-    max-height: 40px;
-    padding: 8px 15px 10px 0;
-    transition: max-height 0.5s ease;
+    padding: 9px 15px 9px 0;
 
     &::-webkit-input-placeholder {
       font-family: $font-family--montserrat;

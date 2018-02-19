@@ -13,27 +13,29 @@ $(function () {
             centerMode: true,
             responsive: [
                 {
-                    breakpoint: 1920,
+                    breakpoint: 991,
                     settings: {
-                        centerPadding: '336px',
-                        slidesToShow: 4
+                        // arrows: true,
+                        slidesToShow: 4,
+                        // centerPadding: '97px'
+                        centerPadding: '32px' // ширина выступающей картинки (20px) + половина отступа между слайдами (12px)
                     }
                 },
                 {
-                    breakpoint: 992,
-                    settings: {
-                        arrows: true,
-                        slidesToShow: 3,
-                        centerPadding: '97px'
-                    }
-                },
-                {
-                    breakpoint: 1200,
+                    breakpoint: 1199,
                     settings: {
                         slidesToShow: 4,
-                        centerPadding: '150px'
+                        centerPadding: '59px'
                     }
-                }
+                },
+                {
+                    breakpoint: 1799,
+                    settings: {
+                        slidesToShow: 5,
+                        centerPadding: '120px', // ширина выступающей картинки (100px) + половина отступа между слайдами (20px)
+                    }
+                },
+
             ]
         });
     }

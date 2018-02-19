@@ -52,16 +52,19 @@
       border-bottom: 2px solid transparent;
     }
   }
-
-  &__list {
+  &__tab-body {
     display: none;
+    &.active {
+      display: block;
+    }
+  }
+  &__list {
+    display: flex;
     align-items: flex-start;
     flex-wrap: wrap;
     padding-bottom: 1px;
 
-    &.active {
-      display: flex;
-    }
+
   }
 
   label.sizes__item {

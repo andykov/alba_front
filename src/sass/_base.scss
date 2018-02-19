@@ -974,11 +974,12 @@ p {
 	@media screen and (min-width: $screen-md) {
 		padding-top: 65px;
 	}
+  @media screen and (min-width: $screen-xl) {
+    padding-top: 123px;
+  }
 	@media screen and (min-width: $screen-xl) {
 		display: flex;
 		flex-direction: column;
-		justify-content: space-between;
-		padding-top: 102px;
 	}
 	@media screen and (min-width: $screen-lg) and (max-width: $screen-xl) {
 		order: 1;

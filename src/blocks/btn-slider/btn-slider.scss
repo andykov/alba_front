@@ -1,0 +1,22 @@
+// В этом файле должны быть стили для БЭМ-блока .btn-slider , его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий... 
+
+.btn-slider{
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	svg {
+		transition: 0.2s ease-in;
+	}
+	&:hover {
+		svg {
+			fill: #1db4b7;
+		}
+	}
+	&:focus {
+		outline: none;
+		svg {
+			fill: #000;
+		}
+	}
+}

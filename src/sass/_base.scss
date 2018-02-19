@@ -319,11 +319,8 @@ p {
     top: 12px;
     left: 16px;
     @media (min-width: $screen-md) {
-      left: 32px;
+      left: 0;
       top: 0;
-    }
-    @media (min-width: $screen-xl) {
-      left: 45px;
     }
 
   }

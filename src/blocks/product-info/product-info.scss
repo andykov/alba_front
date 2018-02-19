@@ -15,8 +15,8 @@
 	}
 	@media screen and (min-width: $screen-xl) {
 		padding-left: 70px;
-		padding-right: 15px;
-		max-width: 356px;
+		padding-right: 42px;
+		max-width: 394px;
 		width: 100%;
 		height: 757px;
 		position: absolute;
@@ -27,6 +27,7 @@
 
 	@media screen and (min-width: $screen-xxl) {
 		height: 832px;
+		right: 80px;
 	}
 	.price {
 		margin-left: auto;
@@ -119,7 +120,7 @@
 			right: -8px;
 		}
 		@media (min-width: $screen-xl) {
-			right: 356px;
+			right: 361px;
 		}
 	}
 	.sizes {

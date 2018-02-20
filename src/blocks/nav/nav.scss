@@ -7,21 +7,28 @@
 .nav-main {
 	//background-color: #505054;
 
+
+	// >>> without dots start <<< comment code below and unccoment nav-dots code if dot neede
 	&__list {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
+
 		@media screen and (max-width: $screen-lg - 1) {
 			padding: 14px 0;
 		}
+
 		@media screen and (min-width: $screen-lg) {
 			flex-wrap: nowrap;
 		}
 	}
+
 	&__item {
 		position: relative;
 		align-self: center;
-
+		.form-search {
+			padding-right: 16px;
+		}
 
 		@media screen and (max-width: $screen-md - 1) {
 			width: 50%;
@@ -35,7 +42,12 @@
 		}
 		@media screen and (min-width: $screen-md) {
 			width: 25%;
+
+			.form-search {
+				padding-right: 0;
+			}
 		}
+
 		@media screen and (min-width: $screen-lg) {
 			width: auto;
 
@@ -44,22 +56,158 @@
 					padding-left: 0;
 				}
 			}
-			&:last-child {
-				a {
-					padding-right: 0;
-				}
-			}
+
 		}
 
-		//&:not(:last-child):after {
-		//	content: '';
-		//	width: 4px;
-		//	height: 4px;
-		//	background-color: rgba(0,0,0,0.5);
-		//	position: absolute;
-		//}
-
 	}
+	// >>> without dots end <<<
+
+	// >>> nav-dots start <<< if nav-dots needed uncomment this code and comment upper code
+	// &__list {
+	// 	display: flex;
+	// 	flex-wrap: wrap;
+	// 	justify-content: space-between;
+
+	// 	@media screen and (min-width: $screen-md) {
+	// 		height: 108px;
+	// 		flex-direction: column;
+	// 		align-content: space-between;
+	// 	}
+	// 	@media screen and (max-width: $screen-lg - 1) {
+	// 		padding: 14px 0;
+	// 	}
+	// 	@media screen and (min-width: $screen-lg) {
+	// 		flex-direction: row;
+	// 		flex-wrap: nowrap;
+	// 		height: auto;
+	// 	}
+	// }
+	// &__item {
+	// 	position: relative;
+	// 	align-self: center;
+
+	// 	[placeholder] {
+	// 		text-align: right;
+	// 	}
+	// 	@media screen and (max-width: $screen-md - 1) {
+	// 		width: 50%;
+
+	// 		&:nth-child(3),
+	// 		&:nth-child(8),
+	// 		&:nth-child(13),
+	// 		&:nth-child(20) {
+	// 			text-align: right;
+	// 			a {
+	// 				padding-left: 6px;
+	// 			}
+	// 		}
+	// 	}
+	// 	@media screen and (min-width: $screen-md) {
+	// 		width: auto;
+	// 		order: -2;
+	// 		&:nth-child(4),
+	// 		&:nth-child(5),
+	// 		&:nth-child(9),
+	// 		&:nth-child(10),
+	// 		&:nth-child(14),
+	// 		&:nth-child(15){
+	// 			display: block;
+	// 		}
+
+	// 		&:first-child,
+	// 		&:nth-child(3) {
+	// 			align-self: flex-start;
+	// 		}
+
+	// 		&:nth-child(16),
+	// 		&:nth-child(18) {
+	// 			align-self: flex-end;
+	// 		}
+
+	// 		&:nth-child(16) {
+	// 			order: 0;
+
+	// 		}
+	// 		&:nth-child(18)	{
+	// 			order: -1;
+	// 		}
+
+	// 	}
+	// 	@media screen and (min-width: $screen-lg) {
+	// 		width: auto;
+	// 		order: 0;
+
+	// 		&:first-child {
+	// 			a {
+	// 				padding-left: 0;
+	// 			}
+	// 		}
+	// 		&:last-child {
+	// 			a {
+	// 				padding-right: 0;
+	// 			}
+	// 		}
+
+	// 		&:nth-child(4),
+	// 		&:nth-child(5),
+	// 		&:nth-child(9),
+	// 		&:nth-child(10),
+	// 		&:nth-child(14),
+	// 		&:nth-child(15){
+	// 			display: none;
+	// 		}
+
+	// 		&:nth-child(18)	{
+	// 			order: 0;
+	// 			align-self: center;
+	// 		}
+	// 	}
+
+	// 	@media screen and (min-width: $screen-xl) {
+	// 		&:nth-child(7),
+	// 		&:nth-child(17) {
+	// 			display: block;
+	// 		}
+	// 	}
+
+	// 	@media screen and (min-width: $screen-xxl) {
+	// 		&:nth-child(2),
+	// 		&:nth-child(4),
+	// 		&:nth-child(9),
+	// 		&:nth-child(12),
+	// 		&:nth-child(14) {
+	// 			display: block;
+	// 		}
+	// 	}
+
+	// }
+	// &__item--decoration {
+	// 	display: none;
+	// 	height: 40px;
+	// 	width: 4px;
+
+	// 	@media screen and (min-width: $screen-lg) {
+	// 		height: 64px;
+	// 	}
+
+	// 	&::before {
+	// 		content: '';
+	// 		position: absolute;
+	// 		top: 0;
+	// 		bottom: 0;
+	// 		left: 0;
+	// 		right: 0;
+	// 		display: block;
+	// 		width: 4px;
+	// 		height: 4px;
+	// 		margin: auto;
+	// 		border-radius: 50%;
+	// 		background: rgba(#000, .5);
+	// 	}
+	// }
+	// >>> nav-dots end <<<
+
+
 	&__link {
 		display: block;
 		padding-top: 12px;

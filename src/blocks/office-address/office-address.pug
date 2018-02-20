@@ -1,15 +1,16 @@
 mixin office-address()
 	.office-address
 		form
+			.office-card__form-wrap
+				+address-choice('checked')
+				+address-choice()
 
-			+address-choice('checked')
-			+address-choice()
-
-			fieldset.form-group
-				button.btn.btn--border Добавить адрес
+				fieldset.form-group
+					button.btn.btn--border Добавить адрес
 
 			.form-control
-				button.btn Сохранить
+				.office-card__form-wrap
+					button.btn Сохранить
 
 
 
@@ -22,7 +23,7 @@ mixin address-choice(radioChecked)
 				option Владивосток
 
 		.office-address__input
-			input.field-text__input(type="text" placeholder="ул. Железнодорожная, д. 18, к. 1, кв 37")
+			input.field-text__input(type="text" placeholder="" value="ул. Железнодорожная, д. 18, к. 1, кв 37")
 
 		.office-address__radio
 			label.field-radio

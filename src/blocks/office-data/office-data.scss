@@ -2,5 +2,106 @@
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий... 
 
 .office-data {
-	
+	.form-group {
+		.btn {
+			padding-left: 40px;
+			padding-right: 40px;
+		}
+	}
+
+	.field-text {
+		margin-bottom: 8px;
+
+		&__name {
+			display: inline-block;
+			min-width: 100px;
+			max-width: 115px;
+			padding-right: 5px;
+
+			@media screen and (min-width: $screen-md) {
+				min-width: 90px;
+				max-width: initial;
+			}
+		}
+	}
+
+	&__info {
+		margin-bottom: 40px;
+
+		@media screen and (min-width: $screen-md) {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			max-width: 696px;
+
+			.form-field {
+				width: 50%;
+				max-width: 300px;
+
+				&:nth-child(n+5) {
+					margin-top: 24px;
+				}
+			}
+		}
+
+		@media screen and (min-width: $screen-lg) {
+			margin-bottom: 64px;
+		}
+
+		@media screen and (min-width: 1366px) {
+
+			.form-field {
+				max-width: 330px;
+			}
+		}
+	}
+
+	&__birthday {
+		display: block;
+		margin-bottom: 30px;
+		@media screen and (min-width: $screen-md) {
+			font-size: 14px;;
+		}
+	}
+
+	&__social {
+		margin-bottom: 30px;
+		span {
+			margin-right: 24px;
+			font-family: $font-family--montserrat;
+			font-size: 11px;
+			font-weight: 600;
+			line-height: 1.45;
+			letter-spacing: 0.4px;
+			text-transform: uppercase;
+			color: #000000;
+		}
+	}
+
+	&__promo {
+		// margin-bottom: 66px;
+		margin-bottom: 40px;
+	}
+
+	.field-checkbox {
+		margin-right: 30px;
+		margin-bottom: 0;
+		&__name {
+			font-family: $font-family--montserrat;
+			font-size: 11px;
+			font-weight: 600;
+			line-height: 24px;
+			letter-spacing: 0.4px;
+			text-transform: uppercase;
+			color: #000000;
+		}
+	}
+}
+
+input[type="tel"] {
+	max-width: 144px;
+}
+
+input[type="date"] {
+	max-width: 104px;
 }

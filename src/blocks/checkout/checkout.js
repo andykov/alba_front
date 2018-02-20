@@ -39,7 +39,7 @@ if ($('.js-slider-checkout').length) {
           arrows: true,
           centerPadding: '120px' // ширина выступающей картинки (100px) + половина отступа между слайдами (20px)
         }
-      },
+      }
 
     ]
   });

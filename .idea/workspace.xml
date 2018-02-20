@@ -1,8 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9cac7a9a-1c57-41d9-acfb-cadee5b42abb" name="Default" comment="Merge branch 'master' of https://github.com/andykov/alba_front&#10;&#10;# Conflicts:&#10;#&#9;src/blocks/slider-products/slider-products.scss&#10;#&#9;src/sass/_base.scss">
+    <list default="true" id="9cac7a9a-1c57-41d9-acfb-cadee5b42abb" name="Default" comment="Merge branch 'master' of https://github.com/andykov/alba_front&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/blocks/office-address/office-address.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/blocks/office-address/office-address.pug" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/blocks/office-address/office-address.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/blocks/office-card/office-card.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/blocks/office-card/office-card.pug" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/blocks/office-card/office-card.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/blocks/office-data/office-data.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/blocks/office-data/office-data.pug" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/blocks/office-data/office-data.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pug/office-address.pug" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pug/office-data.pug" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/alba_front.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/markdown-navigator.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/markdown-navigator/profiles_settings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gulpfile.js" afterPath="$PROJECT_DIR$/gulpfile.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/blocks/btn/btn.scss" afterPath="$PROJECT_DIR$/src/blocks/btn/btn.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/blocks/nav/nav.pug" afterPath="$PROJECT_DIR$/src/blocks/nav/nav.pug" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/blocks/nav/nav.scss" afterPath="$PROJECT_DIR$/src/blocks/nav/nav.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/blocks/office-history/office-history.scss" afterPath="$PROJECT_DIR$/src/blocks/office-history/office-history.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pug/office-history.pug" afterPath="$PROJECT_DIR$/src/pug/office-history.pug" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sass/template.scss" afterPath="$PROJECT_DIR$/src/sass/template.scss" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -23,7 +49,6 @@
               <caret line="202" column="5" lean-forward="false" selection-start-line="202" selection-start-column="5" selection-end-line="202" selection-end-column="5" />
               <folding>
                 <marker date="1519149436828" expanded="true" signature="10429:10462" ph="..." />
-                <marker date="1519149436828" expanded="true" signature="10430:10462" ph="..." />
               </folding>
             </state>
           </provider>
@@ -32,7 +57,7 @@
       <file leaf-file-name="checkout.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/blocks/checkout/checkout.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="487">
+            <state relative-caret-position="15433">
               <caret line="671" column="24" lean-forward="false" selection-start-line="671" selection-start-column="24" selection-end-line="671" selection-end-column="24" />
               <folding />
             </state>
@@ -42,7 +67,7 @@
       <file leaf-file-name="stores.pug" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pug/stores.pug">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="864">
+            <state relative-caret-position="1656">
               <caret line="72" column="4" lean-forward="false" selection-start-line="72" selection-start-column="4" selection-end-line="72" selection-end-column="4" />
               <folding />
             </state>
@@ -62,18 +87,38 @@
       <file leaf-file-name="main.pug" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pug/templates/main.pug">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="786">
+            <state relative-caret-position="1472">
               <caret line="64" column="0" lean-forward="false" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="stores.scss" pinned="false" current-in-tab="true">
+      <file leaf-file-name="stores.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/blocks/stores/stores.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="16" column="3" lean-forward="true" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
+            <state relative-caret-position="437">
+              <caret line="19" column="22" lean-forward="false" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="createBlock.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/createBlock.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="506">
+              <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="568">
+              <caret line="38" column="6" lean-forward="false" selection-start-line="38" selection-start-column="6" selection-end-line="38" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -92,7 +137,7 @@
       <file leaf-file-name="shops.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/blocks/shops/shops.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="667">
+            <state relative-caret-position="3496">
               <caret line="152" column="39" lean-forward="false" selection-start-line="152" selection-start-column="39" selection-end-line="152" selection-end-column="39" />
               <folding />
             </state>
@@ -173,6 +218,7 @@
         <option value="$PROJECT_DIR$/src/blocks/stores/stores.js" />
         <option value="$PROJECT_DIR$/src/pug/stores.pug" />
         <option value="$PROJECT_DIR$/src/blocks/stores/stores.scss" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -253,6 +299,7 @@
     <option name="width" value="1193" />
     <option name="height" value="1047" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -341,8 +388,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -354,153 +401,12 @@
     <property name="js.buildTools.gulp.gulp_package_dir" value="$PROJECT_DIR$/node_modules/gulp" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\pashkes\Desktop\alba_front\build\img" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\pashkes\Desktop\alba_front\src\images" />
     </key>
-  </component>
-  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
-    <UpdatedFiles>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Updated from server" />
-        <option name="myStatusName" value="Changed on server" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="CHANGED_ON_SERVER" />
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Updated" />
-          <option name="myStatusName" value="Changed" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/gulpfile.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/blocks/breadcrumbs/breadcrumbs.scss</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/blocks/catalog/catalog.scss</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/blocks/checkout/checkout.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/blocks/checkout/checkout.scss</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/blocks/filter/filter.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/blocks/product-gallery/product-gallery.scss</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/blocks/product-info/product-info.scss</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/blocks/product-tabs/product-tabs.scss</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/blocks/shops/shops.scss</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/blocks/slider-product/slider-product.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/blocks/slider-products/slider-products.scss</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/pug/card.pug</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/pug/catalog.pug</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/pug/checkout.pug</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/pug/templates/main.pug</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/sass/_base.scss</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/sass/template.scss</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Created" />
-          <option name="myStatusName" value="Created" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="CREATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/markdown-navigator.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/markdown-navigator/profiles_settings.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/misc.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/blocks/btn-slider/btn-slider.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/blocks/btn-slider/btn-slider.pug</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/blocks/btn-slider/btn-slider.scss</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/blocks/stores/stores.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/blocks/stores/stores.pug</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/blocks/stores/stores.scss</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/images/content/photo-shop-1.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/images/content/photo-shop-2.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/images/content/photo-shop-3.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/images/svg/icon-metro.svg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/pug/stores.pug</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Deleted" />
-          <option name="myStatusName" value="Deleted" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="true" />
-          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Restored" />
-          <option name="myStatusName" value="Will be restored" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="RESTORED" />
-        </FILE-GROUP>
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Modified" />
-        <option name="myStatusName" value="Modified" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MODIFIED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Skipped" />
-        <option name="myStatusName" value="Skipped" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SKIPPED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with conflicts" />
-        <option name="myStatusName" value="Will be merged with conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_CONFLICTS" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with tree conflicts" />
-        <option name="myStatusName" value="Merged with tree conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with property conflicts" />
-        <option name="myStatusName" value="Will be merged with property conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged" />
-        <option name="myStatusName" value="Will be merged" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Not in repository" />
-        <option name="myStatusName" value="Not in repository" />
-        <option name="mySupportsDeletion" value="true" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="UNKNOWN" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally added" />
-        <option name="myStatusName" value="Locally added" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_ADDED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally removed" />
-        <option name="myStatusName" value="Locally removed" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_REMOVED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Switched" />
-        <option name="myStatusName" value="Switched" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SWITCHED" />
-      </FILE-GROUP>
-    </UpdatedFiles>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\pashkes\Desktop\alba_front\build\img" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -556,7 +462,8 @@
       <workItem from="1518935653928" duration="32651000" />
       <workItem from="1518971030810" duration="29715000" />
       <workItem from="1519023910292" duration="253000" />
-      <workItem from="1519149390369" duration="4069000" />
+      <workItem from="1519149390369" duration="4241000" />
+      <workItem from="1519158166613" duration="149000" />
     </task>
     <task id="LOCAL-00001" summary="slider card">
       <created>1518908615039</created>
@@ -663,36 +570,43 @@
       <option name="project" value="LOCAL" />
       <updated>1519157418402</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Merge branch 'master' of https://github.com/andykov/alba_front&#10;&#10;# Conflicts:&#10;#&#9;src/blocks/slider-products/slider-products.scss&#10;#&#9;src/sass/_base.scss">
+      <created>1519157969492</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1519157969492</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="81468000" />
+    <option name="totallyTimeSpent" value="81789000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19402985" sideWeight="0.51001054" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19402985" sideWeight="0.48998946" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="SvgViewer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Get Gist" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32982087" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32665965" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19402985" sideWeight="0.51001054" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19402985" sideWeight="0.48998946" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Get Gist" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32665965" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32982087" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -737,9 +651,10 @@
     <MESSAGE value="fixed field subscribe" />
     <MESSAGE value="minor fixed checkout" />
     <MESSAGE value="last-edit" />
-    <MESSAGE value="Merge branch 'master' of https://github.com/andykov/alba_front&#10;&#10;# Conflicts:&#10;#&#9;src/blocks/slider-products/slider-products.scss&#10;#&#9;src/sass/_base.scss" />
     <MESSAGE value="Page stores styled" />
-    <option name="LAST_COMMIT_MESSAGE" value="Page stores styled" />
+    <MESSAGE value="Merge branch 'master' of https://github.com/andykov/alba_front&#10;&#10;# Conflicts:&#10;#&#9;src/blocks/slider-products/slider-products.scss&#10;#&#9;src/sass/_base.scss" />
+    <MESSAGE value="Merge branch 'master' of https://github.com/andykov/alba_front&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'master' of https://github.com/andykov/alba_front&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -772,13 +687,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="115">
           <caret line="17" column="9" lean-forward="true" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/createBlock.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3037">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -828,13 +736,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="368">
           <caret line="16" column="26" lean-forward="false" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-456">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1032,14 +933,13 @@
           <caret line="202" column="5" lean-forward="false" selection-start-line="202" selection-start-column="5" selection-end-line="202" selection-end-column="5" />
           <folding>
             <marker date="1519149436828" expanded="true" signature="10429:10462" ph="..." />
-            <marker date="1519149436828" expanded="true" signature="10430:10462" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/blocks/checkout/checkout.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="487">
+        <state relative-caret-position="15433">
           <caret line="671" column="24" lean-forward="false" selection-start-line="671" selection-start-column="24" selection-end-line="671" selection-end-column="24" />
           <folding />
         </state>
@@ -1047,7 +947,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/blocks/shops/shops.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="667">
+        <state relative-caret-position="3496">
           <caret line="152" column="39" lean-forward="false" selection-start-line="152" selection-start-column="39" selection-end-line="152" selection-end-column="39" />
           <folding />
         </state>
@@ -1071,7 +971,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pug/templates/main.pug">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="786">
+        <state relative-caret-position="1472">
           <caret line="64" column="0" lean-forward="false" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
           <folding />
         </state>
@@ -1079,7 +979,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pug/stores.pug">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="864">
+        <state relative-caret-position="1656">
           <caret line="72" column="4" lean-forward="false" selection-start-line="72" selection-start-column="4" selection-end-line="72" selection-end-column="4" />
           <folding />
         </state>
@@ -1087,8 +987,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/blocks/stores/stores.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="16" column="3" lean-forward="true" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
+        <state relative-caret-position="437">
+          <caret line="19" column="22" lean-forward="false" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="568">
+          <caret line="38" column="6" lean-forward="false" selection-start-line="38" selection-start-column="6" selection-end-line="38" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/createBlock.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding />
         </state>
       </provider>

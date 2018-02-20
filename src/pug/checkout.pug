@@ -7,7 +7,7 @@ block title
 
 block content
   h1.content__title Оформление заказа
-  .container.checkout
+  .checkout
     .row.justify-content-xxl-center.flex-lg-row-reverse
       .col-12.col-xl-5.col-xxl-5
         .checkout-basket
@@ -114,7 +114,7 @@ block content
               span 18 800
                 span руб.
 
-      .col-12.col-xl-7.col-xxl-8
+      .col-12.col-xl-7.col-xxl-10
         form.checkout-order
           .checkout-order__row
             .checkout-order__title
@@ -195,13 +195,13 @@ block content
             input(type="submit" value="Оформить заказ").btn.btn--wide
             p Оформляя заказ Вы принимаете публичную оферту и соглашение об обработке персональных данных (ФЗ152)
   .checkout-slider
-    .container.checkout__remember
+    .checkout__remember
       .h2.checkout__title Не забудьте добавить
       .checkout__slider-arrows
         +btnSliderPrev()
         +btnSliderNext()
     .slider-products.slider-products--checkout-page
-      .container.slider-products__inner
+      .slider-products__inner
         .product-tabs__body.slider-products__body
           #recommended.product-tabs__item.slider-products__tab.active
             .js-slider-checkout

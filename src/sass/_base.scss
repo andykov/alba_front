@@ -640,7 +640,22 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-
+  &--white {
+    .pagination__item a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      font-size: 18px;
+      background-color: #fff;
+			border: 1px solid #e6e6e6;
+      &:hover {
+        box-shadow: none;
+        border-color: transparent;
+      }
+    }
+  }
   &__arrow {
     position: relative;
     width: 24px;
@@ -653,7 +668,6 @@ p {
       right: 0;
       bottom: 0;
       transition: all $transition;
-
       &::before {
         content: '';
         position: absolute;
@@ -783,12 +797,13 @@ p {
       color: #000;
       border-radius: 100%;
       transition: all $transition;
-
       &:hover,
       &:focus {
-        color: #fff;
-        background-color: #1eb4b7;
-        box-shadow: 0 0 0 2px #1eb4b7;
+        &:not(.disabled) {
+          color: #fff;
+          background-color: #1eb4b7;
+          box-shadow: 0 0 0 2px #1eb4b7;
+        }
       }
 
       @media (min-width: $screen-md) {

@@ -149,5 +149,12 @@
 				background-size: auto;
 			}
 		}
+		&__metro {
+			background-image: url(../img/svg/icon-metro.svg);
+			background-size: 13px 13px;
+			@media screen and (min-width: $screen-md) {
+				background-size: auto;
+			}
+		}
 	}
 }

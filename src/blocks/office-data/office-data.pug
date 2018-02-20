@@ -31,12 +31,13 @@ mixin office-data()
 								input.field-text__input(type="tel" placeholder="" value="+7 926 445-47-36")
 
 					.form-field
-						label.field-text
-							span.field-text__name
+						label.field-datepicker
+							span.field-datepicker__name
 								| День рождения
-							span.field-text__input-wrap.js-office-datepicker
-								input.field-text__input.field-text__input--date(type="text"  placeholder="" value="")
-								span.input-group-addon test
+							span.field-datepicker__input-wrap
+								input.field-datepicker__input.js-office-datepicker(type="text"  placeholder="" value="")
+								span.field-datepicker__btn
+									<svg xmlns="http://www.w3.org/2000/svg" width="22" height="16" viewBox="0 0 22 16"><path fill-rule="evenodd" d="M0 0h4v4H0V0zm0 6h4v4H0V6zm0 6h4v4H0v-4zM12 0h4v4h-4V0zm0 6h4v4h-4V6zM6 0h4v4H6V0zm0 6h4v4H6V6zm0 6h4v4H6v-4zM18 0h4v4h-4V0zm0 6h4v4h-4V6z"/></svg>
 						span.office-data__birthday
 							| Получайте специальные предложения в честь дня рождения!
 

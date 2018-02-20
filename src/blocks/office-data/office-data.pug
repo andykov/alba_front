@@ -34,8 +34,9 @@ mixin office-data()
 						label.field-text
 							span.field-text__name
 								| День рождения
-							span.field-text__input-wrap
-								input.field-text__input.field-text__input--date(type="date" placeholder="" value="28.07.1988")
+							span.field-text__input-wrap.js-office-datepicker
+								input.field-text__input.field-text__input--date(type="text"  placeholder="" value="")
+								span.input-group-addon test
 						span.office-data__birthday
 							| Получайте специальные предложения в честь дня рождения!
 

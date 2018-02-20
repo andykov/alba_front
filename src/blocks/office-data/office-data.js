@@ -1,5 +1,6 @@
 // .office-data scripts goes here 
 
-/*$(function() {
-	
-});*/
+$(function() {
+	$('.js-office-datepicker').datepicker();
+});
+

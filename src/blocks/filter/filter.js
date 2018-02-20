@@ -26,7 +26,7 @@ $(function() {
 
     function check() {
 
-        availableSpace = $nav.outerWidth() - $sorting.outerWidth() - 240;
+        availableSpace = $nav.outerWidth() - $sorting.outerWidth() - 288;
         // availableSpace = $vlinks.outerWidth() - 10;
         numOfVisibleItems = $vlinks.children().length;
         requiredSpace = breakWidths[numOfVisibleItems - 1];

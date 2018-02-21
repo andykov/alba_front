@@ -1,0 +1,125 @@
+// В этом файле должны быть стили для БЭМ-блока .about-phy , его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий... 
+
+.about-phy {
+	padding-top: 24px;
+
+	@media screen and (min-width: $screen-md) {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		padding-left: 12px;
+		padding-right: 12px;
+	}
+
+	@media screen and (min-width: $screen-lg) {
+		padding-left: 24px;
+		padding-right: 24px;
+	}
+
+	@media screen and (min-width: $screen-xl) {
+		max-width: $container-xl;
+		margin-left: auto;
+		margin-right: auto;
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	@media screen and (min-width: $screen-xxl) {
+		max-width: $container-xxl;
+	}
+
+
+	&__aside {
+		display: flex;
+		flex-wrap: nowrap;
+
+		overflow-x: auto;
+
+		@media screen and (min-width: $screen-md) {
+			flex-wrap: wrap;
+			justify-content: center;
+
+			&-wrap {
+				margin-bottom: 52px;
+			}
+		}
+
+		@media screen and (min-width: $screen-xl) {
+
+			&-wrap {
+				margin-bottom: 80px;
+			}
+		}
+
+	}
+
+	&__img {
+		min-width: 200px;
+		margin-bottom: 16px;
+
+		img {
+			width: 100%;
+			height: auto;
+		}
+		@media screen and (min-width: $screen-md) {
+			width: 100%;
+			margin-bottom: 0;
+		}
+	}
+
+	&__content {
+		margin-bottom: 40px;
+
+		@media screen and (min-width: $screen-md) {
+			margin-bottom: 52px;
+		}
+
+
+		@media screen and (min-width: $screen-xl) {
+			margin-bottom: 80px;
+		}
+
+		p {
+			margin-bottom: 32px;
+			font-size: 12px;
+			line-height: 1.5;
+			letter-spacing: 0.3px;
+			font-weight: 300;
+			text-align: left;
+			color: #000;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+
+			@media screen and (min-width: $screen-md) {
+				font-size: 14px;
+				letter-spacing: 0.4px;
+			}
+
+			@media screen and (min-width: $screen-xl) {
+				margin-bottom: 64px;
+				font-size: 18px;
+				line-height: 1.78;
+				letter-spacing: 0.5px;
+			}
+		}
+	}
+
+	.share-line {
+		margin-bottom: 50px;
+
+		@media screen and (min-width: $screen-md) {
+			margin-bottom: 70px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		@media screen and (min-width: $screen-xl) {
+			margin-bottom: 90px;
+		}
+	}
+
+}

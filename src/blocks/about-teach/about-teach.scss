@@ -1,0 +1,160 @@
+// В этом файле должны быть стили для БЭМ-блока .about-teach , его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий... 
+
+.about-teach {
+
+	@media screen and (min-width: $screen-xl) {
+		padding-bottom: 40px;
+	}
+
+	
+	&__row {
+		margin-bottom: 40px;
+
+		&-wrap {
+			position: relative;
+			padding-top: 15px;
+			padding-bottom: 45px;
+			background: #fff;
+			.about-teach__row {
+				margin-bottom: 0;
+			}
+			&::before {
+				content: '';
+				position: absolute;
+				z-index: -1;
+				top: -32px;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				background: #fff;
+			}
+
+		}
+
+		&:nth-child(2) {
+			margin-top: 50px;
+		}
+
+		@media screen and (min-width: $screen-md) {
+			display: flex;
+			padding-left: 12px;
+			padding-right: 12px;
+
+			&-wrap {
+				&::before {
+					left: -16px;
+					right: -16px;
+				}
+			}
+		}
+
+		@media screen and (min-width: $screen-lg) {
+			padding-left: 24px;
+			padding-right: 24px;
+
+			&-wrap {
+				&::before {
+					left: -8px;
+					right: -8px;
+				}
+			}
+		}
+
+		@media screen and (min-width: $screen-xl) {
+			max-width: $container-xl;
+			margin-bottom: 86px;
+			margin-left: auto;
+			margin-right: auto;
+			padding-left: 0;
+			padding-right: 0;
+
+			&-wrap {
+				padding-top: 58px;
+				padding-bottom: 70px;
+				&::before {
+					left: -32px;
+					right: -32px;
+				}
+			}
+
+			&:nth-child(2) {
+				margin-top: 100px;
+			}
+		}
+
+		@media screen and (min-width: $screen-xxl) {
+			max-width: $container-xxl;
+		}
+	}
+
+	&__col {
+		font-size: 12px;
+	  line-height: 1.5;
+	  letter-spacing: 0.3px;
+		font-weight: 300;
+		text-align: left;
+		color: #505050;
+
+		@media screen and (min-width: $screen-md) {
+			font-size: 14px;
+			letter-spacing: 0.4px;
+		}
+
+		@media screen and (min-width: $screen-xl) {
+			font-size: 16px;
+			line-height: 1.38;
+		}
+
+		p,
+		li {
+			margin-bottom: 18px;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+			@media screen and (min-width: $screen-xl) {
+				margin-bottom: 36px;
+			}
+		}
+
+		li {
+			position: relative;
+			margin-left: 46px;
+
+			&::before {
+				content: '';
+				position: relative;
+				left: -38px;
+				display: inline-block;
+				width: 8px;
+				height: 8px;
+				margin-left: -8px;
+				background: #60d3d5;
+			}
+		}
+
+		p {
+
+			span {
+				display: block;
+			}
+		}
+	}
+
+	&__title {
+		margin-bottom: 16px;
+		font-family: $font-family--montserrat;
+		font-size: 11px;
+		font-weight: 600;
+		line-height: 1.45;
+		letter-spacing: 0.4px;
+		text-align: left;
+		color: #000000;
+
+		@media screen and (min-width: $screen-md) {
+			margin-bottom: 0;
+		}
+	}
+}

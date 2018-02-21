@@ -300,7 +300,15 @@ p {
     }
 
     @media screen and (min-width: $screen-lg) {
+      margin-left: -12px;
+    }
+
+    @media screen and (min-width: $screen-xl) {
       margin-left: -16px;
+    }
+
+    @media screen and (min-width: $screen-xxl) {
+      margin-left: -20px;
     }
   }
 
@@ -319,8 +327,11 @@ p {
     top: 12px;
     left: 16px;
     @media (min-width: $screen-md) {
-      left: 0;
+      left: 32px;
       top: 0;
+    }
+    @media (min-width: $screen-xl) {
+      left: 45px;
     }
 
   }
@@ -986,12 +997,11 @@ p {
 	@media screen and (min-width: $screen-md) {
 		padding-top: 65px;
 	}
-  @media screen and (min-width: $screen-xl) {
-    padding-top: 123px;
-  }
 	@media screen and (min-width: $screen-xl) {
 		display: flex;
 		flex-direction: column;
+		justify-content: space-between;
+		padding-top: 102px;
 	}
 	@media screen and (min-width: $screen-lg) and (max-width: $screen-xl) {
 		order: 1;

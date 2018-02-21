@@ -1,0 +1,263 @@
+// В этом файле должны быть стили для БЭМ-блока .about-header , его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий... 
+
+.about-header {
+	display: flex;
+	flex-direction: column;
+	color: #fff;
+	padding-bottom: 74px;
+	flex-grow: 1;
+
+	@media screen and (min-width: $screen-md) {
+		padding-bottom: 40px;
+		padding-left: 36px;
+		padding-right: 36px;
+	}
+	@media screen and (min-width: $screen-xl) {
+		width: $container-xl;
+		margin-left: auto;
+		margin-right: auto;
+		padding-left: 16px;
+		padding-right: 16px;
+	}
+
+	@media screen and (min-width: $screen-xxl) {
+		width: $container-xxl;
+	}
+
+	&-bg {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		z-index: -1;
+		background-size: cover;
+
+		&::after {
+			content: '';
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			background-image:  linear-gradient(to bottom, rgba(0, 13, 39, 0), rgba(0, 13, 39, 0.75));
+		}
+
+		@media screen and (min-width: $screen-md) {
+			left: -16px;
+			right: -16px;
+		}
+
+		@media screen and (min-width: $screen-lg) {
+			left: -8px;
+			right: -8px;
+		}
+
+		@media screen and (min-width: $screen-xl) {
+			left: -32px;
+			right: -32px;
+		}
+	}
+
+
+
+
+	&__nav {
+		margin-bottom: 40px;
+
+		&-item {
+			padding: 15px 21px;
+			font-family: $font-family--montserrat;
+			font-size: 10px;
+			font-weight: 600;
+			line-height: 1.6;
+			letter-spacing: 0.4px;
+			text-align: left;
+			text-transform: uppercase;
+
+			a {
+				color: #fff;
+
+				&:hover {
+					color: #1db4b7;
+				}
+			}
+
+			&:not(:last-child) {
+				border-bottom: 1px solid rgba(#000000,.07);
+			}
+
+			&.active {
+				a {
+					color: #60d3d5;
+				}
+			}
+		}
+
+		@media screen and (min-width: $screen-md) {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			order: 1;
+			margin-bottom: 0;
+
+			&-item {
+				padding: 10px 0;
+				font-size: 11px;
+				line-height: 1.45;
+
+				&:not(:last-child) {
+					border-bottom: none;
+				}
+
+				&.active {
+					a {
+						color: #fff;
+						transition: all $transition;
+					}
+						border-bottom: 2px solid #60d3d5;
+				}
+			}
+		}
+	}
+
+
+	&__year {
+
+		&-nav {
+			display: flex;
+			justify-content: space-between;
+			margin-top: auto;
+			margin-bottom: 19px;
+
+			@media screen and (min-width: $screen-md) {
+				justify-content: flex-start;
+				margin-bottom: 14px;
+			}
+		}
+
+		&-item {
+
+			button {
+				position: relative;
+				box-sizing: border-box;
+				display: inline-block;
+				padding: 0;
+				white-space: nowrap;
+				vertical-align: middle;
+				user-select: none;
+				height: auto;
+				font-family: $font-family;
+				font-size: 12px;
+				font-weight: 300;
+				font-style: normal;
+				font-stretch: normal;
+				line-height: 40px;
+				letter-spacing: normal;
+				text-align: center;
+				color: #fff;
+				background: transparent;
+				outline: none;
+				border: none;
+				cursor: pointer;
+				transition: all $transition;
+
+				&:hover {
+					color: #1db4b7;
+				}
+
+				&::before {
+					display: none;
+					content: '';
+					position: absolute;
+					top: 0;
+					bottom: 0;
+					left: -7.5px;
+					right: -7.5px;
+					border: 2px solid #60d3d5;
+				}
+			}
+
+			&.active {
+				button {
+					&::before {
+						display: block;
+					}
+				}
+			}
+
+			@media screen and (min-width: $screen-md) {
+
+				&:first-child {
+					margin-left: -15.5px;
+				}
+
+
+				button {
+					width: 56px;
+					height: 56px;
+					font-size: 16px;
+					line-height: 56px;
+
+					&::before {
+						left: 0;
+						right: 0;
+					}
+				}
+			}
+		}
+
+		@media screen and (min-width: $screen-md) {
+			&-nav {
+				flex-direction: row;
+			}
+		}
+
+	}
+
+	&__title {
+		margin-top: auto;
+		margin-bottom: 12px;
+		font-family: $font-family;
+		font-size: 16px;
+		font-weight: 300;
+		line-height: 1.38;
+		letter-spacing: 0.4px;
+		text-align: left;
+		color: #fff;
+	}
+
+
+	&__subtitle {
+		margin-bottom: 0;
+		font-family: $font-family;
+		font-size: 16px;
+		font-weight: 300;
+		line-height: 1.5;
+		letter-spacing: normal;
+		text-align: left;
+
+		@media screen and (min-width: $screen-md) {
+			margin-bottom: auto;
+			font-size: 30px;
+			line-height: 1.67;
+		}
+
+		@media screen and (min-width: $screen-xl) {
+			margin-bottom: auto;
+		}
+	}
+
+	&__year-nav,
+	&__title,
+	&__subtitle {
+		@media screen and (min-width: $screen-md) {
+			width: 100%;
+			max-width: 1048px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+
+}

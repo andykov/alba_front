@@ -1,0 +1,38 @@
+mixin about-header(modClass, title, subtitle, bgImage)
+	.about-header-bg(style="background-image: url(img/design/"+bgImage+");")
+	.about-header.col-12(class=modClass)
+		ul.about-header__nav
+			li.about-header__nav-item
+				a(href="#") Философия бренда
+			li.about-header__nav-item.active
+				a(href="#") История
+			li.about-header__nav-item
+				a(href="#") Производство
+			li.about-header__nav-item
+				a(href="#") Вакансии
+			li.about-header__nav-item
+				a(href="#") Учебный центр
+
+		if (modClass == 'about-header--history')
+			ul.about-header__year-nav
+				li.about-header__year-item
+					button 1996
+				li.about-header__year-item.active
+					button 1998
+				li.about-header__year-item
+					button 2003
+				li.about-header__year-item
+					button 2008
+				li.about-header__year-item
+					button 2012
+				li.about-header__year-item
+					button 2013
+				li.about-header__year-item
+					button 2014
+				li.about-header__year-item
+					button 2015
+
+		else
+			h1.about-header__title!= title
+
+		p.about-header__subtitle!= subtitle

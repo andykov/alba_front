@@ -61,7 +61,7 @@ var PATH = {
         'node_modules/magnify/dist/css/magnify.css',
         'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.css',
         'node_modules/brazzers-carousel/Brazzers-Carousel/jQuery.Brazzers-Carousel.min.css',
-        'node_modules/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css',
+        'node_modules/air-datepicker/dist/css/datepicker.min.css',
       // 'src/sass/libs/slick.css',
     ],
     JS: [
@@ -74,7 +74,7 @@ var PATH = {
       'node_modules/brazzers-carousel/Brazzers-Carousel/jQuery.Brazzers-Carousel.min.js',
       // 'node_modules/sticky-kit/distfsev/sticky-kit.min.js',
       'node_modules/sticky-sidebar/dist/jquery.sticky-sidebar.min.js',
-      'node_modules/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js',
+      'node_modules/air-datepicker/dist/js/datepicker.min.js',
       // 'src/scripts/libs/slick.min.js',
       // 'src/scripts/libs/jquery.sticky-sidebar.js',
     ]

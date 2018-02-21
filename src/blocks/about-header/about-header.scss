@@ -2,18 +2,28 @@
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий... 
 
 .about-header {
+	display: flex;
+	flex-direction: column;
+	color: #fff;
 	padding-bottom: 74px;
 	flex-grow: 1;
 
 	@media screen and (min-width: $screen-md) {
 		padding-bottom: 40px;
-	}
-
-	@media screen and (min-width: $screen-md) {
 		padding-left: 36px;
 		padding-right: 36px;
 	}
+	@media screen and (min-width: $screen-xl) {
+		width: $container-xl;
+		margin-left: auto;
+		margin-right: auto;
+		padding-left: 16px;
+		padding-right: 16px;
+	}
 
+	@media screen and (min-width: $screen-xxl) {
+		width: $container-xxl;
+	}
 
 	&-bg {
 		position: absolute;
@@ -50,9 +60,6 @@
 		}
 	}
 
-	display: flex;
-	flex-direction: column;
-	color: #fff;
 
 
 
@@ -252,21 +259,5 @@
 			margin-right: auto;
 		}
 	}
-
-	// &--history {
-	// 	.about-header__subtitle {
-	// 		@media screen and (min-width: $screen-md) {
-	// 			margin-bottom: 12.79%;
-
-	// 		}
-
-	// 		@media screen and (min-width: $screen-xl) {
-
-	// 			margin-bottom: 6.66%;
-	// 		}
-	// 	}
-	// }
-
-
 
 }

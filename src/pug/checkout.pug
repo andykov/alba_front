@@ -197,13 +197,10 @@ block content
   .checkout-slider
     .container.checkout__remember
       .h2.checkout__title Не забудьте добавить
-      .checkout__slider-arrows
-        +btnSliderPrev()
-        +btnSliderNext()
     .slider-products.slider-products--checkout-page
       .container.slider-products__inner
         .product-tabs__body.slider-products__body
           #recommended.product-tabs__item.slider-products__tab.active
-            .js-slider-checkout
+            .js-slider-product
               +slider-product()
 block js_libs

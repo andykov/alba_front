@@ -21,38 +21,17 @@
 			order: 2;
 		}
 		@media screen and (min-width: $screen-lg) {
-			padding-top: 64px;
 			padding-right: 56px;
-		}
-		@media screen and (min-width: $screen-xxl) {
-			padding-top: 96px;
 		}
 		.product-tabs__nav {
 			@media screen and (min-width: $screen-md) {
-				margin-bottom: 0;
-			}
-		}
-		.product-tabs__nav-inner {
-			@media screen and (min-width: $screen-md) {
-				display: flex;
 				margin-bottom: 32px;
 				padding-left: 45px;
 				padding-right: 45px;
 				flex-wrap: nowrap;
 			}
-			@media screen and (min-width: $screen-xl) {
-				margin-bottom: 39px;
-			}
-			.product-tabs__tab {
-				&:first-child {
-					padding-left: 8px;
-				}
-			}
 			@media screen and (min-width: $screen-lg) {
 				padding-left: 35px;
-			}
-			@media screen and (min-width: $screen-xxl) {
-				margin-bottom: 39px;
 			}
 		}
 		.product-tabs__body {
@@ -82,7 +61,7 @@
 	&__tab {
 		padding: 0 12px;
 		@media screen and (min-width: $screen-md) {
-			padding: 0 20px;
+			padding: 0 19px;
 		}
 		&.active {
 			a {
@@ -119,16 +98,13 @@
 	}
 	&__item {
 		display: none;
-
 		&.active {
 			display: block;
 		}
 	}
 	&__city {
-		display: block;
 		margin-bottom: 14px;
 		padding-right: 35px;
-		padding-left: 8px;
 		font-size: 12px;
 		line-height: 1.33;
 		letter-spacing: 0.3px;
@@ -136,12 +112,9 @@
 		@media screen and (min-width: $screen-md) {
 			display: inline-block;
 			margin-bottom: 0;
-			padding-right: 30px;
-			padding-left: 0;
-			line-height: 1.1;
+			padding-right: 20px;
+			line-height: 1.5;
 			font-size: 14px;
-		}
-		@media screen and (min-width: $screen-xl) {
 		}
 	}
 }

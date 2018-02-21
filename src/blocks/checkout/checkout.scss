@@ -610,8 +610,6 @@
     }
   }
   &__remember {
-    display: flex;
-    align-items: center;
     margin-bottom: 20px;
     padding-top: 32px;
     font-weight: 900;
@@ -633,18 +631,5 @@
     .slider-products {
       padding-top: 0;
     }
-  }
-  &__slider-arrows {
-    margin-left: auto;
-    align-self: stretch;
-    display: flex;
-    align-items: center;
-    @media (min-width: $screen-lg) {
-      margin-left: 130px;
-    }
-  }
-  &__title {
-    display: inline-block;
-    margin-bottom: 0;
   }
 }

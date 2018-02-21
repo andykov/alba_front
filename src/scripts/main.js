@@ -88,8 +88,14 @@ $(function() {
     }
 
 
+
     var $productGalleryBig = $('.product-gallery__big'),
-        $productGalleryThumb = $('.product-gallery__thumb');
+        $productGalleryThumb = $('.product-gallery__thumb'),
+        $productGalleryItem = $('.product-gallery__item'),
+        $productGalleryFirstImg = $productGalleryItem.first().find('img'),
+        $productGalleryFirstImgPath = $productGalleryFirstImg.attr('src');
+
+    console.log($productGalleryFirstImgPath);
 
     if($productGalleryBig.length) {
         $productGalleryBig.slick({
@@ -119,6 +125,107 @@ $(function() {
             focusOnSelect: true
         });
     }
+
+
+
+
+
+
+
+
+
+
+    var divSizeWidth = $('.container').width();
+    var divSizeHeight = $('.container').height();
+
+    function makeSVG(tag, attrs) {
+        var el= document.createElementNS('http://www.w3.org/2000/svg', tag);
+        for (var k in attrs)
+            el.setAttribute(k, attrs[k]);
+        return el;
+    }
+
+    var svg = makeSVG('svg', {
+        id:"el_svg",
+        viewBox:"0 0 "+ divSizeWidth +" "+ divSizeWidth,
+        version:"1.1",
+        xmlns:"http://www.w3.org/2000/svg",
+        'mlns:xlink': "http://www.w3.org/1999/xlink",
+        width:divSizeWidth,
+        height: divSizeHeight
+    });
+
+    var group_1 = makeSVG('g', { id: 'group_1' });
+    var group_2 = makeSVG('g', { id: 'group_2' });
+
+    var defs = makeSVG('defs');
+
+    var mask_1 = makeSVG('mask', { id: 'mask_1', fill: 'white' });
+    var mask_2 = makeSVG('mask', { id: 'mask_2', fill: 'white' });
+
+    var use_1 = makeSVG('use', {'xlink:href': '#polyMask_1'});
+    var use_2 = makeSVG('use', {'xlink:href': '#polyMask_2'});
+
+    var useMask_1 = makeSVG('use', {'xlink:href': '#poly_1'});
+    var useMask_2 = makeSVG('use', {'xlink:href': '#poly_2'});
+
+    var poly_1 = makeSVG('polygon', {
+        id: 'poly_1',
+        points: [divSizeWidth, 0, 0, divSizeHeight, 0, 0]
+    });
+    var poly_2 = makeSVG('polygon', {
+        id: 'poly_2',
+        points: [divSizeWidth, 0, 0, divSizeHeight, divSizeWidth, divSizeHeight]
+    });
+    var polyMask_1 = makeSVG('polygon', {
+        id: 'polyMask_1',
+        points: [divSizeWidth, 0, 0, divSizeHeight, 0, 0]
+    });
+    var polyMask_2 = makeSVG('polygon', {
+        id: 'polyMask_2',
+        points: [divSizeWidth, 0, 0, divSizeHeight, divSizeWidth, divSizeHeight]
+    });
+
+    var img_1 = makeSVG('image', {
+        mask: "url(#mask_1)",
+        x: divSizeWidth,
+        y: divSizeWidth,
+        width: divSizeWidth,
+        height: divSizeWidth,
+        'xlink:href': firstImgPath
+    });
+    var img_2 = makeSVG('image', {
+        mask: "url(#mask_2)",
+        x: -divSizeWidth,
+        y: -divSizeWidth,
+        width: divSizeWidth,
+        height: divSizeWidth,
+        'xlink:href': firstImgPath
+    });
+
+    document.getElementById('svg-wrap').appendChild(svg).appendChild(defs).appendChild(poly_1);
+    document.getElementById('svg-wrap').appendChild(svg).appendChild(defs).appendChild(poly_2);
+
+    document.getElementById('el_svg').appendChild(group_1).appendChild(mask_1).appendChild(useMask_1);
+// document.getElementById('group_1').appendChild(use_1);
+    document.getElementById('group_1').appendChild(img_1);
+
+    document.getElementById('el_svg').appendChild(group_2).appendChild(mask_2).appendChild(useMask_2);
+// document.getElementById('group_2').appendChild(use_2);
+    document.getElementById('group_2').appendChild(img_2);
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     // function borderMoving() {

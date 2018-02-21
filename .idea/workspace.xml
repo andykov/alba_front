@@ -426,7 +426,7 @@
       <workItem from="1519136870191" duration="114000" />
       <workItem from="1519140569880" duration="103000" />
       <workItem from="1519200575046" duration="622000" />
-      <workItem from="1519202889149" duration="137000" />
+      <workItem from="1519202889149" duration="144000" />
     </task>
     <task id="LOCAL-00001" summary="slider card">
       <created>1518908615039</created>
@@ -582,11 +582,18 @@
       <option name="project" value="LOCAL" />
       <updated>1519203003758</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Merge branch 'master' of https://github.com/andykov/alba_front&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
+      <created>1519203028506</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1519203028506</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="87337000" />
+    <option name="totallyTimeSpent" value="87344000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />

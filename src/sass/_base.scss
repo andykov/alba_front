@@ -300,7 +300,15 @@ p {
     }
 
     @media screen and (min-width: $screen-lg) {
+      margin-left: -12px;
+    }
+
+    @media screen and (min-width: $screen-xl) {
       margin-left: -16px;
+    }
+
+    @media screen and (min-width: $screen-xxl) {
+      margin-left: -20px;
     }
   }
 

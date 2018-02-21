@@ -9,18 +9,31 @@
 		}
 	}
 
-	.field-text {
+	.field-text,
+	.field-datepicker {
 		margin-bottom: 8px;
 
 		&__name {
 			display: inline-block;
-			min-width: 100px;
+			min-width: 115px;
 			max-width: 115px;
 			padding-right: 5px;
 
 			@media screen and (min-width: $screen-md) {
 				min-width: 90px;
 				max-width: initial;
+			}
+		}
+	}
+
+	.field-datepicker {
+		&__input-wrap {
+			@media screen and (min-width: $screen-md) {
+				margin-right: 30px;
+			}
+
+			@media screen and (min-width: $screen-xl) {
+				margin-right: 40px;
 			}
 		}
 	}
@@ -54,6 +67,11 @@
 				max-width: 330px;
 			}
 		}
+	}
+
+
+	input[type="tel"] {
+		max-width: 144px;
 	}
 
 	&__birthday {
@@ -96,12 +114,4 @@
 			color: #000000;
 		}
 	}
-}
-
-input[type="tel"] {
-	max-width: 144px;
-}
-
-input[type="date"] {
-	max-width: 104px;
 }

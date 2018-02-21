@@ -72,7 +72,7 @@ var PATH = {
       // 'node_modules/magnify/dist/js/jquery.magnify-mobile.js',
       'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js',
       'node_modules/brazzers-carousel/Brazzers-Carousel/jQuery.Brazzers-Carousel.min.js',
-      // 'node_modules/sticky-kit/dist/sticky-kit.min.js',
+      // 'node_modules/sticky-kit/distfsev/sticky-kit.min.js',
       'node_modules/sticky-sidebar/dist/jquery.sticky-sidebar.min.js',
       'node_modules/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js',
       // 'src/scripts/libs/slick.min.js',

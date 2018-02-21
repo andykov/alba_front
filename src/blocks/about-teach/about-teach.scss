@@ -16,7 +16,9 @@
 			padding-top: 15px;
 			padding-bottom: 45px;
 			background: #fff;
-
+			.about-teach__row {
+				margin-bottom: 0;
+			}
 			&::before {
 				content: '';
 				position: absolute;

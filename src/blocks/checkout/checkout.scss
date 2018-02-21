@@ -2,634 +2,681 @@
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий... 
 
 .checkout {
+	max-width: 1496px;
+	margin-right: auto;
+	margin-left: auto;
+	padding-left: 16px;
+	padding-right: 16px;
+	@media (min-width: $screen-md) {
+		padding-right: 30px;
+		padding-left: 30px;
+	}
+	@media (min-width: $screen-lg) {
+		padding-right: 34px;
+		padding-left: 34px;
+	}
+	@media (min-width: $screen-xl) {
+		padding-right: 40px;
+		padding-left: 40px;
+	}
+		// формление заказа - корзина
+	&-basket {
+		background-color: #fff;
+		margin-bottom: 16px;
+		margin-right: -15px;
+		margin-left: -16px;
+		@media (min-width: $screen-md) {
+			margin-bottom: 50px;
+			margin-right: 0;
+			margin-left: 0;
+		}
+		@media (min-width: $screen-xl) {
+			margin-left: 24px;
+			margin-right: 0;
+		}
+		.sizes__item span {
+			@media screen and (min-width: $screen-md) {
+				font-size: 14px;
+			}
+		}
+		.sizes__item {
+			font-size: 12px;
+		}
+		.price {
+			color: #000;
+			[data-old-price] {
+				font-weight: 300;
+			}
+		}
+		&__head {
+			display: flex;
+			align-items: center;
+			padding: 17px 16px;
+			border-bottom: 1px solid #E6E6E6;
+			@media screen and (min-width: $screen-md) {
+				padding: 28px 32px 30px 32px;
+			}
+			a {
+				font-family: $font-family--montserrat;
+				margin-left: auto;
+				text-transform: uppercase;
+				font-size: 10px;
+				font-weight: 600;
+				line-height: 1.6;
+				letter-spacing: 0.4px;
+				color: #a0a0a0;
+				@media screen and (min-width: $screen-md) {
+					font-size: 11px;
+					line-height: 1.45;
+				}
+				span {
+					margin-left: 7px;
+					padding-top: 1px;
+					@media screen and (min-width: $screen-md) {
+						padding-top: 0;
+					}
+				}
+			}
+			h3 {
+				margin-bottom: 0;
+				font-family: $font-family--montserrat;
+				font-size: 13px;
+				font-weight: 600;
+				line-height: 1.23;
+				color: #000;
+				@media screen and (min-width: $screen-md) {
+					font-size: 18px;
+				}
+			}
+			.icon-svg {
+				margin-right: 16px;
+				width: 16px;
+				height: 18px;
+				@media screen and (min-width: $screen-md) {
+					width: 20px;
+					height: 23px;
+					margin-right: 24px;
+				}
+			}
+		}
 
-  // формление заказа - корзина
-  &-basket {
-    background-color: #fff;
-    margin-bottom: 16px;
+		&__item {
+			position: relative;
+			display: flex;
+			min-height: 119px;
+			border-bottom: 1px solid #E6E6E6;
 
-    @media (max-width: $screen-md) {
-      margin-bottom: 50px;
-    }
-    @media (max-width: $screen-sm) {
+			@media screen and (min-width: $screen-md) {
+				min-height: 175px;
+				padding: 0 20px;
+			}
+		}
 
-    }
-    .sizes__item span {
-      @media screen and (min-width: $screen-md) {
-        font-size: 14px;
-      }
-    }
-    .sizes__item {
-      font-size: 12px;
-    }
-    .price {
-      color: #000;
-      [data-old-price] {
-        font-weight: 300;
-      }
-    }
-    &__head {
-      display: flex;
-      align-items: center;
-      padding: 17px 16px;
-      border-bottom: 1px solid #E6E6E6;
-      @media screen and (min-width: $screen-md) {
-        padding: 28px 32px 30px 32px;
-      }
-      a {
-        font-family: $font-family--montserrat;
-        margin-left: auto;
-        text-transform: uppercase;
-        font-size: 10px;
-        font-weight: 600;
-        line-height: 1.6;
-        letter-spacing: 0.4px;
-        color: #a0a0a0;
-        @media screen and (min-width: $screen-md) {
-          font-size: 11px;
-          line-height: 1.45;
-        }
-        span {
-          margin-left: 7px;
-          padding-top: 1px;
-          @media screen and (min-width: $screen-md) {
-            padding-top: 0;
-          }
-        }
-      }
-      h3 {
-        margin-bottom: 0;
-        font-family: $font-family--montserrat;
-        font-size: 13px;
-        font-weight: 600;
-        line-height: 1.23;
-        color: #000;
-        @media screen and (min-width: $screen-md) {
-          font-size: 18px;
-        }
-      }
-      .icon-svg {
-        margin-right: 16px;
-        width: 16px;
-        height: 18px;
-        @media screen and (min-width: $screen-md) {
-          width: 20px;
-          height: 23px;
-          margin-right: 24px;
-        }
-      }
-    }
+		&__remove {
+			position: absolute;
+			top: 0;
+			right: 0;
+			@media screen and (min-width: $screen-md) {
+				top: 5px;
+				right: 5px;
+			}
+			svg {
+				fill: #b4b4b4;
+			}
+		}
 
-    &__item {
-      position: relative;
-      display: flex;
-      min-height: 119px;
-      border-bottom: 1px solid #E6E6E6;
+		&__img {
+			flex-basis: 112px;
+			text-align: center;
+			align-self: center;
 
-      @media screen and (min-width: $screen-md) {
-        min-height: 175px;
-        padding: 0 20px;
-      }
-    }
+			@media screen and (min-width: $screen-md) {
+				flex-basis: 220px;
+			}
 
-    &__remove {
-      position: absolute;
-      top: 0;
-      right: 0;
-      @media screen and (min-width: $screen-md) {
-        top: 5px;
-        right: 5px;
-      }
-      svg {
-        fill: #b4b4b4;
-      }
-    }
+			img {
+				max-height: 79px;
+				max-width: 79px;
+				@media screen and (min-width: $screen-md) {
+					max-height: 131px;
+					min-width: 131px;
+				}
+			}
+		}
 
-    &__img {
-      flex-basis: 112px;
-      text-align: center;
-      align-self: center;
+		&__info {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			flex: 1;
+			//padding-top: 45px;
 
-      @media screen and (min-width: $screen-md) {
-        flex-basis: 220px;
-      }
+			&-row {
+				display: flex;
+				justify-content: space-between;
+				padding-top: 20px;
+				margin: auto 0;
+				padding-right: 24px;
+				@media screen and (min-width: $screen-md) {
+					padding-top: 10px;
+				}
+				& + .checkout-basket__info-row {
+					margin: 10px 0 0;
+					padding-top: 0;
+					padding-right: 0;
+				}
+			}
+		}
 
-      img {
-        max-height: 79px;
-        max-width: 79px;
-        @media screen and (min-width: $screen-md) {
-          max-height: 131px;
-          min-width: 131px;
-        }
-      }
-    }
+		&__count {
+			> span {
+				font-family: $font-family--montserrat;
+				font-weight: 600;
+				font-size: 11px;
+				line-height: 1.82;
+				@media screen and (min-width: $screen-md) {
+					font-size: 15px;
+					line-height: 1.33;
+				}
+			}
+		}
 
-    &__info {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      flex: 1;
-      //padding-top: 45px;
+		&__sizes {
+			margin-bottom: -1px;
+			width: 100%;
+		}
 
-      &-row {
-        display: flex;
-        justify-content: space-between;
-        padding-top: 20px;
-        margin: auto 0;
-        padding-right: 24px;
-        @media screen and (min-width: $screen-md) {
-          padding-top: 10px;
-        }
-        & + .checkout-basket__info-row {
-          margin: 10px 0 0;
-          padding-top: 0;
-          padding-right: 0;
-        }
-      }
-    }
+		&__total {
+			background-color: #60D3D5;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			padding: 26px 16px 22px;
+			@media screen and (min-width: $screen-md) {
+				flex-wrap: nowrap;
+			}
+			@media screen and (min-width: $screen-xl) {
+				flex-wrap: wrap;
+				min-height: 206px;
+				align-content: space-between;
+				padding-top: 42px;
+				padding-bottom: 42px;
+			}
+			&-part {
+				margin: 0 15px;
+				text-align: center;
+				color: #000;
+				font-family: $font-family--montserrat;
+				@media screen and (min-width: $screen-md) {
+					margin: 0 24px;
+				}
+				p {
+					font-size: 10px;
+					font-weight: 700;
+					line-height: 1.6;
+					margin-bottom: 0;
+					letter-spacing: 0.4px;
+					text-transform: uppercase;
+					@media screen and (min-width: $screen-md) {
+						margin-bottom: 7px;
+						font-size: 11px;
+						line-height: 1.45;
+					}
+				}
 
-    &__count {
-      > span {
-        font-family: $font-family--montserrat;
-        font-weight: 600;
-        font-size: 11px;
-        line-height: 1.82;
-        @media screen and (min-width: $screen-md) {
-          font-size: 15px;
-          line-height: 1.33;
-        }
-      }
-    }
+				span {
+					font-size: 11px;
+					font-weight: 600;
+					line-height: 2.36;
+					@media (min-width: $screen-md) {
+						font-size: 18px;
+						line-height: 1.44;
+						letter-spacing: -0.2px;
+						color: #ffffff;
+					}
+				}
 
-    &__sizes {
-      margin-bottom: -1px;
-      width: 100%;
-    }
+				&:last-child {
+					width: 100%;
+					padding-top: 14px;
 
-    &__total {
-      background-color: #60D3D5;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      padding: 26px 16px 22px;
-      @media screen and (min-width: $screen-md) {
-        flex-wrap: nowrap;
-      }
-      @media screen and (min-width: $screen-xl) {
-        flex-wrap: wrap;
-        min-height: 206px;
-        align-content: space-between;
-        padding-top: 42px;
-        padding-bottom: 42px;
-      }
-      &-part {
-        margin: 0 15px;
-        text-align: center;
-        color: #000;
-        font-family: $font-family--montserrat;
-        @media screen and (min-width: $screen-md) {
-          margin: 0 24px;
-        }
-        p {
-          font-size: 10px;
-          font-weight: 700;
-          line-height: 1.6;
-          margin-bottom: 0;
-          letter-spacing: 0.4px;
-          text-transform: uppercase;
-          @media screen and (min-width: $screen-md) {
-            margin-bottom: 7px;
-            font-size: 11px;
-            line-height: 1.45;
-          }
-        }
+					span {
+						font-size: 16px;
+						font-weight: 900;
+						line-height: 2;
+						letter-spacing: -0.2px;
+						@media screen and (min-width: $screen-md) {
+							font-size: 26px;
+							line-height: 1.23;
+							letter-spacing: -0.3px;
+						}
+						span {
+							font-weight: 300;
+							padding-left: 5px;
+						}
+					}
+					@media screen and (min-width: $screen-md) {
+						width: auto;
+						padding-top: 0;
+					}
+				}
+			}
+		}
+		&__add-sizes {
+			border-top: 1px solid #E6E6E6;
+		}
+		.dropdown {
+			visibility: visible;
+			opacity: 1;
+			height: auto;
+			&.open .dropdown-menu:after {
+				height: 100%;
+				transition: height 0.25s;
+			}
+			&.open .dropdown-menu .dropdown-menu__inner {
+				opacity: 1;
+				transition: all 0.25s 0.2s;
+			}
+			&.open > .dropdown-menu {
+				visibility: visible;
+				opacity: 1;
+				height: auto;
+			}
+		}
+		.dropdown-menu {
+			position: absolute;
+			top: 100%;
+			min-width: 185px;
+			height: 0;
+			padding: 24px;
+			color: #3C3C3C;
+			visibility: hidden;
+			opacity: 0;
+			z-index: 10;
+			transition: all 0.25s;
+			&::after {
+				content: '';
+				position: absolute;
+				left: 0;
+				top: 0;
+				background-color: #fff;
+				width: 100%;
+				height: 0;
+				box-shadow: 0 32px 64px 0 rgba(0, 2, 14, 0.15);
+				z-index: -1;
+			}
+		}
 
-        span {
-          font-size: 11px;
-          font-weight: 600;
-          line-height: 2.36;
-          @media (min-width: $screen-md) {
-            font-size: 18px;
-            line-height: 1.44;
-            letter-spacing: -0.2px;
-            color: #ffffff;
-          }
-        }
+		.dropdown-menu__inner {
+			color: #3C3C3C;
+			opacity: 0;
+			transition: all 0.25s;
+			position: relative;
+			z-index: 1;
+		}
+		&__sales {
+			display: flex;
+			padding: 16px 16px;
+			@media screen and (min-width: $screen-md) {
+				padding: 36px 32px;
+			}
+			.field-text__input-wrap {
+				max-width: 100%;
+			}
+		}
+		&__code {
+			flex: 1;
+			max-width: 240px;
+			@media screen and (min-width: $screen-md) {
+				max-width: 288px;
+			}
+			&:first-child {
+				margin-right: 16px;
+				@media screen and (min-width: $screen-md) {
+					margin-right: 32px;
+				}
+			}
+			&:last-child {
+				.checkout-basket__input {
+					padding-left: 17px;
+				}
+			}
+		}
+		&__placeholder-inner {
+			display: flex;
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			top: 0;
+			left: 0;
+			align-items: center;
+			justify-content: center;
+			pointer-events: none;
+			opacity: 1;
+			transition: 0.2s ease;
+		}
+		&__placeholder {
+			padding-right: 60px;
+			background: url(../img/logo-small.svg) right bottom 5px no-repeat;
+			font-family: $font-family--montserrat;
+			font-weight: 600;
+			line-height: 1.6;
+			letter-spacing: 0.4px;
+			color: #000;
+			text-transform: uppercase;
+			@media screen and (min-width: $screen-md) {
+				font-size: 11px;
+				color: #1db4b7;
+			}
 
-        &:last-child {
-          width: 100%;
-          padding-top: 14px;
+		}
+		&__input {
+			z-index: 1;
+			vertical-align: middle;
+			transition: 0.2s ease;
+			text-align: center;
+			&::-webkit-input-placeholder {
+				font-family: $font-family--montserrat;
+				font-size: 10px;
+				font-weight: 600;
+				line-height: 1.6;
+				letter-spacing: 0.4px;
+				color: #000;
+				text-transform: uppercase;
+				opacity: 1;
+				@media screen and (min-width: $screen-md) {
+					font-size: 11px;
+					color: $primary-color;
+				}
+			}
+			&:focus {
+				text-align: left;
+				&::-webkit-input-placeholder {
+					opacity: 0;
+				}
+				+ .checkout-basket__placeholder-inner {
+					opacity: 0;
+				}
+			}
+		}
+	}
+	// формление заказа - форма
+	&-order {
+		margin-right: -16px;
+		margin-left: -16px;
+		background-color: #fff;
+		padding: 0 16px 25px;
+		@media (min-width: $screen-md) {
+			margin-right: 0;
+			margin-left: 0;
+			padding: 59px 48px 84px 48px;
+		}
+		@media (min-width: $screen-xl) {
+			padding: 20px 69px 68px;
+		}
+		@media (min-width: $screen-xxl) {
+			padding: 20px 70px 68px;
+		}
+		&__group {
+			display: flex;
+			flex-direction: column;
+		}
+		&__open {
+			textarea {
+				height: 40px;
+				max-height: 40px;
+				transition: max-height 0.5s ease;
+				&:focus {
+					height: auto;
+					max-height: 200px;
+					&::-webkit-input-placeholder {
+						opacity: 0;
+					}
+				}
+			}
+		}
+		&__address-delivery {
+			display: flex;
+			flex-direction: column;
+			@media (min-width: $screen-md) {
+				flex-direction: row;
+			}
+			.field-radio__help-text {
+				display: block;
 
-          span {
-            font-size: 16px;
-            font-weight: 900;
-            line-height: 2;
-            letter-spacing: -0.2px;
-            @media screen and (min-width: $screen-md) {
-              font-size: 26px;
-              line-height: 1.23;
-              letter-spacing: -0.3px;
-            }
-            span {
-              font-weight: 300;
-              padding-left: 5px;
-            }
-          }
-          @media screen and (min-width: $screen-md) {
-            width: auto;
-            padding-top: 0;
-          }
-        }
-      }
-    }
-    &__add-sizes {
-      border-top: 1px solid #E6E6E6;
-    }
-    .dropdown {
-      visibility: visible;
-      opacity: 1;
-      height: auto;
-      &.open .dropdown-menu:after {
-        height: 100%;
-        transition: height 0.25s;
-      }
-      &.open .dropdown-menu .dropdown-menu__inner {
-        opacity: 1;
-        transition: all 0.25s 0.2s;
-      }
-      &.open > .dropdown-menu {
-        visibility: visible;
-        opacity: 1;
-        height: auto;
-      }
-    }
-    .dropdown-menu {
-      position: absolute;
-      top: 100%;
-      min-width: 185px;
-      height: 0;
-      padding: 24px;
-      color: #3C3C3C;
-      visibility: hidden;
-      opacity: 0;
-      z-index: 10;
-      transition: all 0.25s;
-      &::after {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 0;
-        background-color: #fff;
-        width: 100%;
-        height: 0;
-        box-shadow: 0 32px 64px 0 rgba(0, 2, 14, 0.15);
-        z-index: -1;
-      }
-    }
+			}
+			.radio__name {
+				margin-right: 32px;
+			}
+			@media (min-width: $screen-xl) {
+				flex-direction: row;
+				justify-content: space-between;
+			}
+		}
+		&__pay-group {
+			@media (min-width: $screen-xl) {
+				display: flex;
+				flex-direction: row;
+				span.field-radio__name {
+					margin-right: 32px;
+				}
+			}
+		}
 
-    .dropdown-menu__inner {
-      color: #3C3C3C;
-      opacity: 0;
-      transition: all 0.25s;
-      position: relative;
-      z-index: 1;
-    }
-    &__sales {
-      display: flex;
-      padding: 16px 16px;
-      @media screen and (min-width: $screen-md) {
-        padding: 36px 32px;
-      }
-      .field-text__input-wrap {
-        max-width: 100%;
-      }
-    }
-    &__code {
-      flex: 1;
-      max-width: 240px;
-      @media screen and (min-width: $screen-md) {
-        max-width: 288px;
-      }
-      &:first-child {
-        margin-right: 16px;
-        @media screen and (min-width: $screen-md) {
-          margin-right: 32px;
-        }
-      }
-      &:last-child {
-        .checkout-basket__input {
-          padding-left: 17px;
-        }
-      }
-    }
-    &__placeholder-inner {
-      display: flex;
-      position: absolute;
-      right: 0;
-      bottom: 0;
-      top: 0;
-      left: 0;
-      align-items: center;
-      justify-content: center;
-      pointer-events: none;
-      opacity: 1;
-      transition: 0.2s ease;
-    }
-    &__placeholder {
-      padding-right: 60px;
-      background: url(../img/logo-small.svg) right bottom 5px no-repeat;
-      font-family: $font-family--montserrat;
-      font-weight: 600;
-      line-height: 1.6;
-      letter-spacing: 0.4px;
-      color: #000;
-      text-transform: uppercase;
-      @media screen and (min-width: $screen-md) {
-        font-size: 11px;
-        color: #1db4b7;
-      }
+		.list-dots-style {
+			font-size: 12px;
+			line-height: 1.75;
+			letter-spacing: 0.3px;
+			@media (min-width: $screen-xl) {
+				font-size: 14px;
+				line-height: 1.5;
+				letter-spacing: 0.4px;
+			}
+		}
+		.field-select__pseudoselect {
+			margin-bottom: 8px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+		.field-text__input-wrap {
+			max-width: 288px;
+			@media (min-width: $screen-md) {
+				max-width: 240px;
+			}
+			@media (min-width: $screen-md) {
+				max-width: 100%;
+			}
+		}
 
-    }
-    &__input {
-      z-index: 1;
-      vertical-align: middle;
-      transition: 0.2s ease;
-      text-align: center;
-      &::-webkit-input-placeholder {
-        font-family: $font-family--montserrat;
-        font-size: 10px;
-        font-weight: 600;
-        line-height: 1.6;
-        letter-spacing: 0.4px;
-        color: #000;
-        text-transform: uppercase;
-        opacity: 1;
-        @media screen and (min-width: $screen-md) {
-          font-size: 11px;
-          color: $primary-color;
-        }
-      }
-      &:focus {
-        text-align: left;
-        &::-webkit-input-placeholder {
-          opacity: 0;
-        }
-        + .checkout-basket__placeholder-inner {
-          opacity: 0;
-        }
-      }
-    }
-  }
-  // формление заказа - форма
-  &-order {
-    margin-right: -16px;
-    margin-left: -16px;
-    background-color: #fff;
-    padding: 0 16px 25px;
-    @media (min-width: $screen-md) {
-      margin-right: 0;
-      margin-left: 0;
-      padding: 59px 48px 84px 48px;
-    }
-    @media (min-width: $screen-xl) {
-      padding: 20px 69px 68px;
-    }
-    @media (min-width: $screen-xxl) {
-      padding: 20px 70px 68px;
-    }
-    &__group {
-      display: flex;
-      flex-direction: column;
-    }
-    &__open {
-      textarea {
-        height: 40px;
-        max-height: 40px;
-        transition: max-height 0.5s ease;
-        &:focus {
-          height: auto;
-          max-height: 200px;
-          &::-webkit-input-placeholder {
-            opacity: 0;
-          }
-        }
-      }
-    }
-    &__address-delivery {
-      display: flex;
-      .field-radio__help-text {
-        display: block;
+		&__title {
+			margin-bottom: 23px;
+			display: flex;
+			flex-direction: column;
+			font-weight: 600;
+			font-family: $font-family--montserrat;
+			line-height: 2;
+			letter-spacing: -0.1px;
+			font-size: 13px;
+			@media (min-width: $screen-md) {
+				flex-direction: row;
+				margin-bottom: 27px;
+				justify-content: space-between;
+			}
+			h3 {
+				margin-bottom: 0;
+				@media (min-width: $screen-md) {
+					//margin-right: 43px;
+				}
+			}
+			.login-link {
+				font-size: 12px;
+				line-height: 1.75;
+				letter-spacing: 0.3px;
+				font-family: $font-family;
+				color: #3c3c3c;
+				font-weight: 300;
+				@media (min-width: $screen-md) {
+					font-size: 14px;
+				}
+				a {
+					padding: 0 6px;
+					font-family: $font-family--montserrat;
+					font-size: 10px;
+					font-weight: 600;
+					text-transform: uppercase;
+					line-height: 1.6;
+					letter-spacing: 0.4px;
+					&:hover {
+						color: #3C3C3C;
+					}
+					@media (min-width: $screen-md) {
+						color: #1db4b7;
+						font-size: 11px;
+					}
+				}
+			}
+		}
+		.field-radio__name {
+			margin-right: 16px;
+			font-family: $font-family--montserrat;
+			font-size: 10px;
+			font-weight: 600;
+			line-height: 1.6;
+			text-transform: uppercase;
+			letter-spacing: 0.4px;
+			color: #000;
+			@media (min-width: $screen-xl) {
+				font-size: 11px;
+			}
+		}
+		.field-radio {
+			margin-bottom: 26px;
+			@media (min-width: $screen-xl) {
+				margin-bottom: 33px;
+			}
+		}
+		.field-radio__help-text {
+			font-size: 14px;
+			line-height: 1.5;
+			letter-spacing: 0.4px;
+			color: #3c3c3c;
+			@media (min-width: $screen-xl) {
+				display: block;
+			}
+		}
+		&__row {
+			border-bottom: 1px solid #E6E6E6;
+			padding: 26px 0 32px;
+			@media (min-width: $screen-md) {
+				padding-top: 40px;
+				padding-bottom: 46px;
+			}
+			&:nth-child(2) {
+				padding-bottom: 22px;
+			}
+			&:nth-child(3) {
+				padding-bottom: 2px;
+				@media (min-width: $screen-md) {
+					padding-bottom: 43px;
+				}
+			}
+			&:nth-child(5) {
+				padding-top: 5px;
+				padding-bottom: 5px;
+				margin-bottom: 34px;
 
-      }
-      .radio__name {
-        margin-right: 32px;
-      }
-      @media (min-width: $screen-xl) {
-        flex-direction: row;
-        justify-content: space-between;
-      }
-    }
-    &__pay-group {
-      @media (min-width: $screen-xl) {
-        display: flex;
-        flex-direction: row;
-        span.field-radio__name {
-          margin-right: 32px;
-        }
-      }
-    }
+				@media (min-width: $screen-md) {
+					padding-bottom: 11px;
+					padding-top: 11px;
+					margin-bottom: 39px;
+				}
+			}
+		}
 
-    .list-dots-style {
-      font-size: 12px;
-      line-height: 1.75;
-      letter-spacing: 0.3px;
-      @media (min-width: $screen-xl) {
-        font-size: 14px;
-        line-height: 1.5;
-        letter-spacing: 0.4px;
-      }
-    }
-    .field-select__pseudoselect {
-      margin-bottom: 8px;
-      &:last-child {
-        margin-bottom: 0;
-      }
-    }
-    .field-text__input-wrap {
-      max-width: 288px;
-      @media (min-width: $screen-md) {
-        max-width: 240px;
-      }
-      @media (min-width: $screen-md) {
-        max-width: 100%;
-      }
-    }
-
-    &__title {
-      margin-bottom: 23px;
-      display: flex;
-      flex-direction: column;
-      font-weight: 600;
-      font-family: $font-family--montserrat;
-      line-height: 2;
-      letter-spacing: -0.1px;
-      font-size: 13px;
-      @media (min-width: $screen-md) {
-        flex-direction: row;
-        margin-bottom: 27px;
-        justify-content: space-between;
-      }
-      h3 {
-        margin-bottom: 0;
-        @media (min-width: $screen-md) {
-          //margin-right: 43px;
-        }
-      }
-      .login-link {
-        font-size: 12px;
-        line-height: 1.75;
-        letter-spacing: 0.3px;
-        font-family: $font-family;
-        color: #3c3c3c;
-        font-weight: 300;
-        @media (min-width: $screen-md) {
-          font-size: 14px;
-        }
-        a {
-          padding: 0 6px;
-          font-family: $font-family--montserrat;
-          font-size: 10px;
-          font-weight: 600;
-          text-transform: uppercase;
-          line-height: 1.6;
-          letter-spacing: 0.4px;
-          &:hover {
-            color: #3C3C3C;
-          }
-          @media (min-width: $screen-md) {
-            color: #1db4b7;
-            font-size: 11px;
-          }
-        }
-      }
-    }
-    .field-radio__name {
-      margin-right: 16px;
-      font-family: $font-family--montserrat;
-      font-size: 10px;
-      font-weight: 600;
-      line-height: 1.6;
-      text-transform: uppercase;
-      letter-spacing: 0.4px;
-      color: #000;
-      @media (min-width: $screen-xl) {
-        font-size: 11px;
-      }
-    }
-    .field-radio {
-      margin-bottom: 26px;
-      @media (min-width: $screen-xl) {
-        margin-bottom: 33px;
-      }
-    }
-    .field-radio__help-text {
-      font-size: 14px;
-      line-height: 1.5;
-      letter-spacing: 0.4px;
-      color: #3c3c3c;
-      @media (min-width: $screen-xl) {
-        display: block;
-      }
-    }
-    &__row {
-      border-bottom: 1px solid #E6E6E6;
-      padding: 26px 0 32px;
-      @media (min-width: $screen-md) {
-        padding-top: 40px;
-        padding-bottom: 46px;
-      }
-      &:nth-child(2) {
-        padding-bottom: 22px;
-      }
-      &:nth-child(3) {
-        padding-bottom: 2px;
-        @media (min-width: $screen-md) {
-          padding-bottom: 43px;
-        }
-      }
-      &:nth-child(5) {
-        padding-top: 5px;
-        padding-bottom: 5px;
-        margin-bottom: 34px;
-
-        @media (min-width: $screen-md) {
-          padding-bottom: 11px;
-          padding-top: 11px;
-          margin-bottom: 39px;
-        }
-      }
-    }
-
-    &__contacts {
-      max-width: 328px;
-      .field-text__name {
-        max-width: 73px;
-        width: 100%;
-        @media (min-width: $screen-md) {
-          max-width: 89px;
-        }
-      }
-      .field-text__input-wrap {
-        flex: 1;
-      }
-      .field-text {
-        &:last-child {
-          margin-bottom: 0;
-        }
-        @media (min-width: $screen-md) {
-          font-size: 12px;
-        }
-      }
-    }
-    &__tel {
-      .field-text__input {
-        max-width: 136px;
-        flex: auto;
-      }
-    }
-
-    &__submit {
-      padding-top: 16px;
-      @media (min-width: $screen-xl) {
-        padding-top: 23px;
-      }
-      p {
-        font-size: 13px;
-        margin: 11px 0 0;
-      }
-    }
-  }
-  &__remember {
-    margin-bottom: 20px;
-    padding-top: 32px;
-    font-weight: 900;
-    line-height: 1.25;
-    @media (min-width: $screen-md) {
-      margin-bottom: 40px;
-      padding-top: 70px;
-      line-height: 1.31;
-    }
-    @media (min-width: $screen-xl) {
-      padding-top: 86px;
-    }
-    @media (min-width: $screen-xxl) {
-      margin-bottom: 56px;
-      padding-top: 118px;
-    }
-  }
-  &-slider {
-    .slider-products {
-      padding-top: 0;
-    }
-  }
+		&__contacts {
+			max-width: 328px;
+			.field-text__name {
+				max-width: 73px;
+				width: 100%;
+				@media (min-width: $screen-md) {
+					max-width: 89px;
+				}
+			}
+			.field-text__input-wrap {
+				flex: 1;
+			}
+			.field-text {
+				&:last-child {
+					margin-bottom: 0;
+				}
+				@media (min-width: $screen-md) {
+					font-size: 12px;
+				}
+			}
+		}
+		&__tel {
+			.field-text__input {
+				max-width: 136px;
+				flex: auto;
+			}
+		}
+		&__submit {
+			padding-top: 16px;
+			@media (min-width: $screen-xl) {
+				padding-top: 23px;
+			}
+			p {
+				font-size: 13px;
+				margin: 11px 0 0;
+			}
+		}
+	}
+	&__remember {
+		display: flex;
+		align-items: center;
+		max-width: 1496px;
+		margin-right: auto;
+		margin-left: auto;
+		margin-bottom: 20px;
+		padding-top: 32px;
+		font-weight: 900;
+		line-height: 1.25;
+		padding-right: 16px;
+		padding-left: 16px;
+		@media (min-width: $screen-md) {
+			margin-bottom: 40px;
+			padding-top: 70px;
+			padding-right: 30px;
+			padding-left: 30px;
+			line-height: 1.31;
+		}
+		@media (min-width: $screen-xl) {
+			padding-top: 86px;
+			padding-right: 40px;
+			padding-left: 40px;
+		}
+		@media (min-width: $screen-xxl) {
+			margin-bottom: 56px;
+			padding-top: 118px;
+		}
+	}
+	&-slider {
+		.slider-products {
+			padding-top: 0;
+		}
+	}
+	&__slider-arrows {
+		margin-left: auto;
+		align-self: stretch;
+		display: flex;
+		align-items: center;
+		@media (min-width: $screen-lg) {
+			margin-left: 130px;
+		}
+	}
+	&__title {
+		display: inline-block;
+		margin-bottom: 0;
+	}
 }

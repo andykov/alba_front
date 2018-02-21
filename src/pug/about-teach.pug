@@ -1,0 +1,22 @@
+extends templates/main
+
+block title
+	title  Учебный центр
+
+block header
+	+header('header--about')
+
+block about-header
+	+about-header(
+		'',
+		'Учебный центр',
+		'Методики и учебные программы составлены таким образом, чтобы теоретические части программы находили подтверждение в ежедневных практических занятиях.',
+		'bg-article-4.jpg'
+	)
+
+block content
+	include ../blocks/about-teach/about-teach
+	+about-teach()
+
+
+block js_libs

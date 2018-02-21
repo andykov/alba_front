@@ -7,21 +7,28 @@
 .nav-main {
 	//background-color: #505054;
 
+
+
 	&__list {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
+
 		@media screen and (max-width: $screen-lg - 1) {
 			padding: 14px 0;
 		}
+
 		@media screen and (min-width: $screen-lg) {
 			flex-wrap: nowrap;
 		}
 	}
+
 	&__item {
 		position: relative;
 		align-self: center;
-
+		.form-search {
+			padding-right: 16px;
+		}
 
 		@media screen and (max-width: $screen-md - 1) {
 			width: 50%;
@@ -35,7 +42,12 @@
 		}
 		@media screen and (min-width: $screen-md) {
 			width: 25%;
+
+			.form-search {
+				padding-right: 0;
+			}
 		}
+
 		@media screen and (min-width: $screen-lg) {
 			width: auto;
 
@@ -44,22 +56,13 @@
 					padding-left: 0;
 				}
 			}
-			&:last-child {
-				a {
-					padding-right: 0;
-				}
-			}
+
 		}
 
-		//&:not(:last-child):after {
-		//	content: '';
-		//	width: 4px;
-		//	height: 4px;
-		//	background-color: rgba(0,0,0,0.5);
-		//	position: absolute;
-		//}
-
 	}
+
+
+
 	&__link {
 		display: block;
 		padding-top: 12px;

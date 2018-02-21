@@ -1,0 +1,90 @@
+// В этом файле должны быть стили для БЭМ-блока .stores , его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий... 
+
+.stores {
+	max-width: 1496px;
+	margin-right: auto;
+	margin-left: auto;
+	padding-left: 16px;
+	padding-right: 16px;
+	@media (min-width: $screen-md) {
+		padding-right: 33px;
+		padding-left: 33px;
+	}
+	@media (min-width: $screen-lg) {
+		padding-right: 37px;
+		padding-left: 37px;
+	}
+	@media (min-width: $screen-xl) {
+		margin-bottom: 66px;
+		padding-top: 16px;
+		padding-right: 44px;
+		padding-left: 44px;
+	}
+	img {
+		//float: left;
+	}
+	.shops {
+		flex-wrap: wrap;
+	}
+	.shops-list {
+		padding-right: 0;
+		@include col(md, 12, $grid-columns, false);
+		@include col(lg, 6, $grid-columns, false);
+		@include col(xl, 5.25, $grid-columns, false);
+	}
+	.shops__map {
+		@include col(md, 12, $grid-columns, false);
+		@include col(lg, 6, $grid-columns, false);
+		@include col(xl, 6.75, $grid-columns, false);
+
+	}
+	.shops-list__item {
+		@media (min-width: $screen-md) {
+			padding: 14px 20px 108px;
+			align-self: stretch;
+		}
+		@media (min-width: $screen-lg) {
+			padding: 28px 34px 14px 34px;
+		}
+		> span {
+			@media (min-width: $screen-md) {
+				margin-bottom: 14px;
+			}
+		}
+		li {
+			margin-bottom: 11px;
+			@media (min-width: $screen-lg) {
+				margin-bottom: 6px;
+			}
+			span {
+				display: inline-block;
+				vertical-align: top;
+				margin-right: 5px;
+			}
+		}
+	}
+	.shops-list__item li a {
+		display: block;
+	}
+	.shops-list__item {
+		min-height: 100%;
+		width: 100%;
+		border-left: none;
+		border-bottom: 1px solid #e6e6e6;
+		padding-bottom: 12px;
+	}
+	&__item {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		@media (min-width: $screen-sm) {
+			flex-direction: row;
+			align-items: flex-start;
+		}
+	}
+	.pagination {
+		background-color: #fff;
+		padding: 9px;
+	}
+}

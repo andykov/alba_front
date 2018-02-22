@@ -88,15 +88,20 @@ $(function() {
     }
 
 
+    $('.js-product-gallery-big').on('init', function(event, slick) {
+        console.log('fired!');
+        $('.js-product-gallery-big').fadeIn(3000);
+    });
 
     var $productGalleryBig = $('.product-gallery__big'),
         $productGalleryThumb = $('.product-gallery__thumb'),
         $productGalleryItem = $('.product-gallery__item'),
         $productGalleryFirstImg = $productGalleryItem.first().find('img'),
-        $productGalleryFirstImgPath = $productGalleryFirstImg.attr('src');
+        $productGalleryMask = $('.product-gallery__item:first-child').append('<div class="product-gallery-mask"></div>'),
+        productGalleryFirstImgPath = $productGalleryFirstImg.attr('src');
+    var $getElementsByClassName = document.getElementsByClassName('product-gallery-mask');
 
-    console.log($productGalleryFirstImgPath);
-
+    console.log($getElementsByClassName);
     if($productGalleryBig.length) {
         $productGalleryBig.slick({
             mobileFirst: true,
@@ -134,6 +139,10 @@ $(function() {
 
 
 
+
+    $productGalleryFirstImg.css({
+        'opacity': 0,
+    });
 
     var divSizeWidth = $('.container').width();
     var divSizeHeight = $('.container').height();
@@ -192,7 +201,7 @@ $(function() {
         y: divSizeWidth,
         width: divSizeWidth,
         height: divSizeWidth,
-        'xlink:href': firstImgPath
+        'xlink:href': productGalleryFirstImgPath
     });
     var img_2 = makeSVG('image', {
         mask: "url(#mask_2)",
@@ -200,11 +209,11 @@ $(function() {
         y: -divSizeWidth,
         width: divSizeWidth,
         height: divSizeWidth,
-        'xlink:href': firstImgPath
+        'xlink:href': productGalleryFirstImgPath
     });
 
-    document.getElementById('svg-wrap').appendChild(svg).appendChild(defs).appendChild(poly_1);
-    document.getElementById('svg-wrap').appendChild(svg).appendChild(defs).appendChild(poly_2);
+    $getElementsByClassName.appendChild(svg).appendChild(defs).appendChild(poly_1);
+    $getElementsByClassName.appendChild(svg).appendChild(defs).appendChild(poly_2);
 
     document.getElementById('el_svg').appendChild(group_1).appendChild(mask_1).appendChild(useMask_1);
 // document.getElementById('group_1').appendChild(use_1);

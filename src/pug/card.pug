@@ -7,12 +7,12 @@ block content
 
 	.card-detail
 		ul.breadcrumbs
-			li.breadcrumbs__item
+			li.breadcrumbs__item.breadcrumbs__item--bg-white
 				a(href="#")
 					<svg xmlns="http://www.w3.org/2000/svg" width="18" height="10" viewBox="0 0 18 10"><path fill-rule="evenodd" d="M7.48 5.513l1.448-2.796 1.539 2.796H7.479zM12.813 0H5.177L0 9.991h5.86l.899-2.104h4.387l.94 2.113L18 9.991 12.814 0z"/></svg>
-			li.breadcrumbs__item
+			li.breadcrumbs__item.breadcrumbs__item--bg-white
 				a(href="#") Женская обувь
-			li.breadcrumbs__item
+			li.breadcrumbs__item.breadcrumbs__item--bg-white
 				a(href="#") Ботинки
 		.product-gallery
 			.js-product-gallery-big.product-gallery__big
@@ -206,7 +206,7 @@ block content
 						a.social__item(href="#")
 							<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><g fill="none" fill-rule="evenodd"><circle cx="16" cy="16" r="16" fill="#1D1D1D"/><path fill="#FFF" d="M21.612 12.784a2.808 2.808 0 0 0 1.263-1.536 5.91 5.91 0 0 1-1.825.674 2.91 2.91 0 0 0-2.096-.877c-1.586 0-2.872 1.244-2.872 2.777 0 .218.025.43.074.633a8.248 8.248 0 0 1-5.92-2.902c-.247.41-.388.886-.388 1.396 0 .964.508 1.814 1.278 2.312a2.946 2.946 0 0 1-1.301-.349v.035c0 1.345.99 2.468 2.303 2.724-.24.062-.494.097-.757.097-.185 0-.364-.018-.54-.051.365 1.104 1.426 1.907 2.682 1.929a5.887 5.887 0 0 1-3.567 1.187c-.231 0-.46-.013-.685-.038a8.318 8.318 0 0 0 4.403 1.25c5.283 0 8.17-4.233 8.17-7.904l-.01-.36a5.636 5.636 0 0 0 1.437-1.435c-.515.221-1.068.371-1.649.438z"/></g></svg>
 				.product-tabs.product-tabs--adress
-					.product-tabs__nav
+					.product-tabs__nav-inner
 						span.product-tabs__city Ваш город: Москва
 						ul.product-tabs__nav
 							li.product-tabs__tab.active
@@ -270,7 +270,7 @@ block content
 						#reviews.product-tabs__item
 							| not design ...
 
-	.product-tabs.slider-products
+	.product-tabs.slider-products.slider-products--page-card
 		.container.slider-products__nav-inner
 			ul.product-tabs__nav.slider-products__nav
 				li.product-tabs__tab.slider-products__item.active

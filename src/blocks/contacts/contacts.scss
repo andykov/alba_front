@@ -2,5 +2,39 @@
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий... 
 
 .contacts {
-	
+
+	&__names,
+	&__requisites-data {
+		font-size: 12px;
+		line-height: 1.5;
+		letter-spacing: 0.3px;
+		font-weight: 300;
+		text-align: left;
+
+		@media screen and (min-width: $screen-md) {
+			font-size: 14px;
+			letter-spacing: 0.4px;
+		}
+
+		@media screen and (min-width: $screen-xl) {
+			font-size: 16px;
+			line-height: 1.38;
+		}
+	}
+
+	&__names {
+		p {
+			margin-bottom: 0;
+		}
+	}
+
+	&__requisites-title {
+		font-family: $font-family--montserrat;
+		font-size: 11px;
+		font-weight: 600;
+		line-height: 2.18;
+		letter-spacing: 0.4px;
+		text-align: left;
+		text-transform: uppercase;
+	}
 }

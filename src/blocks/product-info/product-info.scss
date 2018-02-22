@@ -15,8 +15,8 @@
 	}
 	@media screen and (min-width: $screen-xl) {
 		padding-left: 70px;
-		padding-right: 42px;
-		max-width: 394px;
+		padding-right: 15px;
+		max-width: 356px;
 		width: 100%;
 		height: 757px;
 		position: absolute;
@@ -27,7 +27,6 @@
 
 	@media screen and (min-width: $screen-xxl) {
 		height: 832px;
-		right: 80px;
 	}
 	.price {
 		margin-left: auto;
@@ -39,16 +38,6 @@
 		}
 		@media screen and (min-width: $screen-xxl) {
 			margin-top: 98px;
-		}
-		[data-old-price] {
-			font-weight: 600;
-			font-size: 13px;
-			line-height: 2;
-			@media screen and (min-width: $screen-md) {
-				font-size: 21px;
-				line-height: 1.24;
-				letter-spacing: -0.2px;
-			}
 		}
  	}
 	&__header {
@@ -130,7 +119,7 @@
 			right: -8px;
 		}
 		@media (min-width: $screen-xl) {
-			right: 361px;
+			right: 356px;
 		}
 	}
 	.sizes {

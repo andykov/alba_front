@@ -82,6 +82,10 @@
 			flex-direction: row;
 			align-items: flex-start;
 		}
+		@media (min-width: $screen-sm) {
+			flex-direction: row;
+			align-items: stretch;
+		}
 	}
 	.pagination {
 		background-color: #fff;

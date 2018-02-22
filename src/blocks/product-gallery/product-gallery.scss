@@ -36,6 +36,7 @@
 
 	&__item {
 		//padding: 0 90px;
+		position: relative;
 		max-width: 668px;
 		transition: opacity 0.4s;
 
@@ -97,6 +98,30 @@
 					border-bottom: 2px solid #60d3d5;
 				}
 			}
+		}
+	}
+}
+
+
+
+
+
+#svg-wrap {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+	border: 1px solid;
+
+	&.anim {
+		image {
+			x: 0;
+			y: 0;
+			transition: all 0.8s 0.2s ease-in-out;
 		}
 	}
 }

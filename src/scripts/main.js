@@ -88,20 +88,31 @@ $(function() {
     }
 
 
+
+    var svgWrap = document.createElement('div');
+    var svgWrap = svgWrap.setAttribute('id', 'svg-wrap');
+    console.log(svgWrap);
+    var $productGalleryBig = $('.product-gallery__big'),
+        $productGalleryThumb = $('.product-gallery__thumb'),
+        $productGalleryItem = $('.product-gallery__item'),
+        $productGalleryFirstImg = $productGalleryItem.first().find('img'),
+        productGalleryFirstImgPath = $productGalleryFirstImg.attr('src');
+    var item = document.getElementsByClassName('product-gallery__item')[0];
+
+    // console.log($(item));
+    // $(item).append(svgWrap);
+
+    $('.product-gallery__item').append('<div id="svg-wrap"></div>');
+
     $('.js-product-gallery-big').on('init', function(event, slick) {
         console.log('fired!');
         $('.js-product-gallery-big').fadeIn(3000);
     });
 
-    var $productGalleryBig = $('.product-gallery__big'),
-        $productGalleryThumb = $('.product-gallery__thumb'),
-        $productGalleryItem = $('.product-gallery__item'),
-        $productGalleryFirstImg = $productGalleryItem.first().find('img'),
-        $productGalleryMask = $('.product-gallery__item:first-child').append('<div class="product-gallery-mask"></div>'),
-        productGalleryFirstImgPath = $productGalleryFirstImg.attr('src');
-    var $getElementsByClassName = document.getElementsByClassName('product-gallery-mask');
 
-    console.log($getElementsByClassName);
+
+    // console.log();
+
     if($productGalleryBig.length) {
         $productGalleryBig.slick({
             mobileFirst: true,
@@ -144,8 +155,8 @@ $(function() {
         'opacity': 0,
     });
 
-    var divSizeWidth = $('.container').width();
-    var divSizeHeight = $('.container').height();
+    var divSizeWidth = $('.product-gallery__item.slick-current').width();
+    var divSizeHeight = $('.product-gallery__item.slick-current').height();
 
     function makeSVG(tag, attrs) {
         var el= document.createElementNS('http://www.w3.org/2000/svg', tag);
@@ -160,8 +171,8 @@ $(function() {
         version:"1.1",
         xmlns:"http://www.w3.org/2000/svg",
         'mlns:xlink': "http://www.w3.org/1999/xlink",
-        width:divSizeWidth,
-        height: divSizeHeight
+        width:'100%',
+        height:'100%',
     });
 
     var group_1 = makeSVG('g', { id: 'group_1' });
@@ -212,9 +223,12 @@ $(function() {
         'xlink:href': productGalleryFirstImgPath
     });
 
-    $getElementsByClassName.appendChild(svg).appendChild(defs).appendChild(poly_1);
-    $getElementsByClassName.appendChild(svg).appendChild(defs).appendChild(poly_2);
+    // $('#svg-wrap').append(svg);
+    // $('#el_svg').append(defs).append(poly_1);
 
+    document.getElementById('svg-wrap').appendChild(svg).appendChild(defs).appendChild(poly_1);
+    document.getElementById('svg-wrap').appendChild(svg).appendChild(defs).appendChild(poly_2);
+//
     document.getElementById('el_svg').appendChild(group_1).appendChild(mask_1).appendChild(useMask_1);
 // document.getElementById('group_1').appendChild(use_1);
     document.getElementById('group_1').appendChild(img_1);
@@ -226,7 +240,16 @@ $(function() {
 
 
 
-
+    function addSvg() {
+        $('.slick-current').append($("#svg-wrap").html($("#svg-wrap").html()));
+    }
+    addSvg();
+    setTimeout(function(){
+        $("#svg-wrap").addClass('anim');
+        $productGalleryFirstImg.delay( 800 ).animate({
+            opacity: 1,
+        }, 200);
+    }, 0);
 
 
 

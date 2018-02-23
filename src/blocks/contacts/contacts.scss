@@ -2,6 +2,15 @@
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий... 
 
 .contacts {
+	@media screen and (min-width: $screen-md) {
+		padding-top: 36px;
+		padding-bottom: 30px;
+	}
+
+	@media screen and (min-width: $screen-lg) {
+		padding-top: 68px;
+		padding-bottom: 76px;
+	}
 
 	&__names,
 	&__requisites-data {
@@ -23,19 +32,58 @@
 	}
 
 	&__names {
+		margin-bottom: 28px;
+
 		p {
 			margin-bottom: 0;
 		}
+
+		@media screen and (min-width: $screen-xl) {
+			margin-bottom: 54px;
+		}
 	}
 
-	&__requisites-title {
+	&__requisites {
 
-		font-family: $font-family--montserrat;
-		font-size: 11px;
-		font-weight: 600;
-		line-height: 2.18;
-		letter-spacing: 0.4px;
-		text-align: left;
-		text-transform: uppercase;
+		li {
+			margin-bottom: 16px;
+		}
+
+		&-title {
+			font-family: $font-family--montserrat;
+			font-size: 11px;
+			font-weight: 600;
+			line-height: 2.18;
+			letter-spacing: 0.4px;
+			text-align: left;
+			text-transform: uppercase;
+			background: #f8f8f8;
+
+			@media screen and (min-width: $screen-md) {
+
+				position: relative;
+
+				span {
+					position: relative;
+					z-index: 1;
+					display: inline-block;
+					padding-right: 10px;
+					background: #f8f8f8;
+				}
+
+				&::before {
+					content: '';
+					position: absolute;
+					top: 0;
+					bottom: 0;
+					left: 24px;
+					right: 0;
+					display: inline-block;
+					height: 1px;
+					margin: auto;
+					background-color: #e6e6e6;
+				}
+			}
+		}
 	}
 }

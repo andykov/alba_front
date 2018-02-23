@@ -1,82 +1,96 @@
 mixin about-hr()
 	.about-hr
-		.about-hr__row
-			h2.offset-md-2.col-12.col-md-8.about-hr__title
-				| Мы ждем стильных, энергичных, коммуникабельных людей, готовых к интересной работе продавцом-консультантом!
+		.container
+			.row.about-hr__row
+				h2.offset-md-2.col-12.col-md-8.about-hr__title
+					| Мы ждем стильных, энергичных, коммуникабельных людей, готовых к интересной работе продавцом-консультантом!
 
-			.col-12.col-md-6
-				h3.about-hr__subtitle Наши пожелания от Вас
-				.about-hr__demands
-					p Желание работать с красивой и качественной обувью
-					p Грамотная речь, энергичность, чувство стиля, стремление расти и развиваться внутри Компании
-					p Опыт работы в продажах будет Вашим преимуществом, но не главным показателем
-					p Возможность работать в сменном скользящем графике 4/3, 3/3, 3/2 ,3/1 или 2/2
+				.col-12.col-md-6.col-xxl-5
+					h3.about-hr__subtitle Наши пожелания от Вас
+					.about-hr__demands
+						p Желание работать с красивой и качественной обувью
+						p Грамотная речь, энергичность, чувство стиля, стремление расти и развиваться внутри Компании
+						p Опыт работы в продажах будет Вашим преимуществом, но не главным показателем
+						p Возможность работать в сменном скользящем графике 4/3, 3/3, 3/2 ,3/1 или 2/2
 
-				h3.about-hr__subtitle Что нужно делать
-				.about-hr__demands
-					p Обслуживать покупателей полный цикл от "Добрый день!" до "Спасибо за покупку!"
-					p Соблюдать стандарты мерчендайзинга, поддерживать чистоту и порядок в торговом зале и подсобном помещении в соответствии со стандартами Компании
-					p Активно участвовать в жизни Компании
+					h3.about-hr__subtitle Что нужно делать
+					.about-hr__demands
+						p Обслуживать покупателей полный цикл от "Добрый день!" до "Спасибо за покупку!"
+						p Соблюдать стандарты мерчендайзинга, поддерживать чистоту и порядок в торговом зале и подсобном помещении в соответствии со стандартами Компании
+						p Активно участвовать в жизни Компании
 
-				h3.about-hr__subtitle Мы предлагаем
-				.about-hr__demands
-					p Наш размерный ряд зарплат широк и зависит от Вашего опыта. Успешные продавцы зарабатывают от 50 000 и выше.
-					p График и условия труда не жмут, а места работы удобны для каждого:
+					h3.about-hr__subtitle Мы предлагаем
+					.about-hr__demands
+						p Наш размерный ряд зарплат широк и зависит от Вашего опыта. Успешные продавцы зарабатывают от 50 000 и выше.
+						p График и условия труда не жмут, а места работы удобны для каждого:
 
-			.col-12.col-md-6.col-xl-5.about-hr__city-wrap
-				.about-hr__city
-					.about-hr__city-header
-						a(href="#").about-hr__city-title.active москва
-						a(href="#").about-hr__city-title другие регионы
-					ul.about-hr__city-list
-						li.about-hr__city-item Университет (ТЦ "Капитолий")
-						li.about-hr__city-item  г. Зеленоград (ТЦ "Иридиум")
-						li.about-hr__city-item  Котельники/Выхино/Кузьминки (ТЦ "Мега Белая Дача")
-						li.about-hr__city-item  Речной вокзал/Планерная/г.Химки (ТЦ "Мега Химки")
-						li.about-hr__city-item  Юго-Западная (ТЦ "Фестиваль")
-						li.about-hr__city-item  Юго-Западная (ТЦ "Авеню")
-						li.about-hr__city-item  Калужская (ТЦ "Калужский")
-						li.about-hr__city-item  Теплый стан (ТЦ "Принц Плаза")
-						li.about-hr__city-item  Домодедовская (ТЦ "Вегас")
-						li.about-hr__city-item  Домодедовская (ТЦ "Домодедовский")
-						li.about-hr__city-item  Братиславская (ТЦ "БУМ")
-						li.about-hr__city-item  Алтуфьево (ТЦ "Весна")
-						li.about-hr__city-item  Бабушкинская/ВДНХ (ТЦ "Золотой Вавилон")
-						li.about-hr__city-item  Сходненская (ТЦ "Калейдоскоп")
-						li.about-hr__city-item  Войковская (ТЦ "Метрополис")
-						li.about-hr__city-item  Киевская (ТЦ "Европейский")
+				.offset-xxl-1.col-12.col-md-6.col-xl-5.about-hr__city-wrap
+					.about-hr__city
+						ul.about-hr__city-header
+							li.about-hr__city-title.active
+								a(href="#moscow" data-toggle="tab") москва
+							li.about-hr__city-title
+								a(href="#other-cities" data-toggle="tab") другие регионы
+						ul#moscow.about-hr__city-list.active
+							li.about-hr__city-item Университет (ТЦ "Капитолий")
+							li.about-hr__city-item  г. Зеленоград (ТЦ "Иридиум")
+							li.about-hr__city-item  Котельники/Выхино/Кузьминки (ТЦ "Мега Белая Дача")
+							li.about-hr__city-item  Речной вокзал/Планерная/г.Химки (ТЦ "Мега Химки")
+							li.about-hr__city-item  Юго-Западная (ТЦ "Фестиваль")
+							li.about-hr__city-item  Юго-Западная (ТЦ "Авеню")
+							li.about-hr__city-item  Калужская (ТЦ "Калужский")
+							li.about-hr__city-item  Теплый стан (ТЦ "Принц Плаза")
+							li.about-hr__city-item  Домодедовская (ТЦ "Вегас")
+							li.about-hr__city-item  Домодедовская (ТЦ "Домодедовский")
+							li.about-hr__city-item  Братиславская (ТЦ "БУМ")
+							li.about-hr__city-item  Алтуфьево (ТЦ "Весна")
+							li.about-hr__city-item  Бабушкинская/ВДНХ (ТЦ "Золотой Вавилон")
+							li.about-hr__city-item  Сходненская (ТЦ "Калейдоскоп")
+							li.about-hr__city-item  Войковская (ТЦ "Метрополис")
+							li.about-hr__city-item  Киевская (ТЦ "Европейский")
+						ul#other-cities.about-hr__city-list
+							li.about-hr__city-item other-cities
+							li.about-hr__city-item other-cities
+							li.about-hr__city-item other-cities
+							li.about-hr__city-item other-cities
+							li.about-hr__city-item other-cities
+							li.about-hr__city-item other-cities
+							li.about-hr__city-item other-cities
+							li.about-hr__city-item other-cities
 
-		.about-hr__row.jc-md-center
-			.col-12.col-md-8.about-hr__career
-				h2.about-hr__title.about-hr__title
-					| C нами легко подняться не только на каблуки, но еще и по карьерной лестнице
-				p
-					| В ALBA каждого ждет своя пара дружных коллег. Ну а корпоративная скидка поможет приобрести большое количество идеальных лодочек.
+		.container
+			.row.about-hr__row.jc-md-center
+				.col-12.col-md-8.about-hr__career
+					h2.about-hr__title.about-hr__title
+						| C нами легко подняться не только на каблуки, но еще и по карьерной лестнице
+					p
+						| В ALBA каждого ждет своя пара дружных коллег. Ну а корпоративная скидка поможет приобрести большое количество идеальных лодочек.
 
 		.col-12.about-hr__logo
 			figure
 				img(src="img/content/badge-superjob.png", alt="")
 
-		.about-hr__row.jc-md-center
-			.col-12.col-md-8.about-hr__about-wrap
-				.about-hr__about
-					p По итогу 2016 года наша Компания вошла в ТОП-100 Лучших работодателей России по версии сайта hh.ru и в ТОП-20 среди розничных, ресторанных и развлекательных сетей.
-					p Это большое достижение, но останавливаться на этом мы не планируем, и по итогу 2017 года будем стараться попасть в ТОП-10 лучших Ритейлеров России!
-					p Ознакомиться с результатами Рейтинга можно на сайте
-						a(href="http://rating.hh.ru/rating2016/" target="_blank")
-							|  http://rating.hh.ru/rating2016/
-				.about-hr__about
-					p Узнать более подробную информацию об открытых вакансиях Вы можете
-					p по телефону
-						a(href="tel:88005550030")
-							|  8 (800) 555-00-30
-						|,
-						a(href="tel:89154329265")
-							|  8 (915) 432-92-65
-					p  или на сайте
-						a(href="http://rating.hh.ru/rating2016/" target="_blank")
-							|  https://hh.ru/employer/84618
+		.container
+			.row.about-hr__row.jc-md-center
+				.col-12.col-md-8.about-hr__about-wrap
+					.about-hr__about
+						p По итогу 2016 года наша Компания вошла в ТОП-100 Лучших работодателей России по версии сайта hh.ru и в ТОП-20 среди розничных, ресторанных и развлекательных сетей.
+						p Это большое достижение, но останавливаться на этом мы не планируем, и по итогу 2017 года будем стараться попасть в ТОП-10 лучших Ритейлеров России!
+						p Ознакомиться с результатами Рейтинга можно на сайте
+							a(href="http://rating.hh.ru/rating2016/" target="_blank")
+								|  http://rating.hh.ru/rating2016/
+					.about-hr__about
+						p Узнать более подробную информацию об открытых вакансиях Вы можете
+						p по телефону
+							a(href="tel:88005550030")
+								|  8 (800) 555-00-30
+							|,
+							a(href="tel:89154329265")
+								|  8 (915) 432-92-65
+						p  или на сайте
+							a(href="http://rating.hh.ru/rating2016/" target="_blank")
+								|  https://hh.ru/employer/84618
 
-				.about-hr__about
-					p Если Вы не нашли интересную вакансию для себя, но желаете работать в нашей Компании, отправьте свое резюме на почту ryazheskaya@the-alba.com.
-					p Мы занесем резюме в кадровый резерв и свяжемся с Вами при наличии подходящих вакансий.
+					.about-hr__about
+						p Если Вы не нашли интересную вакансию для себя, но желаете работать в нашей Компании, отправьте свое резюме на почту ryazheskaya@the-alba.com.
+						p Мы занесем резюме в кадровый резерв и свяжемся с Вами при наличии подходящих вакансий.

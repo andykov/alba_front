@@ -17,23 +17,32 @@ mixin about-header(modClass, title, subtitle, bgImage)
 		if (modClass == 'about-header--history')
 			ul.about-header__year-nav
 				li.about-header__year-item
-					button 1996
+					a(href="#1996" data-toggle="tab") 1996
 				li.about-header__year-item.active
-					button 1998
+					a(href="#1998" data-toggle="tab") 1998
 				li.about-header__year-item
-					button 2003
+					a(href="#2003" data-toggle="tab") 2003
 				li.about-header__year-item
-					button 2008
+					a(href="#2008" data-toggle="tab") 2008
 				li.about-header__year-item
-					button 2012
+					a(href="#2012" data-toggle="tab") 2012
 				li.about-header__year-item
-					button 2013
+					a(href="#2013" data-toggle="tab") 2013
 				li.about-header__year-item
-					button 2014
+					a(href="#2014" data-toggle="tab") 2014
 				li.about-header__year-item
-					button 2015
+					a(href="#2015" data-toggle="tab") 2015
+
+			ul.about-header__subtitle
+				li#1996 1996: далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Ipsum родного они своего грустный семантика злых, заманивший снова толку, lorem сих даль вопроса рукопись это переулка. Прямо, букв, выйти!
+				li#1998.active!= subtitle
+				li#2003 2003: они своего грустный семантика злых, заманивший снова толку, lorem сих даль вопроса рукопись это переулка. Прямо, букв, выйти!
+				li#2008 2008: гласных и согласных живут рыбные тексты. Ipsum родного они своего грустный семантика злых, заманивший снова толку, lorem сих даль вопроса рукопись это переулка. Прямо, букв, выйти!
+				li#2012 2012: далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Ipsum родного они своего грустный семантика злых, заманивший снова толку, lorem сих даль вопроса рукопись это переулка. Прямо, букв, выйти!
+				li#2013 2013: далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.lorem сих даль вопроса рукопись это переулка. Прямо, букв, выйти!
+				li#2014 2014: далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Ipsum родного они своего грустный семантика злых, заманивший снова толку, lorem сих даль вопроса рукопись это переулка. Прямо, букв, выйти!
+				li#2015 2015: lorem сих даль вопроса рукопись это переулка. Прямо, букв, выйти!
 
 		else
 			h1.about-header__title!= title
-
-		p.about-header__subtitle!= subtitle
+			p.about-header__subtitle!= subtitle

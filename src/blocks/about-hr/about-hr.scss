@@ -3,39 +3,16 @@
 
 .about-hr {
 
-	@media screen and (min-width: $screen-md) {
-		padding-left: 12px;
-		padding-right: 12px;
-
-		&__row {
-			display: flex;
-			flex-wrap: wrap;
-		}
-	}
 
 	@media screen and (min-width: $screen-lg) {
 		padding-top: 32px;
-		padding-left: 24px;
-		padding-right: 24px;
 	}
 
 	@media screen and (min-width: $screen-xl) {
-		&__row {max-width: $container-xl;
-			margin-left: auto;
-			margin-right: auto;}
-		margin-left: auto;
-		margin-right: auto;
 		padding-top: 64px;
 		padding-bottom: 40px;
-		padding-left: 0;
-		padding-right: 0;
 	}
 
-	@media screen and (min-width: $screen-xxl) {
-		&__row {max-width: $container-xxl;
-			margin-left: auto;
-			margin-right: auto;}
-	}
 
 	&__title {
 		margin-bottom: 32px;
@@ -73,10 +50,6 @@
 
 	&__demands {
 		margin-bottom: 32px;
-
-		// &:last-child {
-		// 	margin-bottom: 0;
-		// }
 
 		@media screen and (min-width: $screen-xl) {
 			margin-bottom: 64px;
@@ -129,25 +102,40 @@
 		}
 
 		&-title {
-			margin-right: 34px;
-			font-family: $font-family--montserrat;
-			font-size: 11px;
-			font-weight: 600;
-			letter-spacing: 0.4px;
-			text-align: left;
-			color: #a0a0a0;
-			line-height: 28px;
-			text-transform: uppercase;
-			border-bottom: 3px solid transparent;
-			transition: all $transition;
 
-			&.active {
-				color: #000;
-				border-color: #60d3d5;
+			a {
+				display: inline-block;
+				margin-right: 34px;
+				font-family: $font-family--montserrat;
+				font-size: 11px;
+				font-weight: 600;
+				letter-spacing: 0.4px;
+				text-align: left;
+				color: #a0a0a0;
+				line-height: 28px;
+				text-transform: uppercase;
+				border-bottom: 3px solid transparent;
+				transition: all $transition;
+
+				&:hover {
+					color: #1eb4b7;
+				}
 			}
 
-			&:hover {
-				color: #1eb4b7;
+			&.active {
+				a {
+					color: #000;
+					border-color: #60d3d5;
+				}
+			}
+
+		}
+
+		&-list {
+			display: none;
+
+			&.active {
+				display: block;
 			}
 		}
 
@@ -155,13 +143,12 @@
 			font-size: 12px;
 			font-weight: 300;
 			line-height: 1.5;
-			letter-spacing: 0.4px;
+			letter-spacing: 0px;
 			text-align: left;
 			color: #505050;
 
 			@media screen and (min-width: $screen-md) {
 				font-size: 14px;
-				letter-spacing: 0.4px;
 			}
 
 			@media screen and (min-width: $screen-xl) {
@@ -193,11 +180,11 @@
 
 		@media screen and (min-width: $screen-xl) {
 			max-width: 452px;
-			padding-left: 64px;
-			padding-right: 54px;
+			padding-left: 72px;
+			padding-right: 41px;
 		}
 
-		@media screen and (min-width: $screen-xl) {
+		@media screen and (min-width: $screen-xxl) {
 			max-width: 630px;
 		}
 	}

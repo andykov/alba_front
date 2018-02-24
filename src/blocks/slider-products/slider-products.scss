@@ -7,10 +7,43 @@
 
 	&--checkout-page {
 		margin-bottom: -170px;
-		padding-left: 16px;
 		margin-right: 0;
 		margin-left: 0;
-		padding-top: 0;
+		.slick-arrow {
+			margin-left: auto;
+			bottom: initial;
+			top: -66px;
+			right: 16px;
+			cursor: pointer;
+			@media screen and (min-width: $screen-xxl) {
+				//right: 127px;
+				//top: -102px;
+			}
+		}
+		.slick-slider .slick-prev {
+			right: 65px;
+			@media screen and (min-width: $screen-xxl) {
+				//right: 173px;
+			}
+		}
+	}
+	&--page-card {
+		.slick-arrow {
+			bottom: initial;
+			top: -92px;
+			right: 67px;
+			cursor: pointer;
+			@media screen and (min-width: $screen-xxl) {
+				right: 127px;
+				top: -102px;
+			}
+		}
+		.slick-slider .slick-prev {
+			right: 118px;
+			@media screen and (min-width: $screen-xxl) {
+				right: 173px;
+			}
+		}
 	}
 	@media screen and (min-width: $screen-md) {
 		margin-bottom: -50px;

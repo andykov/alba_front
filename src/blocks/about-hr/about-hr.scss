@@ -1,0 +1,279 @@
+// В этом файле должны быть стили для БЭМ-блока .about-hr , его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий... 
+
+.about-hr {
+
+	@media screen and (min-width: $screen-md) {
+		padding-left: 12px;
+		padding-right: 12px;
+
+		&__row {
+			display: flex;
+			flex-wrap: wrap;
+		}
+	}
+
+	@media screen and (min-width: $screen-lg) {
+		padding-top: 32px;
+		padding-left: 24px;
+		padding-right: 24px;
+	}
+
+	@media screen and (min-width: $screen-xl) {
+		&__row {max-width: $container-xl;
+			margin-left: auto;
+			margin-right: auto;}
+		margin-left: auto;
+		margin-right: auto;
+		padding-top: 64px;
+		padding-bottom: 40px;
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	@media screen and (min-width: $screen-xxl) {
+		&__row {max-width: $container-xxl;
+			margin-left: auto;
+			margin-right: auto;}
+	}
+
+	&__title {
+		margin-bottom: 32px;
+		font-family: $font-family--montserrat;
+		font-size: 14px;
+		font-weight: 600;
+		line-height: 1.44;
+		letter-spacing: -0.2px;
+		text-align: center;
+		color: #000000;
+
+		@media screen and (min-width: $screen-md) {
+			order: -1;
+			margin-bottom: 64px;
+			font-size: 16px;
+		}
+
+		@media screen and (min-width: $screen-xl) {
+			margin-bottom: 96px;
+			font-size: 18px;
+		}
+	}
+
+	&__subtitle {
+		margin-bottom: 16px;
+		font-family: $font-family--montserrat;
+		font-size: 11px;
+		font-weight: 600;
+		line-height: 1.45;
+		letter-spacing: 0.4px;
+		text-align: left;
+		color: #000000;
+		text-transform: uppercase;
+	}
+
+	&__demands {
+		margin-bottom: 32px;
+
+		// &:last-child {
+		// 	margin-bottom: 0;
+		// }
+
+		@media screen and (min-width: $screen-xl) {
+			margin-bottom: 64px;
+		}
+
+	}
+
+	p {
+		margin-bottom: 0;
+		font-size: 12px;
+		line-height: 1.5;
+		letter-spacing: 0.3px;
+		font-weight: 300;
+		text-align: left;
+		color: #505050;
+
+		@media screen and (min-width: $screen-md) {
+			font-size: 14px;
+			letter-spacing: 0.4px;
+		}
+
+		@media screen and (min-width: $screen-xl) {
+			font-size: 16px;
+			line-height: 1.38;
+		}
+
+	}
+
+	&__city {
+		position: relative;
+		padding-top: 32px;
+		padding-bottom: 32px;
+		background: #fff;
+
+		&::before {
+			content: '';
+			position: absolute;
+			z-index: -1;
+			top: 0;
+			bottom: 0;
+			left: -16px;
+			right: -16px;
+			background: #fff;
+		}
+
+
+		&-header {
+			display: flex;
+			margin-bottom: 29px;
+		}
+
+		&-title {
+			margin-right: 34px;
+			font-family: $font-family--montserrat;
+			font-size: 11px;
+			font-weight: 600;
+			letter-spacing: 0.4px;
+			text-align: left;
+			color: #a0a0a0;
+			line-height: 28px;
+			text-transform: uppercase;
+			border-bottom: 3px solid transparent;
+			transition: all $transition;
+
+			&.active {
+				color: #000;
+				border-color: #60d3d5;
+			}
+
+			&:hover {
+				color: #1eb4b7;
+			}
+		}
+
+		&-item {
+			font-size: 12px;
+			font-weight: 300;
+			line-height: 1.5;
+			letter-spacing: 0.4px;
+			text-align: left;
+			color: #505050;
+
+			@media screen and (min-width: $screen-md) {
+				font-size: 14px;
+				letter-spacing: 0.4px;
+			}
+
+			@media screen and (min-width: $screen-xl) {
+				font-size: 16px;
+				line-height: 1.75;
+			}
+		}
+
+		@media screen and (min-width: $screen-md) {
+
+			&-wrap {
+				order: -1;
+			}
+			margin-bottom: 0;
+			padding-top: 64px;
+			padding-bottom: 67px;
+			padding-left: 16px;
+			padding-right: 16px;
+
+			&::before {
+				left: 0;
+				right: 0;
+			}
+		}
+
+		@media screen and (min-width: $screen-lg) {
+			padding-left: 40px;
+		}
+
+		@media screen and (min-width: $screen-xl) {
+			max-width: 452px;
+			padding-left: 64px;
+			padding-right: 54px;
+		}
+
+		@media screen and (min-width: $screen-xl) {
+			max-width: 630px;
+		}
+	}
+
+	&__career {
+		padding-top: 32px;
+		padding-bottom: 22px;
+
+		.about-hr__title {
+			margin-bottom: 30px;
+			text-align: left;
+		}
+
+		@media screen and (min-width: $screen-md) {
+			.about-hr__title {
+			}
+			padding-top: 64px;
+			padding-bottom: 44px;
+		}
+
+		@media screen and (min-width: $screen-xl) {
+			padding-top: 96px;
+		}
+	}
+
+	&__logo {
+		padding-top: 16px;
+		padding-bottom: 16px;
+		background: #fff;
+
+		figure {
+			width: 145px;
+			height: 145px;
+			margin-left: auto;
+			margin-right: auto;
+			margin-bottom: 0;
+		}
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: center;
+		}
+
+		@media screen and (min-width: $screen-md) {
+			position: relative;
+
+			&::before {
+				content: '';
+				position: absolute;
+				z-index: -1;
+				top: 0;
+				bottom: 0;
+				right: -28px;
+				left: -28px;
+				background: #fff;
+			}
+		}
+
+		@media screen and (min-width: $screen-lg) {
+			&::before {
+				right: -32px;
+				left: -32px;
+			}
+		}
+	}
+
+	&__about {
+
+		&-wrap {
+			padding-top: 32px;
+		}
+
+		margin-bottom: 32px;
+
+	}
+
+}

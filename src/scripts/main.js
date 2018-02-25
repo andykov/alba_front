@@ -89,32 +89,30 @@ $(function() {
 
 
 
-    var svgWrap = document.createElement('div');
-    var svgWrap = svgWrap.setAttribute('id', 'svg-wrap');
-    console.log(svgWrap);
-    var $productGalleryBig = $('.product-gallery__big'),
-        $productGalleryThumb = $('.product-gallery__thumb'),
+    // var svgMaskWrap = document.createElement('div');
+    // var svgMaskWrap = svgMaskWrap.setAttribute('id', 'svg-mask-wrap');
+
+    var $productGalleryBig = $('.js-product-gallery-big'),
+        $productGalleryThumb = $('.js-product-gallery-thumb'),
         $productGalleryItem = $('.product-gallery__item'),
+        $productGalleryItemFirst = $('.product-gallery__item:first-child'),
         $productGalleryFirstImg = $productGalleryItem.first().find('img'),
         productGalleryFirstImgPath = $productGalleryFirstImg.attr('src');
-    var item = document.getElementsByClassName('product-gallery__item')[0];
+    // var item = document.getElementsByClassName('product-gallery__item')[0];
 
     // console.log($(item));
-    // $(item).append(svgWrap);
+    // $(item).append(svgMaskWrap);
 
-    $('.product-gallery__item').append('<div id="svg-wrap"></div>');
+    $productGalleryItem.append('<div id="svg-mask-wrap" style="opacity: 0"></div>');
 
-    $('.js-product-gallery-big').on('init', function(event, slick) {
-        console.log('fired!');
-        $('.js-product-gallery-big').fadeIn(3000);
+    $productGalleryBig.on('init', function(event, slick) {
+        // $('.js-product-gallery-big').fadeIn(3000);
+        console.log('slick init');
     });
-
-
-
-    // console.log();
 
     if($productGalleryBig.length) {
         $productGalleryBig.slick({
+            // infinite: false,
             mobileFirst: true,
             lazyLoad: 'ondemand',
             arrows: false,
@@ -143,17 +141,9 @@ $(function() {
     }
 
 
-
-
-
-
-
-
-
-
-    $productGalleryFirstImg.css({
-        'opacity': 0,
-    });
+    // $productGalleryItemFirst.css({
+    //     'opacity': 0,
+    // });
 
     var divSizeWidth = $('.product-gallery__item.slick-current').width();
     var divSizeHeight = $('.product-gallery__item.slick-current').height();
@@ -166,7 +156,7 @@ $(function() {
     }
 
     var svg = makeSVG('svg', {
-        id:"el_svg",
+        id:"svg-mask",
         viewBox:"0 0 "+ divSizeWidth +" "+ divSizeWidth,
         version:"1.1",
         xmlns:"http://www.w3.org/2000/svg",
@@ -183,8 +173,8 @@ $(function() {
     var mask_1 = makeSVG('mask', { id: 'mask_1', fill: 'white' });
     var mask_2 = makeSVG('mask', { id: 'mask_2', fill: 'white' });
 
-    var use_1 = makeSVG('use', {'xlink:href': '#polyMask_1'});
-    var use_2 = makeSVG('use', {'xlink:href': '#polyMask_2'});
+    // var use_1 = makeSVG('use', {'xlink:href': '#polyMask_1'});
+    // var use_2 = makeSVG('use', {'xlink:href': '#polyMask_2'});
 
     var useMask_1 = makeSVG('use', {'xlink:href': '#poly_1'});
     var useMask_2 = makeSVG('use', {'xlink:href': '#poly_2'});
@@ -223,32 +213,32 @@ $(function() {
         'xlink:href': productGalleryFirstImgPath
     });
 
-    // $('#svg-wrap').append(svg);
-    // $('#el_svg').append(defs).append(poly_1);
+    // $('#svg-mask-wrap').append(svg);
+    // $('#svg-mask').append(defs).append(poly_1);
 
-    document.getElementById('svg-wrap').appendChild(svg).appendChild(defs).appendChild(poly_1);
-    document.getElementById('svg-wrap').appendChild(svg).appendChild(defs).appendChild(poly_2);
-//
-    document.getElementById('el_svg').appendChild(group_1).appendChild(mask_1).appendChild(useMask_1);
-// document.getElementById('group_1').appendChild(use_1);
+    document.getElementById('svg-mask-wrap').appendChild(svg).appendChild(defs).appendChild(poly_1);
+    document.getElementById('svg-mask-wrap').appendChild(svg).appendChild(defs).appendChild(poly_2);
+
+    document.getElementById('svg-mask').appendChild(group_1).appendChild(mask_1).appendChild(useMask_1);
     document.getElementById('group_1').appendChild(img_1);
 
-    document.getElementById('el_svg').appendChild(group_2).appendChild(mask_2).appendChild(useMask_2);
-// document.getElementById('group_2').appendChild(use_2);
+    document.getElementById('svg-mask').appendChild(group_2).appendChild(mask_2).appendChild(useMask_2);
     document.getElementById('group_2').appendChild(img_2);
 
-
-
-
     function addSvg() {
-        $('.slick-current').append($("#svg-wrap").html($("#svg-wrap").html()));
+        $productGalleryItemFirst.append($("#svg-mask-wrap").html($("#svg-mask-wrap").html()));
     }
+
     addSvg();
+
     setTimeout(function(){
-        $("#svg-wrap").addClass('anim');
-        $productGalleryFirstImg.delay( 800 ).animate({
+        $("#svg-mask-wrap").addClass('animate');
+        $("#svg-mask-wrap").delay( 0 ).animate({
             opacity: 1,
         }, 200);
+        // $productGalleryItemFirst.delay( 0 ).animate({
+        //     opacity: 1,
+        // }, 200);
     }, 0);
 
 

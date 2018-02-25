@@ -79,7 +79,7 @@
 			padding-bottom: 27px;
 
 			img {
-				width: 56px;
+				//width: 56px;
 				max-height: 74px;
 				margin: 0 auto;
 				transform: scale(1);
@@ -106,7 +106,7 @@
 
 
 
-#svg-wrap {
+#svg-mask-wrap {
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -115,9 +115,9 @@
 	width: 100%;
 	height: 100%;
 	z-index: 10;
-	border: 1px solid;
+	opacity: 0;
 
-	&.anim {
+	&.animate {
 		image {
 			x: 0;
 			y: 0;

@@ -139,6 +139,8 @@ mixin header(classMod)
 					li
 						a(href="javascript:;" data-fancybox data-src="#form-login").js-login.link-login Вход
 
+		if(classMod.indexOf('header--promo') != -1)
+			include ../header-promo/header-promo.pug
 
 		if (classMod.indexOf('header--about') != -1)
 			include ../about-header/about-header.pug

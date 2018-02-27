@@ -20,10 +20,11 @@ mixin lookbook()
 
 
 mixin sliderItem(titleFirstPart, titleSecondPart, subtitle, link)
-	.slider-lookbook__item
+	a(href="#lookbook").slider-lookbook__item
 		.slider-lookbook__description
 			.slider-lookbook__title
 				span!= titleFirstPart
 				span!= titleSecondPart
 			.slider-lookbook__subtitle!= subtitle
-		img(src=link)
+		figure.slider-lookbook__img
+			img(src=link)

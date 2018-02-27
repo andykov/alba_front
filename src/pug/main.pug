@@ -7,75 +7,12 @@ block header
 	+header('header--white')
 
 block content
-
+	+features()
 	.container-narrow
 		p sdfdsf
 
 
 	+lookbook()
-
-
-	+slider-product()
-
-	//- .container-narrow
-		p Codeply is a responsive design playground and code editor that front end developers can use to build, prototype and compare responsive frameworks. Codeply also has responsive examples, snippets and layouts.
-
-		.row
-			//- .cell
-			//- 	.cell_cont 1
-			//- .cell
-			//- 	.cell_cont 2
-			//- .cell
-			//- 	.cell_cont 3
-			//- .cell
-			//- 	.cell_cont 4
-			//- .cell
-			//- 	.cell_cont 5
-			//- .cell
-			//- 	.cell_cont 6
-			//- .cell
-			//- 	.cell_cont 7
-			//- .cell
-			//- 	.cell_cont 8
-			//- .cell
-			//- 	.cell_cont 9
-			//- .cell
-			//- 	.cell_cont 10
-			//- .cell
-			//- 	.cell_cont 11
-			//- .cell
-			//- 	.cell_cont 12
-			//- .cell
-				//- .cell_cont 13
-			//- .cell
-				//- .cell_cont 14
-
-
-
-
-
-
-
-
-	br
-	br
-	br
-	br
-	br
-	br
-	br
-	br
-	br
-	br
-	br
-	br
-	br
-	br
-	br
-	br
-
-
-
 
 	+tile('__path__', 'Удобная доставка', '5 способов Бесплатно от 5000 Р')
 
@@ -140,4 +77,15 @@ block content
 				.col-12
 					button(type="button" data-collapse-toggle) Полностью
 
-
+	.checkout-slider
+		.checkout__remember
+			.h2.checkout__title Скидки
+			.checkout__slider-arrows
+				+btnSliderPrev()
+				+btnSliderNext()
+		.slider-product.slider-product--main-page
+			.container.slider-product__inner
+				.slider-product__body
+					.slider-product__tab.active
+						.js-slider-checkout
+							+slider-product()

@@ -2,159 +2,161 @@
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий... 
 
 .shops {
-	display: flex;
-	flex-direction: column;
-	@media screen and (min-width: $screen-md) {
-		flex-direction: row;
-	}
-	&__map {
-		margin-bottom: 8px;
-		@include col(xs, 12, $grid-columns, false);
-		@include col(md, 4, $grid-columns, false);
-		@include col(xl, 5.19, $grid-columns, false);
-		@include col(xxl, 4.05, $grid-columns, false);
-		@media screen and (min-width: $screen-md) {
-			margin-bottom: 0;
-		}
-	}
+  display: flex;
+  flex-direction: column;
+  @media screen and (min-width: $screen-md) {
+    flex-direction: row;
+  }
+  &__map {
+    margin-bottom: 8px;
+    @include col(xs, 12, $grid-columns, false);
+    @include col(md, 4, $grid-columns, false);
+    @include col(xl, 5.19, $grid-columns, false);
+    @include col(xxl, 4.05, $grid-columns, false);
+    @media screen and (min-width: $screen-md) {
+      margin-bottom: 0;
+    }
+  }
 
-	&-list {
-		position: relative;
-		@include col(xs, 12, $grid-columns, false);
-		@include col(md, 8, $grid-columns, false);
-		@include col(xl, 6.06, $grid-columns, false);
-		@include col(xxl, 7.1, $grid-columns, false);
-		@media screen and (min-width: $screen-md) and (max-width: $screen-lg) {
-			padding-right: 40px;
-		}
+  &-list {
+    position: relative;
+    @include col(xs, 12, $grid-columns, false);
+    @include col(md, 8, $grid-columns, false);
+    @include col(xl, 6.06, $grid-columns, false);
+    @include col(xxl, 7.1, $grid-columns, false);
+    @media screen and (min-width: $screen-md) and (max-width: $screen-lg) {
+      padding-right: 40px;
+    }
+    .slick-slide div {
+      height: 100%;
+    }
+    &__item {
+      background-color: #fff;
+      padding: 24px 21px 20px;
+      font-size: 12px;
 
-		&__item {
-			background-color: #fff;
-			padding: 24px 21px 20px;
-			font-size: 12px;
+      @media screen and (min-width: $screen-md) {
+        padding: 44px 40px 108px;
+        font-size: 14px;
+      }
+      @media screen and (min-width: $screen-xl) {
+        min-height: 384px;
+        padding: 44px 32px 68px 40px;
+      }
+      @media screen and (min-width: $screen-xxl) {
 
-			@media screen and (min-width: $screen-md) {
-				padding: 44px 40px 108px;
-				font-size: 14px;
-			}
-			@media screen and (min-width: $screen-xl) {
-				min-height: 384px;
-				padding: 44px 32px 68px 40px;
-			}
-			@media screen and (min-width: $screen-xxl) {
+      }
+      &:not(:first-child) {
+        border-left: 1px solid #E6E6E6;
+      }
+      & > span {
+        display: block;
+        font-family: $font-family--montserrat;
+        font-size: 15px;
+        font-weight: 700;
+        line-height: (20 / 15);
+        margin-bottom: 16px;
+        @media screen and (min-width: $screen-md) {
+          margin-bottom: 37px;
+        }
+      }
+      span {
+        & > b {
+          font-weight: 600;
+          font-size: 11px;
+          line-height: 1.45;
+          @media screen and (min-width: $screen-md) {
+            font-size: 15px;
+          }
+        }
+      }
+      li {
+        position: relative;
+        margin-bottom: 8px;
+        padding-left: 27px;
+        line-height: 1.5;
+        background-repeat: no-repeat;
+        font-size: 12px;
+        @media screen and (min-width: $screen-md) {
+          margin-bottom: 12px;
+          font-size: 14px;
+        }
 
-			}
-			&:not(:first-child) {
-				border-left: 1px solid #E6E6E6;
-			}
-			& > span {
-				display: block;
-				font-family: $font-family--montserrat;
-				font-size: 15px;
-				font-weight: 700;
-				line-height: (20 / 15);
-				margin-bottom: 16px;
-				@media screen and (min-width: $screen-md) {
-					margin-bottom: 37px;
-				}
-			}
-			span {
-				& > b {
-					font-weight: 600;
-					font-size: 11px;
-					line-height: 1.45;
-					@media screen and (min-width: $screen-md) {
-						font-size: 15px;
-					}
-				}
-			}
-			li {
-				position: relative;
-				margin-bottom: 8px;
-				padding-left: 27px;
-				line-height: 1.5;
-				background-repeat: no-repeat;
-				font-size: 12px;
-				@media screen and (min-width: $screen-md) {
-					margin-bottom: 12px;
-					font-size: 14px;
-				}
+        span {
+          display: block;
+          line-height: 1.5;
+          letter-spacing: 0.4px;
+        }
+        a {
+          display: inline-block;
+          font-family: $font-family--montserrat;
+          font-size: 10px;
+          font-weight: 600;
+          text-transform: uppercase;
+          margin-top: 18px;
+          color: #a0a0a0;
+          letter-spacing: 0.4px;
+          @media screen and (min-width: $screen-md) {
+            font-size: 11px;
+          }
+        }
+      }
+    }
 
-				span {
-					display: block;
-					line-height: 1.5;
-					letter-spacing: 0.4px;
-				}
-				a {
-					display: inline-block;
-					font-family: $font-family--montserrat;
-					font-size: 10px;
-					font-weight: 600;
-					text-transform: uppercase;
-					margin-top: 18px;
-					color: #a0a0a0;
-					letter-spacing: 0.4px;
-					@media screen and (min-width: $screen-md) {
-						font-size: 11px;
-					}
-				}
-			}
-		}
+    .slick-track {
+      display: flex;
 
-		.slick-track {
-			display: flex;
-
-			.slick-slide {
-				height: auto;
-			}
-		}
-		.slick-arrow {
-			position: absolute;
-			z-index: 1;
-			background-repeat: no-repeat;
-			&:not(.slick-disabled) {
-				cursor: pointer;
-			}
-			@media screen and (min-width: $screen-md) {
-				bottom: 26px;
-			}
-			&.slick-next {
-				right: 66px;
-				@media screen and (min-width: $screen-xl) {
-					right: 26px;
-				}
-			}
-			&.slick-prev {
-				left: 28px;
-			}
-		}
-		&__tel {
-			background-image: url(../img/svg/icon-phone.svg);
-			background-size: 13px 13px;
-			@media screen and (min-width: $screen-md) {
-				background-size: auto;
-			}
-		}
-		&__time {
-			background-image: url(../img/svg/icon-clock.svg);
-			background-size: 10px 10px;
-			@media screen and (min-width: $screen-md) {
-				background-size: auto;
-			}
-		}
-		&__location {
-			background-image: url(../img/svg/icon-map.svg);
-			background-size: 13px 13px;
-			@media screen and (min-width: $screen-md) {
-				background-size: auto;
-			}
-		}
-		&__metro {
-			background-image: url(../img/svg/icon-metro.svg);
-			background-size: 13px 13px;
-			@media screen and (min-width: $screen-md) {
-				background-size: auto;
-			}
-		}
-	}
+      .slick-slide {
+        height: auto;
+      }
+    }
+    .slick-arrow {
+      position: absolute;
+      z-index: 1;
+      background-repeat: no-repeat;
+      &:not(.slick-disabled) {
+        cursor: pointer;
+      }
+      @media screen and (min-width: $screen-md) {
+        bottom: 26px;
+      }
+      &.slick-next {
+        right: 66px;
+        @media screen and (min-width: $screen-xl) {
+          right: 26px;
+        }
+      }
+      &.slick-prev {
+        left: 28px;
+      }
+    }
+    &__tel {
+      background-image: url(../img/svg/icon-phone.svg);
+      background-size: 13px 13px;
+      @media screen and (min-width: $screen-md) {
+        background-size: auto;
+      }
+    }
+    &__time {
+      background-image: url(../img/svg/icon-clock.svg);
+      background-size: 10px 10px;
+      @media screen and (min-width: $screen-md) {
+        background-size: auto;
+      }
+    }
+    &__location {
+      background-image: url(../img/svg/icon-map.svg);
+      background-size: 13px 13px;
+      @media screen and (min-width: $screen-md) {
+        background-size: auto;
+      }
+    }
+    &__metro {
+      background-image: url(../img/svg/icon-metro.svg);
+      background-size: 13px 13px;
+      @media screen and (min-width: $screen-md) {
+        background-size: auto;
+      }
+    }
+  }
 }

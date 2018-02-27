@@ -2,101 +2,106 @@
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий... 
 
 .product-gallery {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	background-color: #fff;
-	overflow: hidden;
-	@media screen and (min-width: $screen-md) {
-		margin-right: -16px;
-		margin-left: -16px;
-	}
-	@media screen and (min-width: $screen-xl) {
-		margin-right: -32px;
-		margin-left: -32px;
-	}
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #fff;
+  overflow: hidden;
+  @media screen and (min-width: $screen-md) {
+    margin-right: -16px;
+    margin-left: -16px;
+  }
+  @media screen and (min-width: $screen-lg) {
+    margin-right: -8px;
+    margin-left: -8px;
+  }
 
-	&__big {
-		display: flex;
-		margin-bottom: 54px;
-		padding-top: 74px;
-		@media screen and (min-width: $screen-xl) {
-			padding-top: 67px;
-		}
-		@media screen and (min-width: $screen-xxl) {
-			padding-top: 46px;
-			margin-bottom: 64px;
-		}
-		.slick-list {
-			@media screen and (min-width: $screen-xl) {
-				padding-right: 388px !important;
-			}
-		}
-	}
+  @media screen and (min-width: $screen-xl) {
+    margin-right: -32px;
+    margin-left: -32px;
+  }
 
-	&__item {
-		//padding: 0 90px;
-		max-width: 668px;
-		transition: opacity 0.4s;
+  &__big {
+    display: flex;
+    margin-bottom: 54px;
+    padding-top: 74px;
+    @media screen and (min-width: $screen-xl) {
+      padding-top: 67px;
+    }
+    @media screen and (min-width: $screen-xxl) {
+      padding-top: 46px;
+      margin-bottom: 64px;
+    }
+    .slick-list {
+      @media screen and (min-width: $screen-xl) {
+        padding-right: 388px !important;
+      }
+    }
+  }
 
-		img {
-			max-height: 219px;
+  &__item {
+    //padding: 0 90px;
+    max-width: 668px;
+    transition: opacity 0.4s;
 
-			@media screen and (min-width: $screen-md) {
-				max-height: 537px;
-			}
+    img {
+      max-height: 219px;
 
-			@media screen and (min-width: $screen-xxl) {
-				max-height: 632px;
-			}
-		}
+      @media screen and (min-width: $screen-md) {
+        max-height: 537px;
+      }
 
-		&:not(.slick-current) {
-			opacity: 0.05;
-		}
+      @media screen and (min-width: $screen-xxl) {
+        max-height: 632px;
+      }
+    }
 
-	}
+    &:not(.slick-current) {
+      opacity: 0.05;
+    }
 
-	&__thumb {
-		display: none;
-		width: 366px;
-		margin: 0 auto;
-		@media screen and (min-width: $screen-md) {
-			display: block;
-		}
-		@media screen and (min-width: $screen-lg) {
+  }
 
-		}
-		@media screen and (min-width: $screen-xl) {
-			left: calc((100% - 356px) / 2);
-			transform: translateX(-50%);
-			margin: 0;
-		}
-		&-item {
-			position: relative;
-			height: 98px;
-			padding-bottom: 27px;
+  &__thumb {
+    display: none;
+    width: 366px;
+    margin: 0 auto;
+    @media screen and (min-width: $screen-md) {
+      display: block;
+    }
+    @media screen and (min-width: $screen-lg) {
 
-			img {
-				width: 56px;
-				max-height: 74px;
-				margin: 0 auto;
-				transform: scale(1);
-				transition: all .2s ease-in-out;
-				&:hover {
-					transform: scale(1.3);
-				}
-			}
-			&.slick-current {
-				&::before {
-					content: '';
-					position: absolute;
-					bottom: 0;
-					right: 18px;
-					left: 18px;
-					border-bottom: 2px solid #60d3d5;
-				}
-			}
-		}
-	}
+    }
+    @media screen and (min-width: $screen-xl) {
+      left: calc((100% - 356px) / 2);
+      transform: translateX(-50%);
+      margin: 0;
+    }
+    &-item {
+      position: relative;
+      height: 98px;
+      padding-bottom: 27px;
+
+      img {
+        width: 56px;
+        max-height: 74px;
+        margin: 0 auto;
+        transform: scale(1);
+        transition: all .2s ease-in-out;
+        &:hover {
+          transform: scale(1.3);
+        }
+      }
+      &.slick-current {
+        &::before {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          right: 18px;
+          left: 18px;
+          border-bottom: 2px solid #60d3d5;
+        }
+      }
+    }
+  }
 }

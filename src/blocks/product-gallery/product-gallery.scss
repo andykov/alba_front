@@ -41,6 +41,7 @@
 
   &__item {
     //padding: 0 90px;
+    position: relative;
     max-width: 668px;
     transition: opacity 0.4s;
 
@@ -59,7 +60,6 @@
     &:not(.slick-current) {
       opacity: 0.05;
     }
-
   }
 
   &__thumb {
@@ -83,7 +83,7 @@
       padding-bottom: 27px;
 
       img {
-        width: 56px;
+        //width: 56px;
         max-height: 74px;
         margin: 0 auto;
         transform: scale(1);
@@ -102,6 +102,26 @@
           border-bottom: 2px solid #60d3d5;
         }
       }
+    }
+  }
+}
+
+#svg-mask-wrap {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  opacity: 0;
+
+  &.animate {
+    image {
+      x: 0;
+      y: 0;
+      transition: all 0.8s 0.2s ease-in-out;
     }
   }
 }

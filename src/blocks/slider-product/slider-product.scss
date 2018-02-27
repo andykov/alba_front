@@ -3,35 +3,30 @@
 
 .slider-product {
   padding-top: 60px;
-  margin-left: -4px;
-  margin-right: -4px;
-
-  @media screen and (min-width: $screen-md) {
-    margin-left: -24px;
-    margin-right: -24px;
-  }
-  @media screen and (min-width: $screen-lg) {
-    margin-left: -8px;
-    margin-right: -8px;
-  }
-  @media screen and (min-width: $screen-xl) {
-    margin-left: -32px;
-    margin-right: -32px;
+  .slick-slide {
+    > div:not(:last-of-type) {
+      @media screen and (min-width: $screen-md) {
+        margin-bottom: -145px;
+      }
+      @media screen and (min-width: $screen-lg) {
+        margin-bottom: 0;
+      }
+    }
+    padding: 0 4px 0;
+    @media screen and (min-width: $screen-md) {
+      padding: 0 24px 0; // отступ между слайдами
+    }
+    @media screen and (min-width: $screen-lg) {
+      padding: 0 12px 0; // отступ между слайдами
+    }
+    @media screen and (min-width: $screen-xl) {
+      padding: 0 16px 0;
+    }
+    @media screen and (min-width: $screen-xxl) {
+      padding: 0 20px 0;
+    }
   }
   &__item {
     padding-bottom: 126px;
-    margin: 0 4px;
-    @media screen and (min-width: $screen-md) {
-      margin: 0 24px; // отступ между слайдами
-    }
-    @media screen and (min-width: $screen-lg) {
-      margin: 0 12px; // отступ между слайдами
-    }
-    @media screen and (min-width: $screen-xl) {
-      margin: 0 16px;
-    }
-    @media screen and (min-width: $screen-xxl) {
-      margin: 0 20px;
-    }
   }
 }

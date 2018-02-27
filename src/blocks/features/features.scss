@@ -1,0 +1,136 @@
+// В этом файле должны быть стили для БЭМ-блока .features , его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий... 
+
+.features {
+  max-width: 1616px;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  &__list {
+    padding: 27px 16px;
+    @media (min-width: $screen-md) {
+      @include row(40px, 40px, 12px, 12px);
+      padding: 45px 20px;
+    }
+    @media (min-width: $screen-lg) {
+      margin-right: -8px;
+      margin-left: -8px;
+      padding: 54px 20px;
+    }
+    @media (min-width: $screen-xl) {
+      margin-right: -21px;
+      margin-left: -21px;
+      padding: 56px 14px;
+    }
+    @media (min-width: $screen-xxl) {
+      padding: 76px 0;
+      margin-right: -5px;
+      margin-left: -5px;
+      justify-content: space-between;
+    }
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    @include col(md, 6, 12, 24px);
+    @include col(lg, 3, 12, 24px);
+    @include col(xl, 3, 12, 42px);
+    @include col(xxl, 3, 15, 10px);
+    @media (min-width: $screen-md) {
+      margin-bottom: 57px;
+      &:last-child,
+      &:nth-last-child(2){
+        margin-bottom: 0;
+      }
+    }
+    @media (min-width: $screen-lg) {
+      align-items: flex-start;
+      margin-bottom: 0;
+    }
+  }
+  &__info {
+    display: flex;
+    align-items: center;
+    @media (min-width: $screen-md) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+  &__icon {
+    width: 35px;
+    height: 35px;
+    min-width: 35px;
+    margin-right: 16px;
+    flex: none;
+    @media (min-width: $screen-md) {
+      margin-right: 40px;
+      width: 88px;
+      height: 88px;
+    }
+    @media (min-width: $screen-lg) {
+      width: 70px;
+      height: 70px;
+      margin-right: 14px;
+      padding-top: 8px;
+    }
+    @media (min-width: $screen-xl) {
+      width: 88px;
+      height: 88px;
+      margin-right: 25px;
+      padding-top: 4px;
+    }
+    @media (min-width: $screen-xxl) {
+      margin-right: 31px;
+      padding-top: 0;
+    }
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__title {
+    max-width: 72px;
+    width: 100%;
+    margin-right: 19px;
+    margin-bottom: 0;
+    font-family: $font-family--montserrat;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 1.45;
+    color: #000000;
+    @media (min-width: $screen-md) {
+      max-width: 100%;
+      margin-right: 0;
+      margin-bottom: 11px;
+      font-size: 15px;
+      line-height: 1.33;
+    }
+    @media (min-width: $screen-lg) {
+      margin-bottom: 5px;
+    }
+    @media (min-width: $screen-xl) {
+      margin-bottom: 11px;
+    }
+    @media (min-width: $screen-xxl) {
+      margin-bottom: 15px;
+    }
+  }
+  &__desc {
+    margin-bottom: 0;
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.3px;
+    color: #3c3c3c;
+    @media (min-width: $screen-md) {
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 1.38;
+      letter-spacing: 0.4px;
+      color: #505050;
+    }
+    @media (min-width: $screen-lg) {
+      max-width: 156px;
+    }
+  }
+}

@@ -10,50 +10,72 @@ block content
 	+features()
 	.container-narrow
 		p sdfdsf
-	.js-slider-lookbook.slider-lookbook
-		.slider-lookbook__item
-			img(src="https://picsum.photos/408/512?image=155")
-		.slider-lookbook__item
-			img(src="https://picsum.photos/408/512?image=156")
-		.slider-lookbook__item
-			img(src="https://picsum.photos/408/512?image=157")
-		.slider-lookbook__item
-			img(src="https://picsum.photos/436/512?image=146")
 
-	//- +slider-product()
 
-	.container-narrow
-		p Codeply is a responsive design playground and code editor that front end developers can use to build, prototype and compare responsive frameworks. Codeply also has responsive examples, snippets and layouts.
+	+lookbook()
 
+	+tile('__path__', 'Удобная доставка', '5 способов Бесплатно от 5000 Р')
+
+	+product('https://picsum.photos/296/296/?gravity=east', 'Сапожки', true, true, true)
+
+	+slider-sale
+	//- .container-narrow
 		.row
-			.cell
-				.cell_cont 1
-			.cell
-				.cell_cont 2
-			.cell
-				.cell_cont 3
-			.cell
-				.cell_cont 4
-			.cell
-				.cell_cont 5
-			.cell
-				.cell_cont 6
-			.cell
-				.cell_cont 7
-			.cell
-				.cell_cont 8
-			.cell
-				.cell_cont 9
-			.cell
-				.cell_cont 10
-			.cell
-				.cell_cont 11
-			.cell
-				.cell_cont 12
-			//.cell
-			//	.cell_cont 13
-			//.cell
-			//	.cell_cont 14
+			.col-md-6
+				.js-trends.trends
+					.trends__item
+						.card
+							.card__short
+								.card__img
+									img(src="")
+									.card__flags
+										span A
+										span B
+									a.card__more
+										| (O)
+								.card__title
+									| Туфли
+								.card__price
+									span.card__price-old
+									span.card__price-current
+							.card__hover
+								.card__sizes
+									span.card__sizes-title
+									ul.card__sizes-list
+										li.card__sizes-item 36
+										li.card__sizes-item 37
+										li.card__sizes-item 38
+										li.card__sizes-item 39
+										li.card__sizes-item 40
+
+								ul.card__info
+									li
+										| Сезон
+										span демисезон
+									li
+										| Материал
+										span натуральная кожа, теленок
+									li
+										| Подкладка
+										span мех
+			.col-md-6
+				.js-stocks.stocks
+
+	.js-collapse.seo-text.seo-text--main
+		.container
+			.row
+				section.offset-lg-2.offset-xxl-3.col-12.col-lg-8.col-xxl-9
+					h4 Интернет-магазин ALBA
+					p Если вы являетесь поклонником качественной обуви и при этом для вас важен привлекательный дизайн моделей, приглашаем совершать покупки в интернет-магазине ALBA. Мы предлагаем продукцию достойного качества, имеющую красивый внешний вид и созданную в соответствии с последними трендами мировой моды.
+				section.col-12
+					h4 Преимущества совершения покупок у нас
+					.row
+						p.col-12.col-md-6.col-xxl-7 Предлагаем огромный ассортимент. В нашем виртуальном каталоге вы сможете найти обувь, о которой давно мечтали. Многообразие фасонов представлено моделями для разных сезонов года. Так что и для жаркого лета, и для капризного демисезона, и для холодной зимы вы сможете купить обувь ALBA, в которой вам будет особенно комфортно. Наш ассортимент постоянно пополняется!
+						p.offset-xxl-1.col-12.col-md-6.col-xxl-7(data-collapse-body) Создаем тематические подборки. Для удобства выбора мы сформировали на сайте несколько категорий обуви, которые могут заинтересовать заядлых модниц и модников. Если вы чутко следите за модой, обратите внимание на подборку новинок сезона. Предпочитаете при покупке ориентироваться на мнение других потребителей? Ознакомиться с предпочтениями наших покупателей и посмотреть ассортимент хитов продаж можно в рубрике «Популярное».
+						p.col-12.col-md-6.col-xxl-7(data-collapse-body) Регулярно устраиваем распродажи. Мы не только предлагаем приятные цены на обувь, но и предоставляем новым и постоянным покупателям удивительные скидки, позволяющие недорого приобрести оригинальные и качественные модели. Узнать о проводимых акциях и других интересных новостях вы можете в соответствующем разделе.
+						p.offset-xxl-1.col-12.col-md-6.col-xxl-7(data-collapse-body) Чтобы купить обувь в интернет-магазине ALBA, вам потребуется минимум времени. Оформление заказов на нашем сайте производится в режиме онлайн круглосуточно. Вы можете выбрать удобный для вас вариант оплаты и доставки товаров. Наши консультанты всегда готовы помочь вам с выбором модели, определением размера и уточнить дополнительную информацию по характеристикам обуви. Для связи со специалистами используйте телефон горячей линии или закажите обратный звонок.
+				.col-12
+					button(type="button" data-collapse-toggle) Полностью
 
 	.checkout-slider
 		.checkout__remember

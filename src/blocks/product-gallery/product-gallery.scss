@@ -37,6 +37,14 @@
         padding-right: 388px !important;
       }
     }
+
+    .slick-slide {
+      position: relative;
+
+      &:not(.slick-current) {
+        opacity: 0.05;
+      }
+    }
   }
 
   &__item {
@@ -56,10 +64,6 @@
         max-height: 632px;
       }
     }
-
-    &:not(.slick-current) {
-      opacity: 0.05;
-    }
   }
 
   &__thumb {
@@ -78,7 +82,6 @@
       margin: 0;
     }
     &-item {
-      position: relative;
       height: 98px;
       padding-bottom: 27px;
 
@@ -92,6 +95,9 @@
           transform: scale(1.3);
         }
       }
+    }
+
+    .slick-slide {
       &.slick-current {
         &::before {
           content: '';

@@ -270,24 +270,24 @@ block content
 						#reviews.product-tabs__item
 							| not design ...
 
-	.product-tabs.slider-products.slider-products--page-card.slider-product
-		.container.slider-products__nav-inner
-			ul.product-tabs__nav.slider-products__nav
-				li.product-tabs__tab.slider-products__item.active
-					a.product-tabs__link.slider-products__link(aria-controls="recommended" role="tab" data-toggle="tab" href="#recommended") Рекомендуем
-				li.product-tabs__tab.slider-products__item
-					a.product-tabs__link.slider-products__link(aria-controls="related" role="tab" data-toggle="tab" href="#related") Похожие товары
-				li.product-tabs__tab.slider-products__item
-					a.product-tabs__link.slider-products__link(aria-controls="recently-watched" role="tab" data-toggle="tab" href="#recently-watched") Вы недавно смотрели
-		.container.slider-products__inner
-			.product-tabs__body.slider-products__body
-					#recommended.product-tabs__item.slider-products__tab.active
+	.product-tabs.slider-product.slider-product--page-card
+		.container.slider-product__nav-inner
+			ul.product-tabs__nav.slider-product__nav
+				li.product-tabs__tab.slider-product__item.active
+					a.product-tabs__link.slider-product__link(aria-controls="recommended" role="tab" data-toggle="tab" href="#recommended") Рекомендуем
+				li.product-tabs__tab.slider-product__item
+					a.product-tabs__link.slider-product__link(aria-controls="related" role="tab" data-toggle="tab" href="#related") Похожие товары
+				li.product-tabs__tab.slider-product__item
+					a.product-tabs__link.slider-product__link(aria-controls="recently-watched" role="tab" data-toggle="tab" href="#recently-watched") Вы недавно смотрели
+		.container.slider-product__inner
+			.product-tabs__body.slider-product__body
+					#recommended.product-tabs__item.slider-product__tab.active
 						.js-slider-product
 							+slider-product()
-					#related.product-tabs__item.slider-products__tab
+					#related.product-tabs__item.slider-product__tab
 						.js-slider-product
 							+slider-product()
-					#recently-watched.product-tabs__item.slider-products__tab
+					#recently-watched.product-tabs__item.slider-product__tab
 						.js-slider-product
 							+slider-product()
 

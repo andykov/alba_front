@@ -542,7 +542,7 @@ p {
     }
   }
 
-  @media screen and (min-width: $screen-md) {
+  @media screen and (min-width: $screen-lg) {
     &::before {
       right: -8px;
       left: -8px;

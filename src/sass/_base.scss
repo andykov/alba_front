@@ -858,27 +858,6 @@ p {
   }
 }
 
-.slider-lookbook {
-  margin: 0 -20px;
-  @media screen and (min-width: ($screen-xl)) {
-    display: flex;
-    justify-content: flex-end;
-  }
-  &__item {
-    padding: 0 20px;
-    outline: none;
-    &:not(:last-child) {
-      max-width: 408px;
-    }
-    &:last-child {
-      max-width: 436px;
-    }
-    &:nth-child(odd) {
-      padding-top: 96px;
-    }
-  }
-
-}
 
 .slick-slider .slick-slide {
   outline: none;

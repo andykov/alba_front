@@ -1,0 +1,302 @@
+// В этом файле должны быть стили для БЭМ-блока .lookbook , его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий... 
+
+.lookbook {
+	.h2 {
+		font-family: $font-family--montserrat;
+		font-weight: 900;
+
+		@media screen and (min-width: $screen-md) {
+			font-size: 26px;
+		}
+	}
+}
+
+.slider-lookbook {
+
+	&-wrap {
+		display: block;
+	}
+	padding-left: 16px;
+
+	@media screen and (min-width: $screen-md) {
+		padding-left: 24px;
+	}
+
+	@media screen and (min-width: $screen-lg) {
+		padding-left: 12px;
+	}
+
+
+	@media screen and (min-width: $screen-xl) {
+		padding-left: 16px;
+	}
+
+
+	&__item {
+		position: relative;
+		min-width: 192px;
+		width: 60vw;
+		height: 296px;
+		margin-right: 16px;
+		overflow: hidden;
+
+		&:nth-child(even) {
+			img {
+				padding-top: 40px;
+			}
+		}
+
+		&:nth-child(odd) {
+			img {
+				padding-bottom: 40px;
+			}
+		}
+
+		@media screen and (min-width: $screen-md) {
+			min-width: initial;
+			width: 432px;
+			height: 602px;
+			margin-right: 48px;
+
+			&:nth-child(even) {
+				img {
+					padding-top: 90px;
+				}
+			}
+
+			&:nth-child(odd) {
+				img {
+					padding-bottom: 90px;
+				}
+			}
+		}
+
+		@media screen and (min-width: $screen-lg) {
+			width: 340px;
+			height: 496px;
+			margin-right: 24px;
+
+			&:nth-child(even) {
+				img {
+					padding-top: initial;
+				}
+			}
+
+			&:nth-child(odd) {
+				img {
+					padding-bottom: initial;
+				}
+			}
+
+			&:nth-child(3n+2) {
+				width: 296px;
+
+				img {
+					padding-top: 96px;
+				}
+			}
+
+			&:nth-child(3n) {
+				width: 296px;
+
+				img {
+					padding-bottom: 96px;
+				}
+			}
+		}
+
+		@media screen and (min-width: $screen-xl) {
+			width: 460px;
+			height: 608px;
+			margin-right: 32px;
+
+			&:nth-child(3n+2),
+			&:nth-child(3n) {
+				width: 384px;
+			}
+
+		}
+
+		@media screen and (min-width: $screen-xxl) {
+			width: 408px;
+			height: 608px;
+			margin-right: 40px;
+
+			&:nth-child(3n+2),
+			&:nth-child(3n) {
+				width: initial;
+
+				img {
+					padding-top: initial;
+					padding-bottom: initial;
+				}
+			}
+
+			&:nth-child(even) {
+				img {
+					padding-top: 90px;
+				}
+			}
+
+			&:nth-child(odd) {
+				img {
+					padding-bottom: 90px;
+				}
+			}
+
+			&:nth-child(4n+1) {
+				width: 436px;
+
+				img {
+					padding-top: 0;
+					padding-bottom: 0;
+				}
+
+			}
+
+		}
+
+	}
+
+	&__description {
+		position: absolute;
+		left: 16px;
+		top: 150px;
+
+		@media screen and (min-width: $screen-md) {
+			left: 36px;
+			top: 316px;
+		}
+
+		@media screen and (min-width: $screen-lg) {
+			left: 32px;
+			top: 244px;
+		}
+
+		@media screen and (min-width: $screen-xl) {
+			top: 324px;
+		}
+	}
+
+	&__title {
+		margin-bottom: 7px;
+		font-family: $font-family--montserrat;
+		font-size: 13px;
+		font-weight: 900;
+		line-height: 1.23;
+		letter-spacing: normal;
+		color: #ffffff;
+
+		span {
+			display: block;
+		}
+
+		@media screen and (min-width: $screen-md) {
+			margin-bottom: 13px;
+			font-size: 26px;
+			letter-spacing: -0.3px;
+		}
+
+		@media screen and (min-width: $screen-lg) {
+			letter-spacing: normal;
+			line-height: 1.31;
+		}
+	}
+
+	&__subtitle {
+		display: inline-block;
+		padding-top: 4px;
+		padding-bottom: 4px;
+		padding-left: 8px;
+		padding-right: 8px;
+		font-size: 12px;
+		font-weight: 300;
+		line-height: 1.33;
+		letter-spacing: 0.3px;
+		background: #fff;
+		color: #505050;
+
+		@media screen and (min-width: $screen-md) {
+			padding-top: 5px;
+			padding-bottom: 5px;
+			padding-left: 14px;
+			padding-right: 14px;
+			font-size: 16px;
+			line-height: 1.38;
+			letter-spacing: 0.4px;
+		}
+
+		@media screen and (min-width: $screen-xl) {
+		}
+	}
+
+	.slick-slide img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center;
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// .slider-lookbook {
+//   margin: 0 -20px;
+//   @media screen and (min-width: ($screen-xl)) {
+//     display: flex;
+//     justify-content: flex-end;
+//   }
+//   &__item {
+//     padding: 0 20px;
+//     outline: none;
+//     &:not(:last-child) {
+//       max-width: 408px;
+//     }
+//     &:last-child {
+//       max-width: 436px;
+//     }
+//     &:nth-child(odd) {
+//       padding-top: 96px;
+//     }
+//   }
+
+// }
+
+// .slider-lookbook {
+// 	margin: 0 -20px;
+// }
+
+// @media screen and (min-width: 1200px) {
+// 	.slider-lookbook {
+// 		display: flex;
+// 		justify-content: flex-end;
+// 	}
+// }
+// .slider-lookbook__item {
+// 	padding: 0 20px;
+// 	outline: none;
+// }
+// .slider-lookbook__item:not(:last-child) {
+// 	max-width: 408px;
+// }
+// .slider-lookbook__item:last-child {
+// 	max-width: 436px;
+// }
+// .slider-lookbook__item:nth-child(odd) {
+// 	padding-top: 96px;
+// }

@@ -8,30 +8,27 @@ block header
 
 block content
 	+features()
-	.container-narrow
-		p sdfdsf
 
 
 	+lookbook()
 
 	+fashion-world()
 
-	+product('https://picsum.photos/296/296/?gravity=east', 'Сапожки', true, true, true)
+	//+product('https://picsum.photos/296/296/?gravity=east', 'Сапожки', true, true, true)
 
-	+slider-sale
+	//+slider-sale
 
-	.checkout-slider
-		.checkout__remember
-			.h2.checkout__title Скидки
-			.checkout__slider-arrows
-				+btnSliderPrev()
-				+btnSliderNext()
+	.slider-sale
+		.container
+			.row.slider-sale__header
+				.h2.checkout__title.col-12.col-md-6.col-lg-3 Скидки
+				.checkout__slider-arrows.col-md-6
+					+btnSliderPrev().js-slider-product-prev
+					+btnSliderNext().js-slider-product-next
 		.slider-product.slider-product--main-page
 			.container.slider-product__inner
-				.slider-product__body
-					.slider-product__tab.active
-						.js-slider-checkout
-							+slider-product()
+				.js-slider-checkout
+					+slider-product()
 
 	.js-collapse.seo-text.seo-text--main
 		.container

@@ -2,5 +2,15 @@
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий... 
 
 .header-promo {
-	
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  color: #fff;
+
+  &__title {
+    font-size: 109.4px;
+    font-weight: 900;
+    line-height: 0.75;
+    letter-spacing: -6.8px;
+  }
 }

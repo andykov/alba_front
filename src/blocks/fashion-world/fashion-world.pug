@@ -1,0 +1,27 @@
+//- include ../btn-slider/btn-slider
+
+mixin fashion-world()
+	.fashion-world.container
+		.row.fashion-world__header
+			h2.h2.col-12.col-md-6.col-lg-3 Из мира моды
+			.col-md-6.fashion-world-slider__nav
+				+btnSliderPrev()
+				+btnSliderNext()
+
+		.row.fashion-world-slider-wrap
+			.fashion-world-slider.js-fashion-world-slider
+				+fashionSliderItem('https://picsum.photos/520/208?image=184', '23.11', '2017', 'Наш стилист рассказывает что будут носить все в 2018')
+				+fashionSliderItem('https://picsum.photos/520/208?image=199', '07.10', '2017', 'Модные каникулы в Венеции вышли по-особенному душевными')
+				+fashionSliderItem('https://picsum.photos/520/208?image=195', '13.10', '2017', 'Наш стилист рассказывает что будут носить все в 2018')
+				+fashionSliderItem('https://picsum.photos/520/208?image=180', '13.10', '2017', 'Замша — это бархатистая кожа так называемого жирового дубления')
+
+
+mixin fashionSliderItem(img, date, year, title)
+	a(href="#").fashion-world-slider__item
+		figure.fashion-world-slider__img
+			img(src=img)
+		.fashion-world-slider__info
+			span.fashion-world-slider__date
+				span!= date
+				span!= year
+			p.fashion-world-slider__title!=title

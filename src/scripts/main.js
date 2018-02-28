@@ -150,26 +150,6 @@ $(function() {
 
 
     // slider
-    var sliderLookBook = $('.js-slider-lookbook');
-    sliderLookBookSettings = {
-        slidesToShow: 4,
-        responsive: [
-            {
-                breakpoint: 1800,
-                settings: {
-                    slidesToShow: 5,
-                    centerPadding: '120px'
-                }
-            },
-            {
-                breakpoint: 991,
-                settings: {
-                    slidesToShow: 4,
-                    centerPadding: '32px'
-                }
-            }
-        ]
-    };
 
 
     // включение слайдера на мобильном
@@ -186,7 +166,5 @@ $(function() {
             }
         });
     };
-
-    slickMobile(sliderLookBook, sliderLookBookSettings);
 
 });

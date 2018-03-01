@@ -9,7 +9,7 @@ block content
   h1.content__title Оформление заказа
   .checkout
     .row.justify-content-xxl-center.flex-lg-row-reverse
-      .col-12.col-xl-5.col-xxl-5
+      .col-12.col-xl-5.col-xxl-6
         .checkout-basket
           .checkout-basket__head
             span.icon-svg
@@ -114,7 +114,7 @@ block content
               span 18 800
                 span руб.
 
-      .col-12.col-xl-7.col-xxl-10
+      .col-12.col-xl-7.col-xxl-9
         form.checkout-order
           .checkout-order__row
             .checkout-order__title
@@ -198,8 +198,8 @@ block content
     .checkout__remember
       .h2.checkout__title Не забудьте добавить
       .checkout__slider-arrows
-        +btnSliderPrev()
-        +btnSliderNext()
+        +btnSliderPrev().js-slider-product-prev
+        +btnSliderNext().js-slider-product-next
     .slider-product.slider-product--checkout-page
       .container.slider-product__inner
         .product-tabs__body.slider-product__body

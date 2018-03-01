@@ -7,13 +7,14 @@ if ($('.js-slider-checkout').length) {
     slidesToShow: 2,
     centerPadding: '0',
     centerMode: true,
-    prevArrow: $('.btn-slider--prev'),
-    nextArrow: $('.btn-slider--next'),
+    prevArrow: $('.js-slider-product-prev'),
+    nextArrow: $('.js-slider-product-next'),
     responsive: [
       {
         breakpoint: 767,
         settings: {
-          arrows: true
+          arrows: true,
+          rows: 2
         }
       },
       {
@@ -21,6 +22,7 @@ if ($('.js-slider-checkout').length) {
         settings: {
           slidesToShow: 4,
           arrows: true,
+          rows: 1,
           centerPadding: '32px' // ширина выступающей картинки (20px) + половина отступа между слайдами (12px)
         }
       },
@@ -37,7 +39,7 @@ if ($('.js-slider-checkout').length) {
         settings: {
           slidesToShow: 5,
           arrows: true,
-          centerPadding: '120px' // ширина выступающей картинки (100px) + половина отступа между слайдами (20px)
+          centerPadding: '113px' // ширина выступающей картинки (100px) + половина отступа между слайдами (20px)
         }
       }
 

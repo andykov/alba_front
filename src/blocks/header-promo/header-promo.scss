@@ -2,15 +2,92 @@
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий... 
 
 .header-promo {
+  position: relative;
   display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+  justify-content: space-between;
+  font-family: $font-family--montserrat;
   color: #fff;
+  padding: 4.8% 48px 6.1%;
 
   &__title {
+    position: relative;
     font-size: 109.4px;
-    font-weight: 900;
+    font-weight: 600;
     line-height: 0.75;
     letter-spacing: -6.8px;
+    text-transform: uppercase;
+    padding-bottom: 7%;
+
+    &:after {
+      content: '';
+      position: absolute;
+      left: 5px;
+      bottom: 0;
+      width: 75%;
+      height: 16px;
+      background-color: #ffffff;
+    }
+
+  }
+
+  &__year {
+    font-size: 109.4px;
+    font-weight: 600;
+    line-height: 0.75;
+    letter-spacing: -6.8px;
+    align-self: flex-end;
+    padding-bottom: 7%;
+  }
+  
+  &__link {
+    position: absolute;
+    right: 48px;
+    bottom: 23.1%;
+    transition: all 0.25s;
+    width: 72px;
+    height: 48px;
+    //background: #fff url("../img/svg/arrow.svg") no-repeat center center;
+    background-color: #fff;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: 24px;
+      display: block;
+      height: 2px;
+      margin: auto;
+      background: #000;
+      transition: all 0.25s;
+    }
+
+    svg {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 18px;
+      right: 0;
+      width: 6px;
+      height: 6px;
+      fill: #000;
+      margin: auto;
+      transition: all 0.25s;
+    }
+
+    &:hover {
+
+
+      &:before {
+        //right: -10px;
+        background: #1eb4b7;
+      }
+
+      svg {
+        fill: #1eb4b7;
+      }
+    }
   }
 }

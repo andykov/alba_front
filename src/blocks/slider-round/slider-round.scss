@@ -1,0 +1,17 @@
+// В этом файле должны быть стили для БЭМ-блока .slider-round , его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий... 
+
+.slider-round {
+  display: flex;
+  flex-wrap: wrap;
+  width: 440px;
+
+  &__item {
+    width: 200px;
+    margin: 10px;
+  }
+
+  [dir='rtl'] .slick-slide {
+    float: left;
+  }
+}

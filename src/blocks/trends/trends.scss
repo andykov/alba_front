@@ -1,0 +1,15 @@
+// В этом файле должны быть стили для БЭМ-блока .trends , его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий... 
+
+.trends {
+  position: relative;
+
+	&__title {}
+    &__slider {
+      .slick-arrow {
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+    }
+}

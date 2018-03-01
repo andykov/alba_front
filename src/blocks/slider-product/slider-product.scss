@@ -21,6 +21,10 @@
   }
   &--main-page {
     padding-top: 0;
+    margin-bottom: -160px;
+    @media screen and (min-width: $screen-md) {
+      margin-bottom: -190px;
+    }
     @media screen and (min-width: $screen-lg) {
       margin-right: -8px;
       margin-left: -8px;
@@ -36,26 +40,10 @@
     margin-right: 0;
     margin-left: 0;
     padding-top: 0;
-    .slick-arrow {
-      margin-left: auto;
-      bottom: initial;
-      top: -66px;
-      right: 16px;
-      cursor: pointer;
-      @media screen and (min-width: $screen-xxl) {
-        //right: 127px;
-        //top: -102px;
-      }
-    }
-    .slick-slider .slick-prev {
-      right: 65px;
-      @media screen and (min-width: $screen-xxl) {
-        //right: 173px;
-      }
-    }
   }
   &--page-card {
     .slick-arrow {
+      display: none;
       bottom: initial;
       top: -92px;
       right: 67px;
@@ -86,23 +74,18 @@
 
   &__item {
     padding-bottom: 176px;
+
     @media screen and (min-width: $screen-md) {
       padding-bottom: 196px;
     }
   }
-
-  //.slick-list {
-  //	margin-right: -4px;
-  //	margin-left: -4px;
-  //	@media screen and (min-width: $screen-md) {
-  //		margin-right: -48px;
-  //		margin-left: -48px;
-  //	}
-  //	@media screen and (min-width: $screen-md) {
-  //		margin-right: -52px;
-  //		margin-left: -52px;
-  //	}
-  //}
+  .slick-slide > div {
+    width: 44vw;
+    @media screen and (min-width: $screen-md) {
+      max-width: 100%;
+      width: initial;
+    }
+  }
   &__nav {
     margin-bottom: 21px;
     @media screen and (min-width: $screen-md) {
@@ -116,21 +99,7 @@
       margin-bottom: 69px;
     }
   }
-  &__nav-inner {
-    //@media screen and (min-width: $screen-md) {
-    //	padding: 0;
-    //}
-  }
   &__tab {
-    //display: block !important;
-
-    &:not(:first-child) {
-      //display: none !important;
-    }
-    @media screen and (min-width: $screen-md) {
-      //padding-right:16px;
-      //padding-left:16px;
-    }
     @media screen and (min-width: $screen-lg) {
       padding-right: 0;
       padding-left: 0;
@@ -145,11 +114,10 @@
     }
   }
   &__inner {
-    padding-right: 12px;
+    padding-right: 0;
     padding-left: 12px;
     @media screen and (min-width: $screen-md) {
-      padding: 0;
-      width: auto;
+      padding-left: 0;
     }
     @media screen and (min-width: $screen-lg) {
       width: auto;

@@ -970,6 +970,8 @@ p {
   @media screen and (min-width: $screen-lg) {
     flex-wrap: wrap;
     flex-direction: row-reverse;
+    margin-right: -37px;
+    margin-left: -37px;
   }
 
   &__inner {
@@ -1220,6 +1222,9 @@ p {
   }
   .checkout__slider-arrows {
     margin-left: 0;
+    .btn-slider {
+      display: none;
+    }
   }
   .slider-product {
     @media (min-width: $screen-xxl) {

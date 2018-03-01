@@ -1,0 +1,391 @@
+// В этом файле должны быть стили для БЭМ-блока .insta-gallery , его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий... 
+
+.insta-gallery {
+	margin-bottom: 32px;
+
+	@media screen and (min-width: $screen-md) {
+		margin-bottom: 70px;
+	}
+
+	@media screen and (min-width: $screen-lg) {
+		margin-bottom: 55px;
+	}
+
+	@media screen and (min-width: $screen-xl) {
+		margin-bottom: 86px;
+	}
+
+	@media screen and (min-width: $screen-xl) {
+		margin-bottom: 94px;
+	}
+
+	.h2 {
+		margin-bottom: 0;
+		font-family: $font-family--montserrat;
+		font-weight: 900;
+
+		@media screen and (min-width: $screen-md) {
+			font-size: 26px;
+		}
+
+	}
+
+	&__header {
+		margin-bottom: 20px;
+
+		@media screen and (min-width: $screen-md) {
+			margin-bottom: 40px;
+		}
+
+	}
+
+	&__refresh {
+		display: none;
+
+		button {
+			position: relative;
+			display: block;
+			width: 24px;
+			height: 24px;
+			margin-top: auto;
+			margin-bottom: auto;
+			margin-right: auto;
+			padding: 0;
+			border: 2px solid #000;
+			border-radius: 50%;
+			border-left-color: transparent;
+			background: transparent;
+			transform: rotate(-45deg);
+			transform-origin: center;
+
+			&::before {
+				content: '';
+				display: block;
+				position: absolute;
+				top: -1px;
+				left: 0;
+				width: 0;
+				height: 0;
+				border: 6px solid transparent;
+				border-left-color: #000;
+				border-bottom: 0;
+				border-right: 0;
+			}
+		}
+
+		@media screen and (min-width: $screen-md) {
+			display: flex;
+
+		}
+	}
+
+	&__content {
+		flex-wrap: nowrap;
+		padding-left: 16px;
+		overflow-x: scroll;
+
+
+		&-wrap {
+			position: relative;
+			padding-bottom: 35%;
+		}
+
+
+		@media screen and (min-width: $screen-md) {
+			padding-left: 0;
+			margin-right: calc(((-100vw + 672px) / 2) - 24px);
+
+			&-wrap {
+				padding-bottom: 240px;
+				padding-left: 24px;
+				padding-right: 24px;
+			}
+		}
+
+		@media screen and (min-width: $screen-lg) {
+			flex-wrap: wrap;
+			@include row(32px, 32px, 48px, 24px, 32px, 40px);
+
+			&-wrap {
+				padding: 0;
+			}
+		}
+
+	}
+
+	&__inner {
+		flex-wrap: nowrap;
+
+		@media screen and (min-width: $screen-md) {
+			margin-left: 0;
+			margin-right: 0;
+
+			&-wrap {
+				padding-left: 0;
+				padding-right: 0;
+			}
+		}
+
+		@media screen and (min-width: $screen-lg) {
+			width: calc(100% + 24px);
+			flex-wrap: wrap;
+			align-self: stretch;
+			@include row(32px, 32px, 48px, 24px, 32px, 40px);
+
+			&-wrap {
+				display: flex;
+				padding-left: (24px / 2);
+				padding-right: (24px / 2);
+			}
+		}
+
+		@media screen and (min-width: $screen-xl) {
+			width: calc(100% + 32px);
+			&-wrap {
+				padding-left: (32px / 2);
+        padding-right: (32px / 2);
+			}
+		}
+
+		@media screen and (min-width: $screen-xxl) {
+			width: calc(100% + 40px);
+
+			&-wrap {
+				padding-left: (40px / 2);
+        padding-right: (40px / 2);
+			}
+		}
+	}
+
+	&__link {
+		display: flex;
+		width: 192px;
+		min-width: 192px;
+		height: 192px;
+		margin-right: 16px;
+		padding-left: 0;
+		padding-right: 0;
+
+		a {
+			position: relative;
+			display: block;
+			width: 100%;
+			align-self: stretch;
+		}
+
+		&--main {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: calc(100% - 192px - 16px);
+			min-height: 88px;
+
+			a::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				background: rgba(#000, .5);
+			}
+		}
+
+		a::after {
+			content: '';
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 100%;
+			bottom: 0;
+			opacity: 0;
+			transition: top 0.4s ease-in-out, opacity 0.6s ease-in-out;
+			background: linear-gradient(-180deg, rgba(96, 211, 213, 0) 50%, rgba(96, 211, 213, 0.66) 100%);
+		}
+
+		&:hover {
+			a:after {
+				top: 0;
+				opacity: 1;
+			}
+		}
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: center;
+		}
+
+		@media screen and (min-width: $screen-md) {
+			width: 432px;
+			min-width: 432px;
+			height: 432px;
+			margin-right: 48px;
+
+			&--smaller:nth-child(1) {
+				margin-right: 0;
+			}
+			&--main,
+			&--smaller:nth-child(2) {
+				height: 192px;
+				min-height: initial;
+			}
+
+			&--main {
+				left: initial;
+				right: 0;
+				margin-right: 0;
+			}
+
+			&--smaller:nth-child(2) {
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				width: 192px;
+				min-width: initial;
+			}
+		}
+
+		@media screen and (min-width: $screen-lg) {
+			width: initial;
+			min-width: initial;
+			margin-right: initial;
+			height: 296px;
+			padding-left: (24px / 2);
+			padding-right: (24px / 2);
+
+			&--bigger:nth-child(1) {
+				display: none;
+			}
+
+			&--main,
+			&--smaller:nth-child(2) {
+				position: relative;
+			}
+
+			&--main,
+			&--smaller,
+			&--smaller:nth-child(2) {
+				height: 136px;
+			}
+
+			&--main {
+				margin-top: auto;
+			}
+		}
+
+		@media screen and (min-width: $screen-xl) {
+			height: 384px;
+			padding-left: (32px / 2);
+      padding-right: (32px / 2);
+
+			&--main,
+			&--smaller,
+			&--smaller:nth-child(2) {
+				height: 176px;
+			}
+		}
+
+		@media screen and (min-width: $screen-xxl) {
+			height: 408px;
+			padding-left: (40px / 2);
+			padding-right: (40px / 2);
+
+			&--bigger:nth-child(1) {
+				display: flex;
+				height: 296px;
+			}
+
+			&--main,
+			&--smaller,
+			&--smaller:nth-child(2) {
+				height: 184px;
+			}
+
+			&--smaller:nth-child(1) {
+				padding-right: 0;
+				margin-right: auto;
+			}
+
+			&--smaller:nth-child(2) {
+				padding-left: 0;
+			}
+
+			&--smaller {
+				flex: 0 0 calc(50% - 20px);
+				max-width:calc(50% - 20px);
+			}
+		}
+	}
+
+	&__subtitle {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: #fff;
+
+		span {
+			&:first-child {
+				width: 152px;
+				margin-right: 57px;
+				font-size: 12px;
+				font-weight: 300;
+				line-height: 1.33;
+				letter-spacing: normal;
+			}
+
+			&:last-child {
+				background: #fff;
+				width: 36px;
+			}
+		}
+
+		@media screen and (min-width: $screen-md) {
+			span {
+				&:first-child {
+					width: 136px;
+					margin-right: 120px;
+					font-size: 18px;
+					line-height: normal;
+					letter-spacing: 0.4px
+				}
+
+				&:last-child {
+					width: 58px;
+				}
+			}
+		}
+
+		@media screen and (min-width: $screen-lg) {
+			span {
+				&:first-child {
+					margin-right: 28px;
+				}
+			}
+		}
+
+		@media screen and (min-width: $screen-xl) {
+			span {
+				&:first-child {
+					margin-right: 75px;
+				}
+			}
+		}
+
+		@media screen and (min-width: $screen-xxl) {
+			span {
+				&:first-child {
+					margin-right: 92px;
+				}
+			}
+		}
+	}
+}

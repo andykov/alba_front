@@ -67,7 +67,8 @@ var PATH = {
     JS: [
       'node_modules/ismobilejs/isMobile.min.js',
       'node_modules/jquery/dist/jquery.min.js',
-      'node_modules/slick-carousel/slick/slick.js',
+      // 'node_modules/slick-carousel/slick/slick.js',
+      'src/scripts/libs/slick-custom.js',
       'node_modules/magnify/dist/js/jquery.magnify.js',
       // 'node_modules/magnify/dist/js/jquery.magnify-mobile.js',
       'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js',
@@ -75,7 +76,6 @@ var PATH = {
       // 'node_modules/sticky-kit/distfsev/sticky-kit.min.js',
       'node_modules/sticky-sidebar/dist/jquery.sticky-sidebar.min.js',
       'node_modules/air-datepicker/dist/js/datepicker.min.js',
-      // 'src/scripts/libs/slick.min.js',
       // 'src/scripts/libs/jquery.sticky-sidebar.js',
     ]
   },
@@ -142,7 +142,7 @@ gulp.task('pug', function () {
             };
         }))
         .pipe(gulp.dest(PATH.BUILD.HTML))
-        .pipe(browserSync.stream());
+        .pipe(browserSync.stream({once: true}));
 });
 
 

@@ -18,7 +18,7 @@ mixin header(classMod)
 								button(id="dCart" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-count-cart="3").btn-icon
 									span.icon-svg
 										| <svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" viewBox="0 0 20 24"><path fill-rule="evenodd" d="M1.935 6.111H7.37V3.244S7.37.657 10 .657s2.62 2.587 2.62 2.587v2.867h5.445L20 24H0L1.935 6.111zM9.092 6h1.79V3.912s.343-1.592-.885-1.592-.905 1.592-.905 1.592V6z"/></svg>
-								.panel-cart__list(aria-labelledby="dCart")
+								.panel-cart__list(aria-labelledby="dCart" data-dont-close)
 									.panel-cart__item
 										button(type="button").panel-cart__remove
 											| <svg width="12" height="12" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -74,7 +74,7 @@ mixin header(classMod)
 										| <svg xmlns="http://www.w3.org/2000/svg" width="22" height="19" viewBox="0 0 22 19">
 										| <path fill-rule="evenodd" d="M6.037 0C2.38 0 .013 3.655 0 6.658-.024 12.18 11 19 11 19s11.024-6.82 11-12.342C21.987 3.655 19.619 0 15.96 0 14.284 0 12.167 1.099 11 2.133 9.831 1.099 7.714 0 6.036 0z"/>
 										| </svg>
-								.panel-cart__list(aria-labelledby="dFavorite")
+								.panel-cart__list(aria-labelledby="dFavorite" data-dont-close)
 									.panel-cart__item
 										button(type="button").panel-cart__remove
 											| <svg width="12" height="12" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">

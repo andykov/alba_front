@@ -4,8 +4,8 @@ $(function() {
 	$(".js-fashion-world-slider").slick({
 		// autoplay: true,
 		appendArrows: $('.fashion-world-slider__nav'),
-		prevArrow: $('.btn-slider--prev'),
-    nextArrow: $('.btn-slider--next'),
+		prevArrow: $('.fashion-world-slider--prev'),
+    nextArrow: $('.fashion-world-slider--next'),
 		slidesToShow: 3,
 		responsive: [{
 			breakpoint: 1800,

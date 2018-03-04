@@ -5,8 +5,8 @@ mixin fashion-world()
 		.row.fashion-world__header
 			h2.h2.col-12.col-md-6.col-lg-3 Из мира моды
 			.col-md-6.fashion-world-slider__nav
-				+btnSliderPrev()
-				+btnSliderNext()
+				+btnSliderPrev()(class="fashion-world-slider--prev")
+				+btnSliderNext()(class="fashion-world-slider--next")
 
 		.row.fashion-world-slider-wrap
 			.fashion-world-slider.js-fashion-world-slider
@@ -19,7 +19,7 @@ mixin fashion-world()
 mixin fashionSliderItem(img, date, year, title)
 	a(href="#").fashion-world-slider__item
 		figure.fashion-world-slider__img
-			img(src=img)
+			img(src=img, alt="")
 		.fashion-world-slider__info
 			span.fashion-world-slider__date
 				span!= date

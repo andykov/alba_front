@@ -970,6 +970,8 @@ p {
   @media screen and (min-width: $screen-lg) {
     flex-wrap: wrap;
     flex-direction: row-reverse;
+    margin-right: -37px;
+    margin-left: -37px;
   }
 
   &__inner {
@@ -1185,7 +1187,7 @@ p {
 	}
 }
 .slider-sale {
-  padding-top: 32px;
+  // padding-top: 32px;
   &__header {
     padding-bottom: 20px;
     @media screen and (min-width: $screen-md) {
@@ -1193,17 +1195,17 @@ p {
     }
   }
   @media screen and (min-width: $screen-md) {
-    padding-top: 70px;
+    // padding-top: 70px;
     padding-bottom: 15px;
   }
   @media screen and (min-width: $screen-lg) {
-    padding-top: 55px;
+    // padding-top: 55px;
   }
   @media screen and (min-width: $screen-xl) {
-    padding-top: 86px;
+    // padding-top: 86px;
   }
   @media screen and (min-width: $screen-xxl) {
-    padding-top: 94px;
+    // padding-top: 94px;
   }
   .checkout__remember {
     padding: 0;
@@ -1220,6 +1222,9 @@ p {
   }
   .checkout__slider-arrows {
     margin-left: 0;
+    .btn-slider {
+      display: none;
+    }
   }
   .slider-product {
     @media (min-width: $screen-xxl) {

@@ -9,6 +9,24 @@
   &__item {
     width: 200px;
     margin: 10px;
+    z-index: 1;
+
+    //.slick-slide {
+    //  visibility: hidden;
+    //}
+    //
+    //.slick-current {
+    //  visibility: visible;
+    //}
+    //&:hover {
+    //  .slick-list {
+    //    overflow: visible;
+    //  }
+    //}
+
+    &--2 {
+
+    }
   }
 
   [dir='rtl'] .slick-slide {

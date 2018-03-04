@@ -9,6 +9,7 @@ $(function() {
 
 
     $sliderRound_1.slick({
+        infiniti: false,
         arrows: false,
         autoplaySpeed: 1000,
         speed: 1500,
@@ -16,7 +17,8 @@ $(function() {
         rtl: true
     });
     $sliderRound_2.slick({
-        arrows: true,
+        infinite: false,
+        arrows: false,
         autoplaySpeed: 1000,
         speed: 1500,
         asNavFor: '.slider-round__item',
@@ -25,6 +27,7 @@ $(function() {
         verticalReverse: true,
     });
     $sliderRound_3.slick({
+        infinite: false,
         arrows: false,
         autoplaySpeed: 1000,
         speed: 1500,
@@ -33,11 +36,29 @@ $(function() {
         verticalSwiping: true,
     });
     $sliderRound_4.slick({
+        infinite: false,
         arrows: false,
         autoplaySpeed: 1000,
         speed: 1500,
         asNavFor: '.slider-round__item'
     });
+
+
+    // $(document).on("hover", ".slider-round__item--2 .slick-slide", function() {
+    //     $(this).siblings().hide();
+    // }, function() {
+    //     // $(this).children(".overlay").fadeOut("fast");
+    // });
+
+    // $(".slider-round__item--2").hover(
+    //     function () {
+    //         $(".slider-round__item--2 .slick-slide").not(".slider-round__item--2 .slick-current").next().css("visibility","hidden");
+    //         // $(this).
+    //     },
+    //     function () {
+    //         $(".slider-round__item--2 .slick-slide").css("visibility","visible");
+    //     }
+    // );
 
 
 

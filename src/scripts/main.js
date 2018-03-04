@@ -71,7 +71,7 @@ $(function() {
             mobileFirst: true,
             responsive: [
                 {
-                    breakpoint: 1920,
+                    breakpoint: 1799,
                     settings: {
                         slidesToShow: 3
                     }

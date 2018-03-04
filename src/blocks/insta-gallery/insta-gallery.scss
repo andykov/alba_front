@@ -58,6 +58,7 @@
 			background: transparent;
 			transform: rotate(-45deg);
 			transform-origin: center;
+			outline: none;
 
 			&::before {
 				content: '';

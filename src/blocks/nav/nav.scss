@@ -67,9 +67,9 @@
 		display: block;
 		padding-top: 12px;
 		padding-bottom: 12px;
-		font-family: $font-family--lucidagrande;
+		font-family: $font-family--montserrat;
 		font-size: 10px;
-		font-weight: 700;
+		font-weight: 600;
 		line-height: (16 / 10);
 		letter-spacing: 0.4px;
 		color: #000;
@@ -124,9 +124,9 @@
 
 	&__item {
 		display: block;
-		font-family: $font-family--lucidagrande;
+		font-family: $font-family--montserrat;
 		font-size: 14px;
-		font-weight: 700;
+		font-weight: 900;
 		padding-bottom: 6px;
 		line-height: (34 / 14);
 		border-bottom: 3px solid transparent;

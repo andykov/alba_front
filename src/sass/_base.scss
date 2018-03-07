@@ -365,6 +365,11 @@ p {
   @media screen and (min-width: $screen-xl) {
     padding-bottom: 56px;
   }
+
+  .field-checkbox__name {
+    font-family: $font-family--montserrat;
+  }
+
 }
 
 .colors {
@@ -460,7 +465,7 @@ p {
     color: #000;
     text-transform: uppercase;
     outline: none;
-    padding: 8px 0;
+    padding: 12px 0;
     vertical-align: top;
 
     @include placeholder {
@@ -481,6 +486,10 @@ p {
   button {
     position: absolute;
     left: 0;
+    top: 0;
+    bottom: 0;
+    margin-top: auto;
+    margin-bottom: auto;
     background: transparent;
     outline: none;
     border: 0;
@@ -497,7 +506,7 @@ p {
       }
     }
     button {
-      svg {
+      svg g {
         stroke: #1eb4b7;
       }
     }

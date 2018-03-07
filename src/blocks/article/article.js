@@ -8,7 +8,7 @@ $(function() {
 
 	if ($article.length) {
 		$(window).on(' load resize', function() {
-			if (window.matchMedia('(min-width: 768px').matches) {
+			if (window.matchMedia('(min-width: 768px')) {
 				headerHeight = $articleHead.height() + +$article.css('padding-top').replace('px', '');
                 $articleNav.css('top', headerHeight+'px');
 			}

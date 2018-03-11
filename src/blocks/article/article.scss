@@ -418,7 +418,7 @@
   &__title {
     position: relative;
     display: inline-block;
-    padding-right: 45px;
+    padding-right: 35px;
     font-weight: 700;
     font-family: $font-family--montserrat;
     @media (min-width: $screen-md) {
@@ -431,9 +431,9 @@
   &__quantity {
     position: absolute;
     right: 0;
-    top: -10px;
+    top: 0;
     font-size: 12px;
-    line-height: 1.5;
+    line-height: 1;
     letter-spacing: 0.4px;
     font-family: $font-family;
     color: #3c3c3c;

@@ -1,9 +1,11 @@
 // .office-data scripts goes here 
 
 $(function() {
-	$('.js-office-datepicker').datepicker({
-		autoClose: true,
-		position: 'bottom center'
-	});
+	if($('.js-datepicker').length) {
+        $('.js-datepicker').datepicker({
+            autoClose: true,
+            position: 'bottom center'
+        });
+	}
 });
 

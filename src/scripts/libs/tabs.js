@@ -1,4 +1,4 @@
-// .tabs scripts goes here 
+// .tabs scripts goes here
 /* ========================================================================
  * Bootstrap: tab.js v3.3.7
  * http://getbootstrap.com/javascript/#tabs
@@ -154,20 +154,3 @@
         .on('click.bs.tab.data-api', '[data-toggle="pill"]', clickHandler)
 
 }(jQuery);
-
-
-
-$(function() {
-    // включение слайдера в табах
-    $('.product-tabs a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
-        // e.target // newly activated tab
-        // e.relatedTarget // previous active tab
-
-        var $tabBodyCurrent = $(e.target.hash),
-            $reinitSlider = $('.js-slider-product');
-
-        if ($tabBodyCurrent.find($reinitSlider).length) {
-            $reinitSlider.slick('setPosition', 0);
-        }
-    })
-});

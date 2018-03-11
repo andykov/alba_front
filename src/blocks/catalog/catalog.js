@@ -1,5 +1,3 @@
-// .catalog scripts goes here 
-
 $(function () {
 
     // растягивание баннера в каталоге

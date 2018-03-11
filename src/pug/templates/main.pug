@@ -5,6 +5,7 @@ include ../../blocks/product/product.pug
 include ../../blocks/slider-sale/slider-sale.pug
 include ../../blocks/slider-product/slider-product.pug
 include ../../blocks/slider-round/slider-round
+include ../../blocks/slider-promo/slider-promo
 include ../../blocks/auth/auth.pug
 include ../../blocks/subscribe/subscribe.pug
 include ../../blocks/form-login/form-login.pug
@@ -21,15 +22,11 @@ include ../../blocks/btn-slider/btn-slider
 include ../../blocks/features/features
 include ../../blocks/fashion-world/fashion-world
 include ../../blocks/insta-gallery/insta-gallery
-//include ../../blocks/modal-region/modal-region.pug
-//include ../../blocks/modal-advice/modal-advice.pug
-//include ../mixins/column-text.pug
 
 doctype html
 html(lang="ru")
 	head
 		meta(charset="UTF-8")
-		//meta(name='viewport', content='width=device-width, initial-scale=1')
 		meta(name='viewport', content='width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0')
 
 		//- Edge и ряд мобильных браузеров автоматом преобразуют телефоны в ссылки. Отключить если не нужно.
@@ -39,16 +36,13 @@ html(lang="ru")
 			title Home
 
 		block head
-			link(rel="stylesheet" href="css/libs.css")
+			link(rel="stylesheet" href="css/libs/slick.css")
+			link(rel="stylesheet" href="css/libs/jquery.fancybox.min.css")
+			link(rel="stylesheet" href="css/libs/magnify.css")
+			link(rel="stylesheet" href="css/libs/jQuery.Brazzers-Carousel.min.css")
 			block css_libs
-				//link(rel="stylesheet" href="css/select2.min.css")
-				//link(rel="stylesheet" href="css/magnify.css")
-				//link(rel="stylesheet" href="css/jQuery.Brazzers-Carousel.min.css")
-				//link(rel="stylesheet" href="css/jquery.fancybox.min.css")
-			link(rel="stylesheet" href="css/template.css")
 
-			//script
-			//	include ../../blocks/is-mobile/is-mobile.js
+			link(rel="stylesheet" href="css/template.css")
 
 	body
 
@@ -62,13 +56,15 @@ html(lang="ru")
 
 		include ../../blocks/footer/footer
 
-		//+auth()
 		+form-login()
-		//+modal-region()
-		//+modal-advice()
 
 
-		script(src="js/libs.js")
+		script(src="js/libs/jquery.min.js")
+		script(src="js/libs/slick-custom.js")
+		script(src="js/libs/jquery.fancybox.min.js")
+		script(src="js/libs/jQuery.Brazzers-Carousel.min.js")
+		script(src="js/libs/dropdown.js")
+		script(src="js/libs/tabs.js")
 		block js_libs
 
 		script(src="js/main.js")

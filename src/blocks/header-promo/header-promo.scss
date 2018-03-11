@@ -7,16 +7,39 @@
   justify-content: space-between;
   font-family: $font-family--montserrat;
   color: #fff;
-  padding: 4.8% 48px 6.1%;
+  padding: 4.8% 16px 6.1%;
+
+  @media screen and (min-width: $screen-md) {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+  @media screen and (min-width: $screen-lg) {
+    padding-left: 36px;
+    padding-right: 36px;
+  }
+  @media screen and (min-width: $screen-xl) {
+    padding-left: 43px;
+    padding-right: 43px;
+  }
+  @media screen and (min-width: $screen-xxl) {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
 
   &__title {
     position: relative;
-    font-size: 109.4px;
+    font-size: 47px;
     font-weight: 600;
-    line-height: 0.75;
-    letter-spacing: -6.8px;
+    line-height: (56 / 47);
+    letter-spacing: -2.9px;
     text-transform: uppercase;
     padding-bottom: 7%;
+
+    @media screen and (min-width: $screen-lg) {
+      font-size: 109.4px;
+      line-height: 0.75;
+      letter-spacing: -6.8px;
+    }
 
     &:after {
       content: '';

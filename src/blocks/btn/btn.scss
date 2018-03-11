@@ -19,6 +19,7 @@ $field-padding-horizontal: 32px;
 $border-radius: 3px;
 
 .btn {
+  position: relative;
   box-sizing: border-box;
   display: inline-block;
   padding: 11px 16px;
@@ -41,6 +42,8 @@ $border-radius: 3px;
   cursor: pointer;
   transition: all $transition;
 
+
+
   &:hover,
   &:focus {
     text-decoration: none;
@@ -51,11 +54,6 @@ $border-radius: 3px;
   &:active {
     background-color: $black;
   }
-
-  //&--disabled,
-  //&:disabled {
-
-  //}
 
   &[class*="btn--"]:not(.btn--border) {
     border-color: transparent;
@@ -76,40 +74,18 @@ $border-radius: 3px;
   }
 
   // btn colors
-  &--gray {
-    background-color: $btn-gray;
-    color: $text-color;
-    &.btn--shadow {
-      &:hover,
-      &:focus {
-        color: #343434;
-        background-color: $btn-orange;
-      }
+  &--black {
+    background-color: #000;
+    &:hover {
+      background-color: #1eb4b7;
+      box-shadow: 0 0 0 2px #1eb4b7;
     }
   }
-
-  &--turq {
-    background-color: $btn-turq;
-    color: #fff;
-    letter-spacing: 0.8px;
-    &.btn--shadow {
-      &:hover,
-      &:focus {
-        color: #343434;
-        background-color: $btn-orange;
-      }
-    }
-  }
-
-  &--orange {
-    background-color: $btn-orange;
-    color: #343434;
-    &.btn--shadow {
-      &:hover,
-      &:focus {
-        color: #fff;
-        background-color: $btn-turq;
-      }
+  &--blue {
+    background-color: #60D3D5;
+    &:hover {
+      background-color: #1eb4b7;
+      box-shadow: 0 0 0 2px #1eb4b7;
     }
   }
 
@@ -145,7 +121,7 @@ $border-radius: 3px;
   }
 
   // btc icons
-  &-icon {
+  &--icon {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -154,7 +130,6 @@ $border-radius: 3px;
     font-size: 1rem;
     position: relative;
     user-select: none;
-    background-color: white;
     color: #323232;
     cursor: pointer;
     text-align: center;
@@ -174,26 +149,28 @@ $border-radius: 3px;
       height: 56px;
     }
 
-    &--black {
-      background-color: #000;
-      &:hover {
-        background-color: #1eb4b7;
-        box-shadow: 0 0 0 2px #1eb4b7;
-      }
-    }
-    &--blue {
-      background-color: #60D3D5;
-      &:hover {
-        background-color: #1eb4b7;
-        box-shadow: 0 0 0 2px #1eb4b7;
-      }
-    }
-
     &--circle {
       width: 32px;
       height: 32px;
       border-radius: 50%;
     }
+
+    &-text {
+      padding-left: 42px;
+      padding-right: 42px;
+      svg {
+        position: absolute;
+        left: 16px;
+        top: 0;
+        bottom: 0;
+        margin: auto 0;
+        color: #3C3C3C;
+      }
+    }
+  }
+
+  &--icon-text {
+
   }
 
 }

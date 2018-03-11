@@ -171,9 +171,12 @@ block content
 										input(type="checkbox")
 										span 12
 					.product-info__buttons
-						a(href="").btn.product-info__in-cart В корзину
-						a(href="").btn.product-info__add-desires
-						a(href="").btn.btn--border.product-info__reservation Забронировать в магазине
+						a(href="").btn.btn--icon-text.product-info__in-cart
+							| <svg xmlns="http://www.w3.org/2000/svg" width="15" height="18" viewBox="0 0 20 24" opacity=".15"><path fill-rule="evenodd" d="M1.935 6.111H7.37V3.244S7.37.657 10 .657s2.62 2.587 2.62 2.587v2.867h5.445L20 24H0L1.935 6.111zM9.092 6h1.79V3.912s.343-1.592-.885-1.592-.905 1.592-.905 1.592V6z"/></svg>
+							| В корзину
+						a(href="").btn.btn--icon
+							| <svg xmlns="http://www.w3.org/2000/svg" width="18" height="15" viewBox="0 0 22 19"><path opacity=".15" fill-rule="evenodd" d="M6.037 0C2.38 0 .013 3.655 0 6.658-.024 12.18 11 19 11 19s11.024-6.82 11-12.342C21.987 3.655 19.619 0 15.96 0 14.284 0 12.167 1.099 11 2.133 9.831 1.099 7.714 0 6.036 0z"/></svg>
+						a(href="").btn.btn--border.btn--wide.product-info__reservation Забронировать в магазине
 					.product-info__delivery
 						p Доставим сегодня за 320 руб. (Москва)
 						a(href="#") О доставке
@@ -293,3 +296,4 @@ block content
 
 
 block js_libs
+	script(src="js/libs/jquery.magnify.js")

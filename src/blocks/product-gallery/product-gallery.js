@@ -1,32 +1,27 @@
 $(function() {
 
     if ($('.js-product-gallery-big').length) {
-        // var svgMaskWrap = document.createElement('div');
-        // var svgMaskWrap = svgMaskWrap.setAttribute('id', 'svg-mask-wrap');
 
-        var $productGalleryBig = $('.js-product-gallery-big'),
+        var $svgWrap,
+            $productGalleryBig = $('.js-product-gallery-big'),
             $productGalleryThumb = $('.js-product-gallery-thumb'),
             $productGalleryItem = $('.product-gallery__item'),
             $productGalleryItemFirst = $('.product-gallery__item:first-child'),
             $productGalleryFirstImg = $productGalleryItem.first().find('img'),
             productGalleryFirstImgPath = $productGalleryFirstImg.attr('src');
-        // var item = document.getElementsByClassName('product-gallery__item')[0];
-
-
-        // console.log($(item));
-        // $(item).append(svgMaskWrap);
-
-
 
         $productGalleryBig.on('init', function(event, slick) {
-            // $('.js-product-gallery-big').fadeIn(3000);
+            $productGalleryFirstImg.css({
+                'opacity': 0,
+                'visibility': 'hidden'
+            });
             $('.js-product-gallery-big .slick-current').append('<div id="svg-mask-wrap" style="opacity: 0"></div>');
             console.log('slick init');
+            $svgWrap = $('#svg-mask-wrap');
         });
 
         if($productGalleryBig.length) {
             $productGalleryBig.slick({
-                // infinite: false,
                 mobileFirst: true,
                 lazyLoad: 'ondemand',
                 arrows: false,
@@ -36,10 +31,6 @@ $(function() {
                 dots: false,
                 centerPadding: '0',
                 asNavFor: $productGalleryThumb
-                // customPaging : function(slider, i) {
-                //     var thumb = $(slider.$slides[i]).data('thumb');
-                //     return '<a><img src="'+thumb+'"></a>';
-                // },
             });
             $productGalleryThumb.slick({
                 slidesToShow: 4,
@@ -48,17 +39,9 @@ $(function() {
                 arrows: false,
                 dots: false,
                 centerPadding: '0',
-                // useCSS: false,
-                // useTransform: false,
                 focusOnSelect: true
             });
         }
-
-
-        // $productGalleryItemFirst.css({
-        //     'opacity': 0,
-        // });
-
 
         var divSizeWidth = $('.js-product-gallery-big .slick-current').width(),
             divSizeHeight = $('.js-product-gallery-big .slick-current').height();
@@ -119,9 +102,6 @@ $(function() {
             'xlink:href': productGalleryFirstImgPath
         });
 
-        // $('#svg-mask-wrap').append(svg);
-        // $('#svg-mask').append(defs).append(poly_1);
-
         document.getElementById('svg-mask-wrap').appendChild(svg).appendChild(defs).appendChild(poly_1);
         document.getElementById('svg-mask-wrap').appendChild(svg).appendChild(defs).appendChild(poly_2);
 
@@ -131,24 +111,28 @@ $(function() {
         document.getElementById('svg-mask').appendChild(group_2).appendChild(mask_2).appendChild(useMask_2);
         document.getElementById('group_2').appendChild(img_2);
 
-        // function addSvg() {
-        //     // $productGalleryItemFirst.append($("#svg-mask-wrap").html($("#svg-mask-wrap").html()));
-        //     $('.js-product-gallery-big .slick-current').append($("#svg-mask-wrap").html($("#svg-mask-wrap").html()));
-        // }
-        //
-        // addSvg();
-
         // костылик, для работы svg маски
-        $('.js-product-gallery-big .slick-current').append($("#svg-mask-wrap").html($("#svg-mask-wrap").html()));
+        $('.js-product-gallery-big .slick-current').append($svgWrap.html($svgWrap.html()));
 
         setTimeout(function(){
-            $("#svg-mask-wrap").addClass('animate');
-            $("#svg-mask-wrap").delay( 0 ).animate({
+
+            // $svgWrap.addClass('animate');
+            $svgWrap.delay( 0 ).animate({
                 opacity: 1,
             }, 200);
-            // $productGalleryItemFirst.delay( 0 ).animate({
-            //     opacity: 1,
-            // }, 200);
+            $svgWrap.find('image').animate({
+                x: 0,
+                y: 0
+            }, 1200, function () {
+
+                setTimeout(function(){
+                    $productGalleryFirstImg.css({
+                        'opacity': 1,
+                        'visibility': 'visible'
+                    });
+                    $svgWrap.remove();
+                }, 200);
+            });
         }, 0);
     }
 

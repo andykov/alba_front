@@ -1,6 +1,3 @@
-// // .slider-product scripts goes here
-//
-
 $(function () {
 	if ($('.js-slider-product').length) {
 		$('.js-slider-product').slick({

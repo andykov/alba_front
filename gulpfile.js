@@ -32,50 +32,52 @@ const debug = require('gulp-debug');
 
 var PATH = {
 	SRC: {
-    PUG: 'src/pug/*.pug',
-		SASS: 'src/sass/template.scss',
-    JS: [
-      'src/blocks/**/*.js',
-      'src/scripts/main.js'
-    ],
-    IMG: [
-      '!src/images/icons/',
-      'src/images/**/*.{jpg,jpeg,gif,png,svg}'
-    ],
-    SVG: [
-      'src/images/svg/**/*.svg'
-    ],
-    FONTS: 'src/fonts/**'
+        PUG: 'src/pug/*.pug',
+        SASS: 'src/sass/template.scss',
+        JS: [
+          'src/blocks/**/*.js',
+          'src/scripts/main.js'
+        ],
+        IMG: [
+          '!src/images/icons/',
+          'src/images/**/*.{jpg,jpeg,gif,png,svg}'
+        ],
+        SVG: [
+          'src/images/svg/**/*.svg'
+        ],
+        FONTS: 'src/fonts/**'
 	},
 	BUILD: {
-    HTML: 'build/',
-		CSS: 'build/css/',
-    JS: 'build/js/',
-    IMG: 'build/img/',
-    SVG: 'build/img/svg',
-    FONTS: 'build/fonts/'
+        HTML: 'build/',
+            CSS: 'build/css/',
+        JS: 'build/js/',
+        IMG: 'build/img/',
+        SVG: 'build/img/svg',
+        FONTS: 'build/fonts/'
 	},
   LIBS: {
     CSS: [
-        'node_modules/slick-carousel/slick/slick.css',
-        'node_modules/magnify/dist/css/magnify.css',
-        'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.css',
-        'node_modules/brazzers-carousel/Brazzers-Carousel/jQuery.Brazzers-Carousel.min.css',
-        'node_modules/air-datepicker/dist/css/datepicker.min.css',
+        'src/sass/libs/**'
+        // 'node_modules/slick-carousel/slick/slick.css',
+        // 'node_modules/magnify/dist/css/magnify.css',
+        // 'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.css',
+        // 'node_modules/brazzers-carousel/Brazzers-Carousel/jQuery.Brazzers-Carousel.min.css',
+        // 'node_modules/air-datepicker/dist/css/datepicker.min.css',
       // 'src/sass/libs/slick.css',
     ],
     JS: [
-      'node_modules/ismobilejs/isMobile.min.js',
-      'node_modules/jquery/dist/jquery.min.js',
+        'src/scripts/libs/**'
+      // 'node_modules/ismobilejs/isMobile.min.js',
+      // 'node_modules/jquery/dist/jquery.min.js',
       // 'node_modules/slick-carousel/slick/slick.js',
-      'src/scripts/libs/slick-custom.js',
-      'node_modules/magnify/dist/js/jquery.magnify.js',
+      // 'src/scripts/libs/slick-custom.js',
+      // 'node_modules/magnify/dist/js/jquery.magnify.js',
       // 'node_modules/magnify/dist/js/jquery.magnify-mobile.js',
-      'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js',
-      'node_modules/brazzers-carousel/Brazzers-Carousel/jQuery.Brazzers-Carousel.min.js',
+      // 'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js',
+      // 'node_modules/brazzers-carousel/Brazzers-Carousel/jQuery.Brazzers-Carousel.min.js',
       // 'node_modules/sticky-kit/distfsev/sticky-kit.min.js',
-      'node_modules/sticky-sidebar/dist/jquery.sticky-sidebar.min.js',
-      'node_modules/air-datepicker/dist/js/datepicker.min.js',
+      // 'node_modules/sticky-sidebar/dist/jquery.sticky-sidebar.min.js',
+      // 'node_modules/air-datepicker/dist/js/datepicker.min.js',
       // 'src/scripts/libs/jquery.sticky-sidebar.js',
     ]
   },
@@ -100,8 +102,8 @@ var PATH = {
 gulp.task('css:libs', function () {
   console.log('---------- Копирование внешних стилей');
     return gulp.src(PATH.LIBS.CSS)
-        .pipe(concat('libs.css'))
-        .pipe(gulp.dest(PATH.BUILD.CSS))
+        // .pipe(concat('libs.css'))
+        .pipe(gulp.dest(PATH.BUILD.CSS + 'libs/'))
         .pipe(browserSync.stream());
 });
 gulp.task('sass', function () {
@@ -162,9 +164,9 @@ gulp.task('js:libs', function () {
       //     this.emit('end');
       //   }
       // }))
-      .pipe(concat('libs.js'))
+      // .pipe(concat('libs.js'))
       .pipe(uglify())
-      .pipe(gulp.dest(PATH.BUILD.JS))
+      .pipe(gulp.dest(PATH.BUILD.JS + 'libs/'))
       .pipe(browserSync.stream());
 });
 gulp.task('js', function () {

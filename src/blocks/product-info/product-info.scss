@@ -147,24 +147,12 @@
 	&__in-cart {
 		flex-grow: 1;
 		margin-right: 16px;
-		background-image: url(../img/svg/icon-cart.svg);
-		background-position: 16px 50%;
-		background-size: 16px 18px;
 		font-weight: 600;
 		@media screen and (min-width: $screen-md) {
 			max-width: 256px;
 		}
 	}
-	&__add-desires {
-		width: 40px;
-		height: 40px;
-		background-image: url(../img/svg/icon-favor.svg);
-		background-position: center;
-		background-size: 18px 15px;
-	}
 	&__reservation {
-		display: block;
-		width: 100%;
 		font-weight: 600;
 		margin-top: 16px;
 	}

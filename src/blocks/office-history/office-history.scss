@@ -31,7 +31,7 @@
       .timeline-orders {
 
         &__btn {
-          .btn-icon {
+          .btn--icon {
             background: #60d3d5;
 
             polyline {
@@ -45,7 +45,7 @@
   }
 
   &__btn {
-   .btn-icon {
+   .btn--icon {
       border: solid 1px #60d3d5;
       transition: all $transition;
    }

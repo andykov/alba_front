@@ -15,7 +15,7 @@ mixin header(classMod)
 						.panel-cart
 							span В корзине 3 товара на 18 500 руб.
 							.panel-cart__dropdown
-								button(id="dCart" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-count-cart="3").btn-icon
+								button(id="dCart" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-count-cart="3").btn--icon
 									span.icon-svg
 										| <svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" viewBox="0 0 20 24"><path fill-rule="evenodd" d="M1.935 6.111H7.37V3.244S7.37.657 10 .657s2.62 2.587 2.62 2.587v2.867h5.445L20 24H0L1.935 6.111zM9.092 6h1.79V3.912s.343-1.592-.885-1.592-.905 1.592-.905 1.592V6z"/></svg>
 								.panel-cart__list(aria-labelledby="dCart" data-dont-close)
@@ -69,7 +69,7 @@ mixin header(classMod)
 										a(href="#").btn Оформить заказ
 										span 18 500 руб.
 							.panel-cart__dropdown
-								button(id="dFavorite" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-count-favorite="2").btn-icon
+								button(id="dFavorite" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-count-favorite="2").btn--icon
 									span.icon-svg
 										| <svg xmlns="http://www.w3.org/2000/svg" width="22" height="19" viewBox="0 0 22 19">
 										| <path fill-rule="evenodd" d="M6.037 0C2.38 0 .013 3.655 0 6.658-.024 12.18 11 19 11 19s11.024-6.82 11-12.342C21.987 3.655 19.619 0 15.96 0 14.284 0 12.167 1.099 11 2.133 9.831 1.099 7.714 0 6.036 0z"/>
@@ -110,7 +110,7 @@ mixin header(classMod)
 									.panel-cart__action
 										a(href="#").btn Переместить в корзину
 										span 10 000 руб.
-							button(type="button").js-mobile-nav.mobile-nav.btn-icon
+							button(type="button").js-mobile-nav.mobile-nav.btn--icon
 								| <svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" viewBox="0 0 20 16"><path fill-rule="evenodd" d="M0 0h20v2H0V0zm0 7h20v2H0V7zm0 7h20v2H0v-2z"/></svg>
 						span.phone-desktop 8 800 555 00 30
 			.header-navs__main

@@ -1,0 +1,33 @@
+// В этом файле должны быть стили для БЭМ-блока .slider-promo , его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий... 
+
+.slider-promo {
+  display: flex;
+  flex-direction: column;
+  width: 632px;
+    &__big {
+      position: relative;
+      width: 100%;
+      height: 632px;
+
+      &-item {
+        position: absolute;
+        display: none;
+        &.active {
+          display: block;
+        }
+      }
+    }
+	&__thumb {
+      display: flex;
+
+      &-item {
+        flex: 1;
+        height: 48px;
+
+        img {
+          max-height: 100%;
+        }
+      }
+    }
+}

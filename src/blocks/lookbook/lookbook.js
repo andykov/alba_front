@@ -1,4 +1,4 @@
-// .lookbook scripts goes here 
+// .lookbook scripts goes here
 
 $(function() {
 	$(".js-slider-lookbook").slick({

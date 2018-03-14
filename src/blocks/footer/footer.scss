@@ -104,6 +104,7 @@
 			font-size: 16px;
 			line-height: (19 / 16);
 			letter-spacing: -0.1px;
+			white-space: nowrap;
 			color: #000;
 			@media screen and (min-width: $screen-md) and (max-width: $screen-lg - 1) {
 				font-size: 21px;

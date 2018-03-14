@@ -1,5 +1,3 @@
-// .article scripts goes here 
-
 $(function() {
 	var $articleNav = $('.article__nav'),
         $articleHead = $('.article__head'),

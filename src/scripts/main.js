@@ -48,8 +48,8 @@ $(function() {
 
 
     // зум товара в детальной карточке
-    if($('.zoom').length) {
-        $('.zoom').magnify();
+    if($('.slick-current .zoom').length) {
+        $('.slick-current .zoom').magnify();
     }
 
     // $('.js-dropdown').on('click', '[data-trigger="dropdown"]', function() {

@@ -75,12 +75,8 @@ $(function() {
         check();
     });
 
-    // $btn.on('click', function() {
-    //     $hlinks.parent().toggleClass('hidden');
-    // });
-
     if ($nav.length) {
-        var elementOffset;
+        var filterOffset;
 
         $(window).resize(function() {
             filterOffset = $('.content').offset().top - +$('.content').css('padding-top').replace('px', '');

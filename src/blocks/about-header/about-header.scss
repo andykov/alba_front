@@ -13,6 +13,20 @@
 		padding-left: 36px;
 		padding-right: 36px;
 	}
+
+
+	@media screen and (min-width: $screen-md) {
+		.about-header__subtitle {
+			margin-bottom: 100px;
+		}
+
+		.about-header__nav {
+			margin-top: auto;
+		}
+	}
+
+
+
 	@media screen and (min-width: $screen-xl) {
 		width: $container-xl;
 		margin-left: auto;
@@ -129,12 +143,21 @@
 		&-nav {
 			display: flex;
 			justify-content: space-between;
-			margin-top: auto;
+			margin-top: 90px;
 			margin-bottom: 19px;
 
 			@media screen and (min-width: $screen-md) {
 				justify-content: flex-start;
+				margin-top: 270px;
 				margin-bottom: 14px;
+			}
+
+			@media screen and (min-width: $screen-lg) {
+				margin-top: 10vh;
+			}
+
+			@media screen and (min-width: $screen-xxl) {
+				margin-top: 20vh;
 			}
 		}
 

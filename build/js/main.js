@@ -211,8 +211,6 @@ $(function() {
 
     });
 });
-
-
 // .filter scripts goes here
 
 $(function() {
@@ -324,6 +322,8 @@ $(function() {
 });
 
 
+
+
 $(function() {
 
     // Перенос логотипа и панели с корзиной в отдельный блок DOM в мобильном меню
@@ -373,9 +373,6 @@ $(function() {
 
 
 
-
-
-
 // .lookbook scripts goes here
 
 $(function() {
@@ -419,6 +416,7 @@ $(function() {
 		$(".js-slider-lookbook").css({'margin-right': sliderMargin + 'px'})
 	})
 });
+
 
 
 
@@ -707,7 +705,6 @@ $(function() {
 
 
 });
-
 // .slider-sale scripts goes here 
 
 $(function() {
@@ -730,6 +727,9 @@ $(function() {
     }
 
 });
+
+
+
 
 
 

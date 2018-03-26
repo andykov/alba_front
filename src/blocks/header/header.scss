@@ -404,6 +404,10 @@
     padding-top: 16px;
   }
 
+  @media screen and (min-width: $screen-xxl) {
+    padding-top: 30.5px;
+  }
+
   &-navs {
     @media screen and (max-width: $screen-lg - 1) {
       display: none;

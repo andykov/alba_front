@@ -92,7 +92,6 @@ $(function () {
 
 });
 
-
 // .fashion-world scripts goes here 
 
 $(function() {
@@ -126,6 +125,7 @@ $(function() {
 });
 
 
+
 $(function() {
 
     // Счетчик количества в корзине
@@ -154,7 +154,6 @@ $(function() {
         }
     });
 });
-
 
 $(function() {
     // кастомный селект
@@ -211,6 +210,7 @@ $(function() {
 
     });
 });
+
 // .filter scripts goes here
 
 $(function() {
@@ -323,7 +323,6 @@ $(function() {
 
 
 
-
 $(function() {
 
     // Перенос логотипа и панели с корзиной в отдельный блок DOM в мобильном меню
@@ -373,6 +372,8 @@ $(function() {
 
 
 
+
+
 // .lookbook scripts goes here
 
 $(function() {
@@ -418,8 +419,6 @@ $(function() {
 });
 
 
-
-
 // .office-data scripts goes here 
 
 $(function() {
@@ -430,6 +429,8 @@ $(function() {
         });
 	}
 });
+
+
 
 
 
@@ -576,8 +577,6 @@ $(function() {
 
 
 
-
-
 $(function () {
 	if ($('.js-slider-product').length) {
 		$('.js-slider-product').slick({
@@ -705,6 +704,7 @@ $(function() {
 
 
 });
+
 // .slider-sale scripts goes here 
 
 $(function() {

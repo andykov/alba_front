@@ -612,6 +612,7 @@ p {
     right: 0;
     top: 0; }
   .card-detail .breadcrumbs {
+    padding-left: 0;
     position: absolute;
     top: 12px;
     left: 16px; }
@@ -3924,7 +3925,7 @@ p {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    margin-bottom: 54px;
+    margin-bottom: 40px;
     padding-top: 74px; }
     @media screen and (min-width: 1200px) {
       .product-gallery__big {
@@ -8293,7 +8294,7 @@ p {
   margin-right: 10px; }
 
 .product-info__title {
-  margin-bottom: 3px;
+  margin-bottom: 7px;
   font-family: "Montserrat", "Ubuntu", "Droid Sans", "Helvetica Neue", "Arial", sans-serif;
   font-size: 16px;
   font-weight: 900;
@@ -8309,8 +8310,12 @@ p {
 
 .product-info__id {
   margin-bottom: 16px;
-  font-size: 13px;
+  font-size: 12px;
+  letter-spacing: 0.3px;
   color: #3c3c3c; }
+  @media (min-width: 768px) {
+    .product-info__id {
+      font-size: 13px; } }
 
 .product-info__option {
   display: block;

@@ -54,6 +54,7 @@
     "svg4everybody": "^2.1.9"
   },
   "dependencies": {
-    "magnify": "^2.1.0"
+    "magnify": "^2.1.0",
+    "npm": "^5.8.0"
   }
 }

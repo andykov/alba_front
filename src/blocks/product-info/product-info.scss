@@ -41,6 +41,7 @@
 			margin-top: 98px;
 		}
 		[data-old-price] {
+			font-family: $font-family--montserrat;
 			font-weight: 600;
 			font-size: 13px;
 			line-height: 2;
@@ -54,7 +55,8 @@
 	&__header {
 		display: flex;
 		justify-content: space-between;
-		padding-top: 26px;
+		padding-top: 23px;
+		margin-bottom: 8px;
 		@media (min-width: $screen-md) {
 			padding-top: 56px;
 		}
@@ -71,7 +73,7 @@
 		font-family: $font-family--montserrat;
 		font-size: 16px;
 		font-weight: 900;
-		line-height: 1.25;
+		line-height: 1.35;
 		color: #000;
 		@media (min-width: $screen-md) {
 			font-size: 26px;
@@ -92,22 +94,22 @@
 	}
 	&__option {
 		display: block;
-		margin-bottom: 18px;
+		margin-bottom: 12px;
 		color: #000000;
 		font: 600 11px/1.45 $font-family--montserrat;
 		letter-spacing: 0.4px;
 		text-transform: uppercase;
+		@media (min-width: $screen-md) {
+			margin-bottom: 18px;
+		}
 	}
 	&__color {
-		margin-bottom: 25px;
+		margin-bottom: 24px;
 		@media screen and (min-width: $screen-md) {
 			margin-bottom: 32px;
 		}
 		img {
-			width: 44px;
-			@media screen and (min-width: $screen-md) {
-				width: 48px;
-			}
+			width: 48px;
 		}
 	}
 	&__discount {
@@ -138,14 +140,14 @@
 		}
 	}
 	.sizes {
-		margin-bottom: 34px;
+		margin-bottom: 32px;
 	}
 	&__buttons {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
 		max-width: 312px;
-		margin-bottom: 33px;
+		margin-bottom: 35px;
 
 	}
 	&__in-cart {
@@ -159,14 +161,18 @@
 	&__reservation {
 		font-weight: 600;
 		margin-top: 16px;
+		font-size: 10px;
+		padding-top: 12px;
+		padding-bottom: 12px;
 	}
 	&__delivery {
 		p {
-			margin-bottom: 5px;
+			margin-bottom: 3px;
 			font-size: 12px;
 			font-weight: 300;
 			line-height: 1.5;
 			color: #3c3c3c;
+			letter-spacing: 0.4px;
 			@media screen and (min-width: $screen-md) {
 				font-size: 14px;
 			}
@@ -179,12 +185,12 @@
 			display: inline-block;
 			margin-bottom: 16px;
 			padding-right: 15px;
-			font: 600 10px/1.45 $font-family--montserrat;
-			letter-spacing: 0.4px;
+			font: 600 10px/1.55 $font-family--montserrat;
+			letter-spacing: 0.9px;
 			color: #a0a0a0;
 			text-transform: uppercase;
 			background: url(../img/svg/arrow-h.svg) right center no-repeat;
-			background-size: 5px 6px;
+			background-size: 4px 6px;
 			&:hover {
 				color: #60D3D5;
 			}

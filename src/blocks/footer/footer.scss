@@ -29,7 +29,7 @@
 
 		&__title {
 			font: 600 13px/1.54 $font-family--lucidagrande;
-			margin-bottom: 8px;
+			margin-bottom: 11px;
 			color: #000;
 			@media screen and (min-width: $screen-md) {
 				font-size: 15px;
@@ -70,7 +70,7 @@
 		}
 
 		&__col {
-			margin-bottom: 27px;
+			margin-bottom: 29px;
 			@include col(xs, 6, 12, 32px);
 			@include col(sm, 6, 12, 32px);
 			@include col(md, 4, 12, 48px);

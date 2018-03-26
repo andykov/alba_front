@@ -1,4 +1,4 @@
-// В этом файле должны быть стили для БЭМ-блока .nav , его элементов, 
+// В этом файле должны быть стили для БЭМ-блока .nav , его элементов,
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 
 
@@ -57,6 +57,9 @@
 				}
 			}
 
+			input {
+				width: 128px;
+			}
 		}
 
 	}
@@ -86,7 +89,7 @@
 			//text-align: center;
 		}
 		@media screen and (min-width: $screen-lg) {
-			padding: 24px 0;
+			padding: 23px 0 24px;
 			font-size: 11px;
 			line-height: (16 / 11);
 		}
@@ -113,7 +116,9 @@
 		justify-content: space-between;
 	}
 	@media screen and (min-width: $screen-xxl) {
-		max-width: 500px;
+		margin-left: 91px;
+		margin-top: 14px;
+		max-width: 518px;
 	}
 	&__inner {
 
@@ -146,6 +151,11 @@
 			line-height: (34 / 26);
 		}
 
+		@media screen and (min-width: $screen-xxl) {
+			letter-spacing: normal;
+			line-height: 1.31;
+		}
+
 		&.active {
 			border-color: #60D3D5;
 		}
@@ -163,6 +173,10 @@
 		text-align: center;
 		justify-content: center;
 		flex-grow: 1;
+	}
+
+	@media screen and (min-width: $screen-xxl) {
+	margin-left: 82px;
 	}
 	&__item {
 		@media screen and (max-width: $screen-lg - 1) {
@@ -227,5 +241,14 @@
 		top: 0;
 		right: 16px;
 		text-align: right;
+	}
+}
+
+@media (min-width: $screen-xxl) {
+	.header__region {
+		span {
+			display: inline-block;
+			padding-left: 3px;
+		}
 	}
 }

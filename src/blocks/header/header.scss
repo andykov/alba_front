@@ -468,7 +468,7 @@
           display: flex;
           align-items: center;
           justify-content: space-between;
-          height: 153px;
+          height: 146px;
         }
       }
     }
@@ -544,6 +544,9 @@
     @media screen and (min-width: $screen-lg) {
       width: 190px;
     }
+    @media screen and (min-width: $screen-xxl) {
+      margin-top: 6px;
+    }
   }
   &__cart {
     @media screen and (max-width: $screen-md - 1) {
@@ -559,6 +562,12 @@
       @media screen and (min-width: $screen-lg) {
         padding: 20px 0;
       }
+
+      @media screen and (min-width: $screen-lg) {
+        padding-left: 12px;
+        margin-right: -12px;
+      }
+
     }
     .phone-desktop {
       text-align: right;

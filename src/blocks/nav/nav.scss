@@ -125,7 +125,7 @@
 	}
 	@media screen and (min-width: $screen-xxl) {
 		margin-left: 91px;
-		margin-top: 14px;
+		margin-top: 8px;
 		max-width: 518px;
 	}
 	&__inner {
@@ -163,6 +163,7 @@
 		}
 
 		@media screen and (min-width: $screen-xxl) {
+			font-weight: 600;
 			letter-spacing: normal;
 			line-height: 1.31;
 		}

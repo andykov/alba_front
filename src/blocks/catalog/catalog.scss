@@ -191,6 +191,12 @@
                 line-height: 76px;
               }
             }
+
+            @media (min-width: $screen-xxl) {
+              &-large {
+                margin-left: 46px;
+              }
+            }
           }
         }
       }

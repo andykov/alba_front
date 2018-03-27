@@ -563,7 +563,7 @@ p {
   }
 
   @media screen and (min-width: $screen-xxl) {
-    padding-bottom: 92px;
+    padding-bottom: 67px;
   }
 
   section {
@@ -1256,5 +1256,12 @@ p {
      @media screen and (min-width: $screen-md) {
       margin-bottom: 67px;
      }
+
+    @media screen and (min-width: $screen-xxl) {
+      max-width: 968px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 50px;
+    }
   }
 }

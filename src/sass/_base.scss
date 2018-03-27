@@ -535,7 +535,7 @@ p {
   @media screen and (min-width: $screen-md) {
     margin-bottom: 0;
     padding-top: 66px;
-    padding-bottom: 4px;
+    padding-bottom: 0;
 
     &::before {
       bottom: -16px;
@@ -575,7 +575,7 @@ p {
     }
 
     @media screen and (min-width: $screen-md) {
-      margin-bottom: 52px;
+      margin-bottom: 53px;
 
       &[data-collapse-body] {
         margin-top: 0;
@@ -601,7 +601,7 @@ p {
       margin-bottom: 14px;
       font-size: 18px;
       line-height: 1.44;
-      letter-spacing: -0.2px;
+      letter-spacing: 0.3px;
     }
 
     @media screen and (min-width: $screen-xl) {
@@ -1245,7 +1245,19 @@ p {
 .catalog-text {
   line-height: 1.5;
 
+  @media screen and (min-width: $screen-md) {
+    line-height: 1.4;
+
+    p{
+      margin-bottom: 67px;
+    }
+  }
+
   p {
     margin-bottom: 39px;
+
+     @media screen and (min-width: $screen-md) {
+      margin-bottom: 67px;
+     }
   }
 }

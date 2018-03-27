@@ -1,5 +1,5 @@
-// В этом файле должны быть стили для БЭМ-блока .catalog , его элементов, 
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий... 
+// В этом файле должны быть стили для БЭМ-блока .catalog , его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 
 .catalog {
 
@@ -34,7 +34,7 @@
       }
       @media screen and (min-width: $screen-md) {
         @include make-col(6, $grid-columns, 48px);
-        margin-bottom: 32px;
+        margin-bottom: 28px;
       }
       @media screen and (min-width: $screen-lg) {
         @include make-col(3, $grid-columns, 24px);

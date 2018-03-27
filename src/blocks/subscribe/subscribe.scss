@@ -5,16 +5,19 @@
 	background: url('../img/design/bg-subscribe.png') no-repeat center center / cover;
 	padding: 35px 16px 46px 16px;
 	@media (min-width: $screen-md) {
+		padding-top: 40px;
 		padding-bottom: 53px;
+		padding-left: 0;
+		padding-right: 0;
 	}
 	@media (min-width: $screen-md) {
-		padding-bottom: 42px;
+		padding-bottom: 55px;
 	}
 	&__inner {
 		@include row(32px, 32px, 48px, 24px, 32px, 40px);
 		@media (min-width: $screen-md) {
-			padding-right: 147px;
-			padding-left: 147px;
+			padding-right: 144px;
+			padding-left: 144px;
 		}
 		@media (min-width: $screen-lg) {
 			padding-right: 0;
@@ -36,6 +39,10 @@
 	&__text {
 		margin-bottom: 34px;
 		color: #fff;
+
+		@media screen and (min-width: $screen-md) {
+			margin-bottom: 50px;
+		}
 		@media screen and (min-width: $screen-lg) {
 			margin-bottom: 46px;
 		}
@@ -59,7 +66,7 @@
 			font-family: $font-family--montserrat;
 			font-weight: 600;
 			@media (min-width: $screen-md) {
-				margin-bottom: 13px;
+				margin-bottom: 15px;
 			}
 			span {
 				display: inline-block;
@@ -106,7 +113,7 @@
 					&:first-child {
 						display: flex;
 						align-items: flex-end;
-						margin-bottom: 15px;
+						margin-bottom: 17px;
 						@media screen and (min-width: $screen-xl) {
 							max-width: 312px;
 						}
@@ -126,7 +133,7 @@
 
 			.field-checkbox {
 				&:first-child {
-					margin-right: 26px;
+					margin-right: 32px;
 				}
 			}
 		}
@@ -161,7 +168,8 @@
 		align-items: flex-start;
 		margin-bottom: 16px;
 		@media screen and (min-width: $screen-md) {
-			flex: 1;
+			// flex: 1;
+			width: 272px;
 		}
 	}
 	&__checkboxes {
@@ -178,6 +186,10 @@
 	.form-control {
 		max-width: 176px;
 		width: 100%;
+
+		@media screen and (min-width: $screen-md) {
+			max-width: 136px;
+		}
 		@media screen and (min-width: $screen-xxl) {
 			max-width: 184px;
 		}

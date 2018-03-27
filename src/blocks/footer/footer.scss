@@ -217,7 +217,7 @@
 		&:last-child {
 			margin-bottom: 0;
 			@media screen and (min-width: $screen-xl) {
-				.footer__item {
+				.footer__item:last-child {
 					padding-right: 0;
 					padding-left: 38px;
 				}

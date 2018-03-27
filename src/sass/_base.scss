@@ -327,8 +327,9 @@ p {
     top: 0;
   }
   .breadcrumbs {
+    padding-left: 0;
     position: absolute;
-    top: 12px;
+    top: 10px;
     left: 16px;
     @media (min-width: $screen-md) {
       left: 0;
@@ -400,15 +401,18 @@ p {
 }
 
 .content {
-  padding: 32px 0;
+  //padding: 32px 0;
   margin-bottom: 22px;
   line-height: 1.25;
   &__title {
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-bottom: 28px;
+    line-height: 1.31;
+
     @media screen and (min-width: $screen-md) {
       padding-left: 32px;
       padding-right: 32px;
-      margin-bottom: 28px;
-      line-height: 1.31;
     }
     @media screen and (min-width: $screen-lg) {
       padding-left: 36px;
@@ -423,27 +427,8 @@ p {
       padding-right: 48px;
     }
   }
-
-  &__title {
-    padding-left: 16px;
-    padding-right: 16px;
-
-    @media screen and (min-width: $screen-md) {
-      padding-left: 32px;
-      padding-right: 32px;
-    }
-    @media screen and (min-width: $screen-lg) {
-      padding-left: 36px;
-      padding-right: 36px;
-    }
-    @media screen and (min-width: $screen-xl) {
-      padding-left: 43px;
-      padding-right: 43px;
-    }
-    @media screen and (min-width: $screen-xxl) {
-      padding-left: 48px;
-      padding-right: 48px;
-    }
+  &--page-card {
+    padding-top: 0;
   }
 }
 
@@ -997,13 +982,20 @@ p {
 
 .price {
 	text-align: right;
-
+  span.price__economy {
+    display: flex;
+    justify-content: flex-end;
+  }
+  &__value {
+    margin-left: 1px;
+  }
 	span {
 		display: block;
 		font-size: 12px;
-		line-height: (20 / 12);
+		line-height: 1.4;
 		white-space: nowrap;
 		& + span {
+      letter-spacing: 0.3px;
 			font-size: 12px;
 			color: #1eb4b7;
 		}
@@ -1036,6 +1028,7 @@ p {
 		&:before {
 			content: attr(data-old-price);
 			opacity: 0.3;
+      font-family: $font-family;
 			text-decoration: line-through;
 			margin-right: 12px;
 			font-size: 12px;
@@ -1071,7 +1064,7 @@ p {
 		padding-top: 155px;
 	}
 	&__list {
-		margin-bottom: 24px;
+		margin-bottom: 30px;
 		@media screen and (min-width: $screen-md) {
 			margin-bottom: 60px;
 		}
@@ -1080,7 +1073,7 @@ p {
 		}
 		li {
 			display: flex;
-			margin-bottom: 8px;
+			margin-bottom: 6px;
 			@media screen and (min-width: $screen-md) {
 				margin-bottom: 5px;
 			}
@@ -1092,10 +1085,7 @@ p {
 			letter-spacing: 0.4px;
 			font-size: 12px;
 			&:first-child {
-				flex: 1.4;
-				@media screen and (min-width: $screen-xl) {
-					flex: .7;
-				}
+        flex: .6;
 			}
 			@media screen and (min-width: $screen-md) {
 				font-size: 14px;
@@ -1103,7 +1093,7 @@ p {
 		}
 	}
 	&__text {
-		margin-bottom: 33px;
+		margin-bottom: 34px;
 		font-size: 12px;
 		letter-spacing: 0.3px;
 		line-height: 1.5;
@@ -1114,11 +1104,15 @@ p {
 	}
 	&__share {
 		display: block;
-		margin-bottom: 14px;
-		font: 600 11px/1.45 $font-family--montserrat;
+		margin-bottom: 15px;
+		font: 600 10px/1.6 $font-family--montserrat;
 		letter-spacing: 0.4px;
 		text-transform: uppercase;
 		color: #000000;
+    @media (min-width: $screen-md) {
+      line-height: 1.45;
+      font-size: 11px;
+    }
 	}
 }
 
@@ -1166,7 +1160,7 @@ p {
 	&__name {
 		position: relative;
 		display: block;
-		padding-bottom: 6px;
+		padding-bottom: 5px;
 		cursor: pointer;
 		@media screen and (min-width: $screen-md) {
 			padding-bottom: 4px;

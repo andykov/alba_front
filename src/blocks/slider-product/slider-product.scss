@@ -4,7 +4,7 @@
 .slider-product {
   position: relative;
   padding-top: 37px;
-  margin-bottom: -190px;
+  margin-bottom: -166px;
   z-index: 1;
   @media screen and (min-width: $screen-md) {
     margin-bottom: -150px;
@@ -18,6 +18,14 @@
   @media screen and (min-width: $screen-xxl) {
     padding-top: 129px;
     margin-bottom: -40px;
+  }
+  &__nav-inner {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  .slider-product__link {
+    padding-right: 13px;
+    color: #b4b4b4;
   }
   &--main-page {
     padding-top: 0;
@@ -115,7 +123,7 @@
   }
   &__inner {
     padding-right: 0;
-    padding-left: 12px;
+    padding-left: 4px;
     @media screen and (min-width: $screen-md) {
       padding-left: 0;
     }

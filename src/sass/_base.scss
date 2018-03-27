@@ -553,7 +553,7 @@ p {
 
   @media screen and (min-width: $screen-xl) {
     padding-top: 87px;
-    padding-bottom: 82px;
+    padding-bottom: 72px;
 
     &::before {
       bottom: 0;
@@ -606,6 +606,7 @@ p {
 
     @media screen and (min-width: $screen-xl) {
       margin-bottom: 37px;
+      // letter-spacing: 0.2px;
     }
   }
 
@@ -1247,10 +1248,6 @@ p {
 
   @media screen and (min-width: $screen-md) {
     line-height: 1.4;
-
-    p{
-      margin-bottom: 67px;
-    }
   }
 
   p {

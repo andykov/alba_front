@@ -108,6 +108,13 @@
               bottom: 12px;
               left: 12px;
             }
+
+            @media screen and (min-width: $screen-xl) {
+              top: 17px;
+              right: 17px;
+              bottom: 17px;
+              left: 17px;
+            }
             @media screen and (min-width: $screen-xxl) {
               top: 16px;
               right: 16px;
@@ -142,8 +149,8 @@
               display: block;
               max-width: 96px;
               margin: auto;
-              font-family: $font-family--lucidagrande;
-              font-weight: 700;
+              font-family: $font-family--montserrat;
+              font-weight: 400;
               font-size: 13px;
               line-height: 1.54;
             }
@@ -165,8 +172,8 @@
               &-small {
                 max-width: 181px;
                 font-size: 26px;
-                font-weight: 900;
                 line-height: 1.23;
+                letter-spacing: 2.5px;
               }
 
               &-large {
@@ -174,6 +181,14 @@
                 font-size: 69px;
                 font-weight: 900;
                 letter-spacing: -0.8px;
+                margin-left: 38px;
+              }
+            }
+
+            @media (min-width: $screen-xl) {
+              top: 76px;
+              &-large {
+                line-height: 76px;
               }
             }
           }
@@ -188,6 +203,10 @@
 
     @media screen and (min-width: $screen-lg) {
       margin-bottom: 14px;
+    }
+
+    @media screen and (min-width: $screen-xl) {
+      margin-bottom: 9px;
     }
 
     @media screen and (min-width: $screen-xxl) {

@@ -26,6 +26,7 @@
 	}
 
 	@media screen and (min-width: $screen-xl) {
+		margin-top: 31px;
 		padding-left: 43px;
 
 		&:after {
@@ -129,6 +130,11 @@
 			letter-spacing: 2px;
 			font-weight: 600;
 			padding-right: 32px;
+		}
+
+		@media screen and (min-width: $screen-xl) {
+			letter-spacing: 1.2px;
+			padding-right: 40px;
 		}
 	}
 

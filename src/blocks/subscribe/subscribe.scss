@@ -13,6 +13,9 @@
 	@media (min-width: $screen-md) {
 		padding-bottom: 55px;
 	}
+	@media (min-width: $screen-md) {
+		padding-bottom: 42px;
+	}
 	&__inner {
 		@include row(32px, 32px, 48px, 24px, 32px, 40px);
 		@media (min-width: $screen-md) {
@@ -25,7 +28,7 @@
 		}
 		@media (min-width: $screen-xl) {
 			padding-right: 0;
-			padding-left: 147px;
+			padding-left: 208px;
 		}
 	}
 	&__label {
@@ -99,7 +102,9 @@
 		}
 		@media screen and (min-width: $screen-xl) {
 			@include col(xl, 6.3, 12, 32px);
-			@include col-offset(xl, 1.65, 12);
+			margin-top: 3px;
+			// @include col-offset(xl, 1.65, 12);
+			margin-left: 6.8%;
 		}
 		@media screen and (min-width: $screen-xxl) {
 			@include col(xxl, 6.3, 15, 40px);
@@ -171,6 +176,11 @@
 			// flex: 1;
 			width: 272px;
 		}
+
+		@media screen and (min-width: $screen-md) {
+			// flex: 1;
+			width: 292px;
+		}
 	}
 	&__checkboxes {
 		margin-bottom: 39px;
@@ -189,6 +199,10 @@
 
 		@media screen and (min-width: $screen-md) {
 			max-width: 136px;
+		}
+
+		@media screen and (min-width: $screen-md) {
+			max-width: 176px;
 		}
 		@media screen and (min-width: $screen-xxl) {
 			max-width: 184px;

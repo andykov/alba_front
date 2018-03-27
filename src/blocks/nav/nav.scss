@@ -117,6 +117,12 @@
 		display: flex;
 		justify-content: space-between;
 	}
+
+	@media screen and (min-width: $screen-xl) {
+		max-width: 482px;
+		margin-left: 85px;
+		margin-top: 4px;
+	}
 	@media screen and (min-width: $screen-xxl) {
 		margin-left: 91px;
 		margin-top: 14px;
@@ -153,6 +159,7 @@
 		@media screen and (min-width: 1366px) {
 			font-size: 26px;
 			line-height: (34 / 26);
+			line-height: 1.6;
 		}
 
 		@media screen and (min-width: $screen-xxl) {
@@ -177,6 +184,10 @@
 		text-align: center;
 		justify-content: center;
 		flex-grow: 1;
+	}
+
+	@media screen and (min-width: $screen-xl) {
+		margin-left: 58px;
 	}
 
 	@media screen and (min-width: $screen-xxl) {

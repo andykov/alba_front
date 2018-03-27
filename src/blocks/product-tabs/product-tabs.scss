@@ -105,11 +105,11 @@
 		text-transform: uppercase;
 		line-height: 1.25;
 		letter-spacing: 0.4px;
-		padding-bottom: 5px;
-		padding-right: 0;
-		border-bottom: 3px solid transparent;
+		padding-bottom: 7px;
+		border-bottom: 2px solid transparent;
 		white-space: nowrap;
 		color: #a0a0a0;
+		padding-right: 9px;
 		&:hover {
 			color: $primary-color;
 		}

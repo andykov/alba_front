@@ -956,6 +956,9 @@ p {
 }
 
 .product-holder {
+  .product-tabs__link {
+    border-width: 2px;
+  }
   @media screen and (min-width: $screen-md) {
     display: flex;
     margin-right: -48px;

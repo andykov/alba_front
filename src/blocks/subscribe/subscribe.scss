@@ -1,5 +1,5 @@
-// В этом файле должны быть стили для БЭМ-блока .subscribe , его элементов, 
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий... 
+// В этом файле должны быть стили для БЭМ-блока .subscribe , его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 
 .subscribe {
 	background: url('../img/design/bg-subscribe.png') no-repeat center center / cover;
@@ -27,13 +27,14 @@
 	}
 	&__label {
 		display: block;
-		margin-bottom: 15px;
+		margin-bottom: 13px;
+		letter-spacing: -0.4px;
 		@media screen and (min-width: $screen-md) {
 			margin-bottom: 13px;
 		}
 	}
 	&__text {
-		margin-bottom: 32px;
+		margin-bottom: 34px;
 		color: #fff;
 		@media screen and (min-width: $screen-lg) {
 			margin-bottom: 46px;
@@ -54,7 +55,7 @@
 			margin-bottom: 11px;
 			line-height: 1.25;
 			color: #fff;
-			letter-spacing: -0.3px;
+			letter-spacing: 0.3px;
 			font-family: $font-family--montserrat;
 			font-weight: 600;
 			@media (min-width: $screen-md) {

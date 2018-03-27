@@ -517,6 +517,7 @@ p {
   position: relative;
   margin-bottom: -22px;
   padding-top: 24px;
+  padding-bottom: 31px;
   background: #fff;
 
   &::before {
@@ -566,7 +567,8 @@ p {
   }
 
   section {
-    margin-bottom: 32px;
+    margin-bottom: 9px;
+
 
     &[data-collapse-body] {
       margin-top: 40px;
@@ -591,7 +593,7 @@ p {
     font-size: 13px;
     font-weight: 600;
     line-height: 1.38;
-    letter-spacing: normal;
+    letter-spacing: 0.3px;
     text-align: left;
     color: #000000;
 
@@ -1236,5 +1238,14 @@ p {
     @media (min-width: $screen-xxl) {
       margin-bottom: -70px;
     }
+  }
+}
+
+
+.catalog-text {
+  line-height: 1.5;
+
+  p {
+    margin-bottom: 39px;
   }
 }

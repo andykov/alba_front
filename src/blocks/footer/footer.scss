@@ -31,6 +31,7 @@
 			font: 600 13px/1.54 $font-family--lucidagrande;
 			margin-bottom: 11px;
 			color: #000;
+			letter-spacing: -0.2px;
 			@media screen and (min-width: $screen-md) {
 				font-size: 15px;
 				margin-bottom: 10px;
@@ -39,7 +40,7 @@
 				margin-bottom: 28px;
 			}
 			&--social {
-				margin-bottom: 12px;
+				margin-bottom: 13px;
 				font-size: 13px;
 				@media screen and (min-width: $screen-md) {
 					margin-bottom: 17px;
@@ -106,6 +107,7 @@
 			letter-spacing: -0.1px;
 			white-space: nowrap;
 			color: #000;
+			margin-top: 14px;
 			@media screen and (min-width: $screen-md) and (max-width: $screen-lg - 1) {
 				font-size: 21px;
 				line-height: (25 / 21);
@@ -130,7 +132,7 @@
 				font-weight: 600;
 				line-height: 1.6;
 				letter-spacing: 0.4px;
-				padding: 17px;
+				padding: 15px 8px 13px;
 				white-space: normal;
 				border-width: 2px;
 				text-align: left;
@@ -183,7 +185,7 @@
 		}
 	}
 	&__bottom-col {
-		margin-bottom: 33px;
+		margin-bottom: 32px;
 		&:last-child {
 			margin-bottom: 0;
 		}
@@ -208,7 +210,7 @@
 		}
 		a {
 			display: inline-block;
-			vertical-align: top;
+			vertical-align: baseline;
 			color: #fff;
 		}
 		&:last-child {
@@ -225,9 +227,9 @@
 		}
 	}
 	&__link {
-		margin-right: 7px;
+		margin-right: 4px;
 		&--bold {
-			font-weight: 900;
+			font-weight: 600;
 			font-family: $font-family--montserrat;
 			font-size: 12px;
 		}

@@ -4,7 +4,13 @@
 .slider-promo {
   display: flex;
   flex-direction: column;
-  width: 632px;
+  @include col(lg, 6, 12, 48px);
+  @include col(xxl, 6, 15, 40px);
+  @media (min-width: $screen-lg) {
+  }
+  @media(min-width: $screen-xxl) {
+
+  }
     &__big {
       position: relative;
       width: 100%;

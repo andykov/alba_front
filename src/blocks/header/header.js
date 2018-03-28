@@ -42,5 +42,25 @@ $(function() {
         $('.header-navs.open').removeClass('open');
     });
 
+    $(window).on("resize load", function () {
+        var fixedHeader = $('.js-fixed-header');
+        var fixedClass = 'header-navs__main--fixed';
+
+        if (window.matchMedia('(min-width: 992px)').matches) {
+            var toTop = fixedHeader.offset().top;
+
+            $(window).on("scroll", function () {
+                if ($(window).scrollTop() > toTop) {
+                    fixedHeader.addClass(fixedClass);
+                } else {
+                    fixedHeader.removeClass(fixedClass);
+                }
+            });
+
+        } else {
+            fixedHeader.removeClass(fixedClass);
+        }
+    });
+
 
 });

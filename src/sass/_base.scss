@@ -438,6 +438,10 @@ p {
   padding-left: 30px;
   margin-left: auto;
 
+  @media  screen and (min-width: $screen-md) {
+    margin-left: 0;
+  }
+
   input[type="text"] {
     border: 0;
     background-color: transparent;
@@ -451,6 +455,7 @@ p {
     outline: none;
     padding: 12px 0;
     vertical-align: top;
+    width: 100%;
 
     @include placeholder {
       font-family: $font-family--montserrat;

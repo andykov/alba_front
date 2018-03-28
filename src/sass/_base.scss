@@ -1,5 +1,4 @@
 ::selection {
-  background: #60D3D5;
 }
 
 html {
@@ -332,7 +331,7 @@ p {
     top: 10px;
     left: 16px;
     @media (min-width: $screen-md) {
-      left: 0;
+      left: 31px;
       top: 0;
     }
 
@@ -959,6 +958,9 @@ p {
 }
 
 .product-holder {
+  .product-tabs__link {
+    border-width: 2px;
+  }
   @media screen and (min-width: $screen-md) {
     display: flex;
     margin-right: -48px;
@@ -988,6 +990,14 @@ p {
   span.price__economy {
     display: flex;
     justify-content: flex-end;
+    @media (min-width: $screen-md) {
+      align-items: center;
+      padding-top: 4px;
+      .price__value {
+        margin-left: 3px;
+        font-size: 13px;
+      }
+    }
   }
   &__value {
     margin-left: 1px;
@@ -1051,7 +1061,8 @@ p {
 	@include col(md, 6, 12, 88px);
 	@include col(xl, 3, 12, 0);
 	@media screen and (min-width: $screen-md) {
-		padding-top: 65px;
+		padding-top: 68px;
+    padding-left: 64px;
 	}
   @media screen and (min-width: $screen-xl) {
     padding-top: 123px;
@@ -1069,7 +1080,7 @@ p {
 	&__list {
 		margin-bottom: 30px;
 		@media screen and (min-width: $screen-md) {
-			margin-bottom: 60px;
+			margin-bottom: 65px;
 		}
 		@media screen and (min-width: $screen-xl) {
 			margin-bottom: 65px;
@@ -1089,6 +1100,9 @@ p {
 			font-size: 12px;
 			&:first-child {
         flex: .6;
+        @media (min-width: $screen-md) {
+           flex: 1;
+        }
 			}
 			@media screen and (min-width: $screen-md) {
 				font-size: 14px;
@@ -1185,7 +1199,7 @@ p {
 			}
 		}
 		@media screen and (min-width: $screen-md) {
-			padding-bottom: 10px;
+			padding-bottom: 5px;
 
 		}
 	}

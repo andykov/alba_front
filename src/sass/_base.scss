@@ -517,6 +517,7 @@ p {
   position: relative;
   margin-bottom: -22px;
   padding-top: 24px;
+  padding-bottom: 31px;
   background: #fff;
 
   &::before {
@@ -534,7 +535,7 @@ p {
   @media screen and (min-width: $screen-md) {
     margin-bottom: 0;
     padding-top: 66px;
-    padding-bottom: 4px;
+    padding-bottom: 0;
 
     &::before {
       bottom: -16px;
@@ -552,7 +553,7 @@ p {
 
   @media screen and (min-width: $screen-xl) {
     padding-top: 87px;
-    padding-bottom: 82px;
+    padding-bottom: 72px;
 
     &::before {
       bottom: 0;
@@ -562,18 +563,19 @@ p {
   }
 
   @media screen and (min-width: $screen-xxl) {
-    padding-bottom: 92px;
+    padding-bottom: 67px;
   }
 
   section {
-    margin-bottom: 32px;
+    margin-bottom: 9px;
+
 
     &[data-collapse-body] {
       margin-top: 40px;
     }
 
     @media screen and (min-width: $screen-md) {
-      margin-bottom: 52px;
+      margin-bottom: 53px;
 
       &[data-collapse-body] {
         margin-top: 0;
@@ -591,7 +593,7 @@ p {
     font-size: 13px;
     font-weight: 600;
     line-height: 1.38;
-    letter-spacing: normal;
+    letter-spacing: 0.3px;
     text-align: left;
     color: #000000;
 
@@ -599,11 +601,12 @@ p {
       margin-bottom: 14px;
       font-size: 18px;
       line-height: 1.44;
-      letter-spacing: -0.2px;
+      letter-spacing: 0.3px;
     }
 
     @media screen and (min-width: $screen-xl) {
       margin-bottom: 37px;
+      // letter-spacing: 0.2px;
     }
   }
 
@@ -1235,6 +1238,30 @@ p {
   .slider-product {
     @media (min-width: $screen-xxl) {
       margin-bottom: -70px;
+    }
+  }
+}
+
+
+.catalog-text {
+  line-height: 1.5;
+
+  @media screen and (min-width: $screen-md) {
+    line-height: 1.4;
+  }
+
+  p {
+    margin-bottom: 39px;
+
+     @media screen and (min-width: $screen-md) {
+      margin-bottom: 67px;
+     }
+
+    @media screen and (min-width: $screen-xxl) {
+      max-width: 968px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 50px;
     }
   }
 }

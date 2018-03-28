@@ -3,7 +3,7 @@
 .breadcrumbs {
 	position: relative;
 	display: inline-flex;
-	margin-bottom: 12px;
+	margin-bottom: 13px;
 	padding-left: 16px;
 
 	&:after {
@@ -26,6 +26,7 @@
 	}
 
 	@media screen and (min-width: $screen-xl) {
+		margin-top: 31px;
 		padding-left: 43px;
 
 		&:after {
@@ -114,19 +115,26 @@
 		position: relative;
 		margin-bottom: 0;
 		padding-left: 9px;
-		padding-right: 34px;
+		padding-right: 30px;
 		font-family: $font-family--montserrat;
 		font-size: 16px;
 		font-weight: 900;
 		line-height: 32px;
-		letter-spacing: normal;
+		letter-spacing: -0.8px;
 		color: #000000;
 
 		@media screen and (min-width: $screen-md){
 			padding-left: 12px;
-			padding-right: 30px;
 			font-size: 26px;
 			line-height: 1.31;
+			letter-spacing: 2px;
+			font-weight: 600;
+			padding-right: 32px;
+		}
+
+		@media screen and (min-width: $screen-xl) {
+			letter-spacing: 1.2px;
+			padding-right: 40px;
 		}
 	}
 

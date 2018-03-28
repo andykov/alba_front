@@ -1,11 +1,17 @@
-// В этом файле должны быть стили для БЭМ-блока .subscribe , его элементов, 
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий... 
+// В этом файле должны быть стили для БЭМ-блока .subscribe , его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 
 .subscribe {
 	background: url('../img/design/bg-subscribe.png') no-repeat center center / cover;
 	padding: 35px 16px 46px 16px;
 	@media (min-width: $screen-md) {
+		padding-top: 40px;
 		padding-bottom: 53px;
+		padding-left: 0;
+		padding-right: 0;
+	}
+	@media (min-width: $screen-md) {
+		padding-bottom: 55px;
 	}
 	@media (min-width: $screen-md) {
 		padding-bottom: 42px;
@@ -13,28 +19,35 @@
 	&__inner {
 		@include row(32px, 32px, 48px, 24px, 32px, 40px);
 		@media (min-width: $screen-md) {
-			padding-right: 147px;
-			padding-left: 147px;
+			padding-right: 144px;
+			padding-left: 144px;
 		}
 		@media (min-width: $screen-lg) {
 			padding-right: 0;
 			padding-left: 0;
 		}
 		@media (min-width: $screen-xl) {
-			padding-right: 0;
-			padding-left: 147px;
+			padding-left: 208px;
+		}
+		@media (min-width: $screen-xl) {
+			padding-left: 338px;
 		}
 	}
 	&__label {
 		display: block;
-		margin-bottom: 15px;
+		margin-bottom: 13px;
+		letter-spacing: -0.4px;
 		@media screen and (min-width: $screen-md) {
 			margin-bottom: 13px;
 		}
 	}
 	&__text {
-		margin-bottom: 32px;
+		margin-bottom: 34px;
 		color: #fff;
+
+		@media screen and (min-width: $screen-md) {
+			margin-bottom: 50px;
+		}
 		@media screen and (min-width: $screen-lg) {
 			margin-bottom: 46px;
 		}
@@ -46,19 +59,19 @@
 			@include col(xl, 4, 12, 32px);
 		}
 		@media screen and (min-width: $screen-xxl) {
-			@include col(xxl, 3, 15, 40px);
-			@include col-offset(xxl, 3, 15);
+			@include col(xxl, 4, 15, 40px);
+			// @include col-offset(xxl, 3, 15);
 		}
 
 		h2 {
 			margin-bottom: 11px;
 			line-height: 1.25;
 			color: #fff;
-			letter-spacing: -0.3px;
+			letter-spacing: 0.3px;
 			font-family: $font-family--montserrat;
 			font-weight: 600;
 			@media (min-width: $screen-md) {
-				margin-bottom: 13px;
+				margin-bottom: 15px;
 			}
 			span {
 				display: inline-block;
@@ -91,10 +104,12 @@
 		}
 		@media screen and (min-width: $screen-xl) {
 			@include col(xl, 6.3, 12, 32px);
-			@include col-offset(xl, 1.65, 12);
+			margin-top: 3px;
+			// @include col-offset(xl, 1.65, 12);
+			margin-left: 6.8%;
 		}
 		@media screen and (min-width: $screen-xxl) {
-			@include col(xxl, 6.3, 15, 40px);
+			@include col(xxl, 7, 15, 40px);
 			@include col-offset(xxl, 1, 15);
 		}
 
@@ -105,9 +120,12 @@
 					&:first-child {
 						display: flex;
 						align-items: flex-end;
-						margin-bottom: 15px;
+						margin-bottom: 17px;
 						@media screen and (min-width: $screen-xl) {
 							max-width: 312px;
+						}
+						@media screen and (min-width: $screen-xxl) {
+							max-width: 335px;
 						}
 					}
 				}
@@ -125,7 +143,7 @@
 
 			.field-checkbox {
 				&:first-child {
-					margin-right: 26px;
+					margin-right: 32px;
 				}
 			}
 		}
@@ -160,7 +178,13 @@
 		align-items: flex-start;
 		margin-bottom: 16px;
 		@media screen and (min-width: $screen-md) {
-			flex: 1;
+			// flex: 1;
+			width: 272px;
+		}
+
+		@media screen and (min-width: $screen-md) {
+			// flex: 1;
+			width: 292px;
 		}
 	}
 	&__checkboxes {
@@ -177,6 +201,14 @@
 	.form-control {
 		max-width: 176px;
 		width: 100%;
+
+		@media screen and (min-width: $screen-md) {
+			max-width: 136px;
+		}
+
+		@media screen and (min-width: $screen-md) {
+			max-width: 176px;
+		}
 		@media screen and (min-width: $screen-xxl) {
 			max-width: 184px;
 		}

@@ -1,5 +1,5 @@
-// В этом файле должны быть стили для БЭМ-блока .product , его элементов, 
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий... 
+// В этом файле должны быть стили для БЭМ-блока .product , его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 
 .product {
 
@@ -14,9 +14,18 @@
     display: block;
     background-color: #fff;
     position: relative;
-    margin-bottom: ((14 / 296) * 100%);
+    // margin-bottom: ((14 / 296) * 100%);
+    margin-bottom: 5px;
     //padding: ((23 / 296) * 100%) ((23 / 296) * 100%) 100% ((23 / 296) * 100%);
     padding-bottom: 100%;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 19px;
+    }
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 14px;
+    }
     .brazzers {
       position: absolute;
       top: 0;

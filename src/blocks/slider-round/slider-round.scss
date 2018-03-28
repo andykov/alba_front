@@ -2,34 +2,35 @@
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий... 
 
 .slider-round {
-  display: flex;
-  flex-wrap: wrap;
-  width: 440px;
+	padding-left: 8px;
+	@include row(0px, 0, 48px, 18px, 24px , 40px);
+	@include col(lg, 6, 12, 0);
+	@include col(xxl, 9, 15, 40px);
+	@media (min-width: $screen-md) {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		padding-left: 0;
+	}
 
-  &__item {
-    width: 200px;
-    margin: 10px;
-    z-index: 1;
-
-    //.slick-slide {
-    //  visibility: hidden;
-    //}
-    //
-    //.slick-current {
-    //  visibility: visible;
-    //}
-    //&:hover {
-    //  .slick-list {
-    //    overflow: visible;
-    //  }
-    //}
-
-    &--2 {
-
-    }
-  }
-
-  [dir='rtl'] .slick-slide {
-    float: left;
-  }
+	& > .slick-list > .slick-track > .slick-slide {
+		width: 44vw;
+		margin: 4px;
+		@media (min-width: $screen-md) {
+			width: auto;
+		}
+	}
+	&__item {
+		z-index: 1;
+		@include col(md, 6, 12, 48px);
+		@include col(lg, 6, 12, 24px);
+		@include col(xl, 6, 12, 32px);
+		@include col(xxl, 4, 12, 40px);
+		&.show-xxl {
+			display: none;
+			@media(min-width: $screen-xxl) {
+				display: block;
+			}
+		}
+	}
 }

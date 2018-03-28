@@ -25,6 +25,9 @@
     display: flex;
     margin-bottom: 40px;
     padding-top: 74px;
+    @media (min-width: $screen-md) {
+      margin-bottom: 35px;
+    }
     @media screen and (min-width: $screen-xl) {
       padding-top: 67px;
     }
@@ -68,7 +71,7 @@
 
   &__thumb {
     display: none;
-    width: 366px;
+    width: 401px;
     margin: 0 auto;
     @media screen and (min-width: $screen-md) {
       display: block;
@@ -99,11 +102,12 @@
 
     .slick-slide {
       &.slick-current {
+        position: relative;
         &::before {
           content: '';
           position: absolute;
           bottom: 0;
-          right: 18px;
+          right: 27px;
           left: 18px;
           border-bottom: 2px solid #60d3d5;
         }

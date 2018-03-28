@@ -5,7 +5,7 @@
 	@media (min-width: $screen-md) {
 		@include col(md, 6, 12, false);
 		padding-right: 24px;
-		padding-left: 44px;
+		padding-left: 48px;
 	}
 	@media screen and (min-width: $screen-lg) and (max-width: $screen-xl) {
 		order: 2;
@@ -32,7 +32,7 @@
 	.price {
 		margin-left: auto;
 		@media screen and (min-width: $screen-md) {
-			margin-top: 32px;
+			margin-top: 67px;
 		}
 		@media screen and (min-width: $screen-xl) {
 			margin-top: 66px;
@@ -58,7 +58,8 @@
 		padding-top: 23px;
 		margin-bottom: 8px;
 		@media (min-width: $screen-md) {
-			padding-top: 56px;
+			margin-bottom: 0;
+			padding-top: 55px;
 		}
 		@media (min-width: $screen-xl) {
 			margin-bottom: 5px;
@@ -72,11 +73,13 @@
 		margin-bottom: 7px;
 		font-family: $font-family--montserrat;
 		font-size: 16px;
-		font-weight: 900;
+		font-weight: 700;
 		line-height: 1.35;
 		color: #000;
 		@media (min-width: $screen-md) {
+			margin-bottom: 3px;
 			font-size: 26px;
+			letter-spacing: 1.3px;
 		}
 		@media (min-width: $screen-xl) {
 			line-height: 1.31;
@@ -107,11 +110,13 @@
 		margin-bottom: 24px;
 		@media screen and (min-width: $screen-md) {
 			margin-bottom: 32px;
+			margin-top: -8px;
 		}
 		img {
 			width: 48px;
 		}
 	}
+
 	&__discount {
 		display: none;
 		position: absolute;

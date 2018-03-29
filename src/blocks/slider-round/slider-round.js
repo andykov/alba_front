@@ -1,28 +1,30 @@
 // .slider-round scripts goes here 
+function slickMobile (slider, settings) {
+  if ($(window).width() > 767) {
+    if (slider.hasClass('slick-initialized')) {
+      slider.slick('unslick');
+    }
+    return
+  }
+  if (!slider.hasClass('slick-initialized')) {
+    return slider.slick(settings);
+  }
+};
 
+var roundCommonSlider = $('.js-slider-round');
+var roundCommonSettingsSlider = {
+  variableWidth: true,
+  arrows: true,
+  nextArrow: $('.js-arrow-round-next'),
+  prevArrow: $('.js-arrow-round-prev')
+};
+
+$(window).on('load resize', function () {
+  slickMobile(roundCommonSlider, roundCommonSettingsSlider);
+});
 $(function () {
 // включение слайдера на мобильном
-	function slickMobile (slider, settings) {
-		if ($(window).width() > 767) {
-			if (slider.hasClass('slick-initialized')) {
-				slider.slick('unslick');
-			}
-			return
-		}
-		if (!slider.hasClass('slick-initialized')) {
-			return slider.slick(settings);
-		}
-	};
 
-	var roundCommonSlider = $('.js-slider-round');
-	var roundCommonSettingsSlider = {
-		variableWidth: true,
-		arrows: true
-	};
-
-	$(window).on('load resize', function () {
-		slickMobile(roundCommonSlider, roundCommonSettingsSlider);
-	});
 
 	var $sliderRound_1 = $('.js-slider-round .slider-round__item--1'),
 		$sliderRound_2 = $('.js-slider-round .slider-round__item--2'),
@@ -37,6 +39,7 @@ $(function () {
 		autoplaySpeed: 1000,
 		speed: 800,
 		asNavFor: '.slider-round__item',
+		arrows: true,
 		nextArrow: $('.js-arrow-round-next'),
 		prevArrow: $('.js-arrow-round-prev'),
 		swipe: false,
@@ -56,6 +59,7 @@ $(function () {
 		asNavFor: '.slider-round__item',
 		vertical: true,
 		verticalSwiping: true,
+		arrows: true,
 		nextArrow: $('.js-arrow-round-next'),
 		prevArrow: $('.js-arrow-round-prev'),
 		swipe: false,
@@ -75,6 +79,7 @@ $(function () {
 		asNavFor: '.slider-round__item',
 		vertical: true,
 		verticalSwiping: true,
+		arrows: true,
 		nextArrow: $('.js-arrow-round-next'),
 		prevArrow: $('.js-arrow-round-prev'),
 		swipe: false,
@@ -92,6 +97,7 @@ $(function () {
 		autoplaySpeed: 1000,
 		speed: 800,
 		asNavFor: '.slider-round__item',
+		arrows: true,
 		nextArrow: $('.js-arrow-round-next'),
 		prevArrow: $('.js-arrow-round-prev'),
 		swipe: false,
@@ -110,6 +116,7 @@ $(function () {
 		autoplaySpeed: 1000,
 		speed: 800,
 		asNavFor: '.slider-round__item',
+		arrows: true,
 		nextArrow: $('.js-arrow-round-next'),
 		prevArrow: $('.js-arrow-round-prev'),
 		swipe: false,
@@ -128,6 +135,7 @@ $(function () {
 		autoplaySpeed: 1000,
 		speed: 800,
 		asNavFor: '.slider-round__item',
+		arrows: true,
 		nextArrow: $('.js-arrow-round-next'),
 		prevArrow: $('.js-arrow-round-prev'),
 		swipe: false,

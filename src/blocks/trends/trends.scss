@@ -3,13 +3,22 @@
 
 .trends {
   position: relative;
-
-	&__title {}
-    &__slider {
-      .slick-arrow {
-        position: absolute;
-        top: 0;
-        right: 0;
+  &__slider {
+    padding-left: 8px;
+    @media (min-width: $screen-md) {
+      padding-left: 0;
+    }
+    .container {
+      @media (max-width: 767px) {
+        padding-right: 0;
+        padding-left: 0;
       }
     }
+  }
+  &__slider-inner {
+    @include row(0, 0, 0, 0, 0, 0);
+  }
+  .btn-slider {
+    display: none;
+  }
 }

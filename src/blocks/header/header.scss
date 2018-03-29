@@ -23,6 +23,7 @@
         background-color: rgba(#f5f5f5, .98);
       }
     }
+
     .header-navs {
       display: block;
       background-color: #f5f5f5;
@@ -52,12 +53,14 @@
 
         &__main--fixed {
           position: fixed;
-          z-index: 15;
+          z-index: 14;
           top: 0;
           left: 0;
           width: 100%;
           padding: 0;
           box-shadow: 0 16px 24px 0 rgba(0, 0, 0, 0.05);
+          transform: translateY(-100%);
+
           @media screen and (min-width: $screen-xl) {
             padding-left: 32px;
             padding-right: 32px;
@@ -73,7 +76,8 @@
             @media screen and (min-width: $screen-lg) {
               max-width: 960px;
               padding-left: 12px;
-              padding-right: 12px;
+              // padding-right: 12px;
+              padding-right: 92px;
               margin-left: auto;
               margin-right: auto;
             }
@@ -81,17 +85,71 @@
             @media screen and (min-width: $screen-xl) {
               max-width: 1248px;
               padding-left: 16px;
-              padding-right: 16px;
+              // padding-right: 16px;
+              padding-right: 128px;
             }
 
             @media screen and (min-width: $screen-xxl) {
               max-width: 1680px;
               padding-left: 20px;
-              padding-right: 20px;
+              // padding-right: 20px;
+              padding-right: 132px;
             }
           }
         }
       }
+    }
+
+    .header__cart .panel-cart--fixed {
+      position: fixed;
+      z-index: 15;
+      top: 0;
+      left: 0;
+      right: 0;
+      width: auto;
+      max-width: 960px;
+      padding: 4px 12px;
+      margin-left: auto;
+      margin-right: auto;
+      transform: translateY(-100%);
+      pointer-events: none;
+
+      .panel-cart__dropdown > button {
+        pointer-events: visible;
+      }
+
+      > span {
+        display: none;
+      }
+      .panel-cart__dropdown:nth-of-type(2) {
+        margin-left: 0;
+        margin-right: -12px;
+      }
+
+      @media screen and (min-width: $screen-xl) {
+        max-width: 1248px;
+        padding: 4px 32px 4px 16px;
+
+        .panel-cart__dropdown:nth-of-type(2) {
+          // margin-left: 11px;
+          margin-right: 0;
+        }
+      }
+
+       @media screen and (min-width: 1300px) {
+         .panel-cart__dropdown:nth-of-type(2) {
+           margin-right: -16px;
+         }
+       }
+
+       @media screen and (min-width: $screen-xxl) {
+           max-width: 1680px;
+           padding: 4px 32px 4px 20px;
+           .panel-cart__dropdown:nth-of-type(2) {
+             // margin-left: 11px;
+            //  margin-right: -16px;
+           }
+       }
     }
 
     .nav-main {

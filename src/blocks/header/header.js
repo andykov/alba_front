@@ -45,15 +45,34 @@ $(function() {
     $(window).on("resize load", function () {
         var fixedHeader = $('.js-fixed-header');
         var fixedClass = 'header-navs__main--fixed';
+        var panelDropdown = $('.panel-cart');
+        var panelFixed = 'panel-cart--fixed';
 
         if (window.matchMedia('(min-width: 992px)').matches) {
-            var toTop = fixedHeader.offset().top;
+            var toTop = fixedHeader.offset().top + fixedHeader.height();
 
-            $(window).on("scroll", function () {
+            $(window).on("scroll load", function () {
                 if ($(window).scrollTop() > toTop) {
                     fixedHeader.addClass(fixedClass);
+                    panelDropdown.addClass(panelFixed);
+
+                    setTimeout(() => {
+                      fixedHeader.css('transition', 'transform .2s linear');
+                      panelDropdown.css('transition', 'transform .2s linear');
+                    }, 200);
+
+                    setTimeout(() => {
+                      fixedHeader.css('transform', 'translateY(0)');
+                      panelDropdown.css('transform', 'translateY(0)');
+                    }, 500);
+
                 } else {
-                    fixedHeader.removeClass(fixedClass);
+                    fixedHeader
+                      .removeClass(fixedClass)
+                      .removeAttr('style');
+                    panelDropdown
+                      .removeClass(panelFixed)
+                      .removeAttr('style');
                 }
             });
 

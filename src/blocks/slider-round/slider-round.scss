@@ -2,27 +2,44 @@
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий... 
 
 .slider-round {
-	@include col(lg, 6, 12, 0);
+	@include col(lg, 6, 12, 24px);
 	@include col(xxl, 9, 15, 40px);
+	margin-bottom: 28px;
+	@media (min-width: $screen-md) {
+		margin-bottom: 55px;
+	}
+	@media (min-width: $screen-lg) {
+		margin-bottom: 0;
+	}
 	&__header {
 		padding-left: 8px;
+		margin-bottom: 20px;
 		@media (min-width: $screen-md) {
+			margin-bottom: 40px;
 			padding-left: 0;
-			@include row(0px, 0, 48px, 18px, 24px, 40px);
+			@include row(0px, 0, 48px, 24px, 32px, 40px);
 		}
 		align-items: center;
 	}
 	&__title {
 		@include col(md, 6, 12, 48px);
-
+		@include col(lg, 6, 12, 24px);
+		@include col(xl, 6, 12, 32px);
+		@include col(xxl, 5, 15, 40px);
+		margin-bottom: 0;
 	}
 	&__nav {
 		@include col(md, 6, 12, 48px);
+		@include col(lg, 6, 12, 24px);
+		@include col(xl, 6, 12, 32px);
+		@include col(xxl, 6, 15, 40px);
+
+
 	}
 	&__slick {
 		padding-left: 8px;
 		@media (min-width: $screen-md) {
-			@include row(0px, 0, 48px, 18px, 24px, 40px);
+			@include row(0px, 0, 48px, 24px, 24px,40px);
 			display: flex;
 			flex-wrap: wrap;
 			justify-content: center;
@@ -30,7 +47,7 @@
 		}
 	}
 
-	& > .slick-list > .slick-track > .slick-slide {
+	& .slider-round__slick > .slick-list > .slick-track > .slick-slide {
 		width: 44vw;
 		margin: 4px;
 		@media (min-width: $screen-md) {

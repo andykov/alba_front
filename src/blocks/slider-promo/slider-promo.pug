@@ -3,34 +3,54 @@ mixin slider-promo()
 		.slider-promo__header
 			h2.slider-promo__title Акции
 			.slider-promo__nav
-				+btnSliderPrev().js-arrow-promo-prev
-				+btnSliderNext().js-arrow-promo-next
+				+btnSliderPrev()(class="js-arrow-promo-prev")
+				+btnSliderNext()(class="js-arrow-promo-next")
 		.slider-promo__big.js-slider-big
-			.slider-promo__big-item.active
+			.slider-promo__big-item
+				.slider-promo__discount
+					.slider-promo__top
+						span.slider-promo__text Скидка
+						span.slider-promo__percent 20%
+					p.slider-promo__bottom На полный образ с магазином-партнером
 				.slider-promo__img
 					img(src="img/content/slider-promo-img.jpg")
 
-				.slider-promo__cont
 			.slider-promo__big-item
-					.slider-promo__img
-						img(src="img/content/slider-promo-img.jpg")
+				.slider-promo__discount
+					.slider-promo__top
+						span.slider-promo__text Скидка
+						span.slider-promo__percent 10%
+					p.slider-promo__bottom На полный образ с магазином-партнером
+				.slider-promo__img
+					img(src="img/content/slider-promo-img.jpg")
 
-					.slider-promo__cont
+			.slider-promo__big-item
+				.slider-promo__discount
+					.slider-promo__top
+						span.slider-promo__text Скидка
+						span.slider-promo__percent 30%
+					p.slider-promo__bottom На полный образ с магазином-партнером
+				.slider-promo__img
+					img(src="https://picsum.photos/632/632?image=1073")
 			.slider-promo__big-item
 				.slider-promo__img
 					img(src="https://picsum.photos/632/632?image=1073")
-				.slider-promo__cont
-			.slider-promo__big-item
-				.slider-promo__img
-					img(src="https://picsum.photos/632/632?image=1073")
+				.slider-promo__discount
+					.slider-promo__top
+						span.slider-promo__text Скидка
+						span.slider-promo__percent 30%
+					p.slider-promo__bottom На полный образ с магазином-партнером
 
-				.slider-promo__cont
 		.slider-promo__thumb.js-slider-big-nav
 			.slider-promo__thumb-item
+				.span.slider-promo__thumb-text %
 				img(src="https://picsum.photos/632/632?image=1082")
 			.slider-promo__thumb-item
+				.span.slider-promo__thumb-text 1+1
 				img(src="https://picsum.photos/632/632?image=1080")
 			.slider-promo__thumb-item
+				.span.slider-promo__thumb-text %
 				img(src="https://picsum.photos/632/632?image=1078")
 			.slider-promo__thumb-item
+				.span.slider-promo__thumb-text 1+1
 				img(src="https://picsum.photos/632/632?image=1073")

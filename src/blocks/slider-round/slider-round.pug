@@ -3,9 +3,8 @@ mixin slider-round()
     .slider-round__header
       h2.slider-round__title В тренде
       .slider-round__nav
-        +btnSliderPrev().js-arrow-round-prev
-        +btnSliderNext().js-arrow-round-next
-
+        +btnSliderPrev()(class="js-arrow-round-prev")
+        +btnSliderNext()(class="js-arrow-round-next")
     .js-slider-round.slider-round__slick
       .slider-round__item.slider-round__item--1
         +product('https://picsum.photos/296/296/?image=395', 'Сапожки', false, true, false, true)

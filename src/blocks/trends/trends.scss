@@ -16,7 +16,9 @@
     }
   }
   &__slider-inner {
-    @include row(0, 0, 0, 0, 0, 0);
+    @media (min-width: $screen-lg) {
+      @include row(0, 0, 0, 0, 0, 0);
+    }
   }
   .btn-slider {
     display: none;

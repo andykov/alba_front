@@ -2,38 +2,51 @@
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий... 
 
 .slider-promo {
-  display: flex;
-  flex-direction: column;
-  @include col(lg, 6, 12, 48px);
-  @include col(xxl, 6, 15, 40px);
-  @media (min-width: $screen-lg) {
-  }
-  @media(min-width: $screen-xxl) {
+	padding-left: 8px;
+	padding-right: 16px;
+	@include col(lg, 6, 12, 48px);
+	@include col(xxl, 6, 15, 40px);
+	@media (min-width: $screen-md) {
+		padding-left: 0;
+		padding-right: 0;
+	}
+	&__header {
+		@include row(0px, 0px, 24px, 18px, 24px);
+		@media (min-width: $screen-md) {
+			align-items: center;
+		}
+	}
+	&__title {
+		@include col(md, 6, 12, 48px);
 
-  }
-    &__big {
-      position: relative;
-      width: 100%;
-      height: 632px;
+	}
+	&__nav {
+		@include col(md, 6, 12, 48px);
+	}
+	&__big {
+		position: relative;
 
-      &-item {
-        position: absolute;
-        display: none;
-        &.active {
-          display: block;
-        }
-      }
-    }
+		&-item {
+			img {
+				width: 100%;
+				object-fit: cover;
+				object-position: center;
+			}
+		}
+	}
 	&__thumb {
-      display: flex;
+		//display: flex;
+		text-align: center;
+		img {
+			display: inline-block;
+		}
+		&-item {
+			flex: 1;
+			height: 48px;
 
-      &-item {
-        flex: 1;
-        height: 48px;
-
-        img {
-          max-height: 100%;
-        }
-      }
-    }
+			img {
+				max-height: 100%;
+			}
+		}
+	}
 }

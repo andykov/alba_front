@@ -101,55 +101,57 @@
     }
 
     .header__cart .panel-cart--fixed {
-      position: fixed;
-      z-index: 15;
-      top: 0;
-      left: 0;
-      right: 0;
-      width: auto;
-      max-width: 960px;
-      padding: 4px 12px;
-      margin-left: auto;
-      margin-right: auto;
-      transform: translateY(-100%);
-      pointer-events: none;
+      @media screen and (min-width: $screen-lg) {
+        position: fixed;
+        z-index: 15;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: auto;
+        max-width: 960px;
+        padding: 4px 12px;
+        margin-left: auto;
+        margin-right: auto;
+        transform: translateY(-100%);
+        pointer-events: none;
 
-      .panel-cart__dropdown > button {
-        pointer-events: visible;
-      }
+        .panel-cart__dropdown > button {
+          pointer-events: visible;
+        }
 
-      > span {
-        display: none;
-      }
-      .panel-cart__dropdown:nth-of-type(2) {
-        margin-left: 0;
-        margin-right: -12px;
-      }
-
-      @media screen and (min-width: $screen-xl) {
-        max-width: 1248px;
-        padding: 4px 32px 4px 16px;
-
+        > span {
+          display: none;
+        }
         .panel-cart__dropdown:nth-of-type(2) {
-          // margin-left: 11px;
-          margin-right: 0;
+          margin-left: 0;
+          margin-right: -12px;
+        }
+
+        @media screen and (min-width: $screen-xl) {
+          max-width: 1248px;
+          padding: 4px 32px 4px 16px;
+
+          .panel-cart__dropdown:nth-of-type(2) {
+            // margin-left: 11px;
+            margin-right: 0;
+          }
+        }
+
+        @media screen and (min-width: 1300px) {
+          .panel-cart__dropdown:nth-of-type(2) {
+            margin-right: -16px;
+          }
+        }
+
+        @media screen and (min-width: $screen-xxl) {
+            max-width: 1680px;
+            padding: 4px 32px 4px 20px;
+            .panel-cart__dropdown:nth-of-type(2) {
+              // margin-left: 11px;
+              //  margin-right: -16px;
+            }
         }
       }
-
-       @media screen and (min-width: 1300px) {
-         .panel-cart__dropdown:nth-of-type(2) {
-           margin-right: -16px;
-         }
-       }
-
-       @media screen and (min-width: $screen-xxl) {
-           max-width: 1680px;
-           padding: 4px 32px 4px 20px;
-           .panel-cart__dropdown:nth-of-type(2) {
-             // margin-left: 11px;
-            //  margin-right: -16px;
-           }
-       }
     }
 
     .nav-main {

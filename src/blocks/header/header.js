@@ -47,38 +47,37 @@ $(function() {
         var fixedClass = 'header-navs__main--fixed';
         var panelDropdown = $('.panel-cart');
         var panelFixed = 'panel-cart--fixed';
+        var toTop = fixedHeader.offset().top + fixedHeader.height();
 
-        if (window.matchMedia('(min-width: 992px)').matches) {
-            var toTop = fixedHeader.offset().top + fixedHeader.height();
 
-            $(window).on("scroll load", function () {
-                if ($(window).scrollTop() > toTop) {
-                    fixedHeader.addClass(fixedClass);
-                    panelDropdown.addClass(panelFixed);
+        function headerOnScroll() {
+          if (($(window).scrollTop() > toTop) && (window.matchMedia('(min-width: 992px)').matches)) {
 
-                    setTimeout(() => {
-                      fixedHeader.css('transition', 'transform .2s linear');
-                      panelDropdown.css('transition', 'transform .2s linear');
-                    }, 200);
+              fixedHeader.addClass(fixedClass);
+              panelDropdown.addClass(panelFixed);
 
-                    setTimeout(() => {
-                      fixedHeader.css('transform', 'translateY(0)');
-                      panelDropdown.css('transform', 'translateY(0)');
-                    }, 500);
+              setTimeout(() => {
+                  fixedHeader.css('transition', 'transform .2s linear');
+                  panelDropdown.css('transition', 'transform .2s linear');
+              }, 200);
 
-                } else {
-                    fixedHeader
-                      .removeClass(fixedClass)
-                      .removeAttr('style');
-                    panelDropdown
-                      .removeClass(panelFixed)
-                      .removeAttr('style');
-                }
-            });
+              setTimeout(() => {
+                  fixedHeader.css('transform', 'translateY(0)');
+                  panelDropdown.css('transform', 'translateY(0)');
+              }, 500);
 
-        } else {
-            fixedHeader.removeClass(fixedClass);
+          } else {
+            panelDropdown.removeClass(panelFixed).removeAttr('style');
+            fixedHeader.removeClass(fixedClass).removeAttr('style');
+          }
         }
+
+        headerOnScroll();
+
+        $(window).on("scroll", function () {
+            headerOnScroll();
+        });
+
     });
 
 

@@ -3,6 +3,15 @@
 
 .trends {
   position: relative;
+  @media (min-width: $screen-md) {
+    margin-bottom: 60px;
+  }
+  @media (min-width: $screen-lg) {
+    margin-bottom: 112px;
+  }
+  @media (min-width: $screen-xxl) {
+    margin-bottom: 120px;
+  }
   &__slider {
     padding-left: 8px;
     @media (min-width: $screen-md) {
@@ -17,7 +26,7 @@
   }
   &__slider-inner {
     @media (min-width: $screen-lg) {
-      @include row(0, 0, 0, 0, 0, 0);
+      @include row(0, 0, 0, 0, 32px, 40px);
     }
   }
   .btn-slider {

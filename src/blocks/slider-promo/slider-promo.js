@@ -4,11 +4,20 @@ $(function () {
 
   $('.js-slider-big').slick({
     fade: true,
-    arrows: false,
+    arrows: true,
+		prevArrow: $('.js-arrow-promo-prev'),
+		nextArrow: $('.js-arrow-promo-next'),
     slidesToShow: 1,
     slidesToScroll: 1,
     asNavFor: '.js-slider-big-nav',
-    infinite: false
+    infinite: false,
+		responsive: [{
+			breakpoint: 767,
+			settings: {
+				arrows: false
+			}
+		}
+		]
   });
   $('.js-slider-big-nav').slick({
     slidesToShow: 3,
@@ -17,16 +26,7 @@ $(function () {
     // centerMode: true,
     focusOnSelect: true,
     infinite: false,
-    prevArrow: $('.js-arrow-promo-prev'),
-    nextArrow: $('.js-arrow-promo-next'),
-    arrows: true,
-    responsive: [{
-      breakpoint: 767,
-      settings: {
-        arrows: false
-      }
-    }
-    ]
+    arrows: false
   });
   // $('.slider-promo__thumb-item').on(' load click', function () {
   //     var thumbIndex = $(this).index();

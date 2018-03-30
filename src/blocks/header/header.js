@@ -51,33 +51,45 @@ $(function() {
         if (window.matchMedia('(min-width: 992px)').matches) {
             var toTop = fixedHeader.offset().top + fixedHeader.height();
 
-            $(window).on("scroll load", function () {
+            function headerOnScroll() {
                 if ($(window).scrollTop() > toTop) {
                     fixedHeader.addClass(fixedClass);
                     panelDropdown.addClass(panelFixed);
 
                     setTimeout(() => {
-                      fixedHeader.css('transition', 'transform .2s linear');
-                      panelDropdown.css('transition', 'transform .2s linear');
+                        fixedHeader.css('transition', 'transform .2s linear');
+                        panelDropdown.css('transition', 'transform .2s linear');
                     }, 200);
 
                     setTimeout(() => {
-                      fixedHeader.css('transform', 'translateY(0)');
-                      panelDropdown.css('transform', 'translateY(0)');
+                        fixedHeader.css('transform', 'translateY(0)');
+                        panelDropdown.css('transform', 'translateY(0)');
                     }, 500);
 
                 } else {
                     fixedHeader
-                      .removeClass(fixedClass)
-                      .removeAttr('style');
+                        .removeClass(fixedClass)
+                        .removeAttr('style');
                     panelDropdown
-                      .removeClass(panelFixed)
-                      .removeAttr('style');
+                        .removeClass(panelFixed)
+                        .removeAttr('style');
                 }
+            }
+
+            headerOnScroll();
+
+            $(window).on("scroll", function () {
+                headerOnScroll();
             });
 
         } else {
-            fixedHeader.removeClass(fixedClass);
+
+            panelDropdown
+                .removeClass(panelFixed)
+                .removeAttr('style');
+            fixedHeader
+                .removeClass(fixedClass)
+                .removeAttr('style');
         }
     });
 

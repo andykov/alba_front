@@ -2,25 +2,20 @@ mixin slider-round()
   .slider-round
     .slider-round__header
       h2.slider-round__title В тренде
-      .slider-round__nav
-        +btnSliderPrev()(class="js-arrow-round-prev")
-        +btnSliderNext()(class="js-arrow-round-next")
+      //.slider-round__nav
+      //  +btnSliderPrev()(class="js-arrow-round-prev")
+      //  +btnSliderNext()(class="js-arrow-round-next")
     .js-slider-round.slider-round__slick
-      .slider-round__item.slider-round__item--1
+      .slider-round__item
         +product('https://picsum.photos/296/296/?image=395', 'Сапожки', false, true, false, true)
+      .slider-round__item
         +product('https://picsum.photos/296/296/?image=389', 'Сапожки', false, true, false, true)
-      .slider-round__item.slider-round__item--2
+      .slider-round__item
         +product('https://picsum.photos/296/296/?image=371', 'Сапожки', false, true, false, true)
+      .slider-round__item
         +product('https://picsum.photos/296/296/?image=361', 'Сапожки', false, true, false, true)
-      .slider-round__item.slider-round__item--3
+      .slider-round__item.show-xxl
         +product('https://picsum.photos/296/296/?image=349', 'Сапожки', false, true, false, true)
+      .slider-round__item.show-xxl
         +product('https://picsum.photos/296/296/?image=342', 'Сапожки', false, true, false, true)
-      .slider-round__item.slider-round__item--4
-        +product('https://picsum.photos/296/296/?image=325', 'Сапожки', false, true, false, true)
-        +product('https://picsum.photos/296/296/?image=326', 'Сапожки', false, true, false, true)
-      .slider-round__item.slider-round__item--5.show-xxl
-        +product('https://picsum.photos/296/296/?image=325', 'Сапожки', false, true, false, true)
-        +product('https://picsum.photos/296/296/?image=326', 'Сапожки', false, true, false, true)
-      .slider-round__item.slider-round__item--6.show-xxl
-        +product('https://picsum.photos/296/296/?image=325', 'Сапожки', false, true, false, true)
-        +product('https://picsum.photos/296/296/?image=326', 'Сапожки', false, true, false, true)
+

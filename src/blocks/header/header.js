@@ -47,11 +47,13 @@ $(function() {
         var fixedClass = 'header-navs__main--fixed';
         var panelDropdown = $('.panel-cart');
         var panelFixed = 'panel-cart--fixed';
+        panelDropdown.removeClass(panelFixed).removeAttr('style');
+        fixedHeader.removeClass(fixedClass).removeAttr('style');
+
         var toTop = fixedHeader.offset().top + fixedHeader.height();
 
-
         function headerOnScroll() {
-          if (($(window).scrollTop() > toTop) && (window.matchMedia('(min-width: 992px)').matches)) {
+            if (($(window).scrollTop() > toTop) && (window.matchMedia('(min-width: 992px)').matches)) {
 
               fixedHeader.addClass(fixedClass);
               panelDropdown.addClass(panelFixed);

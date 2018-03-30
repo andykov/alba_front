@@ -51,34 +51,26 @@ $(function() {
 
 
         function headerOnScroll() {
-            if ($(window).scrollTop() > toTop) {
-                if (window.matchMedia('(min-width: 992px)').matches) {
-                    fixedHeader.addClass(fixedClass);
-                    panelDropdown.addClass(panelFixed);
+          if (($(window).scrollTop() > toTop) && (window.matchMedia('(min-width: 992px)').matches)) {
 
-                    setTimeout(() => {
-                        fixedHeader.css('transition', 'transform .2s linear');
-                        panelDropdown.css('transition', 'transform .2s linear');
-                    }, 200);
+              fixedHeader.addClass(fixedClass);
+              panelDropdown.addClass(panelFixed);
 
-                    setTimeout(() => {
-                        fixedHeader.css('transform', 'translateY(0)');
-                        panelDropdown.css('transform', 'translateY(0)');
-                    }, 500);
+              setTimeout(() => {
+                  fixedHeader.css('transition', 'transform .2s linear');
+                  panelDropdown.css('transition', 'transform .2s linear');
+              }, 200);
 
-                } else {
-                    fixedHeader
-                        .removeClass(fixedClass)
-                        .removeAttr('style');
-                    panelDropdown
-                        .removeClass(panelFixed)
-                        .removeAttr('style');
-                    }
-            } else {
-                panelDropdown.removeClass(panelFixed).removeAttr('style');
-                fixedHeader.removeClass(fixedClass).removeAttr('style');
-            }
-         }
+              setTimeout(() => {
+                  fixedHeader.css('transform', 'translateY(0)');
+                  panelDropdown.css('transform', 'translateY(0)');
+              }, 500);
+
+          } else {
+            panelDropdown.removeClass(panelFixed).removeAttr('style');
+            fixedHeader.removeClass(fixedClass).removeAttr('style');
+          }
+        }
 
         headerOnScroll();
 

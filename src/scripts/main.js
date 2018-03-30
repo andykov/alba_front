@@ -161,7 +161,7 @@ $(function () {
       sliderRoundItem[i].addEventListener('touchstart', function () {
         this.closest('.slider-round__item').style.zIndex = '2';
       });
-      sliderRoundItem[i].addEventListener('touchend', function () {
+      sliderRoundItem[i].addEventListener('touchcancel', function () {
         this.closest('.slider-round__item').style.zIndex =  '1';
       });
     }

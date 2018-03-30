@@ -21,7 +21,7 @@ var roundCommonSettingsSlider = {
 
 $(window).on('load resize', function () {
   slickMobile(roundCommonSlider, roundCommonSettingsSlider);
-});
+});/*
 $(function () {
 // включение слайдера на мобильном
 
@@ -149,4 +149,4 @@ $(function () {
 			}
 		]
 	});
-});
+});*/
